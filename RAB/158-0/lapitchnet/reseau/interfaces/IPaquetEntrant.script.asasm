@@ -1,0 +1,25 @@
+script ; 326
+ sinit
+  refid "lapitchnet.reseau.interfaces:IPaquetEntrant.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "lapitchnet.reseau.interfaces:IPaquetEntrant"
+    initproperty        QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  #include "IPaquetEntrant.class.asasm"
+ end ; trait
+end ; script

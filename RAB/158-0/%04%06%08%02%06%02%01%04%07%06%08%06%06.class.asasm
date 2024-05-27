@@ -1,0 +1,67 @@
+class
+ refid "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06"
+ instance QName(PackageNamespace(""), "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06")
+  extends QName(PackageNamespace(""), "\x06\x04\x02\x04\x02\x02\x08\x03\x07\x06\x03\x03")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06")
+  iinit
+   refid "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "\x07\x07\x01\x08\x03\x06\x06\x08\x02\x02\x07\x07\x06")
+     findpropstrict      QName(PackageNamespace("tribulle.categories"), "CategorieTribu")
+     constructprop       QName(PackageNamespace("tribulle.categories"), "CategorieTribu"), 0
+     initproperty        QName(PackageNamespace(""), "\x07\x07\x01\x08\x03\x06\x06\x08\x02\x02\x07\x07\x06")
+
+     findproperty        QName(PackageNamespace(""), "\x05\x03\x01\x03\x08\x03\x05\x02\x03\x08\x05\x06\x03")
+     findpropstrict      QName(PackageNamespace("tribulle.categories"), "CategorieChat")
+     constructprop       QName(PackageNamespace("tribulle.categories"), "CategorieChat"), 0
+     initproperty        QName(PackageNamespace(""), "\x05\x03\x01\x03\x08\x03\x05\x02\x03\x08\x05\x06\x03")
+
+     findproperty        QName(PackageNamespace(""), "\x06\x02\x07\x02\x03\x01\x08\x02\x03\x01\x06")
+     findpropstrict      QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     constructprop       QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire"), 0
+     initproperty        QName(PackageNamespace(""), "\x06\x02\x07\x02\x03\x01\x08\x02\x03\x01\x06")
+
+     findproperty        QName(PackageNamespace(""), "\x06\x03\x05\x04\x01\x01\x05\x07\x06\x01\x04")
+     findpropstrict      QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     constructprop       QName(PackageNamespace("tribulle.categories"), "CategorieAmis"), 0
+     initproperty        QName(PackageNamespace(""), "\x06\x03\x05\x04\x01\x01\x05\x07\x06\x01\x04")
+
+     findproperty        QName(PackageNamespace(""), "\x04\x05\x08\x04\x01\x06\x07\x07\x02\x02\x03\x08")
+     findpropstrict      QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     constructprop       QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur"), 0
+     initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x04\x01\x06\x07\x07\x02\x02\x03\x08")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,513 @@
+class
+ refid "org.osflash.signals:OnceSignal"
+ instance QName(PackageNamespace("org.osflash.signals"), "OnceSignal")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("org.osflash.signals"), "IOnceSignal")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("org.osflash.signals:OnceSignal")
+  iinit
+   refid "org.osflash.signals:OnceSignal/iinit"
+   flag NEED_REST
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+     getproperty         QName(PackageNamespace(""), "NIL")
+     findproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+     swap
+     setproperty         QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            1
+     equals
+     dup
+     iffalse             L22
+
+     pop
+     getlocal1
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlex              QName(PackageNamespace(""), "Array")
+     istypelate
+L22:
+     iffalse             L27
+
+     getlocal1
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     jump                L29
+
+L27:
+     getlocal1
+     coerce_a
+L29:
+     setproperty         QName(PackageNamespace(""), "valueClasses")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots") type QName(PackageNamespace("org.osflash.signals"), "SlotList") end
+  trait getter QName(PackageNamespace(""), "valueClasses")
+   method
+    refid "org.osflash.signals:OnceSignal/valueClasses/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "valueClasses")
+   method
+    refid "org.osflash.signals:OnceSignal/valueClasses/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      iffalse             L9
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 0
+      jump                L11
+
+L9:
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+L11:
+      findproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      swap
+      setproperty         QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      jump                L47
+
+L19:
+      label
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace(""), "Class")
+      istypelate
+      iftrue              L47
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Invalid valueClasses argument: item at index "
+      getlocal2
+      add
+      pushstring          " should be a Class but was:<"
+      add
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      add
+      pushstring          ">."
+      add
+      getlex              QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      call                1
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L47:
+      getlocal2
+      declocal_i          2
+      iftrue              L19
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "numListeners")
+   method
+    refid "org.osflash.signals:OnceSignal/numListeners/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addOnce")
+   method
+    refid "org.osflash.signals:OnceSignal/addOnce"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registerListener")
+      getlocal1
+      pushtrue
+      callproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registerListener"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "remove")
+   method
+    refid "org.osflash.signals:OnceSignal/remove"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "find"), 1
+      coerce              QName(PackageNamespace("org.osflash.signals"), "ISlot")
+      setlocal2
+
+      getlocal2
+      iftrue              L11
+
+      pushnull
+      returnvalue
+
+L11:
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "filterNot"), 1
+      findproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      swap
+      setproperty         QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAll")
+   method
+    refid "org.osflash.signals:OnceSignal/removeAll"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getproperty         QName(PackageNamespace(""), "NIL")
+      findproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      swap
+      setproperty         QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dispatch")
+   method
+    refid "org.osflash.signals:OnceSignal/dispatch"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      getlocal2
+      getlocal            5
+      ifnlt               L27
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Incorrect number of arguments. Expected at least "
+      getlocal            5
+      add
+      pushstring          " but received "
+      add
+      getlocal2
+      add
+      pushstring          "."
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L27:
+      pushbyte            0
+      setlocal            4
+
+      jump                L64
+
+L30:
+      label
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      istypelate
+      dup
+      iftrue              L46
+
+      pop
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      strictequals
+L46:
+      iftrue              L63
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Value object <"
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      add
+      pushstring          "> is not an instance of <"
+      add
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "_valueClasses")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "org.osflash.signals:OnceSignal#0"), ProtectedNamespace("org.osflash.signals:OnceSignal"), StaticProtectedNs("org.osflash.signals:OnceSignal"), StaticProtectedNs("Object"), PackageNamespace("org.osflash.signals"), PackageInternalNs("org.osflash.signals"), PrivateNamespace(null, "org.osflash.signals:OnceSignal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      add
+      pushstring          ">."
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L63:
+      inclocal_i          4
+L64:
+      getlocal            4
+      getlocal            5
+      iflt                L30
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iffalse             L86
+
+      jump                L83
+
+L74:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "head")
+      getlocal1
+      callpropvoid        QName(Namespace("org.osflash.signals:ISlot"), "execute"), 1
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal3
+
+L83:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L74
+
+L86:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registerListener")
+   method
+    refid "org.osflash.signals:OnceSignal:registerListener"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registrationPossible")
+      getlocal1
+      getlocal2
+      callproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registrationPossible"), 2
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Slot")
+      getlocal1
+      getlocal0
+      getlocal2
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "Slot"), 3
+      coerce              QName(PackageNamespace("org.osflash.signals"), "ISlot")
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      findproperty        QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      swap
+      setproperty         QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+
+      getlocal3
+      returnvalue
+
+L24:
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "find"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "registrationPossible")
+   method
+    refid "org.osflash.signals:OnceSignal:registrationPossible"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L7
+
+      pushtrue
+      returnvalue
+
+L7:
+      getlex              QName(ProtectedNamespace("org.osflash.signals:OnceSignal"), "slots")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "find"), 1
+      coerce              QName(PackageNamespace("org.osflash.signals"), "ISlot")
+      setlocal3
+
+      getlocal3
+      iftrue              L16
+
+      pushtrue
+      returnvalue
+
+L16:
+      getlocal3
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "once")
+      getlocal2
+      ifeq                L24
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "You cannot addOnce() then add() the same listener without removing the relationship first."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L24:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:OnceSignal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

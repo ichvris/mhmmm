@@ -1,0 +1,56 @@
+class
+ refid "\x03\x04\x02\x04\x02\x02\x03\x06\x06\x01\x02"
+ instance QName(PackageNamespace(""), "\x03\x04\x02\x04\x02\x02\x03\x06\x06\x01\x02")
+  extends QName(PackageNamespace(""), "\x02\x02\x08\x05\x01\x01\x08\x05\x05\x07\x03\x06")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x03\x04\x02\x04\x02\x02\x03\x06\x06\x01\x02")
+  iinit
+   refid "\x03\x04\x02\x04\x02\x02\x03\x06\x06\x01\x02/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     initproperty        QName(PackageNamespace(""), "\x04\x02\x08\x02\x05\x04\x06\x07\x02\x07\x01")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "\x05\x04\x01\x03\x01\x05\x08\x04\x03\x05\x07")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x05\x04\x01\x03\x01\x05\x08\x04\x03\x05\x07") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x04\x02\x08\x02\x05\x04\x06\x07\x02\x07\x01") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "\x03\x04\x02\x04\x02\x02\x03\x06\x06\x01\x02/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

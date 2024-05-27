@@ -1,0 +1,173 @@
+class
+ refid "cuicui.bit101.components:PushButtonMC"
+ instance QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+  extends QName(PackageNamespace("com.bit101.components"), "PushButton")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("cuicui.bit101.components:PushButtonMC")
+  iinit
+   refid "cuicui.bit101.components:PushButtonMC/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional Null()
+   optional Null()
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_faceClip")
+     swap
+     setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_faceClip")
+
+     getlocal            5
+     findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip")
+     swap
+     setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     pushstring          ""
+     getlocal            6
+     constructsuper      5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_faceClip") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(ProtectedNamespace("cuicui.bit101.components:PushButtonMC"), "addChildren") flag OVERRIDE
+   method
+    refid "cuicui.bit101.components:PushButtonMC:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:PushButton"), "addChildren"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_faceClip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip")
+      pushnull
+      ifeq                L16
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "cuicui.bit101.components:PushButtonMC/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+      dup
+      iffalse             L10
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:PushButtonMC"), "_backClip")
+      pushnull
+      equals
+      not
+L10:
+      iffalse             L18
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L24
+
+L18:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L24:
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("cuicui.bit101.components:PushButtonMC"), "drawFace") flag OVERRIDE
+   method
+    refid "cuicui.bit101.components:PushButtonMC:drawFace"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "cuicui.bit101.components:PushButtonMC/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,720 @@
+class
+ refid "tribulle.categories:CategorieAmis"
+ instance QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+  extends QName(PackageNamespace("lapitchnet.reseau"), "Categorie")
+  implements QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_Ami")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.categories:CategorieAmis")
+  iinit
+   refid "tribulle.categories:CategorieAmis/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "executeSignaleRetraitAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleRetraitAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRetraitAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleRetraitAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "login")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleDeconnexionAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleDeconnexionAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDeconnexionAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleDeconnexionAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idAmi")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleConnexionAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleConnexionAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleConnexionAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleConnexionAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ami")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleAjoutAmiBidirectionnel")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleAjoutAmiBidirectionnel"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleAjoutAmiBidirectionnel")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleAjoutAmiBidirectionnel")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ami")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleRetraitAmiBidirectionnel")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleRetraitAmiBidirectionnel"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRetraitAmiBidirectionnel")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleRetraitAmiBidirectionnel")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idAmi")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatRetireAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatRetireAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatRetireAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatRetireAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleAjoutAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleAjoutAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleAjoutAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleAjoutAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ami")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatAjoutAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatAjoutAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatAjoutAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatAjoutAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatListeAmis")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatListeAmis"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatListeAmis")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatListeAmis")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "amis")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurListeAmis")
+   method
+    refid "tribulle.categories:CategorieAmis/executeErreurListeAmis"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurListeAmis")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ErreurListeAmis")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleModificationLocalisationAmi")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleModificationLocalisationAmi"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleModificationLocalisationAmi")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleModificationLocalisationAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idAmi")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleConnexionAmis")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleConnexionAmis"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleConnexionAmis")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleConnexionAmis")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "amis")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleDeconnexionAmis")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleDeconnexionAmis"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDeconnexionAmis")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleDeconnexionAmis")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idsAmis")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleDemandeEnMariage")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleDemandeEnMariage"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDemandeEnMariage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleDemandeEnMariage")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idSequence")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idAuteur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomAuteur")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatRepondDemandeEnMariage")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatRepondDemandeEnMariage"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatRepondDemandeEnMariage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatRepondDemandeEnMariage")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentRepondDemandeEnMariage")
+      getproperty         QName(PackageNamespace(""), "reponse")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatDemandeEnMariage")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatDemandeEnMariage"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDemandeEnMariage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatDemandeEnMariage")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentDemandeEnMariage")
+      getproperty         QName(PackageNamespace(""), "nomCible")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurDemandeEnMariage")
+   method
+    refid "tribulle.categories:CategorieAmis/executeErreurDemandeEnMariage"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDemandeEnMariage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ErreurDemandeEnMariage")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMariage")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleMariage"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMariage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleMariage")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "demandeur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "cible")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatDemandeDivorce")
+   method
+    refid "tribulle.categories:CategorieAmis/executeResultatDemandeDivorce"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDemandeDivorce")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatDemandeDivorce")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleDivorce")
+   method
+    refid "tribulle.categories:CategorieAmis/executeSignaleDivorce"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDivorce")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleDivorce")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomDemandeur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomExEpoux")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.categories:CategorieAmis/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleRetraitAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleRetraitAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleDeconnexionAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleDeconnexionAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleConnexionAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleConnexionAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleAjoutAmiBidirectionnel")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleAjoutAmiBidirectionnel")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleRetraitAmiBidirectionnel")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleRetraitAmiBidirectionnel")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleAjoutAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleAjoutAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    applytype           1
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatListeAmis")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatListeAmis")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+    findproperty        QName(PackageNamespace(""), "SignaleModificationLocalisationAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleModificationLocalisationAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatAjoutAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatAjoutAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatRetireAmi")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatRetireAmi")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ErreurListeAmis")
+    swap
+    setproperty         QName(PackageNamespace(""), "ErreurListeAmis")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    applytype           1
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleConnexionAmis")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleConnexionAmis")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace(""), "int")
+    applytype           1
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleDeconnexionAmis")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleDeconnexionAmis")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+    findproperty        QName(PackageNamespace(""), "SignaleDemandeEnMariage")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleDemandeEnMariage")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatDemandeEnMariage")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatDemandeEnMariage")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ErreurDemandeEnMariage")
+    swap
+    setproperty         QName(PackageNamespace(""), "ErreurDemandeEnMariage")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "ResultatRepondDemandeEnMariage")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatRepondDemandeEnMariage")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleMariage")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleMariage")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatDemandeDivorce")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatDemandeDivorce")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleDivorce")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleDivorce")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "SignaleRetraitAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleDeconnexionAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleConnexionAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleAjoutAmiBidirectionnel") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleRetraitAmiBidirectionnel") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleAjoutAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatListeAmis") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleModificationLocalisationAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatAjoutAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatRetireAmi") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ErreurListeAmis") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleConnexionAmis") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleDeconnexionAmis") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleDemandeEnMariage") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatDemandeEnMariage") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ErreurDemandeEnMariage") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatRepondDemandeEnMariage") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleMariage") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatDemandeDivorce") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleDivorce") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+end ; class

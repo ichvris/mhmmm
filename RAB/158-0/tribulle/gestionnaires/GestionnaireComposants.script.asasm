@@ -1,0 +1,41 @@
+script ; 728
+ sinit
+  refid "tribulle.gestionnaires:GestionnaireComposants.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireComposants"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireComposants/PrivateClass"
+    popscope
+    initproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), "PrivateClass")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+  #include "GestionnaireComposants.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), "PrivateClass")
+  #include "GestionnaireComposants/PrivateClass.class.asasm"
+ end ; trait
+end ; script

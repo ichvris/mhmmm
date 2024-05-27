@@ -1,0 +1,25 @@
+script ; 42
+ sinit
+  refid "lapitchnet.reseau.interfaces:IProtocole.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "lapitchnet.reseau.interfaces:IProtocole"
+    initproperty        QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole")
+  #include "IProtocole.class.asasm"
+ end ; trait
+end ; script

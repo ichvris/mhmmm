@@ -1,0 +1,61 @@
+method
+ refid "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05/\x02\x04\x03\x05\x07\x04\x01\x04\x02\x08\x06\x07/inline_method#2"
+ param QName(PackageNamespace("flash.events"), "Event")
+ returns QName(PackageNamespace(""), "void")
+ flag NEED_ACTIVATION
+ body
+  maxstack 8
+  localcount 4
+  initscopedepth 5
+  maxscopedepth 6
+  code
+   newactivation
+   dup
+   setlocal2
+
+   pushscope
+
+   getscopeobject      0
+   getlocal1
+   setslot             1
+
+   findproperty        QName(PackageInternalNs(""), "\x05\x02\x04\x04\x01\x02\x05\x03\x03\x05\x02")
+   getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+   getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+   setproperty         QName(PackageInternalNs(""), "\x05\x02\x04\x04\x01\x02\x05\x03\x03\x05\x02")
+
+   getlex              QName(PackageNamespace(""), "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05")
+   getscopeobject      0
+   getslot             1
+   getproperty         QName(PackageNamespace(""), "currentTarget")
+   getproperty         Multiname("content", [PrivateNamespace(null, "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05"), StaticProtectedNs("\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05")])
+   setproperty         QName(PackageNamespace(""), "\x02\x08\x05\x06\x01\x02\x02\x04\x07\x06\x05\x02\x02")
+
+   getlex              QName(PackageNamespace(""), "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05")
+   getproperty         QName(PackageNamespace(""), "\x02\x08\x05\x06\x01\x02\x02\x04\x07\x06\x05\x02\x02")
+   dup
+   setlocal3
+
+   getlex              QName(PackageNamespace(""), "\x07\x04\x04\x01\x08\x08\x01\x02\x06\x03")
+   getproperty         QName(PackageNamespace(""), "\x07\x04\x03\x01\x06\x07\x04\x05\x01\x05\x01\x08")
+   getproperty         MultinameL([PrivateNamespace(null, "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05"), StaticProtectedNs("\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05")])
+   getlocal3
+   pushstring          "stage"
+   getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+   getproperty         QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03")
+   getproperty         QName(PackageNamespace(""), "\x01\x01\x07\x02\x02\x03\x07\x05\x07\x02\x06\x01")
+   pushstring          "apiKey"
+   getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+   getproperty         QName(PackageNamespace(""), "\x04\x06\x03\x04\x08\x06\x01\x06\x06\x04\x03\x06\x03")
+   getproperty         QName(PackageNamespace(""), "\x08\x07\x07\x03\x01\x04\x06\x02\x02\x05\x05\x07\x06")
+   pushstring          "\x02\x08\x08\x02\x08\x03\x03\x03\x07\x04\x04"
+   newfunction         "\x01\x01\x07\x03\x03\x08\x02\x07\x06\x05/\x02\x04\x03\x05\x07\x04\x01\x04\x02\x08\x06\x07/inline_method#1"
+   newobject           3
+   call                1
+   pop
+   kill                3
+   returnvoid
+  end ; code
+  trait slot QName(PackageInternalNs(""), "\x03\x01\x02\x05\x01\x08\x08\x01\x04\x03\x03\x05\x03") slotid 1 type QName(PackageNamespace("flash.events"), "Event") end
+ end ; body
+end ; method

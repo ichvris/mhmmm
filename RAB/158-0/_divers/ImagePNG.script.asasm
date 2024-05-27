@@ -1,0 +1,29 @@
+script ; 996
+ sinit
+  refid "_divers:ImagePNG.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "_divers:ImagePNG"
+    popscope
+    initproperty        QName(PackageNamespace("_divers"), "ImagePNG")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_divers"), "ImagePNG")
+  #include "ImagePNG.class.asasm"
+ end ; trait
+end ; script

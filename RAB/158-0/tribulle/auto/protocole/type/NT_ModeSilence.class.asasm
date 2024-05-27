@@ -1,0 +1,40 @@
+class
+ refid "tribulle.auto.protocole.type:NT_ModeSilence"
+ instance QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.type:NT_ModeSilence/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.type:NT_ModeSilence/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "AMI_SEULEMENT") type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "INACTIF") type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait slot QName(PackageNamespace(""), "TOUT_LE_MONDE") type QName(PackageNamespace(""), "int") value Integer(2) end
+end ; class

@@ -1,0 +1,33 @@
+script ; 116
+ sinit
+  refid "tribulle.auto.protocole.sortie:ST_SignaleChangementDeGenre.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.sortie:ST_SignaleChangementDeGenre"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_SignaleChangementDeGenre")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_SignaleChangementDeGenre")
+  #include "ST_SignaleChangementDeGenre.class.asasm"
+ end ; trait
+end ; script

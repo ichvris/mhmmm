@@ -1,0 +1,27 @@
+method
+ refid "tribulle.composants:ComposantTribu/lierPageEtOnglet/inline_method"
+ param QName(PackageNamespace("flash.events"), "MouseEvent")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 2
+  localcount 2
+  initscopedepth 0
+  maxscopedepth 0
+  code
+   findpropstrict      QName(PackageNamespace(""), "selectionOnglet")
+   getlex              QName(PackageInternalNs("tribulle.composants"), "nom")
+   callpropvoid        QName(PackageNamespace(""), "selectionOnglet"), 1
+
+   getlex              QName(PackageInternalNs("tribulle.composants"), "callbackSelectionOnglet")
+   pushnull
+   ifeq                L10
+
+   getlex              QName(PackageInternalNs("tribulle.composants"), "callbackSelectionOnglet")
+   getglobalscope
+   call                0
+   pop
+L10:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

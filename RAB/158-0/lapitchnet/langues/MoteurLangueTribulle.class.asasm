@@ -1,0 +1,375 @@
+class
+ refid "lapitchnet.langues:MoteurLangueTribulle"
+ instance QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  iinit
+   refid "lapitchnet.langues:MoteurLangueTribulle/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.langues:MoteurLangueTribulle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), "indexTexte")
+    swap
+    setproperty         QName(PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), "indexTexte")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), "indexTexte") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace(""), "x_initialisation")
+  method
+   refid "lapitchnet.langues:MoteurLangueTribulle/x_initialisation"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            7
+
+     pushbyte            0
+     setlocal            5
+
+     pushnull
+     setlocal2
+
+     getlocal1
+     pushstring          "¤"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     setlocal            4
+
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal3
+
+     pushbyte            255
+     setlocal            6
+
+     jump                L48
+
+L20:
+     label
+     getlocal            4
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), StaticProtectedNs("lapitchnet.langues:MoteurLangueTribulle"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.langues"), PackageInternalNs("lapitchnet.langues"), PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            7
+
+     pushstring          "="
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_i
+     dup
+     setlocal            5
+
+     pushbyte            255
+     ifeq                L48
+
+     getlocal            7
+     pushbyte            0
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_s
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), "indexTexte")
+     getlocal2
+     getlocal            7
+     getlocal            5
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), StaticProtectedNs("lapitchnet.langues:MoteurLangueTribulle"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.langues"), PackageInternalNs("lapitchnet.langues"), PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L48:
+     inclocal_i          6
+     getlocal            6
+     getlocal3
+     iflt                L20
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "recupTexte")
+  method
+   refid "lapitchnet.langues:MoteurLangueTribulle/recupTexte"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 11
+    initscopedepth 0
+    maxscopedepth 2
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            6
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            7
+
+L10:
+     getlex              QName(PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), "indexTexte")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), StaticProtectedNs("lapitchnet.langues:MoteurLangueTribulle"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.langues"), PackageInternalNs("lapitchnet.langues"), PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            6
+
+     iffalse             L48
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     dup
+     setlocal            4
+
+     iffalse             L44
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L41
+
+L26:
+     label
+     getlocal            6
+     pushstring          "%"
+     getlocal            5
+     pushbyte            1
+     add
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     getlocal2
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), StaticProtectedNs("lapitchnet.langues:MoteurLangueTribulle"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.langues"), PackageInternalNs("lapitchnet.langues"), PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal            6
+
+     inclocal_i          5
+L41:
+     getlocal            5
+     getlocal            4
+     iflt                L26
+
+L44:
+     getlocal            6
+     dup
+     setlocal            9
+
+     returnvalue
+
+L48:
+     jump                L63
+
+L49:
+     getlocal0
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal            10
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+     getlex              QName(PackageInternalNs("lapitchnet.langues"), "E")
+     getproperty         QName(PackageNamespace(""), "message")
+     callpropvoid        QName(PackageNamespace(""), "flashTrace"), 1
+
+     popscope
+L63:
+     getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+     pushstring          "ATTENTION : Texte introuvable -> ["
+     getlocal1
+     add
+     pushstring          "]"
+     add
+     callpropvoid        QName(PackageNamespace(""), "flashTrace"), 1
+
+     getlocal1
+     setlocal3
+
+     pushbyte            0
+     setlocal            7
+
+     jump                L86
+
+L75:
+     label
+     getlocal3
+     pushstring          ", "
+     getlocal2
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#0"), StaticProtectedNs("lapitchnet.langues:MoteurLangueTribulle"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.langues"), PackageInternalNs("lapitchnet.langues"), PrivateNamespace(null, "lapitchnet.langues:MoteurLangueTribulle#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     add
+     add
+     coerce_s
+     setlocal3
+
+     inclocal_i          7
+L86:
+     getlocal            7
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L75
+
+     getlocal3
+     returnvalue
+    end ; code
+    try from L10 to L48 target L49 type QName(PackageNamespace(""), "Error") name QName(PackageInternalNs("lapitchnet.langues"), "E") end
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "parser")
+  method
+   refid "lapitchnet.langues:MoteurLangueTribulle/parser"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            7
+
+     pushnull
+     setlocal            4
+
+     pushnull
+     setlocal            8
+
+     getlocal1
+     setlocal            6
+
+     jump                L55
+
+L15:
+     label
+     getlocal            6
+     pushstring          "#"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            1
+     add
+     convert_i
+     setlocal            5
+
+     getlocal            6
+     pushstring          "}"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_i
+     setlocal            7
+
+     getlocal            6
+     getlocal3
+     getlocal            7
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     coerce_s
+     setlocal            4
+
+     getlocal            6
+     getlocal            5
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     coerce_s
+     setlocal            8
+
+     getlocal2
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
+
+     getlocal            6
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     getlex              QName(PackageNamespace(""), "recupTexte")
+     pushnull
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal            6
+
+L55:
+     getlocal            6
+     pushstring          "${trad#"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     dup
+     convert_i
+     setlocal3
+
+     pushbyte            255
+     ifgt                L15
+
+     getlocal            6
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,68 @@
+class
+ refid "lapitchnet.reseau:Categorie"
+ instance QName(PackageNamespace("lapitchnet.reseau"), "Categorie")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("lapitchnet.reseau:Categorie")
+  iinit
+   refid "lapitchnet.reseau:Categorie/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("lapitchnet.reseau:Categorie"), "envoyerSignalAuContexte")
+   method
+    refid "lapitchnet.reseau:Categorie:envoyerSignalAuContexte"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.reseau"), "Connexion")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "categorieInformationsSignal")
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau:Categorie/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

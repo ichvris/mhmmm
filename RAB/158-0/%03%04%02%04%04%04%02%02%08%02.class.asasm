@@ -1,0 +1,119 @@
+class
+ refid "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02"
+ instance QName(PackageNamespace(""), "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02")
+  iinit
+   refid "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "\x03\x05\x03\x05\x07\x04\x01\x02\x04\x01\x07") flag FINAL dispid 3
+  method
+   refid "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02/\x03\x05\x03\x05\x07\x04\x01\x02\x04\x01\x07"
+   param QName(PackageNamespace(""), "Date")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+     getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x07\x02\x01\x08\x07\x04\x03\x04")
+     getproperty         MultinameL([PrivateNamespace(null, "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02/\x03\x05\x03\x05\x07\x04\x01\x02\x04\x01\x07#0"), PackageNamespace(""), PrivateNamespace(null, "\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02/\x03\x05\x03\x05\x07\x04\x01\x02\x04\x01\x07#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02"), StaticProtectedNs("\x03\x04\x02\x04\x04\x04\x02\x02\x08\x02")])
+     convert_i
+     setlocal2
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "hours")
+     convert_i
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x05\x04\x04\x03\x07\x08\x01\x01\x07\x08\x06")
+     lessthan
+     iffalse             L25
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlocal3
+     add
+     coerce_a
+     jump                L29
+
+L25:
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_a
+L29:
+     getlex              QName(PackageNamespace(""), "\x07\x06\x06\x08\x07\x03\x06\x07\x07\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x06\x05\x04\x03\x06\x08\x04\x04\x07\x04\x03\x07")
+     add
+     getlocal2
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x05\x04\x04\x03\x07\x08\x01\x01\x07\x08\x06")
+     lessthan
+     iffalse             L45
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlocal2
+     add
+     coerce_a
+     jump                L49
+
+L45:
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_a
+L49:
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

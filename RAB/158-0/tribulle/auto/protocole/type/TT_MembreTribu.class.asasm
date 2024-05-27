@@ -1,0 +1,307 @@
+class
+ refid "tribulle.auto.protocole.type:TT_MembreTribu"
+ instance QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_MembreTribu")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "ITypeReseau")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.type:TT_MembreTribu/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional False()
+   body
+    maxstack 2
+    localcount 10
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "avatar")
+
+     getlocal0
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "nom")
+
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "idRang")
+
+     getlocal0
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "dateEntreeTribu")
+
+     getlocal0
+     getlocal            6
+     setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+     getlocal0
+     getlocal            7
+     setproperty         QName(PackageNamespace(""), "typeService")
+
+     getlocal0
+     getlocal            8
+     setproperty         QName(PackageNamespace(""), "localisation")
+
+     getlocal0
+     getlocal            9
+     setproperty         QName(PackageNamespace(""), "online")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "avatar") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nom") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "idRang") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "dateEntreeTribu") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "dateDerniereConnexion") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "typeService") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "localisation") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "online") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "getTaille")
+   method
+    refid "tribulle.auto.protocole.type:TT_MembreTribu/getTaille"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            29
+      getlex              QName(PackageNamespace(""), "nom")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      getlex              QName(PackageNamespace(""), "localisation")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ecriture")
+   method
+    refid "tribulle.auto.protocole.type:TT_MembreTribu/ecriture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "avatar")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "nom")
+      callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "idRang")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "dateEntreeTribu")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "dateDerniereConnexion")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "typeService")
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "online")
+      iffalse             L31
+
+      pushbyte            1
+      jump                L32
+
+L31:
+      pushdouble          0
+L32:
+      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.type:TT_MembreTribu/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "id")
+      swap
+      setproperty         QName(PackageNamespace(""), "id")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "avatar")
+      swap
+      setproperty         QName(PackageNamespace(""), "avatar")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal3
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "nom")
+      swap
+      setproperty         QName(PackageNamespace(""), "nom")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "idRang")
+      swap
+      setproperty         QName(PackageNamespace(""), "idRang")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "dateEntreeTribu")
+      swap
+      setproperty         QName(PackageNamespace(""), "dateEntreeTribu")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "dateDerniereConnexion")
+      swap
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "typeService")
+      swap
+      setproperty         QName(PackageNamespace(""), "typeService")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "localisation")
+      swap
+      setproperty         QName(PackageNamespace(""), "localisation")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      pushbyte            0
+      equals
+      not
+      findproperty        QName(PackageNamespace(""), "online")
+      swap
+      setproperty         QName(PackageNamespace(""), "online")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.type:TT_MembreTribu/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "cree")
+  method
+   refid "tribulle.auto.protocole.type:TT_MembreTribu/cree"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_MembreTribu")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_MembreTribu")
+     setlocal2
+
+     getlocal2
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "lecture"), 1
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

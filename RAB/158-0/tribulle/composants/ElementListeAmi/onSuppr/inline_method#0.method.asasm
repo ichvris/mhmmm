@@ -1,0 +1,24 @@
+method
+ refid "tribulle.composants:ElementListeAmi/onSuppr/inline_method#0"
+ param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 4
+  localcount 2
+  initscopedepth 0
+  maxscopedepth 0
+  code
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "connexionTribulle")
+   findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RetireAmi")
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+   getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+   getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+   constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RetireAmi"), 2
+   callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

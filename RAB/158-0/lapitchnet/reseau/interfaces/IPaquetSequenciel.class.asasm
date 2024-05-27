@@ -1,0 +1,27 @@
+class
+ refid "lapitchnet.reseau.interfaces:IPaquetSequenciel"
+ instance QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+  flag INTERFACE
+  iinit
+   refid "lapitchnet.reseau.interfaces:IPaquetSequenciel/iinit"
+  end ; method
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IPaquetSequenciel"), "getIdSequence")
+   method
+    refid "lapitchnet.reseau.interfaces:IPaquetSequenciel:getIdSequence"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau.interfaces:IPaquetSequenciel/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,495 @@
+class
+ refid "com.bit101.components:VBox"
+ instance QName(PackageNamespace("com.bit101.components"), "VBox")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:VBox")
+  iinit
+   refid "com.bit101.components:VBox/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing") type QName(PackageNamespace(""), "Number") value Integer(5) end
+  trait slot QName(PackageNamespace(""), "bordure") type QName(PackageNamespace(""), "int") value Integer(4) end
+  trait slot QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment") type QName(PackageNamespace(""), "String") value Utf8("none") end
+  trait method QName(PackageNamespace(""), "addChild") flag OVERRIDE
+   method
+    refid "com.bit101.components:VBox/addChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      getlocal1
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addChildAt") flag OVERRIDE
+   method
+    refid "com.bit101.components:VBox/addChildAt"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "addChildAt"), 2
+      getlocal1
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeChild") flag OVERRIDE
+   method
+    refid "com.bit101.components:VBox/removeChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "removeChild"), 1
+      getlocal1
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeChildAt") flag OVERRIDE
+   method
+    refid "com.bit101.components:VBox/removeChildAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace(""), "removeChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:VBox"), "onResize")
+   method
+    refid "com.bit101.components:VBox:onResize"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:VBox"), "doAlignment")
+   method
+    refid "com.bit101.components:VBox:doAlignment"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      pushnull
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      pushstring          "none"
+      ifeq                L50
+
+      pushbyte            0
+      setlocal1
+
+      jump                L47
+
+L12:
+      label
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      pushstring          "left"
+      ifne                L25
+
+      getlocal2
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L46
+
+L25:
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      pushstring          "right"
+      ifne                L35
+
+      getlocal2
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L46
+
+L35:
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      pushstring          "center"
+      ifne                L46
+
+      getlocal2
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+L46:
+      inclocal_i          1
+L47:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "numChildren")
+      iflt                L12
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:VBox/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushnull
+      setlocal3
+
+      pushbyte            0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      pushbyte            0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      pushdouble          0
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L60
+
+L19:
+      label
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "bordure")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getlocal1
+      getlex              QName(PackageNamespace(""), "bordure")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      convert_d
+      setlocal1
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing")
+      add
+      convert_d
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      dup
+      getproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "width")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      inclocal_i          2
+L60:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "numChildren")
+      iflt                L19
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:VBox"), "doAlignment")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:VBox"), "doAlignment"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      dup
+      getproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing")
+      getlex              QName(PackageNamespace(""), "numChildren")
+      decrement
+      multiply
+      add
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "spacing")
+   method
+    refid "com.bit101.components:VBox/spacing/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "spacing")
+   method
+    refid "com.bit101.components:VBox/spacing/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:VBox"), "_spacing")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alignment")
+   method
+    refid "com.bit101.components:VBox/alignment/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "alignment")
+   method
+    refid "com.bit101.components:VBox/alignment/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:VBox"), "_alignment")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:VBox/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "LEFT") type QName(PackageNamespace(""), "String") value Utf8("left") end
+ trait const QName(PackageNamespace(""), "RIGHT") type QName(PackageNamespace(""), "String") value Utf8("right") end
+ trait const QName(PackageNamespace(""), "CENTER") type QName(PackageNamespace(""), "String") value Utf8("center") end
+ trait const QName(PackageNamespace(""), "NONE") type QName(PackageNamespace(""), "String") value Utf8("none") end
+end ; class

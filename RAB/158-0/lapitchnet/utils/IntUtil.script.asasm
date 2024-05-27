@@ -1,0 +1,29 @@
+script ; 281
+ sinit
+  refid "lapitchnet.utils:IntUtil.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.utils:IntUtil"
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+  #include "IntUtil.class.asasm"
+ end ; trait
+end ; script

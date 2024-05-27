@@ -1,0 +1,20 @@
+method
+ refid "tribulle.gestionnaires:GestionnaireTribu/triDesRangs/inline_method"
+ param QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+ param QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+ returns QName(PackageNamespace(""), "Number")
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 0
+  maxscopedepth 0
+  code
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "ordre")
+   getlocal2
+   getproperty         QName(PackageNamespace(""), "ordre")
+   subtract
+   returnvalue
+  end ; code
+ end ; body
+end ; method

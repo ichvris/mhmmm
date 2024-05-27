@@ -1,0 +1,33 @@
+script ; 295
+ sinit
+  refid "tribulle.type:MembreTribu.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_MembreTribu")
+    dup
+    pushscope
+
+    newclass            "tribulle.type:MembreTribu"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.type"), "MembreTribu")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.type"), "MembreTribu")
+  #include "MembreTribu.class.asasm"
+ end ; trait
+end ; script

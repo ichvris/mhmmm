@@ -1,0 +1,29 @@
+script ; 985
+ sinit
+  refid "tribulle.categories:CategorieListeNoire.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.categories:CategorieListeNoire"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+  #include "CategorieListeNoire.class.asasm"
+ end ; trait
+end ; script

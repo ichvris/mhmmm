@@ -1,0 +1,41 @@
+class
+ refid "tribulle.auto.protocole.type:NT_MasqueInfosAmi"
+ instance QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.type:NT_MasqueInfosAmi/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.type:NT_MasqueInfosAmi/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "GARCON") type QName(PackageNamespace(""), "int") value Integer(8) end
+ trait slot QName(PackageNamespace(""), "EPOUX") type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FILLE") type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "AMITIE_BIDIRECTIONNELLE") type QName(PackageNamespace(""), "int") value Integer(1) end
+end ; class

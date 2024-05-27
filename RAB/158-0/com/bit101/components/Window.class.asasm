@@ -1,0 +1,1035 @@
+class
+ refid "com.bit101.components:Window"
+ instance QName(PackageNamespace("com.bit101.components"), "Window")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:Window")
+  iinit
+   refid "com.bit101.components:Window/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("Window")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_title") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar") type QName(PackageNamespace("com.bit101.components"), "Panel") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_panel") type QName(PackageNamespace("com.bit101.components"), "Panel") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_color") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_shadow") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:Window:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:Window:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Panel")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Panel"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "afficherFond")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FOND_TITRE_FENETRE")
+      setproperty         QName(PackageNamespace(""), "couleurFond")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "onMouseGoDown")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      pushbyte            30
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "content")
+      pushbyte            5
+      pushbyte            255
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "TEXTE_TITRE_FENETRE")
+      callpropvoid        QName(PackageNamespace(""), "formatage"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Panel")
+      pushnull
+      pushbyte            0
+      pushbyte            20
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Panel"), 3
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "afficherFond")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "bordureRondeUniquementBas")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized")
+      not
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            246
+      pushbyte            246
+      pushbyte            20
+      dup
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      pushdouble          0.35
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            251
+      pushbyte            253
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            5
+      pushbyte            253
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      pushbyte            4
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            251
+      pushbyte            253
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushbyte            10
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushbyte            10
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushstring          "click"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "onMinimize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "PushButton")
+      pushnull
+      pushbyte            83
+      pushbyte            2
+      pushstring          ""
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "onClose")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "PushButton"), 5
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      pushbyte            8
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      pushstring          "chat_btn_fermer"
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:Window:addChildren#0"), ProtectedNamespace("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:Window:addChildren#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addChild") flag OVERRIDE
+   method
+    refid "com.bit101.components:Window/addChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addRawChild")
+   method
+    refid "com.bit101.components:Window/addRawChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:Window/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_color")
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_color")
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton")
+      iffalse             L20
+
+      pushbyte            20
+      jump                L21
+
+L20:
+      pushdouble          5
+L21:
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            18
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            20
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "onMouseGoDown")
+   method
+    refid "com.bit101.components:Window:onMouseGoDown"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+      iffalse             L13
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L13:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "select"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "onMouseGoUp")
+   method
+    refid "com.bit101.components:Window:onMouseGoUp"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "stopDrag"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "onMinimize")
+   method
+    refid "com.bit101.components:Window:onMinimize"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "minimized")
+      not
+      findproperty        QName(PackageNamespace(""), "minimized")
+      swap
+      setproperty         QName(PackageNamespace(""), "minimized")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Window"), "onClose")
+   method
+    refid "com.bit101.components:Window:onClose"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "close"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "shadow")
+   method
+    refid "com.bit101.components:Window/shadow/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_shadow")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_shadow")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_shadow")
+      iffalse             L17
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            4
+      pushfalse
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 2
+      newarray            1
+      findproperty        QName(PackageNamespace(""), "filters")
+      swap
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      jump                L21
+
+L17:
+      newarray            0
+      findproperty        QName(PackageNamespace(""), "filters")
+      swap
+      setproperty         QName(PackageNamespace(""), "filters")
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "shadow")
+   method
+    refid "com.bit101.components:Window/shadow/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_shadow")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "color")
+   method
+    refid "com.bit101.components:Window/color/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_color")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_color")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "color")
+   method
+    refid "com.bit101.components:Window/color/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_color")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "title")
+   method
+    refid "com.bit101.components:Window/title/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "title")
+   method
+    refid "com.bit101.components:Window/title/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_title")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "content")
+   method
+    refid "com.bit101.components:Window/content/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      getproperty         QName(PackageNamespace(""), "content")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "draggable")
+   method
+    refid "com.bit101.components:Window/draggable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "draggable")
+   method
+    refid "com.bit101.components:Window/draggable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_draggable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "hasMinimizeButton")
+   method
+    refid "com.bit101.components:Window/hasMinimizeButton/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton")
+      iffalse             L12
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      jump                L19
+
+L12:
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L19:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "hasMinimizeButton")
+   method
+    refid "com.bit101.components:Window/hasMinimizeButton/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_hasMinimizeButton")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "minimized")
+   method
+    refid "com.bit101.components:Window/minimized/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized")
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L15
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L15:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushbyte            166
+      setproperty         QName(PackageNamespace(""), "rotation")
+
+      jump                L29
+
+L19:
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iftrue              L26
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+L26:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimizeButton")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "rotation")
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "resize"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minimized")
+   method
+    refid "com.bit101.components:Window/minimized/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_minimized")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "height") flag OVERRIDE
+   method
+    refid "com.bit101.components:Window/height/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_panel")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L9
+
+      findpropstrict      QName(PackageNamespace(""), "height")
+      getsuper            QName(PackageNamespace(""), "height")
+      returnvalue
+
+L9:
+      pushbyte            20
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "hasCloseButton")
+   method
+    refid "com.bit101.components:Window/hasCloseButton/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+      iffalse             L13
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      jump                L22
+
+L13:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L22
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_closeButton")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L22:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "hasCloseButton")
+   method
+    refid "com.bit101.components:Window/hasCloseButton/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "titleBar")
+   method
+    refid "com.bit101.components:Window/titleBar/getter"
+    returns QName(PackageNamespace("com.bit101.components"), "Panel")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "titleBar")
+   method
+    refid "com.bit101.components:Window/titleBar/setter"
+    param QName(PackageNamespace("com.bit101.components"), "Panel")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:Window/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

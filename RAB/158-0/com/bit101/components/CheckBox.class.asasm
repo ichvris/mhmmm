@@ -1,0 +1,426 @@
+class
+ refid "com.bit101.components:CheckBox"
+ instance QName(PackageNamespace("com.bit101.components"), "CheckBox")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:CheckBox")
+  iinit
+   refid "com.bit101.components:CheckBox/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal            5
+     pushnull
+     ifeq                L18
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "click"
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("com.bit101.components:CheckBox"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:CheckBox:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "buttonMode")
+      swap
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "useHandCursor")
+      swap
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:CheckBox"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:CheckBox:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             2306616
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            6
+      dup
+      dup
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:CheckBox"), "filtreCheckBox")
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_back")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             11059144
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            6
+      dup
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      pushbyte            0
+      pushbyte            1
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "click"
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "onClick")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:CheckBox/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      pushbyte            13
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      pushbyte            12
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            12
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      pushbyte            10
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:CheckBox"), "onClick")
+   method
+    refid "com.bit101.components:CheckBox:onClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      not
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:CheckBox/label/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:CheckBox/label/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_labelText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:CheckBox/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_button")
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:CheckBox/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:CheckBox"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "com.bit101.components:CheckBox/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "enabled")
+      swap
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:CheckBox/cinit"
+  body
+   maxstack 12
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    findpropstrict      QName(PackageNamespace("flash.filters"), "BevelFilter")
+    pushbyte            1
+    pushbyte            45
+    pushbyte            0
+    pushbyte            1
+    pushint             6325657
+    pushbyte            1
+    dup
+    dup
+    pushbyte            1
+    pushbyte            3
+    constructprop       QName(PackageNamespace("flash.filters"), "BevelFilter"), 10
+    constructprop       QName(PackageNamespace(""), "Array"), 1
+    findproperty        QName(PrivateNamespace(null, "com.bit101.components:CheckBox"), "filtreCheckBox")
+    swap
+    setproperty         QName(PrivateNamespace(null, "com.bit101.components:CheckBox"), "filtreCheckBox")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "com.bit101.components:CheckBox"), "filtreCheckBox") type QName(PackageNamespace(""), "Array") end
+end ; class

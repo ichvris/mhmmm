@@ -1,0 +1,105 @@
+class
+ refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"
+ instance QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_DonneesUtilisateur")
+  flag INTERFACE
+  iinit
+   refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur/iinit"
+  end ; method
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeResultatDonneesUtilisateur")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeResultatDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeErreurDonneesUtilisateur")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeErreurDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeResultatDefinitDonneesUtilisateur")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeResultatDefinitDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDefinitDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeResultatChangerDeGenre")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeResultatChangerDeGenre"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatChangerDeGenre")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeSignaleChangementDeGenre")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeSignaleChangementDeGenre"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleChangementDeGenre")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeSignaleChangementAvatar")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeSignaleChangementAvatar"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleChangementAvatar")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeDemandeNouveauxMessagesPrivesWeb")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeDemandeNouveauxMessagesPrivesWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_DemandeNouveauxMessagesPrivesWeb")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeDemandeNouveauxMessagesPrivesWebEnMasse")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeDemandeNouveauxMessagesPrivesWebEnMasse"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_DemandeNouveauxMessagesPrivesWebEnMasse")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeSignalNouveauxMessagesPrivesWeb")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeSignalNouveauxMessagesPrivesWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignalNouveauxMessagesPrivesWeb")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeSignalNouveauMessagePriveWeb")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeSignalNouveauMessagePriveWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignalNouveauMessagePriveWeb")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeReponseDemandeInfosJeuUtilisateur")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeReponseDemandeInfosJeuUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ReponseDemandeInfosJeuUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_DonneesUtilisateur"), "executeErreurDemandeInfosJeuUtilisateur")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur:executeErreurDemandeInfosJeuUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDemandeInfosJeuUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.categorie:CT_DonneesUtilisateur/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

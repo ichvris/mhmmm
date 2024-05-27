@@ -1,0 +1,29 @@
+script ; 221
+ sinit
+  refid "tribulle.auto.protocole.type:NT_MasqueInfosAmi.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.type:NT_MasqueInfosAmi"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+  #include "NT_MasqueInfosAmi.class.asasm"
+ end ; trait
+end ; script

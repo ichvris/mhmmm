@@ -1,0 +1,269 @@
+class
+ refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08"
+ instance QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+  extends QName(PackageNamespace("flash.geom"), "Point")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+  iinit
+   refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/iinit"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "\x04\x01\x02\x01\x03\x01\x02\x08\x05\x04\x06")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x04\x01\x02\x01\x03\x01\x02\x08\x05\x04\x06"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "atan2"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "delta")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/delta"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    optional Integer(0)
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "x")
+      getlocal1
+      add
+      initproperty        QName(PackageNamespace(""), "x")
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "y")
+      getlocal2
+      add
+      initproperty        QName(PackageNamespace(""), "y")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x03\x08\x02\x04\x02\x04\x06\x04\x07\x01\x08\x02")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x03\x08\x02\x04\x02\x04\x06\x04\x07\x01\x08\x02"
+    param QName(PackageNamespace("flash.geom"), "Point")
+    returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      initproperty        QName(PackageNamespace(""), "x")
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      initproperty        QName(PackageNamespace(""), "y")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"
+    returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+      getlex              QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "y")
+      constructprop       QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "x")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "x")
+      multiply
+      initproperty        QName(PackageNamespace(""), "x")
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "y")
+      multiply
+      initproperty        QName(PackageNamespace(""), "y")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x03\x05\x08\x01\x02\x04\x01\x08\x05\x07\x05")
+   method
+    refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x03\x05\x08\x01\x02\x04\x01\x08\x05\x07\x05"
+    returns QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01")
+      getlex              QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "y")
+      constructprop       QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "\x05\x01\x07\x06\x02\x07\x05\x04\x08\x01\x02") flag FINAL dispid 3
+  method
+   refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x05\x01\x07\x06\x02\x07\x05\x04\x08\x01\x02"
+   param QName(PackageNamespace(""), "\x08\x07\x08\x02\x01\x04\x08\x05\x06\x01\x06\x08\x03")
+   returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "y")
+     construct           2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x01\x07\x06\x01\x01\x03\x04\x07\x06\x03\x02\x06") flag FINAL dispid 4
+  method
+   refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08/\x01\x07\x06\x01\x01\x03\x04\x07\x06\x03\x02\x06"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "y")
+     construct           2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

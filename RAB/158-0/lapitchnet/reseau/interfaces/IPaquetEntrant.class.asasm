@@ -1,0 +1,40 @@
+class
+ refid "lapitchnet.reseau.interfaces:IPaquetEntrant"
+ instance QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  flag INTERFACE
+  iinit
+   refid "lapitchnet.reseau.interfaces:IPaquetEntrant/iinit"
+  end ; method
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "lecture")
+   method
+    refid "lapitchnet.reseau.interfaces:IPaquetEntrant:lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "typeTaille")
+   method
+    refid "lapitchnet.reseau.interfaces:IPaquetEntrant:typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "getTailleDonnes")
+   method
+    refid "lapitchnet.reseau.interfaces:IPaquetEntrant:getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau.interfaces:IPaquetEntrant/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

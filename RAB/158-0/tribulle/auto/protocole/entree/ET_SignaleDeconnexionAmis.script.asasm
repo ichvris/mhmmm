@@ -1,0 +1,29 @@
+script ; 163
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleDeconnexionAmis.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_SignaleDeconnexionAmis"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDeconnexionAmis")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleDeconnexionAmis")
+  #include "ET_SignaleDeconnexionAmis.class.asasm"
+ end ; trait
+end ; script

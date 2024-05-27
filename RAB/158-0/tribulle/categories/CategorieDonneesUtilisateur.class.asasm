@@ -1,0 +1,356 @@
+class
+ refid "tribulle.categories:CategorieDonneesUtilisateur"
+ instance QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+  extends QName(PackageNamespace("lapitchnet.reseau"), "Categorie")
+  implements QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_DonneesUtilisateur")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.categories:CategorieDonneesUtilisateur")
+  iinit
+   refid "tribulle.categories:CategorieDonneesUtilisateur/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+     callpropvoid        QName(PackageNamespace(""), "getInstance"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "executeResultatDonneesUtilisateur")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeResultatDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurDonneesUtilisateur")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeErreurDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatDefinitDonneesUtilisateur")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeResultatDefinitDonneesUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDefinitDonneesUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatChangerDeGenre")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeResultatChangerDeGenre"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatChangerDeGenre")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatChangerDeGenre")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleChangementDeGenre")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeSignaleChangementDeGenre"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleChangementDeGenre")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleChangementDeGenre")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomJoueur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idGenre")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeReponseDemandeInfosJeuUtilisateur")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeReponseDemandeInfosJeuUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ReponseDemandeInfosJeuUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ReponseDemandeInfosJeuUtilisateur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "avatar")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idGenre")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurDemandeInfosJeuUtilisateur")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeErreurDemandeInfosJeuUtilisateur"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDemandeInfosJeuUtilisateur")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleChangementAvatar")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeSignaleChangementAvatar"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleChangementAvatar")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleChangementAvatar")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomJoueur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "avatar")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignalNouveauxMessagesPrivesWeb")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeSignalNouveauxMessagesPrivesWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignalNouveauxMessagesPrivesWeb")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "trace")
+      getglobalscope
+      pushstring          "executeSignalNouveauxMessagesPrivesWeb"
+      call                1
+      pop
+      getlex              QName(PackageNamespace(""), "SignalNouveauxMessagesPrives")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nombreMessages")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignalNouveauMessagePriveWeb")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeSignalNouveauMessagePriveWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignalNouveauMessagePriveWeb")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "trace")
+      getglobalscope
+      pushstring          "executeSignalNouveauMessagePriveWeb"
+      call                1
+      pop
+      getlex              QName(PackageNamespace(""), "SignalNouveauMessagePrive")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "auteur")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeDemandeNouveauxMessagesPrivesWeb")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeDemandeNouveauxMessagesPrivesWeb"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_DemandeNouveauxMessagesPrivesWeb")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeDemandeNouveauxMessagesPrivesWebEnMasse")
+   method
+    refid "tribulle.categories:CategorieDonneesUtilisateur/executeDemandeNouveauxMessagesPrivesWebEnMasse"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_DemandeNouveauxMessagesPrivesWebEnMasse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.categories:CategorieDonneesUtilisateur/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatChangerDeGenre")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatChangerDeGenre")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleChangementDeGenre")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleChangementDeGenre")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+    findproperty        QName(PackageNamespace(""), "SignaleChangementAvatar")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleChangementAvatar")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+    findproperty        QName(PackageNamespace(""), "ReponseDemandeInfosJeuUtilisateur")
+    swap
+    setproperty         QName(PackageNamespace(""), "ReponseDemandeInfosJeuUtilisateur")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignalNouveauxMessagesPrives")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignalNouveauxMessagesPrives")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignalNouveauMessagePrive")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignalNouveauMessagePrive")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "ResultatChangerDeGenre") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleChangementDeGenre") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleChangementAvatar") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ReponseDemandeInfosJeuUtilisateur") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignalNouveauxMessagesPrives") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignalNouveauMessagePrive") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+end ; class

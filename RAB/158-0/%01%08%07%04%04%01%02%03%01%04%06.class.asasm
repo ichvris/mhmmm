@@ -1,0 +1,42 @@
+class
+ refid "\x01\x08\x07\x04\x04\x01\x02\x03\x01\x04\x06"
+ instance QName(PackageNamespace(""), "\x01\x08\x07\x04\x04\x01\x02\x03\x01\x04\x06")
+  extends QName(PackageNamespace(""), "\x07\x03\x03\x01\x05\x06\x02\x08\x01\x01\x08\x04")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x01\x08\x07\x04\x04\x01\x02\x03\x01\x04\x06")
+  iinit
+   refid "\x01\x08\x07\x04\x04\x01\x02\x03\x01\x04\x06/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x01\x08\x07\x04\x04\x01\x02\x03\x01\x04\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

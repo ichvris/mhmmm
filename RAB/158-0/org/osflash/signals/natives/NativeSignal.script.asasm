@@ -1,0 +1,29 @@
+script ; 788
+ sinit
+  refid "org.osflash.signals.natives:NativeSignal.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "org.osflash.signals.natives:NativeSignal"
+    popscope
+    initproperty        QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+  #include "NativeSignal.class.asasm"
+ end ; trait
+end ; script

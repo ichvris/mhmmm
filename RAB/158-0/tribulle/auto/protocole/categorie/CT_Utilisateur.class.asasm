@@ -1,0 +1,35 @@
+class
+ refid "tribulle.auto.protocole.categorie:CT_Utilisateur"
+ instance QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_Utilisateur")
+  flag INTERFACE
+  iinit
+   refid "tribulle.auto.protocole.categorie:CT_Utilisateur/iinit"
+  end ; method
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_Utilisateur"), "executeResultatMiseAJourLocalisation")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_Utilisateur:executeResultatMiseAJourLocalisation"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMiseAJourLocalisation")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_Utilisateur"), "executeResultatMiseAJourLocalisations")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_Utilisateur:executeResultatMiseAJourLocalisations"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMiseAJourLocalisations")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.categorie:CT_Utilisateur/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

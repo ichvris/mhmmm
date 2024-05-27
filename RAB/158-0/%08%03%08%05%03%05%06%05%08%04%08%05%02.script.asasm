@@ -1,0 +1,29 @@
+script ; 103
+ sinit
+  refid "\x08\x03\x08\x05\x03\x05\x06\x05\x08\x04\x08\x05\x02.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("\x08\x03\x08\x05\x03\x05\x06\x05\x08\x04\x08\x05\x02", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "\x08\x03\x08\x05\x03\x05\x06\x05\x08\x04\x08\x05\x02"
+    popscope
+    initproperty        QName(PackageNamespace(""), "\x08\x03\x08\x05\x03\x05\x06\x05\x08\x04\x08\x05\x02")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "\x08\x03\x08\x05\x03\x05\x06\x05\x08\x04\x08\x05\x02")
+  #include "%08%03%08%05%03%05%06%05%08%04%08%05%02.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,47 @@
+class
+ refid "lapitchnet.moteurjeu:Constantes"
+ instance QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.moteurjeu:Constantes/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 0
+     findproperty        QName(PackageNamespace(""), "donneesChargeSignal")
+     swap
+     setproperty         QName(PackageNamespace(""), "donneesChargeSignal")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "donneesChargeSignal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ end ; instance
+ cinit
+  refid "lapitchnet.moteurjeu:Constantes/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "LOGIN") type QName(PackageNamespace(""), "String") end
+ trait slot QName(PackageNamespace(""), "ID") type QName(PackageNamespace(""), "int") end
+end ; class

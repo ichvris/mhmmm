@@ -1,0 +1,494 @@
+class
+ refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur"
+ instance QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/iinit"
+   param QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#1"), "PrivateClass")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "ResultatChangerDeGenre")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onResultatChangerDeGenre")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "SignaleChangementDeGenre")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignaleChangementDeGenre")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "ReponseDemandeInfosJeuUtilisateur")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onReponseDemandeInfosJeuUtilisateur")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "SignaleChangementAvatar")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignaleChangementAvatar")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "SignalNouveauxMessagesPrives")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignalNouveauxMessagesPrives")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "SignalNouveauMessagePrive")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignalNouveauMessagePrive")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant") type QName(PackageNamespace("tribulle.composants"), "ComposantChoixGenre") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre") type QName(PackageNamespace(""), "int") end
+  trait getter QName(PackageNamespace(""), "id")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/id/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "avatar")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/avatar/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "idGenre")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/idGenre/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "composant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/composant/getter"
+    returns QName(PackageNamespace("tribulle.composants"), "ComposantChoixGenre")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "composant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/composant/setter"
+    param QName(PackageNamespace("tribulle.composants"), "ComposantChoixGenre")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+      callpropvoid        QName(PackageNamespace(""), "x_setGenre"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "changerDeGenre")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/changerDeGenre"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ChangerDeGenre")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlocal1
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ChangerDeGenre"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onResultatChangerDeGenre")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onResultatChangerDeGenre"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L14
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace(""), "composant")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatRepondDemandeEnMariage.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignaleChangementDeGenre")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onSignaleChangementDeGenre"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L16
+
+      getlocal2
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      pushnull
+      ifeq                L16
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "x_setGenre"), 1
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignaleChangementAvatar")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onSignaleChangementAvatar"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L10
+
+      getlocal2
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar")
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignalNouveauxMessagesPrives")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onSignalNouveauxMessagesPrives"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<ROSE><a href='event:MP'>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "texte.messagerie.nouveauxMessages"
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          "</a>"
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onSignalNouveauMessagePrive")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onSignalNouveauMessagePrive"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<ROSE><a href='event:MP'>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "texte.messagerie.nouveauMessage"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          "</a>"
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "onReponseDemandeInfosJeuUtilisateur")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/onReponseDemandeInfosJeuUtilisateur"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_id")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_id")
+
+      getlocal2
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_avatar")
+
+      getlocal3
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_idGenre")
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "ID")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      pushnull
+      ifeq                L23
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_composant")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "x_setGenre"), 1
+
+L23:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      callpropvoid        QName(PackageNamespace(""), "x_rechargerCanauxPrives"), 0
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_invite")
+      iftrue              L31
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "recoitToken")
+      callpropvoid        QName(PackageNamespace(""), "x_fonctionDemandeToken"), 1
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "recoitToken")
+   method
+    refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/recoitToken"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x_token")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_singleton") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/getInstance"
+   returns QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_singleton")
+     pushnull
+     ifne                L12
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#1"), "PrivateClass")
+     constructprop       QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#1"), "PrivateClass"), 0
+     construct           1
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_singleton")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_singleton")
+
+L12:
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#0"), "_singleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

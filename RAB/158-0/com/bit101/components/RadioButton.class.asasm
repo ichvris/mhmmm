@@ -1,0 +1,564 @@
+class
+ refid "com.bit101.components:RadioButton"
+ instance QName(PackageNamespace("com.bit101.components"), "RadioButton")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:RadioButton")
+  iinit
+   refid "com.bit101.components:RadioButton/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional False()
+   optional Null()
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "RadioButton")
+     getlocal0
+     callpropvoid        QName(StaticProtectedNs("com.bit101.components:RadioButton"), "addButton"), 1
+
+     getlocal            5
+     findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal            6
+     pushnull
+     ifeq                L25
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "click"
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L25:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_groupName") type QName(PackageNamespace(""), "String") value Utf8("defaultRadioGroup") end
+  trait method QName(ProtectedNamespace("com.bit101.components:RadioButton"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:RadioButton:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "buttonMode")
+      swap
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "useHandCursor")
+      swap
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "click"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "onClick")
+      pushfalse
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+      findproperty        QName(PackageNamespace(""), "selected")
+      swap
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RadioButton"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:RadioButton:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            2
+      pushtrue
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 2
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            1
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 1
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:RadioButton/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BACKGROUND")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            5
+      dup
+      dup
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            5
+      dup
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      pushbyte            12
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            12
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      pushbyte            10
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RadioButton"), "onClick")
+   method
+    refid "com.bit101.components:RadioButton:onClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "selected")
+      swap
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:RadioButton/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_button")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+      iffalse             L14
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "RadioButton")
+      getlocal0
+      callpropvoid        QName(StaticProtectedNs("com.bit101.components:RadioButton"), "clear"), 1
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:RadioButton/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:RadioButton/label/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:RadioButton/label/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_labelText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "groupName")
+   method
+    refid "com.bit101.components:RadioButton/groupName/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_groupName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "groupName")
+   method
+    refid "com.bit101.components:RadioButton/groupName/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_groupName")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RadioButton"), "_groupName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:RadioButton/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons") type QName(PackageNamespace(""), "Array") end
+ trait method QName(StaticProtectedNs("com.bit101.components:RadioButton"), "addButton")
+  method
+   refid "com.bit101.components:RadioButton:addButton"
+   param QName(PackageNamespace("com.bit101.components"), "RadioButton")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     pushnull
+     ifne                L9
+
+     newarray            0
+     findproperty        QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     swap
+     setproperty         QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+
+L9:
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     getlocal1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(StaticProtectedNs("com.bit101.components:RadioButton"), "clear")
+  method
+   refid "com.bit101.components:RadioButton:clear"
+   param QName(PackageNamespace("com.bit101.components"), "RadioButton")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal2
+
+     pushbyte            0
+     convert_u
+     setlocal2
+
+     jump                L36
+
+L8:
+     label
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:RadioButton:clear#0"), StaticProtectedNs("com.bit101.components:RadioButton"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RadioButton:clear#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.bit101.components:RadioButton")])
+     getlocal1
+     equals
+     not
+     dup
+     iffalse             L25
+
+     pop
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:RadioButton:clear#0"), StaticProtectedNs("com.bit101.components:RadioButton"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RadioButton:clear#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.bit101.components:RadioButton")])
+     getproperty         Multiname("groupName", [PrivateNamespace(null, "com.bit101.components:RadioButton:clear#0"), StaticProtectedNs("com.bit101.components:RadioButton"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RadioButton:clear#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.bit101.components:RadioButton")])
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "groupName")
+     equals
+L25:
+     iffalse             L31
+
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:RadioButton:clear#0"), StaticProtectedNs("com.bit101.components:RadioButton"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RadioButton:clear#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.bit101.components:RadioButton")])
+     pushfalse
+     setproperty         Multiname("selected", [PrivateNamespace(null, "com.bit101.components:RadioButton:clear#0"), StaticProtectedNs("com.bit101.components:RadioButton"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RadioButton:clear#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.bit101.components:RadioButton")])
+
+L31:
+     getlocal2
+     convert_d
+     increment
+     convert_u
+     setlocal2
+
+L36:
+     getlocal2
+     getlex              QName(StaticProtectedNs("com.bit101.components:RadioButton"), "buttons")
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L8
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

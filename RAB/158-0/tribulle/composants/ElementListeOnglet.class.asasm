@@ -1,0 +1,385 @@
+class
+ refid "tribulle.composants:ElementListeOnglet"
+ instance QName(PackageNamespace("tribulle.composants"), "ElementListeOnglet")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ElementListeOnglet")
+  iinit
+   refid "tribulle.composants:ElementListeOnglet/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeOnglet"), "init") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeOnglet:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:ListItem"), "init"), 0
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "useHandCursor")
+      swap
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeOnglet"), "addChildren") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeOnglet:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:ListItem"), "addChildren"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushbyte            75
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault")
+      pushnull
+      ifne                L20
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      pushstring          "chat_onglet"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), ProtectedNamespace("tribulle.composants:ElementListeOnglet"), StaticProtectedNs("tribulle.composants:ElementListeOnglet"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeOnglet:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault")
+
+L20:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected")
+      pushnull
+      ifne                L30
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      pushstring          "chat_onglet_actif"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), ProtectedNamespace("tribulle.composants:ElementListeOnglet"), StaticProtectedNs("tribulle.composants:ElementListeOnglet"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeOnglet:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected")
+
+L30:
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault")
+      constructprop       QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected")
+      constructprop       QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeOnglet/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "draw"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_selected")
+      iffalse             L20
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L43
+
+L20:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_mouseOver")
+      iffalse             L33
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurLumiere")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      jump                L43
+
+L33:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_selectedClip")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L43:
+      getlex              QName(PackageNamespace(""), "data")
+      iffalse             L101
+
+      getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      getproperty         QName(PackageNamespace(""), "nouveauMessagePrive")
+      iffalse             L56
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getproperty         QName(PackageNamespace(""), "textField")
+      pushint             14452223
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      jump                L72
+
+L56:
+      getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      getproperty         QName(PackageNamespace(""), "nouveauMessage")
+      iffalse             L67
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getproperty         QName(PackageNamespace(""), "textField")
+      pushint             14269952
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      jump                L72
+
+L67:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "COULEUR_TEXTE_DEFAUT")
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+L72:
+      getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      getproperty         QName(PackageNamespace(""), "nouveauMessagePrive")
+      iffalse             L91
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      getproperty         QName(PackageNamespace(""), "label")
+      pushstring          " ♥"
+      add
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 2
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L101
+
+L91:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      getproperty         QName(PackageNamespace(""), "label")
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 2
+      setproperty         QName(PackageNamespace(""), "text")
+
+L101:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeOnglet/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "selected")
+      swap
+      setsuper            QName(PackageNamespace(""), "selected")
+
+      getlocal1
+      iftrue              L12
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "_defaultClip")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ElementListeOnglet/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushdouble          1.3
+    pushdouble          1.3
+    pushdouble          1.3
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurLumiere")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurLumiere")
+
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 0
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classDefault") type QName(PackageNamespace(""), "Class") end
+ trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "classSelected") type QName(PackageNamespace(""), "Class") end
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurLumiere") type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeOnglet"), "couleurNormal") type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+end ; class

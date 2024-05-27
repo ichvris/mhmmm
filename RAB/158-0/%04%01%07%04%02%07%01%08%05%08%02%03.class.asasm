@@ -1,0 +1,80 @@
+class
+ refid "\x04\x01\x07\x04\x02\x07\x01\x08\x05\x08\x02\x03"
+ instance QName(PackageNamespace(""), "\x04\x01\x07\x04\x02\x07\x01\x08\x05\x08\x02\x03")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x04\x01\x07\x04\x02\x07\x01\x08\x05\x08\x02\x03")
+  iinit
+   refid "\x04\x01\x07\x04\x02\x07\x01\x08\x05\x08\x02\x03/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x04\x01\x07\x04\x02\x07\x01\x08\x05\x08\x02\x03/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "\x07\x07\x07\x01\x03\x02\x05\x06\x08\x02\x04\x06")
+    getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+    pushstring          "A-Za-z0-9_+*"
+    callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+    initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x01\x03\x02\x05\x06\x08\x02\x04\x06")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x03\x04\x05\x08\x06\x02\x03\x07\x04\x02")
+    pushstring          "A-Za-z0-9_+"
+    initproperty        QName(PackageNamespace(""), "\x03\x03\x04\x05\x08\x06\x02\x03\x07\x04\x02")
+
+    findproperty        QName(PackageNamespace(""), "\x07\x07\x08\x07\x08\x05\x08\x02\x07\x07\x02\x05")
+    pushshort           3374
+    pushshort           -3371
+    add
+    initproperty        QName(PackageNamespace(""), "\x07\x07\x08\x07\x08\x05\x08\x02\x07\x07\x02\x05")
+
+    findproperty        QName(PackageNamespace(""), "\x01\x04\x08\x06\x02\x02\x02\x02\x07\x06\x06\x01\x02")
+    pushshort           9520
+    pushshort           -9500
+    add
+    initproperty        QName(PackageNamespace(""), "\x01\x04\x08\x06\x02\x02\x02\x02\x07\x06\x06\x01\x02")
+
+    findproperty        QName(PackageNamespace(""), "\x05\x04\x03\x06\x03\x01\x01\x04\x01\x03\x07")
+    pushshort           7897
+    pushshort           -7885
+    add
+    initproperty        QName(PackageNamespace(""), "\x05\x04\x03\x06\x03\x01\x01\x04\x01\x03\x07")
+
+    findproperty        QName(PackageNamespace(""), "\x01\x02\x01\x05\x01\x04\x04\x07\x08\x06\x04\x02")
+    pushstring          "A-Za-z0-9_"
+    initproperty        QName(PackageNamespace(""), "\x01\x02\x01\x05\x01\x04\x04\x07\x08\x06\x04\x02")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "\x07\x07\x07\x01\x03\x02\x05\x06\x08\x02\x04\x06") slotid 1 type QName(PackageNamespace(""), "String") end
+ trait const QName(PackageNamespace(""), "\x03\x03\x04\x05\x08\x06\x02\x03\x07\x04\x02") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("A-Za-z0-9_+") end
+ trait const QName(PackageNamespace(""), "\x07\x07\x08\x07\x08\x05\x08\x02\x07\x07\x02\x05") slotid 3 type QName(PackageNamespace(""), "int") value Double(3) end
+ trait const QName(PackageNamespace(""), "\x01\x04\x08\x06\x02\x02\x02\x02\x07\x06\x06\x01\x02") slotid 4 type QName(PackageNamespace(""), "int") value Double(20) end
+ trait const QName(PackageNamespace(""), "\x05\x04\x03\x06\x03\x01\x01\x04\x01\x03\x07") slotid 5 type QName(PackageNamespace(""), "int") value Double(12) end
+ trait const QName(PackageNamespace(""), "\x01\x02\x01\x05\x01\x04\x04\x07\x08\x06\x04\x02") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("A-Za-z0-9_") end
+end ; class

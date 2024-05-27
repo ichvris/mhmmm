@@ -1,0 +1,29 @@
+script ; 507
+ sinit
+  refid "lapitchnet.pools:ByteArrayPool.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.pools:ByteArrayPool"
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.pools"), "ByteArrayPool")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.pools"), "ByteArrayPool")
+  #include "ByteArrayPool.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,82 @@
+class
+ refid "lapitchnet.moteurjeu:Global"
+ instance QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.moteurjeu:Global/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.moteurjeu:Global/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "connexionTribulle") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+ trait slot QName(PackageNamespace(""), "stageWidth") type QName(PackageNamespace(""), "int") end
+ trait slot QName(PackageNamespace(""), "stageHeight") type QName(PackageNamespace(""), "int") end
+ trait slot QName(PackageNamespace(""), "langue") type QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle") end
+ trait getter QName(PackageNamespace(""), "idSequenceConnexion")
+  method
+   refid "lapitchnet.moteurjeu:Global/idSequenceConnexion/getter"
+   returns QName(PackageNamespace(""), "int")
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            255
+     setlocal1
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     pushnull
+     ifeq                L18
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     dup
+     getproperty         QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "idSequence")
+     increment
+     dup
+     setlocal2
+
+     setproperty         QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "idSequence")
+
+     getlocal2
+     setlocal1
+
+L18:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

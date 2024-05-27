@@ -1,0 +1,40 @@
+class
+ refid "tribulle.enums:EnumTypeMessagePrive"
+ instance QName(PackageNamespace("tribulle.enums"), "EnumTypeMessagePrive")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.enums:EnumTypeMessagePrive/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.enums:EnumTypeMessagePrive/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "MESSAGE_RECU") type QName(PackageNamespace(""), "int") value Integer(100) end
+ trait const QName(PackageNamespace(""), "MESSAGE_ENVOYE") type QName(PackageNamespace(""), "int") value Integer(101) end
+ trait const QName(PackageNamespace(""), "MESSAGE_SYSTEM") type QName(PackageNamespace(""), "int") value Integer(102) end
+end ; class

@@ -1,0 +1,22 @@
+method
+ refid "tribulle.composants:ElementListeAmi/onSuppr/inline_method#1"
+ param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 3
+  localcount 2
+  initscopedepth 0
+  maxscopedepth 0
+  code
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "connexionTribulle")
+   findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeDivorce")
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+   constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeDivorce"), 1
+   callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

@@ -1,0 +1,39 @@
+class
+ refid "tribulle.enums:ChatClientMessageCSS"
+ instance QName(PackageNamespace("tribulle.enums"), "ChatClientMessageCSS")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.enums:ChatClientMessageCSS/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.enums:ChatClientMessageCSS/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "MESSAGE_INFO") type QName(PackageNamespace(""), "String") value Utf8("info") end
+ trait const QName(PackageNamespace(""), "MESSAGE_ALERT") type QName(PackageNamespace(""), "String") value Utf8("alert") end
+end ; class

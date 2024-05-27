@@ -1,0 +1,29 @@
+script ; 374
+ sinit
+  refid "org.osflash.signals:SlotList.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "org.osflash.signals:SlotList"
+    popscope
+    initproperty        QName(PackageNamespace("org.osflash.signals"), "SlotList")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals"), "SlotList")
+  #include "SlotList.class.asasm"
+ end ; trait
+end ; script

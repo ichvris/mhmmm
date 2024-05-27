@@ -1,0 +1,29 @@
+script ; 34
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_ResultatMessagePrive.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_ResultatMessagePrive"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMessagePrive")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMessagePrive")
+  #include "ET_ResultatMessagePrive.class.asasm"
+ end ; trait
+end ; script

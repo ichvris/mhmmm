@@ -1,0 +1,23 @@
+method
+ refid "tribulle.composants:MenuContextuelJoueur/onIgnorer/inline_method"
+ param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 4
+  localcount 2
+  initscopedepth 0
+  maxscopedepth 0
+  code
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "connexionTribulle")
+   findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutListeNoire")
+   getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+   getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+   getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+   constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutListeNoire"), 2
+   callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

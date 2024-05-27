@@ -1,0 +1,29 @@
+script ; 965
+ sinit
+  refid "tribulle.enums:ChatEventEnum.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.enums:ChatEventEnum"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.enums"), "ChatEventEnum")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.enums"), "ChatEventEnum")
+  #include "ChatEventEnum.class.asasm"
+ end ; trait
+end ; script

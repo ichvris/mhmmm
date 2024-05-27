@@ -1,0 +1,208 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleConnexionAmis")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "amis") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>) end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L19
+
+L9:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace(""), "amis")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleConnexionAmis"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleConnexionAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getTaille"), 0
+      add
+      convert_i
+      setlocal1
+
+      inclocal_i          2
+L19:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "amis")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      pushbyte            2
+      getlocal1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      applytype           1
+      getlocal2
+      construct           1
+      findproperty        QName(PackageNamespace(""), "amis")
+      swap
+      setproperty         QName(PackageNamespace(""), "amis")
+
+      pushbyte            0
+      setlocal3
+
+      jump                L27
+
+L19:
+      label
+      getlex              QName(PackageNamespace(""), "amis")
+      getlocal3
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cree"), 1
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleConnexionAmis"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleConnexionAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      inclocal_i          3
+L27:
+      getlocal3
+      getlocal2
+      iflt                L19
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleConnexionAmis/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

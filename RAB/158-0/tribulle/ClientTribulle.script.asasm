@@ -1,0 +1,29 @@
+script ; 595
+ sinit
+  refid "tribulle:ClientTribulle.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle:ClientTribulle"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle"), "ClientTribulle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle"), "ClientTribulle")
+  #include "ClientTribulle.class.asasm"
+ end ; trait
+end ; script

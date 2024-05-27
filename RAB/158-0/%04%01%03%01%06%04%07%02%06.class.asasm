@@ -1,0 +1,84 @@
+class
+ refid "\x04\x01\x03\x01\x06\x04\x07\x02\x06"
+ instance QName(PackageNamespace(""), "\x04\x01\x03\x01\x06\x04\x07\x02\x06")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x04\x01\x03\x01\x06\x04\x07\x02\x06")
+  iinit
+   refid "\x04\x01\x03\x01\x06\x04\x07\x02\x06/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "\x05\x08\x01\x07\x04\x04\x05\x02\x07\x07\x06\x07\x01")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "\x02\x03\x08\x08\x02\x08\x08\x02\x02\x07")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PackageNamespace(""), "\x08\x02\x08\x04\x06\x07\x05\x08\x01\x01\x06\x02")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x02\x05\x04\x07\x07\x08\x08\x01\x03\x04\x06")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+     getproperty         QName(PackageNamespace(""), "\x05\x07\x05\x05\x07\x04\x08\x05\x06\x03\x02")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal1
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x01\x06\x08\x05\x05\x06\x07\x07\x06\x07\x05\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     callproperty        QName(PackageNamespace(""), "\x02\x02\x04\x05\x05\x07\x04\x05\x08\x03\x02\x03"), 1
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x05\x08\x01\x07\x04\x04\x05\x02\x07\x07\x06\x07\x01") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x02\x03\x08\x08\x02\x08\x08\x02\x02\x07") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x01\x03\x03\x02\x08\x02\x03\x08\x01\x05\x08") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x06\x03\x04\x04\x06\x01\x01\x07\x04\x06\x01\x02") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x04\x07\x02\x01\x01\x01\x03\x04\x08\x05\x03\x08") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x04\x06\x07\x08\x07\x04\x03\x08\x07\x06") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x02\x02\x02\x01\x05\x04\x05\x08\x07\x01\x06") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x01\x01\x05\x05\x04\x01\x06\x06\x07\x01") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x05\x01\x08\x07\x01\x08\x06\x07\x04\x04\x08\x07\x05") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "\x04\x01\x03\x01\x06\x04\x07\x02\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

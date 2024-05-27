@@ -1,0 +1,155 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRetraitListeNoire")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "login") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "login")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "login")
+      swap
+      setproperty         QName(PackageNamespace(""), "login")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleRetraitListeNoire/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

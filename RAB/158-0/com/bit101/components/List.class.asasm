@@ -1,0 +1,1812 @@
+class
+ refid "com.bit101.components:List"
+ instance QName(PackageNamespace("com.bit101.components"), "List")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:List")
+  iinit
+   refid "com.bit101.components:List/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional True()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "LIST_DEFAULT")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "LIST_ALTERNATE")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "LIST_SELECTED")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "LIST_ROLLOVER")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+
+     getlocal            4
+     pushnull
+     ifeq                L34
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+
+     jump                L38
+
+L34:
+     newarray            0
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+
+L38:
+     getlocal            5
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_items") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_panel") type QName(PackageNamespace("com.bit101.components"), "Panel") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight") type QName(PackageNamespace(""), "Number") value Integer(20) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_listItemMargin") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar") type QName(PackageNamespace("com.bit101.components"), "VScrollBar") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_alternateRows") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:List"), "_scroll") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:List:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "mouseWheel"
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "onMouseWheel")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:List:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "addChildren"), 0
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Panel")
+      getlocal0
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Panel"), 3
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      setproperty         QName(PackageNamespace(""), "color")
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      getproperty         QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iffalse             L41
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "VScrollBar")
+      getlocal0
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "onScroll")
+      pushfalse
+      constructprop       QName(PackageNamespace("com.bit101.components"), "VScrollBar"), 5
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      pushbyte            0
+      dup
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSliderParams"), 3
+
+L41:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+   method
+    refid "com.bit101.components:List:makeListItems"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L23
+
+L7:
+      label
+      getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      call                1
+      coerce              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      setlocal1
+
+      getlocal1
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "onSelect")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L23:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifgt                L7
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      divide
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      convert_i
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal3
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_i
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal3
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      convert_i
+      setlocal3
+
+      pushbyte            0
+      setlocal2
+
+      jump                L80
+
+L50:
+      label
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemMargin")
+      getlocal2
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemMargin")
+      add
+      multiply
+      constructprop       QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass"), 3
+      coerce              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      setproperty         QName(PackageNamespace(""), "defaultColor")
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+      setproperty         QName(PackageNamespace(""), "selectedColor")
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+      setproperty         QName(PackageNamespace(""), "rolloverColor")
+
+      getlocal1
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "onSelect")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      inclocal_i          2
+L80:
+      getlocal2
+      getlocal3
+      iflt                L50
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+   method
+    refid "com.bit101.components:List:fillItems"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iffalse             L11
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      jump                L12
+
+L11:
+      pushdouble          0
+L12:
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      divide
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      convert_i
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_i
+      setlocal            4
+
+      pushbyte            0
+      setlocal3
+
+      jump                L92
+
+L31:
+      label
+      getlocal3
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      ifge                L95
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      astypelate
+      coerce              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      setlocal1
+
+      getlocal2
+      getlocal3
+      add
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      ifnlt               L57
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal2
+      getlocal3
+      add
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:List#0"), ProtectedNamespace("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:List#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         QName(PackageNamespace(""), "data")
+
+      jump                L60
+
+L57:
+      getlocal1
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "data")
+
+L60:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_alternateRows")
+      iffalse             L76
+
+      getlocal1
+      getlocal2
+      getlocal3
+      add
+      pushbyte            2
+      modulo
+      pushbyte            0
+      ifne                L72
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      jump                L74
+
+L72:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+      convert_u
+L74:
+      setproperty         QName(PackageNamespace(""), "defaultColor")
+
+      jump                L79
+
+L76:
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      setproperty         QName(PackageNamespace(""), "defaultColor")
+
+L79:
+      getlocal2
+      getlocal3
+      add
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      ifne                L88
+
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      jump                L91
+
+L88:
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L91:
+      inclocal_i          3
+L92:
+      getlocal3
+      getlocal            4
+      iflt                L31
+
+L95:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "scrollToSelection")
+   method
+    refid "com.bit101.components:List:scrollToSelection"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      divide
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      convert_i
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      pushbyte            255
+      ifeq                L32
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      ifgt                L32
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal1
+      add
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      ifnlt               L32
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      getlocal1
+      subtract
+      pushbyte            1
+      add
+      setproperty         QName(PackageNamespace(""), "value")
+
+L32:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:List/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal1
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_panel")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iffalse             L72
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      multiply
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlocal2
+      divide
+      callpropvoid        QName(PackageNamespace(""), "setThumbPercent"), 1
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      convert_d
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal1
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      setproperty         QName(PackageNamespace(""), "maximum")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "pageSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "scrollToSelection")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "scrollToSelection"), 0
+
+      jump                L74
+
+L72:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+L74:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItem")
+   method
+    refid "com.bit101.components:List/addItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItemAt")
+   method
+    refid "com.bit101.components:List/addItemAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_i
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal2
+      pushbyte            0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 3
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItems")
+   method
+    refid "com.bit101.components:List/addItems"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Object")>)
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal1
+      setlocal            4
+
+      jump                L15
+
+L7:
+      label
+      getlocal            4
+      getlocal            5
+      nextvalue
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L15:
+      hasnext2            4, 5
+      iftrue              L7
+
+      getlocal2
+      pushnull
+      ifeq                L23
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+L23:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setItems")
+   method
+    refid "com.bit101.components:List/setItems"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+
+      getlocal2
+      pushnull
+      ifeq                L12
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+L12:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItem")
+   method
+    refid "com.bit101.components:List/removeItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "removeItemAt")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "removeItemAt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNextItem")
+   method
+    refid "com.bit101.components:List/getNextItem"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      getlocal1
+      add
+      convert_i
+      setlocal2
+
+      getlocal2
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      ifnge               L14
+
+      pushbyte            0
+      setlocal2
+
+      jump                L22
+
+L14:
+      getlocal2
+      pushbyte            0
+      ifnlt               L22
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal2
+
+L22:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:List#0"), ProtectedNamespace("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:List#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItemAt")
+   method
+    refid "com.bit101.components:List/removeItemAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      lessthan
+      dup
+      iftrue              L12
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      greaterequals
+L12:
+      iffalse             L14
+
+      returnvoid
+
+L14:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal1
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAll")
+   method
+    refid "com.bit101.components:List/removeAll"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sort")
+   method
+    refid "com.bit101.components:List/sort"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "onSelect")
+   method
+    refid "com.bit101.components:List:onSelect"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      istypelate
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iffalse             L15
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      jump                L16
+
+L15:
+      pushdouble          0
+L16:
+      convert_i
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      jump                L43
+
+L21:
+      label
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      ifne                L34
+
+      getlocal3
+      getlocal2
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+
+L34:
+      getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      call                1
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      inclocal_i          3
+L43:
+      getlocal3
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_itemHolder")
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      iflt                L21
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+      getglobalscope
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      call                1
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "select"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "onScroll")
+   method
+    refid "com.bit101.components:List:onScroll"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "onMouseWheel")
+   method
+    refid "com.bit101.components:List:onMouseWheel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "delta")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      swap
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:List"), "onResize")
+   method
+    refid "com.bit101.components:List:onResize"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedIndex")
+   method
+    refid "com.bit101.components:List/selectedIndex/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L12
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L12:
+      iffalse             L18
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+
+      jump                L22
+
+L18:
+      pushbyte            255
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+
+L22:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "select"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedIndex")
+   method
+    refid "com.bit101.components:List/selectedIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedItem")
+   method
+    refid "com.bit101.components:List/selectedItem/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      findproperty        QName(PackageNamespace(""), "selectedIndex")
+      swap
+      setproperty         QName(PackageNamespace(""), "selectedIndex")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "select"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedItem")
+   method
+    refid "com.bit101.components:List/selectedItem/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L12
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L12:
+      iffalse             L17
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:List#0"), ProtectedNamespace("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:List#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvalue
+
+L17:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "defaultColor")
+   method
+    refid "com.bit101.components:List/defaultColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "defaultColor")
+   method
+    refid "com.bit101.components:List/defaultColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_defaultColor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedColor")
+   method
+    refid "com.bit101.components:List/selectedColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedColor")
+   method
+    refid "com.bit101.components:List/selectedColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_selectedColor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "rolloverColor")
+   method
+    refid "com.bit101.components:List/rolloverColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rolloverColor")
+   method
+    refid "com.bit101.components:List/rolloverColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_rolloverColor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "listItemHeight")
+   method
+    refid "com.bit101.components:List/listItemHeight/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listItemHeight")
+   method
+    refid "com.bit101.components:List/listItemHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "items")
+   method
+    refid "com.bit101.components:List/items/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "items")
+   method
+    refid "com.bit101.components:List/items/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "listItemClass")
+   method
+    refid "com.bit101.components:List/listItemClass/setter"
+    param QName(PackageNamespace(""), "Class")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listItemClass")
+   method
+    refid "com.bit101.components:List/listItemClass/getter"
+    returns QName(PackageNamespace(""), "Class")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alternateColor")
+   method
+    refid "com.bit101.components:List/alternateColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "alternateColor")
+   method
+    refid "com.bit101.components:List/alternateColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_alternateColor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alternateRows")
+   method
+    refid "com.bit101.components:List/alternateRows/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_alternateRows")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_alternateRows")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "alternateRows")
+   method
+    refid "com.bit101.components:List/alternateRows/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_alternateRows")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:List/autoHideScrollBar/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "autoHide")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:List/autoHideScrollBar/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scroll")
+      iftrue              L6
+
+      pushfalse
+      returnvalue
+
+L6:
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "autoHide")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:List/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

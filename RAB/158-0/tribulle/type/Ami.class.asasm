@@ -1,0 +1,406 @@
+class
+ refid "tribulle.type:Ami"
+ instance QName(PackageNamespace("tribulle.type"), "Ami")
+  extends QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Ami")
+  flag SEALED
+  iinit
+   refid "tribulle.type:Ami/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional False()
+   body
+    maxstack 9
+    localcount 9
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            8
+     constructsuper      8
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "majLocalisation")
+   method
+    refid "tribulle.type:Ami/majLocalisation"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    optional Utf8("")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      ifne                L10
+
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "localisation")
+
+      jump                L22
+
+L10:
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L22
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "typeService")
+
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "localisation")
+
+L22:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifeq                L32
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "online")
+
+      jump                L35
+
+L32:
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "online")
+
+L35:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "deconnecte")
+   method
+    refid "tribulle.type:Ami/deconnecte"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      setproperty         QName(PackageNamespace(""), "typeService")
+
+      getlocal0
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "localisation")
+
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "online")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "bidirectionnel")
+   method
+    refid "tribulle.type:Ami/bidirectionnel/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "AMITIE_BIDIRECTIONNELLE")
+      bitand
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "AMITIE_BIDIRECTIONNELLE")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "epoux")
+   method
+    refid "tribulle.type:Ami/epoux/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "EPOUX")
+      bitand
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "EPOUX")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "fille")
+   method
+    refid "tribulle.type:Ami/fille/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "FILLE")
+      bitand
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "FILLE")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "garcon")
+   method
+    refid "tribulle.type:Ami/garcon/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "GARCON")
+      bitand
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "GARCON")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retireBidirectionnalite")
+   method
+    refid "tribulle.type:Ami/retireBidirectionnalite"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "AMITIE_BIDIRECTIONNELLE")
+      bitnot
+      bitand
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal0
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "localisation")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setGenre")
+   method
+    refid "tribulle.type:Ami/setGenre"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_FILLE")
+      ifne                L22
+
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "FILLE")
+      bitor
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "GARCON")
+      bitnot
+      bitand
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      jump                L53
+
+L22:
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_GARCON")
+      ifne                L42
+
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "GARCON")
+      bitor
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "FILLE")
+      bitnot
+      bitand
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      jump                L53
+
+L42:
+      findpropstrict      QName(PackageNamespace(""), "masqueInfos")
+      dup
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "GARCON")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "FILLE")
+      bitor
+      bitnot
+      bitand
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.type:Ami/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "cree")
+  method
+   refid "tribulle.type:Ami/cree"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace("tribulle.type"), "Ami")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+     setlocal2
+
+     getlocal2
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "lecture"), 1
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,880 @@
+class
+ refid "tribulle.composants:ElementListeAmi"
+ instance QName(PackageNamespace("tribulle.composants"), "ElementListeAmi")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ElementListeAmi")
+  iinit
+   refid "tribulle.composants:ElementListeAmi/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation") type QName(PackageNamespace("com.bit101.components"), "Component") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur") type QName(PackageNamespace("com.bit101.components"), "HBox") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeAmi"), "addChildren") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeAmi:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "HBox")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "HBox"), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      pushbyte            0
+      dup
+      getlocal2
+      pushstring          "btn_fermer_normal"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlocal2
+      pushstring          "btn_fermer_over"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onSuppr")
+      constructprop       QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC"), 6
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+      pushbyte            15
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Component")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Component"), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      pushbyte            36
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 3
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "html")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "GLOBAL_STYLESHEET")
+      setproperty         QName(PackageNamespace(""), "stylesheet")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushshort           287
+      setproperty         QName(PackageNamespace(""), "width")
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushstring          "link"
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+      coerce              QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onTextLink")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      pushbyte            0
+      dup
+      getlocal2
+      pushstring          "btn_chucho_normal"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlocal2
+      pushstring          "btn_chucho_over"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onChuchote")
+      constructprop       QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC"), 6
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter")
+      pushbyte            15
+      setproperty         QName(PackageNamespace(""), "width")
+
+      findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneur")
+      pushbyte            0
+      dup
+      getlocal2
+      pushstring          "btn_rejoindre_normal"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlocal2
+      pushstring          "btn_rejoindre_over"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onRejoindre")
+      constructprop       QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC"), 6
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+      pushbyte            15
+      setproperty         QName(PackageNamespace(""), "width")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeAmi/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      pushnull
+      setlocal            4
+
+      pushnull
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "draw"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifeq                L191
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      callpropvoid        QName(PackageNamespace(""), "vider"), 1
+
+      pushstring          ""
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("epoux", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L30
+
+      getlocal3
+      pushstring          "♥ "
+      add
+      setlocal3
+
+L30:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("fille", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L38
+
+      getlocal3
+      pushstring          "<CH2><b>♀</b> "
+      add
+      setlocal3
+
+      jump                L45
+
+L38:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("garcon", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L45
+
+      getlocal3
+      pushstring          "<CH><b>♂</b> "
+      add
+      setlocal3
+
+L45:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iftrue              L85
+
+      getlocal3
+      pushstring          "<G><font size='12'>"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushtrue
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      add
+      add
+      coerce_s
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("bidirectionnel", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      dup
+      iffalse             L71
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("dateDerniereConnexion", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushbyte            0
+      greaterthan
+      coerce_a
+L71:
+      iffalse             L84
+
+      getlocal3
+      pushstring          ", <font size='10'>"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilDate")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("dateDerniereConnexion", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "toTimestampEnMillis"), 1
+      callproperty        QName(PackageNamespace(""), "getDateAffichage"), 1
+      add
+      add
+      coerce_s
+      setlocal3
+
+L84:
+      jump                L182
+
+L85:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("typeService", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifeq                L97
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("typeService", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "recupImageJeu"), 1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L97:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("bidirectionnel", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L169
+
+      getlocal3
+      pushstring          "<J><font size='12'>"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushtrue
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      add
+      pushstring          "<G> - <V><font size='11'>"
+      add
+      add
+      coerce_s
+      setlocal3
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("localisation", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "recupImageDrapeauSalon"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+      dup
+      setlocal            4
+
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("localisation", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            3
+      ifne                L145
+
+      getlocal1
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      getlocal1
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      add
+      coerce_s
+      setlocal1
+
+L145:
+      getlocal1
+      pushstring          "-"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            2
+      ifne                L163
+
+      getlocal3
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      add
+      coerce_s
+      setlocal3
+
+      jump                L168
+
+L163:
+      getlocal3
+      getlocal1
+      add
+      coerce_s
+      setlocal3
+
+L168:
+      jump                L182
+
+L169:
+      getlocal3
+      pushstring          "<BL>"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushtrue
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      add
+      add
+      coerce_s
+      setlocal3
+
+L182:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "updateEtats")
+      callpropvoid        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "updateEtats"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L200
+
+L191:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_conteneneurLocalisation")
+      callpropvoid        QName(PackageNamespace(""), "vider"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonSupprimerAmi")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L200:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onSuppr")
+   method
+    refid "tribulle.composants:ElementListeAmi/onSuppr"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 2
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      pushscope
+
+      findpropstrict      QName(PackageInternalNs("tribulle.composants"), "pEvt")
+      getlocal1
+      setproperty         QName(PackageInternalNs("tribulle.composants"), "pEvt")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("epoux", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L26
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.divorcer.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.divorcer.contenu"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      newfunction         "tribulle.composants:ElementListeAmi/onSuppr/inline_method#1"
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      jump                L41
+
+L26:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.supprimerAmi.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.supprimerAmi.contenu"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      newfunction         "tribulle.composants:ElementListeAmi/onSuppr/inline_method#0"
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+L41:
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs("tribulle.composants"), "pEvt") slotid 1 type QName(PackageNamespace("flash.events"), "MouseEvent") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onChuchote")
+   method
+    refid "tribulle.composants:ElementListeAmi/onChuchote"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("nom", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "x_activerChuchotement"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onRejoindre")
+   method
+    refid "tribulle.composants:ElementListeAmi/onRejoindre"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifeq                L94
+
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      ifeq                L77
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_TRANSFORMICE")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L34
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.transformice.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L34:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_BOUBOUM")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L48
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.bouboum.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L48:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_FORTORESSE")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L62
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.fortoresse.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L62:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_NEKODANCER")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L76
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.nekodancer.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L76:
+      returnvoid
+
+L77:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      iffalse             L94
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "RejoindreSalon")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      getlex              QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+      getglobalscope
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      call                1
+      callpropvoid        QName(PackageNamespace(""), "x_masquer"), 0
+
+L94:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeAmi/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "data")
+      swap
+      setsuper            QName(PackageNamespace(""), "data")
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "updateEtats")
+      callpropvoid        QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "updateEtats"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "updateEtats")
+   method
+    refid "tribulle.composants:ElementListeAmi/updateEtats"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("typeService", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      equals
+      dup
+      iftrue              L20
+
+      pop
+      getlex              QName(PackageNamespace("lapitchnet.utils"), "StringUtil")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("localisation", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "estVideOuNull"), 1
+      convert_b
+L20:
+      dup
+      iftrue              L26
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      not
+L26:
+      dup
+      iftrue              L32
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("bidirectionnel", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      not
+L32:
+      iffalse             L37
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L40
+
+L37:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L40:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("typeService", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getproperty         QName(PackageNamespace(""), "id")
+      equals
+      not
+      dup
+      iffalse             L58
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("typeService", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      equals
+      not
+L58:
+      iffalse             L62
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonRejoindre")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L62:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), ProtectedNamespace("tribulle.composants:ElementListeAmi"), StaticProtectedNs("tribulle.composants:ElementListeAmi"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeAmi#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iftrue              L69
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L72
+
+L69:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "_boutonChuchoter")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L72:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeAmi#0"), "onTextLink")
+   method
+    refid "tribulle.composants:ElementListeAmi/onTextLink"
+    param QName(PackageNamespace("flash.events"), "TextEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "LinkUtil")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      callpropvoid        QName(PackageNamespace(""), "handleTextLink"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ElementListeAmi/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

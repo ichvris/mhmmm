@@ -1,0 +1,737 @@
+class
+ refid "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"
+ instance QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 9
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "nomConstante")
+
+     getlocal0
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "cle")
+
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "cleDrapeau")
+
+     getlocal0
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "idCommunauteTfm")
+
+     getlocal0
+     getlocal            6
+     setproperty         QName(PackageNamespace(""), "forumRedirection")
+
+     getlocal0
+     getlocal            7
+     setproperty         QName(PackageNamespace(""), "langue")
+
+     getlocal0
+     getlocal            8
+     setproperty         QName(PackageNamespace(""), "cleTradNom")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nomConstante") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cle") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cleDrapeau") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "idCommunauteTfm") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "forumRedirection") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "langue") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cleTradNom") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute/cinit"
+  body
+   maxstack 9
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlocal0
+    pushbyte            1
+    pushstring          "INTERNATIONALE"
+    pushstring          "EN"
+    pushstring          "xx"
+    pushbyte            0
+    dup
+    pushstring          "EN"
+    pushstring          "communaute.1.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "INTERNATIONALE")
+    swap
+    initproperty        QName(PackageNamespace(""), "INTERNATIONALE")
+
+    getlocal0
+    pushbyte            2
+    pushstring          "FRANCAISE"
+    pushstring          "FR"
+    pushstring          ""
+    pushbyte            1
+    pushbyte            0
+    pushstring          "FR"
+    pushstring          "communaute.2.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "FRANCAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "FRANCAISE")
+
+    getlocal0
+    pushbyte            3
+    pushstring          "RUSSE"
+    pushstring          "RU"
+    pushstring          ""
+    pushbyte            2
+    pushbyte            0
+    pushstring          "RU"
+    pushstring          "communaute.3.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "RUSSE")
+    swap
+    initproperty        QName(PackageNamespace(""), "RUSSE")
+
+    getlocal0
+    pushbyte            4
+    pushstring          "BRESILIENNE"
+    pushstring          "BR"
+    pushstring          ""
+    pushbyte            3
+    pushbyte            0
+    pushstring          "PT"
+    pushstring          "communaute.4.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "BRESILIENNE")
+    swap
+    initproperty        QName(PackageNamespace(""), "BRESILIENNE")
+
+    getlocal0
+    pushbyte            5
+    pushstring          "ESPAGNOLE"
+    pushstring          "ES"
+    pushstring          ""
+    pushbyte            4
+    pushbyte            0
+    pushstring          "ES"
+    pushstring          "communaute.5.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ESPAGNOLE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ESPAGNOLE")
+
+    getlocal0
+    pushbyte            6
+    pushstring          "TAIWANAISE"
+    pushstring          "CN"
+    pushstring          ""
+    pushbyte            5
+    pushbyte            0
+    pushstring          "ZH"
+    pushstring          "communaute.6.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "TAIWANAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "TAIWANAISE")
+
+    getlocal0
+    pushbyte            7
+    pushstring          "TURQUE"
+    pushstring          "TR"
+    pushstring          ""
+    pushbyte            6
+    pushbyte            0
+    pushstring          "TR"
+    pushstring          "communaute.7.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "TURQUE")
+    swap
+    initproperty        QName(PackageNamespace(""), "TURQUE")
+
+    getlocal0
+    pushbyte            8
+    pushstring          "SCANDINAVE"
+    pushstring          "VK"
+    pushstring          ""
+    pushbyte            7
+    pushbyte            0
+    pushstring          "EN"
+    pushstring          "communaute.8.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "SCANDINAVE")
+    swap
+    initproperty        QName(PackageNamespace(""), "SCANDINAVE")
+
+    getlocal0
+    pushbyte            9
+    pushstring          "POLONAISE"
+    pushstring          "PL"
+    pushstring          ""
+    pushbyte            8
+    pushbyte            0
+    pushstring          "PL"
+    pushstring          "communaute.9.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "POLONAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "POLONAISE")
+
+    getlocal0
+    pushbyte            10
+    pushstring          "HONGROISE"
+    pushstring          "HU"
+    pushstring          ""
+    pushbyte            9
+    pushbyte            0
+    pushstring          "HU"
+    pushstring          "communaute.10.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "HONGROISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "HONGROISE")
+
+    getlocal0
+    pushbyte            11
+    pushstring          "NEERLANDAISE"
+    pushstring          "NL"
+    pushstring          ""
+    pushbyte            10
+    pushbyte            0
+    pushstring          "NL"
+    pushstring          "communaute.11.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "NEERLANDAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "NEERLANDAISE")
+
+    getlocal0
+    pushbyte            12
+    pushstring          "ROUMAINE"
+    pushstring          "RO"
+    pushstring          ""
+    pushbyte            11
+    pushbyte            0
+    pushstring          "RO"
+    pushstring          "communaute.12.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ROUMAINE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ROUMAINE")
+
+    getlocal0
+    pushbyte            13
+    pushstring          "INDONESIENNE"
+    pushstring          "ID"
+    pushstring          ""
+    pushbyte            12
+    pushbyte            0
+    pushstring          "ID"
+    pushstring          "communaute.13.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "INDONESIENNE")
+    swap
+    initproperty        QName(PackageNamespace(""), "INDONESIENNE")
+
+    getlocal0
+    pushbyte            14
+    pushstring          "ALLEMANDE"
+    pushstring          "DE"
+    pushstring          ""
+    pushbyte            13
+    pushbyte            0
+    pushstring          "DE"
+    pushstring          "communaute.14.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ALLEMANDE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ALLEMANDE")
+
+    getlocal0
+    pushbyte            15
+    pushstring          "ANGLAISE"
+    pushstring          "E2"
+    pushstring          "gb"
+    pushbyte            14
+    pushbyte            0
+    pushstring          "EN"
+    pushstring          "communaute.15.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ANGLAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ANGLAISE")
+
+    getlocal0
+    pushbyte            16
+    pushstring          "ARABE"
+    pushstring          "AR"
+    pushstring          "sa"
+    pushbyte            15
+    pushbyte            0
+    pushstring          "AR"
+    pushstring          "communaute.16.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ARABE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ARABE")
+
+    getlocal0
+    pushbyte            17
+    pushstring          "PHILIPPINS"
+    pushstring          "PH"
+    pushstring          ""
+    pushbyte            16
+    pushbyte            0
+    pushstring          "TL"
+    pushstring          "communaute.17.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "PHILIPPINS")
+    swap
+    initproperty        QName(PackageNamespace(""), "PHILIPPINS")
+
+    getlocal0
+    pushbyte            18
+    pushstring          "LITUANIENE"
+    pushstring          "LT"
+    pushstring          ""
+    pushbyte            17
+    pushbyte            0
+    pushstring          "LT"
+    pushstring          "communaute.18.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "LITUANIENE")
+    swap
+    initproperty        QName(PackageNamespace(""), "LITUANIENE")
+
+    getlocal0
+    pushbyte            19
+    pushstring          "JAPONAISE"
+    pushstring          "JP"
+    pushstring          ""
+    pushbyte            18
+    pushbyte            0
+    pushstring          "JA"
+    pushstring          "communaute.19.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "JAPONAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "JAPONAISE")
+
+    getlocal0
+    pushbyte            20
+    pushstring          "CHINOISE"
+    pushstring          "CH"
+    pushstring          ""
+    pushbyte            19
+    pushbyte            0
+    pushstring          "ZH"
+    pushstring          "communaute.20.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "CHINOISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "CHINOISE")
+
+    getlocal0
+    pushbyte            21
+    pushstring          "FINLANDAISE"
+    pushstring          "FI"
+    pushstring          ""
+    pushbyte            20
+    pushbyte            0
+    pushstring          "FI"
+    pushstring          "communaute.21.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "FINLANDAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "FINLANDAISE")
+
+    getlocal0
+    pushbyte            22
+    pushstring          "TCHEQUE"
+    pushstring          "CZ"
+    pushstring          ""
+    pushbyte            21
+    pushbyte            0
+    pushstring          "CS"
+    pushstring          "communaute.22.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "TCHEQUE")
+    swap
+    initproperty        QName(PackageNamespace(""), "TCHEQUE")
+
+    getlocal0
+    pushbyte            23
+    pushstring          "CROATE"
+    pushstring          "HR"
+    pushstring          ""
+    pushbyte            23
+    pushbyte            0
+    pushstring          "HR"
+    pushstring          "communaute.23.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "CROATE")
+    swap
+    initproperty        QName(PackageNamespace(""), "CROATE")
+
+    getlocal0
+    pushbyte            24
+    pushstring          "SLOVAQUE"
+    pushstring          "SK"
+    pushstring          ""
+    pushbyte            22
+    pushbyte            0
+    pushstring          "SK"
+    pushstring          "communaute.24.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "SLOVAQUE")
+    swap
+    initproperty        QName(PackageNamespace(""), "SLOVAQUE")
+
+    getlocal0
+    pushbyte            25
+    pushstring          "BULGARE"
+    pushstring          "BG"
+    pushstring          ""
+    pushbyte            24
+    pushbyte            0
+    pushstring          "BG"
+    pushstring          "communaute.25.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "BULGARE")
+    swap
+    initproperty        QName(PackageNamespace(""), "BULGARE")
+
+    getlocal0
+    pushbyte            26
+    pushstring          "LETTON"
+    pushstring          "LV"
+    pushstring          ""
+    pushbyte            25
+    pushbyte            0
+    pushstring          "LV"
+    pushstring          "communaute.26.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "LETTON")
+    swap
+    initproperty        QName(PackageNamespace(""), "LETTON")
+
+    getlocal0
+    pushbyte            27
+    pushstring          "ISRAELIEN"
+    pushstring          "HE"
+    pushstring          "il"
+    pushbyte            26
+    pushbyte            0
+    pushstring          "HE"
+    pushstring          "communaute.27.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ISRAELIEN")
+    swap
+    initproperty        QName(PackageNamespace(""), "ISRAELIEN")
+
+    getlocal0
+    pushbyte            28
+    pushstring          "ITALIEN"
+    pushstring          "IT"
+    pushstring          ""
+    pushbyte            27
+    pushbyte            0
+    pushstring          "IT"
+    pushstring          "communaute.28.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ITALIEN")
+    swap
+    initproperty        QName(PackageNamespace(""), "ITALIEN")
+
+    getlocal0
+    pushbyte            29
+    pushstring          "ESTONIENNE"
+    pushstring          "ET"
+    pushstring          "ee"
+    pushbyte            29
+    pushbyte            0
+    pushstring          "ET"
+    pushstring          "communaute.29.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "ESTONIENNE")
+    swap
+    initproperty        QName(PackageNamespace(""), "ESTONIENNE")
+
+    getlocal0
+    pushbyte            30
+    pushstring          "AZERBAIDJAN"
+    pushstring          "AZ"
+    pushstring          ""
+    pushbyte            30
+    pushbyte            0
+    pushstring          "AZ"
+    pushstring          "communaute.30.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "AZERBAIDJAN")
+    swap
+    initproperty        QName(PackageNamespace(""), "AZERBAIDJAN")
+
+    getlocal0
+    pushbyte            31
+    pushstring          "PORTUGAISE"
+    pushstring          "PT"
+    pushstring          ""
+    pushbyte            31
+    pushbyte            4
+    pushstring          "PT"
+    pushstring          "communaute.31.nom"
+    construct           8
+    findproperty        QName(PackageNamespace(""), "PORTUGAISE")
+    swap
+    initproperty        QName(PackageNamespace(""), "PORTUGAISE")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "_ids")
+    swap
+    setproperty         QName(PackageNamespace(""), "_ids")
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            1
+    getlex              QName(PackageNamespace(""), "INTERNATIONALE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            2
+    getlex              QName(PackageNamespace(""), "FRANCAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            3
+    getlex              QName(PackageNamespace(""), "RUSSE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            4
+    getlex              QName(PackageNamespace(""), "BRESILIENNE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            5
+    getlex              QName(PackageNamespace(""), "ESPAGNOLE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            6
+    getlex              QName(PackageNamespace(""), "TAIWANAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            7
+    getlex              QName(PackageNamespace(""), "TURQUE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            8
+    getlex              QName(PackageNamespace(""), "SCANDINAVE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            9
+    getlex              QName(PackageNamespace(""), "POLONAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            10
+    getlex              QName(PackageNamespace(""), "HONGROISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            11
+    getlex              QName(PackageNamespace(""), "NEERLANDAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            12
+    getlex              QName(PackageNamespace(""), "ROUMAINE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            13
+    getlex              QName(PackageNamespace(""), "INDONESIENNE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            14
+    getlex              QName(PackageNamespace(""), "ALLEMANDE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            15
+    getlex              QName(PackageNamespace(""), "ANGLAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            16
+    getlex              QName(PackageNamespace(""), "ARABE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            17
+    getlex              QName(PackageNamespace(""), "PHILIPPINS")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            18
+    getlex              QName(PackageNamespace(""), "LITUANIENE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            19
+    getlex              QName(PackageNamespace(""), "JAPONAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            20
+    getlex              QName(PackageNamespace(""), "CHINOISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            21
+    getlex              QName(PackageNamespace(""), "FINLANDAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            22
+    getlex              QName(PackageNamespace(""), "TCHEQUE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            23
+    getlex              QName(PackageNamespace(""), "CROATE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            24
+    getlex              QName(PackageNamespace(""), "SLOVAQUE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            25
+    getlex              QName(PackageNamespace(""), "BULGARE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            26
+    getlex              QName(PackageNamespace(""), "LETTON")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            27
+    getlex              QName(PackageNamespace(""), "ISRAELIEN")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            28
+    getlex              QName(PackageNamespace(""), "ITALIEN")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            29
+    getlex              QName(PackageNamespace(""), "ESTONIENNE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            30
+    getlex              QName(PackageNamespace(""), "AZERBAIDJAN")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            31
+    getlex              QName(PackageNamespace(""), "PORTUGAISE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "INTERNATIONALE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "FRANCAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "RUSSE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "BRESILIENNE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ESPAGNOLE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "TAIWANAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "TURQUE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "SCANDINAVE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "POLONAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "HONGROISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "NEERLANDAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ROUMAINE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "INDONESIENNE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ALLEMANDE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ANGLAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ARABE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "PHILIPPINS") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "LITUANIENE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "JAPONAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "CHINOISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "FINLANDAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "TCHEQUE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "CROATE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "SLOVAQUE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "BULGARE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "LETTON") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ISRAELIEN") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ITALIEN") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "ESTONIENNE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "AZERBAIDJAN") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait const QName(PackageNamespace(""), "PORTUGAISE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute") end
+ trait slot QName(PackageNamespace(""), "_ids") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace(""), "getById")
+  method
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute/getById"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesCommunaute")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "_ids")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesCommunaute"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesCommunaute#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

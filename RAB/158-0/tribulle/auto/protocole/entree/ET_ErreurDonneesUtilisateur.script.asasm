@@ -1,0 +1,29 @@
+script ; 892
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_ErreurDonneesUtilisateur.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_ErreurDonneesUtilisateur"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDonneesUtilisateur")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDonneesUtilisateur")
+  #include "ET_ErreurDonneesUtilisateur.class.asasm"
+ end ; trait
+end ; script

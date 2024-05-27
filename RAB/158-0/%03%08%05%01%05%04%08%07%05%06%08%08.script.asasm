@@ -1,0 +1,33 @@
+script ; 768
+ sinit
+  refid "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "Point")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "Point")
+    newclass            "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "\x03\x08\x05\x01\x05\x04\x08\x07\x05\x06\x08\x08")
+  #include "%03%08%05%01%05%04%08%07%05%06%08%08.class.asasm"
+ end ; trait
+end ; script

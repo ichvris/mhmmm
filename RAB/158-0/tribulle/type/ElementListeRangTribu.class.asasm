@@ -1,0 +1,124 @@
+class
+ refid "tribulle.type:ElementListeRangTribu"
+ instance QName(PackageNamespace("tribulle.type"), "ElementListeRangTribu")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.type:ElementListeRangTribu")
+  iinit
+   refid "tribulle.type:ElementListeRangTribu/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("tribulle.type:ElementListeRangTribu"), "addChildren") flag OVERRIDE
+   method
+    refid "tribulle.type:ElementListeRangTribu:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:ListItem"), "addChildren"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.type:ElementListeRangTribu/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal1
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifeq                L25
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ordre")
+      pushstring          ". "
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L28
+
+L25:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.type:ElementListeRangTribu/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,25 @@
+script ; 203
+ sinit
+  refid "org.osflash.signals:ISlot.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "org.osflash.signals:ISlot"
+    initproperty        QName(PackageNamespace("org.osflash.signals"), "ISlot")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals"), "ISlot")
+  #include "ISlot.class.asasm"
+ end ; trait
+end ; script

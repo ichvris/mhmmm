@@ -1,0 +1,29 @@
+script ; 306
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_ResultatAjoutListeNoire.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_ResultatAjoutListeNoire"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatAjoutListeNoire")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatAjoutListeNoire")
+  #include "ET_ResultatAjoutListeNoire.class.asasm"
+ end ; trait
+end ; script

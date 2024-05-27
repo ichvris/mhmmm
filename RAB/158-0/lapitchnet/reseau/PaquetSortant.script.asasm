@@ -1,0 +1,29 @@
+script ; 68
+ sinit
+  refid "lapitchnet.reseau:PaquetSortant.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.reseau:PaquetSortant"
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+  #include "PaquetSortant.class.asasm"
+ end ; trait
+end ; script

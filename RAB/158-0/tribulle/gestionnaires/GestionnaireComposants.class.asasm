@@ -1,0 +1,147 @@
+class
+ refid "tribulle.gestionnaires:GestionnaireComposants"
+ instance QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.gestionnaires:GestionnaireComposants/iinit"
+   param QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), "PrivateClass")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait method QName(PackageNamespace(""), "register")
+   method
+    refid "tribulle.gestionnaires:GestionnaireComposants/register"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("com.bit101.components"), "Component")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants")
+      getlocal1
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "unregister")
+   method
+    refid "tribulle.gestionnaires:GestionnaireComposants/unregister"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getComposant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireComposants/getComposant"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("com.bit101.components"), "Component")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_composants")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireComposants"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.gestionnaires:GestionnaireComposants/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_singleton") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle.gestionnaires:GestionnaireComposants/getInstance"
+   returns QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_singleton")
+     pushnull
+     ifne                L12
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), "PrivateClass")
+     constructprop       QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#1"), "PrivateClass"), 0
+     construct           1
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_singleton")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_singleton")
+
+L12:
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireComposants#0"), "_singleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

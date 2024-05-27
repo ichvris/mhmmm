@@ -1,0 +1,710 @@
+class
+ refid "tribulle.categories:CategorieChat"
+ instance QName(PackageNamespace("tribulle.categories"), "CategorieChat")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_Chat")
+  flag SEALED
+  iinit
+   refid "tribulle.categories:CategorieChat/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "executeRecoitMessagePriveSysteme")
+   method
+    refid "tribulle.categories:CategorieChat/executeRecoitMessagePriveSysteme"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_RecoitMessagePriveSysteme")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomDestinataire")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "message")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomDestinataire")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "parser"), 2
+      pushbyte            102
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatDefinitModeSilence")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatDefinitModeSilence"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDefinitModeSilence")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "statusModeSilence")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentDefinitModeSilence")
+      getproperty         QName(PackageNamespace(""), "modeSilence")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMembreQuitteCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleMembreQuitteCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMembreQuitteCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "deconnexionMembreCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idMembre")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMembresRejoignentCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleMembresRejoignentCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMembresRejoignentCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "connexionMembresCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idsMembres")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomsMembres")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMembresQuittentCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleMembresQuittentCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMembresQuittentCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "deconnexionMembresCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idsMembres")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleQuitteCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleQuitteCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleQuitteCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "quitteCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMembreRejointCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleMembreRejointCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMembreRejointCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "connexionMembreCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idMembre")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomMembre")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleRejointCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleRejointCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRejointCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "rejoinsCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "custom")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idsMembres")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomsMembres")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleMessageCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeSignaleMessageCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleMessageCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "message")
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "<"
+      pushstring          "g"
+      construct           2
+      pushstring          "&lt;"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      setproperty         QName(PackageNamespace(""), "message")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessageCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomAuteur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "message")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "communaute")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeRecoitMessagePrive")
+   method
+    refid "tribulle.categories:CategorieChat/executeRecoitMessagePrive"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_RecoitMessagePrive")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "message")
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "<"
+      pushstring          "g"
+      construct           2
+      pushstring          "&lt;"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      setproperty         QName(PackageNamespace(""), "message")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomAuteur")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "message")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "estAuteur")
+      iffalse             L24
+
+      pushbyte            101
+      jump                L25
+
+L24:
+      pushbyte            100
+L25:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "communaute")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatMessagePrive")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatMessagePrive"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMessagePrive")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "UTILISATEUR_NON_CONNECTE")
+      ifne                L20
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentEnvoitMessagePrive")
+      getproperty         QName(PackageNamespace(""), "nomDestinataire")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.joueurNonConnecte"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushbyte            102
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+      jump                L55
+
+L20:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "DESTINATAIRE_INVALIDE")
+      ifne                L38
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentEnvoitMessagePrive")
+      getproperty         QName(PackageNamespace(""), "nomDestinataire")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.joueurInexistant"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushbyte            102
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+      jump                L55
+
+L38:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "MUTE")
+      ifne                L55
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentEnvoitMessagePrive")
+      getproperty         QName(PackageNamespace(""), "nomDestinataire")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.mute"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushbyte            102
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+L55:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatRejoindreCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatRejoindreCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatRejoindreCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      setlocal2
+
+      jump                L53
+
+L6:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalRejoins"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "info"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "changeCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentRejoindreCanal")
+      getproperty         QName(PackageNamespace(""), "canal")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L69
+
+L23:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalInvalide"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "alert"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L69
+
+L33:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalInterdit"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "alert"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L69
+
+L43:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalDejaPresent"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "alert"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L69
+
+L53:
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      getlocal2
+      ifstricteq          L6
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "CANAL_INVALIDE")
+      getlocal2
+      ifstricteq          L23
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "CANAL_INTERDIT")
+      getlocal2
+      ifstricteq          L33
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "CANAL_DEJA_PRESENT")
+      getlocal2
+      ifstricteq          L43
+
+L69:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatQuitterCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatQuitterCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatQuitterCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "erreur")
+      setlocal2
+
+      jump                L26
+
+L6:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalQuitte"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "info"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L34
+
+L16:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.canalInvalide"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          "alert"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L34
+
+L26:
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      getlocal2
+      ifstricteq          L6
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "CANAL_INVALIDE")
+      getlocal2
+      ifstricteq          L16
+
+L34:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatMessageCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatMessageCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatMessageCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "MUTE")
+      ifne                L19
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "recoisMessageCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentEnvoitMessageCanal")
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      pushnull
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.message.mute"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 4
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatDemandeMembresCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeResultatDemandeMembresCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDemandeMembresCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "resultatDemandeMembresCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "precedentDemandeMembresCanal")
+      getproperty         QName(PackageNamespace(""), "idCanal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "idsMembres")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nomsMembres")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurDemandeMembresCanal")
+   method
+    refid "tribulle.categories:CategorieChat/executeErreurDemandeMembresCanal"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurDemandeMembresCanal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.categories:CategorieChat/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

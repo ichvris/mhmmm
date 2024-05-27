@@ -1,0 +1,639 @@
+class
+ refid "com.bit101.components:Panel"
+ instance QName(PackageNamespace("com.bit101.components"), "Panel")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:Panel")
+  iinit
+   refid "com.bit101.components:Panel/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "FOND_FENETRE")
+     findproperty        QName(PackageNamespace(""), "couleurFond")
+     swap
+     setproperty         QName(PackageNamespace(""), "couleurFond")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_background") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_color") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_shadow") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize") type QName(PackageNamespace(""), "int") value Integer(10) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_showGrid") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridColor") type QName(PackageNamespace(""), "uint") value Integer(13684944) end
+  trait slot QName(PackageNamespace(""), "afficherFond") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "couleurFond") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "effetBiseau") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "bordureRondeUniquementBas") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "content") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait method QName(ProtectedNamespace("com.bit101.components:Panel"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:Panel:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Panel"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:Panel:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(PackageNamespace(""), "content")
+      swap
+      setproperty         QName(PackageNamespace(""), "content")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "content")
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      getlex              QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      setproperty         QName(PackageNamespace(""), "mask")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addChild") flag OVERRIDE
+   method
+    refid "com.bit101.components:Panel/addChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addRawChild")
+   method
+    refid "com.bit101.components:Panel/addRawChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "addChild"), 1
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:Panel/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(PackageNamespace(""), "afficherFond")
+      iffalse             L52
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            2
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FOND_TITRE_FENETRE")
+      pushbyte            1
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "couleurFond")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PackageNamespace(""), "bordureRondeUniquementBas")
+      iffalse             L35
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            0
+      dup
+      pushbyte            6
+      dup
+      callpropvoid        QName(PackageNamespace(""), "drawRoundRectComplex"), 8
+
+      jump                L43
+
+L35:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            10
+      callpropvoid        QName(PackageNamespace(""), "drawRoundRect"), 5
+
+L43:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(PackageNamespace(""), "effetBiseau")
+      iffalse             L52
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "EFFET_BISEAU_FENETRE")
+      setproperty         QName(PackageNamespace(""), "filters")
+
+L52:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Panel"), "drawGrid")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Panel"), "drawGrid"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             16711680
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Panel"), "drawGrid")
+   method
+    refid "com.bit101.components:Panel:drawGrid"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_showGrid")
+      iftrue              L7
+
+      returnvoid
+
+L7:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridColor")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+      pushbyte            0
+      setlocal1
+
+      jump                L31
+
+L15:
+      label
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize")
+      add
+      convert_i
+      setlocal1
+
+L31:
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      iflt                L15
+
+      pushbyte            0
+      setlocal1
+
+      jump                L53
+
+L37:
+      label
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize")
+      add
+      convert_i
+      setlocal1
+
+L53:
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      iflt                L37
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "shadow")
+   method
+    refid "com.bit101.components:Panel/shadow/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_shadow")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_shadow")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_shadow")
+      iffalse             L17
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            2
+      pushtrue
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 2
+      newarray            1
+      findproperty        QName(PackageNamespace(""), "filters")
+      swap
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      jump                L21
+
+L17:
+      newarray            0
+      findproperty        QName(PackageNamespace(""), "filters")
+      swap
+      setproperty         QName(PackageNamespace(""), "filters")
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "shadow")
+   method
+    refid "com.bit101.components:Panel/shadow/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_shadow")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "color")
+   method
+    refid "com.bit101.components:Panel/color/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_color")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_color")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "color")
+   method
+    refid "com.bit101.components:Panel/color/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_color")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gridSize")
+   method
+    refid "com.bit101.components:Panel/gridSize/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gridSize")
+   method
+    refid "com.bit101.components:Panel/gridSize/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showGrid")
+   method
+    refid "com.bit101.components:Panel/showGrid/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_showGrid")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_showGrid")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showGrid")
+   method
+    refid "com.bit101.components:Panel/showGrid/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_showGrid")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gridColor")
+   method
+    refid "com.bit101.components:Panel/gridColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridColor")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gridColor")
+   method
+    refid "com.bit101.components:Panel/gridColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_gridColor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:Panel/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

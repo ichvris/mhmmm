@@ -1,0 +1,253 @@
+class
+ refid "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"
+ instance QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "nomConstante")
+
+     getlocal0
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "cleTradNom")
+
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "cleTradDescription")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nomConstante") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cleTradNom") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cleTradDescription") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu/cinit"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlocal0
+    pushbyte            1
+    pushstring          "PROPRIETAIRE"
+    pushstring          "droit_tribu.1.nom"
+    pushstring          "droit_tribu.1.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "PROPRIETAIRE")
+    swap
+    initproperty        QName(PackageNamespace(""), "PROPRIETAIRE")
+
+    getlocal0
+    pushbyte            2
+    pushstring          "MESSAGE_JOUR"
+    pushstring          "droit_tribu.2.nom"
+    pushstring          "droit_tribu.2.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "MESSAGE_JOUR")
+    swap
+    initproperty        QName(PackageNamespace(""), "MESSAGE_JOUR")
+
+    getlocal0
+    pushbyte            3
+    pushstring          "EDITER_RANGS"
+    pushstring          "droit_tribu.3.nom"
+    pushstring          "droit_tribu.3.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "EDITER_RANGS")
+    swap
+    initproperty        QName(PackageNamespace(""), "EDITER_RANGS")
+
+    getlocal0
+    pushbyte            4
+    pushstring          "AFFECTER_RANGS"
+    pushstring          "droit_tribu.4.nom"
+    pushstring          "droit_tribu.4.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "AFFECTER_RANGS")
+    swap
+    initproperty        QName(PackageNamespace(""), "AFFECTER_RANGS")
+
+    getlocal0
+    pushbyte            5
+    pushstring          "INVITER"
+    pushstring          "droit_tribu.5.nom"
+    pushstring          "droit_tribu.5.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "INVITER")
+    swap
+    initproperty        QName(PackageNamespace(""), "INVITER")
+
+    getlocal0
+    pushbyte            6
+    pushstring          "EXCLURE"
+    pushstring          "droit_tribu.6.nom"
+    pushstring          "droit_tribu.6.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "EXCLURE")
+    swap
+    initproperty        QName(PackageNamespace(""), "EXCLURE")
+
+    getlocal0
+    pushbyte            7
+    pushstring          "MUSIQUE"
+    pushstring          "droit_tribu.7.nom"
+    pushstring          "droit_tribu.7.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "MUSIQUE")
+    swap
+    initproperty        QName(PackageNamespace(""), "MUSIQUE")
+
+    getlocal0
+    pushbyte            8
+    pushstring          "CHANGEMENT_MAISON"
+    pushstring          "droit_tribu.8.nom"
+    pushstring          "droit_tribu.8.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "CHANGEMENT_MAISON")
+    swap
+    initproperty        QName(PackageNamespace(""), "CHANGEMENT_MAISON")
+
+    getlocal0
+    pushbyte            9
+    pushstring          "CHARGEMENT_MAISON"
+    pushstring          "droit_tribu.9.nom"
+    pushstring          "droit_tribu.9.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "CHARGEMENT_MAISON")
+    swap
+    initproperty        QName(PackageNamespace(""), "CHARGEMENT_MAISON")
+
+    getlocal0
+    pushbyte            10
+    pushstring          "GERER_FORUM"
+    pushstring          "droit_tribu.10.nom"
+    pushstring          "droit_tribu.10.description"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "GERER_FORUM")
+    swap
+    initproperty        QName(PackageNamespace(""), "GERER_FORUM")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "_ids")
+    swap
+    setproperty         QName(PackageNamespace(""), "_ids")
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            1
+    getlex              QName(PackageNamespace(""), "PROPRIETAIRE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            2
+    getlex              QName(PackageNamespace(""), "MESSAGE_JOUR")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            3
+    getlex              QName(PackageNamespace(""), "EDITER_RANGS")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            4
+    getlex              QName(PackageNamespace(""), "AFFECTER_RANGS")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            5
+    getlex              QName(PackageNamespace(""), "INVITER")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            6
+    getlex              QName(PackageNamespace(""), "EXCLURE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            7
+    getlex              QName(PackageNamespace(""), "MUSIQUE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            8
+    getlex              QName(PackageNamespace(""), "CHANGEMENT_MAISON")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            9
+    getlex              QName(PackageNamespace(""), "CHARGEMENT_MAISON")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            10
+    getlex              QName(PackageNamespace(""), "GERER_FORUM")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "PROPRIETAIRE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "MESSAGE_JOUR") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "EDITER_RANGS") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "AFFECTER_RANGS") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "INVITER") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "EXCLURE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "MUSIQUE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "CHANGEMENT_MAISON") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "CHARGEMENT_MAISON") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait const QName(PackageNamespace(""), "GERER_FORUM") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu") end
+ trait slot QName(PackageNamespace(""), "_ids") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace(""), "getById")
+  method
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu/getById"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "_ids")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,53 @@
+class
+ refid "tribulle.composants:ListeRangsTribu"
+ instance QName(PackageNamespace("tribulle.composants"), "ListeRangsTribu")
+  extends QName(PackageNamespace("com.bit101.components"), "List")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ListeRangsTribu")
+  iinit
+   refid "tribulle.composants:ListeRangsTribu/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlex              QName(PackageNamespace("tribulle.type"), "ElementListeRangTribu")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.composants:ListeRangsTribu/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

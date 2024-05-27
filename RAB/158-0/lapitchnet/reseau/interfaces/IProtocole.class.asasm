@@ -1,0 +1,50 @@
+class
+ refid "lapitchnet.reseau.interfaces:IProtocole"
+ instance QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole")
+  flag INTERFACE
+  iinit
+   refid "lapitchnet.reseau.interfaces:IProtocole/iinit"
+  end ; method
+  trait getter QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "version")
+   method
+    refid "lapitchnet.reseau.interfaces:IProtocole:version/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "creePaquetEntrant")
+   method
+    refid "lapitchnet.reseau.interfaces:IProtocole:creePaquetEntrant"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "traiterPaquetEntrant")
+   method
+    refid "lapitchnet.reseau.interfaces:IProtocole:traiterPaquetEntrant"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "getIdPaquet")
+   method
+    refid "lapitchnet.reseau.interfaces:IProtocole:getIdPaquet"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau.interfaces:IProtocole/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

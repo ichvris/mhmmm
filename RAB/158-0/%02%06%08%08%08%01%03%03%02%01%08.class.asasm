@@ -1,0 +1,47 @@
+class
+ refid "\x02\x06\x08\x08\x08\x01\x03\x03\x02\x01\x08"
+ instance QName(PackageNamespace(""), "\x02\x06\x08\x08\x08\x01\x03\x03\x02\x01\x08")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x02\x06\x08\x08\x08\x01\x03\x03\x02\x01\x08")
+  iinit
+   refid "\x02\x06\x08\x08\x08\x01\x03\x03\x02\x01\x08/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x02\x06\x08\x08\x08\x01\x03\x03\x02\x01\x08/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "\x06\x02\x04\x04\x08\x07\x05\x02\x08\x05\x03")
+    pushtrue
+    setproperty         QName(PackageNamespace(""), "\x06\x02\x04\x04\x08\x07\x05\x02\x08\x05\x03")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "\x06\x02\x04\x04\x08\x07\x05\x02\x08\x05\x03") slotid 1 type QName(PackageNamespace(""), "Boolean") value True() end
+end ; class

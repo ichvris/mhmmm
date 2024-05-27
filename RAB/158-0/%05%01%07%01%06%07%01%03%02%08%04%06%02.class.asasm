@@ -1,0 +1,68 @@
+class
+ refid "\x05\x01\x07\x01\x06\x07\x01\x03\x02\x08\x04\x06\x02"
+ instance QName(PackageNamespace(""), "\x05\x01\x07\x01\x06\x07\x01\x03\x02\x08\x04\x06\x02")
+  extends QName(PackageNamespace(""), "\x05\x08\x07\x06\x04\x08\x04\x03\x06\x01\x07\x08")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x05\x01\x07\x01\x06\x07\x01\x03\x02\x08\x04\x06\x02")
+  iinit
+   refid "\x05\x01\x07\x01\x06\x07\x01\x03\x02\x08\x04\x06\x02/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     initproperty        QName(PackageNamespace(""), "\x03\x04\x05\x02\x06\x05\x05\x03\x07\x02\x02\x03\x04")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     initproperty        QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     initproperty        QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUTF"), 0
+     initproperty        QName(PackageNamespace(""), "\x05\x02\x07\x07\x05\x04\x05\x03\x01\x03\x06\x01\x01")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x03\x04\x05\x02\x06\x05\x05\x03\x07\x02\x02\x03\x04") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "x") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "y") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x05\x02\x07\x07\x05\x04\x05\x03\x01\x03\x06\x01\x01") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "\x05\x01\x07\x01\x06\x07\x01\x03\x02\x08\x04\x06\x02/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

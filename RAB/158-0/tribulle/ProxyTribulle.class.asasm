@@ -1,0 +1,596 @@
+class
+ refid "tribulle:ProxyTribulle"
+ instance QName(PackageNamespace("tribulle"), "ProxyTribulle")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle:ProxyTribulle/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle:ProxyTribulle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "x_indexListeAmis")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "x_indexListeIgnores")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_indexListeIgnores")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "x_indexListeMembreTribu")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_indexListeMembreTribu")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "x_indexCommunauteParCodeChaine")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_indexCommunauteParCodeChaine")
+
+    getlex              QName(PackageNamespace("_divers"), "ImagePNG")
+    getproperty         QName(PackageNamespace(""), "encode")
+    findproperty        QName(PackageNamespace(""), "x_creationFichierPNG")
+    swap
+    setproperty         QName(PackageNamespace(""), "x_creationFichierPNG")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "instanceTransformice") type QName(PackageNamespace("flash.display"), "Sprite") end
+ trait slot QName(PackageNamespace(""), "x_messageChat") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_autorisationModo") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_autorisationArbitre") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_autorisationMapCrew") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_autorisationLua") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_fonctionAutoCompletion") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_indexListeAmis") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_indexListeIgnores") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_indexListeMembreTribu") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_afficherHeureMessageChat") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_estDansUnePartieLua") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_ouvrirInterfacePolice") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_policeSpecialeChat") type QName(PackageNamespace(""), "String") value Utf8("") end
+ trait slot QName(PackageNamespace(""), "x_fonctionDebug") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fonctionCliqueChat") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_modeBouboum") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_modeTransformice") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_modeForteresse") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_inversionSensLecture") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_policeInterface") type QName(PackageNamespace(""), "String") value Utf8("Verdana") end
+ trait slot QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_indexCommunauteParCodeChaine") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_fonctionLancementEchange") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_recupImageDistante") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_invite") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PackageNamespace(""), "x_recupDrapeau") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_redirectionChat") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_validationMessageChat") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_testTexteChatInterdit") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fonctionMessageStaff") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "x_infoException") type QName(PackageNamespace(""), "String") value Utf8("-") end
+ trait slot QName(PackageNamespace(""), "x_fonctionDemandeToken") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fonctionGetNomJoueurWeb") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fonctionEnvoiMessagePrive") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fonctionGetUrlForum") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_token") type QName(PackageNamespace(""), "String") end
+ trait slot QName(PackageNamespace(""), "x_creationFichierPNG") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_receptionMessagePrive") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_rejoindreCanalDiscussion") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_receptionMessageCanal") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_affichageListeJoueursCanal") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_fermerCanal") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_resultatActivationSilence") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_affichageMessageChat") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_rechargerCanauxPrives") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "x_activerChuchotement") type QName(PackageNamespace(""), "Function") end
+ trait slot QName(PackageNamespace(""), "modeSilenceActif") type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait slot QName(PrivateNamespace(null, "tribulle:ProxyTribulle"), "menuContextuelAInitialiser") type QName(PackageNamespace(""), "Boolean") value True() end
+ trait method QName(PackageNamespace(""), "x_initilisation")
+  method
+   refid "tribulle:ProxyTribulle/x_initilisation"
+   param QName(PackageNamespace("flash.display"), "Sprite")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     findproperty        QName(PackageNamespace(""), "instanceTransformice")
+     swap
+     setproperty         QName(PackageNamespace(""), "instanceTransformice")
+
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getproperty         QName(PackageNamespace(""), "getNomJoueurWeb")
+     findproperty        QName(PackageNamespace(""), "x_fonctionGetNomJoueurWeb")
+     swap
+     setproperty         QName(PackageNamespace(""), "x_fonctionGetNomJoueurWeb")
+
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+     getproperty         QName(PackageNamespace(""), "envoiMessagePrive")
+     findproperty        QName(PackageNamespace(""), "x_fonctionEnvoiMessagePrive")
+     swap
+     setproperty         QName(PackageNamespace(""), "x_fonctionEnvoiMessagePrive")
+
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+     getproperty         QName(PackageNamespace(""), "getUrlForum")
+     findproperty        QName(PackageNamespace(""), "x_fonctionGetUrlForum")
+     swap
+     setproperty         QName(PackageNamespace(""), "x_fonctionGetUrlForum")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_joueurEstIgnore")
+  method
+   refid "tribulle:ProxyTribulle/x_joueurEstIgnore"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L9
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireListeNoire")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "estIgnore"), 1
+     returnvalue
+
+L9:
+     pushfalse
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_envoyerMessagePrive")
+  method
+   refid "tribulle:ProxyTribulle/x_envoyerMessagePrive"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L8
+
+     pop
+     getlocal2
+     coerce_s
+L8:
+     iffalse             L18
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_EnvoitMessagePrive")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlocal1
+     getlocal2
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_EnvoitMessagePrive"), 3
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_envoyerMessageCanal")
+  method
+   refid "tribulle:ProxyTribulle/x_envoyerMessageCanal"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L13
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_EnvoitMessageCanal")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlocal1
+     getlocal2
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_EnvoitMessageCanal"), 3
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L13:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_demandeListeJoueurPresentCanalDiscussion")
+  method
+   refid "tribulle:ProxyTribulle/x_demandeListeJoueurPresentCanalDiscussion"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeMembresCanal")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlocal1
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeMembresCanal"), 2
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_activerSilence")
+  method
+   refid "tribulle:ProxyTribulle/x_activerSilence"
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushnull
+     ifne                L7
+
+     pushstring          ""
+     setlocal2
+
+L7:
+     getlex              QName(PackageNamespace(""), "modeSilenceActif")
+     pushbyte            0
+     ifngt               L12
+
+     pushbyte            0
+     jump                L18
+
+L12:
+     getlocal1
+     iffalse             L16
+
+     pushbyte            2
+     jump                L17
+
+L16:
+     pushdouble          1
+L17:
+     convert_d
+L18:
+     findproperty        QName(PackageNamespace(""), "modeSilenceActif")
+     swap
+     setproperty         QName(PackageNamespace(""), "modeSilenceActif")
+
+     getlex              QName(PackageNamespace(""), "modeSilenceActif")
+     iffalse             L47
+
+     getlocal1
+     iffalse             L36
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+     getproperty         QName(PackageNamespace(""), "TOUT_LE_MONDE")
+     getlocal2
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence"), 3
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+     jump                L46
+
+L36:
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+     getproperty         QName(PackageNamespace(""), "AMI_SEULEMENT")
+     getlocal2
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence"), 3
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L46:
+     jump                L57
+
+L47:
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+     getproperty         QName(PackageNamespace(""), "INACTIF")
+     pushstring          ""
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DefinitModeSilence"), 3
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L57:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_affichagePopupIgnorerJoueur")
+  method
+   refid "tribulle:ProxyTribulle/x_affichagePopupIgnorerJoueur"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag NEED_ACTIVATION
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 2
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     pushscope
+
+     findpropstrict      QName(PackageInternalNs("tribulle"), "CONTENEUR")
+     getlocal1
+     setproperty         QName(PackageInternalNs("tribulle"), "CONTENEUR")
+
+     findpropstrict      QName(PackageInternalNs("tribulle"), "JOUEUR")
+     getlocal2
+     setproperty         QName(PackageInternalNs("tribulle"), "JOUEUR")
+
+     getlex              QName(PackageInternalNs("tribulle"), "JOUEUR")
+     iffalse             L23
+
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PackageInternalNs("tribulle"), "CONTENEUR")
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "popup.amis.ignorerJoueur.titre"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "popup.amis.ignorerJoueur.contenu"
+     getlex              QName(PackageInternalNs("tribulle"), "JOUEUR")
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+     newfunction         "tribulle:ProxyTribulle/x_affichagePopupIgnorerJoueur/inline_method"
+     callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+L23:
+     returnvoid
+    end ; code
+    trait slot QName(PackageInternalNs("tribulle"), "CONTENEUR") slotid 1 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+    trait slot QName(PackageInternalNs("tribulle"), "JOUEUR") slotid 2 type QName(PackageNamespace(""), "String") end
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_demandeRejoindreCanalDiscussion")
+  method
+   refid "tribulle:ProxyTribulle/x_demandeRejoindreCanalDiscussion"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L14
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RejoindreCanal")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     pushstring          "#"
+     getlocal1
+     add
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RejoindreCanal"), 2
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L14:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_ajouterAmi")
+  method
+   refid "tribulle:ProxyTribulle/x_ajouterAmi"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L12
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutAmi")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlocal1
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutAmi"), 2
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+L12:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_quitterCanalDiscussion")
+  method
+   refid "tribulle:ProxyTribulle/x_quitterCanalDiscussion"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "connexionTribulle")
+     findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_QuitterCanal")
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+     getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+     getlocal1
+     constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_QuitterCanal"), 2
+     callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "x_menuContextuel")
+  method
+   refid "tribulle:ProxyTribulle/x_menuContextuel"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("tribulle.type"), "MembreTribu")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional True()
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle:ProxyTribulle"), "menuContextuelAInitialiser")
+     iffalse             L16
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     pushstring          "menucontextuel"
+     findpropstrict      QName(PackageNamespace("tribulle.composants"), "MenuContextuelJoueur")
+     getlex              QName(PackageNamespace(""), "instanceTransformice")
+     getproperty         QName(PackageNamespace(""), "stage")
+     constructprop       QName(PackageNamespace("tribulle.composants"), "MenuContextuelJoueur"), 1
+     callpropvoid        QName(PackageNamespace(""), "register"), 2
+
+     pushfalse
+     findproperty        QName(PrivateNamespace(null, "tribulle:ProxyTribulle"), "menuContextuelAInitialiser")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle:ProxyTribulle"), "menuContextuelAInitialiser")
+
+L16:
+     getlex              QName(PackageNamespace("tribulle.composants"), "MenuContextuelJoueur")
+     getglobalscope
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     pushstring          "menucontextuel"
+     callproperty        QName(PackageNamespace(""), "getComposant"), 1
+     call                1
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "show"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

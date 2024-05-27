@@ -1,0 +1,572 @@
+class
+ refid "com.bit101.components:Label"
+ instance QName(PackageNamespace("com.bit101.components"), "Label")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:Label")
+  iinit
+   refid "com.bit101.components:Label/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Integer(-1)
+   optional Integer(-1)
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            5
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_backgroundColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_backgroundColor")
+
+     getlocal            6
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_fontColor")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_fontColor")
+
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlocal            7
+     pushstring          ""
+     ifne                L18
+
+     pushstring          "left"
+     jump                L20
+
+L18:
+     getlocal            7
+     coerce_s
+L20:
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_align")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_align")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:Label"), "_autoSize") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Label"), "_text") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "_tf") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Label"), "_align") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Label"), "_backgroundColor") type QName(PackageNamespace(""), "int") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Label"), "_fontColor") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "formatage")
+   method
+    refid "com.bit101.components:Label/formatage"
+    param QName(PackageNamespace("flash.text"), "TextFormat")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Label"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:Label:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Label"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:Label:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            18
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      findproperty        QName(PackageNamespace(""), "_tf")
+      swap
+      setproperty         QName(PackageNamespace(""), "_tf")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "embedFonts")
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "x_policeInterface")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "fontSize")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_fontColor")
+      pushbyte            255
+      ifne                L35
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "COULEUR_TEXTE_DEFAUT")
+      jump                L37
+
+L35:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_fontColor")
+      coerce_a
+L37:
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal1
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_align")
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      iffalse             L52
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      jump                L55
+
+L52:
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      setproperty         QName(PackageNamespace(""), "text")
+
+L55:
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PackageNamespace(""), "_tf")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:Label/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_backgroundColor")
+      pushbyte            255
+      ifeq                L20
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_backgroundColor")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+L20:
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      iffalse             L26
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      jump                L29
+
+L26:
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      setproperty         QName(PackageNamespace(""), "text")
+
+L29:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_autoSize")
+      iffalse             L45
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushstring          "left"
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "width")
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "resize"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      jump                L51
+
+L45:
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushstring          "none"
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+L51:
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushbyte            18
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "text")
+   method
+    refid "com.bit101.components:Label/text/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      pushnull
+      ifne                L13
+
+      pushstring          ""
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+
+L13:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "text")
+   method
+    refid "com.bit101.components:Label/text/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "html")
+   method
+    refid "com.bit101.components:Label/html/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "html")
+   method
+    refid "com.bit101.components:Label/html/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      iffalse             L19
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      swap
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "stylesheet")
+   method
+    refid "com.bit101.components:Label/stylesheet/setter"
+    param QName(PackageNamespace("flash.text"), "StyleSheet")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:Label"), "_html")
+      iffalse             L7
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "styleSheet")
+
+L7:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoSize")
+   method
+    refid "com.bit101.components:Label/autoSize/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Label"), "_autoSize")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Label"), "_autoSize")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoSize")
+   method
+    refid "com.bit101.components:Label/autoSize/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Label"), "_autoSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "textField")
+   method
+    refid "com.bit101.components:Label/textField/getter"
+    returns QName(PackageNamespace("flash.text"), "TextField")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "changementCouleur")
+   method
+    refid "com.bit101.components:Label/changementCouleur"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:Label/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

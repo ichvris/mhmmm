@@ -1,0 +1,29 @@
+script ; 80
+ sinit
+  refid "tribulle.auto.protocole.type:NT_ModeSilence.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.type:NT_ModeSilence"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ModeSilence")
+  #include "NT_ModeSilence.class.asasm"
+ end ; trait
+end ; script

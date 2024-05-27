@@ -1,0 +1,42 @@
+class
+ refid "tribulle.enums:ComposantsParDefauts"
+ instance QName(PackageNamespace("tribulle.enums"), "ComposantsParDefauts")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.enums:ComposantsParDefauts/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.enums:ComposantsParDefauts/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "CHAT") type QName(PackageNamespace(""), "String") value Utf8("chat") end
+ trait const QName(PackageNamespace(""), "LISTE_CANAUX") type QName(PackageNamespace(""), "String") value Utf8("listecanaux") end
+ trait const QName(PackageNamespace(""), "MENU_CONTEXTUEL") type QName(PackageNamespace(""), "String") value Utf8("menucontextuel") end
+ trait const QName(PackageNamespace(""), "LISTE_AMIS") type QName(PackageNamespace(""), "String") value Utf8("listedamis") end
+ trait const QName(PackageNamespace(""), "TRIBU") type QName(PackageNamespace(""), "String") value Utf8("tribu") end
+end ; class

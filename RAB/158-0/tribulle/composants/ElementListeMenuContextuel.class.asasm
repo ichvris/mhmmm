@@ -1,0 +1,183 @@
+class
+ refid "tribulle.composants:ElementListeMenuContextuel"
+ instance QName(PackageNamespace("tribulle.composants"), "ElementListeMenuContextuel")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ElementListeMenuContextuel")
+  iinit
+   refid "tribulle.composants:ElementListeMenuContextuel/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "useHandCursor")
+     swap
+     setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeMenuContextuel"), "init") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeMenuContextuel:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:ListItem"), "init"), 0
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "buttonMode")
+      swap
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeMenuContextuel/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L12
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getproperty         Multiname("isTitle", [PrivateNamespace(null, "tribulle.composants:ElementListeMenuContextuel#0"), ProtectedNamespace("tribulle.composants:ElementListeMenuContextuel"), StaticProtectedNs("tribulle.composants:ElementListeMenuContextuel"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMenuContextuel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      coerce_a
+L12:
+      iffalse             L26
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getproperty         QName(PackageNamespace(""), "textField")
+      pushint             754565
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "buttonMode")
+      swap
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FOND_TITRE_FENETRE")
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ListItem"), "_defaultColor")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ListItem"), "_defaultColor")
+
+L26:
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeMenuContextuel/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlocal1
+      getproperty         Multiname("isTitle", [PrivateNamespace(null, "tribulle.composants:ElementListeMenuContextuel#0"), ProtectedNamespace("tribulle.composants:ElementListeMenuContextuel"), StaticProtectedNs("tribulle.composants:ElementListeMenuContextuel"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMenuContextuel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      dup
+      iffalse             L15
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "hasEventListener")
+      pushstring          "mouseOver"
+      callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
+      coerce_a
+L15:
+      iffalse             L20
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      pushstring          "mouseOver"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L20:
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "data")
+      swap
+      setsuper            QName(PackageNamespace(""), "data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ElementListeMenuContextuel/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

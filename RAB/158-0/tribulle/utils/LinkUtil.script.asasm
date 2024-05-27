@@ -1,0 +1,29 @@
+script ; 483
+ sinit
+  refid "tribulle.utils:LinkUtil.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.utils:LinkUtil"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.utils"), "LinkUtil")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.utils"), "LinkUtil")
+  #include "LinkUtil.class.asasm"
+ end ; trait
+end ; script

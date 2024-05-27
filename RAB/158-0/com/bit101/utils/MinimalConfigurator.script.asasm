@@ -1,0 +1,33 @@
+script ; 749
+ sinit
+  refid "com.bit101.utils:MinimalConfigurator.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    dup
+    pushscope
+
+    newclass            "com.bit101.utils:MinimalConfigurator"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator")
+  #include "MinimalConfigurator.class.asasm"
+ end ; trait
+end ; script

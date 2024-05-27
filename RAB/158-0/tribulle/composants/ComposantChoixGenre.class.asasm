@@ -1,0 +1,334 @@
+class
+ refid "tribulle.composants:ComposantChoixGenre"
+ instance QName(PackageNamespace("tribulle.composants"), "ComposantChoixGenre")
+  extends QName(PackageNamespace("com.bit101.components"), "HBox")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ComposantChoixGenre")
+  iinit
+   refid "tribulle.composants:ComposantChoixGenre/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     getlocal0
+     pushbyte            0
+     dup
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "texte.genreInconnu"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueInconnu")
+     constructprop       QName(PackageNamespace("com.bit101.components"), "CheckBox"), 5
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     getlocal0
+     pushbyte            0
+     dup
+     pushstring          "♀ "
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "texte.fille"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueFille")
+     constructprop       QName(PackageNamespace("com.bit101.components"), "CheckBox"), 5
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     getlocal0
+     pushbyte            0
+     dup
+     pushstring          "♂ "
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "texte.garcon"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueGarcon")
+     constructprop       QName(PackageNamespace("com.bit101.components"), "CheckBox"), 5
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+
+     findpropstrict      QName(PackageNamespace(""), "x_setGenre")
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     getproperty         QName(PackageNamespace(""), "idGenre")
+     callpropvoid        QName(PackageNamespace(""), "x_setGenre"), 1
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     getlocal0
+     setproperty         QName(PackageNamespace(""), "composant")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu") type QName(PackageNamespace("com.bit101.components"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille") type QName(PackageNamespace("com.bit101.components"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon") type QName(PackageNamespace("com.bit101.components"), "CheckBox") end
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueInconnu")
+   method
+    refid "tribulle.composants:ComposantChoixGenre/onCliqueInconnu"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      getproperty         QName(PackageNamespace(""), "selected")
+      not
+      dup
+      iftrue              L14
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "idGenre")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_INCONNU")
+      equals
+L14:
+      iffalse             L16
+
+      returnvoid
+
+L16:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_INCONNU")
+      callpropvoid        QName(PackageNamespace(""), "changerDeGenre"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueFille")
+   method
+    refid "tribulle.composants:ComposantChoixGenre/onCliqueFille"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      getproperty         QName(PackageNamespace(""), "selected")
+      not
+      dup
+      iftrue              L14
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "idGenre")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_FILLE")
+      equals
+L14:
+      iffalse             L16
+
+      returnvoid
+
+L16:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_FILLE")
+      callpropvoid        QName(PackageNamespace(""), "changerDeGenre"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "onCliqueGarcon")
+   method
+    refid "tribulle.composants:ComposantChoixGenre/onCliqueGarcon"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      getproperty         QName(PackageNamespace(""), "selected")
+      not
+      dup
+      iftrue              L14
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "idGenre")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_GARCON")
+      equals
+L14:
+      iffalse             L16
+
+      returnvoid
+
+L16:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_GARCON")
+      callpropvoid        QName(PackageNamespace(""), "changerDeGenre"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "x_setGenre")
+   method
+    refid "tribulle.composants:ComposantChoixGenre/x_setGenre"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_FILLE")
+      ifne                L16
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      jump                L39
+
+L16:
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "GENRE_GARCON")
+      ifne                L30
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      jump                L39
+
+L30:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseInconnu")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseFille")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ComposantChoixGenre"), "_caseGarcon")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ComposantChoixGenre/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

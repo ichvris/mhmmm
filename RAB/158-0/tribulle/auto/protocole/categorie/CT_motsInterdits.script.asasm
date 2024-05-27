@@ -1,0 +1,25 @@
+script ; 870
+ sinit
+  refid "tribulle.auto.protocole.categorie:CT_motsInterdits.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "tribulle.auto.protocole.categorie:CT_motsInterdits"
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_motsInterdits")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_motsInterdits")
+  #include "CT_motsInterdits.class.asasm"
+ end ; trait
+end ; script

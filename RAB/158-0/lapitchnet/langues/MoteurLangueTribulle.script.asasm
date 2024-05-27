@@ -1,0 +1,33 @@
+script ; 321
+ sinit
+  refid "lapitchnet.langues:MoteurLangueTribulle.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.langues:MoteurLangueTribulle"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+  #include "MoteurLangueTribulle.class.asasm"
+ end ; trait
+end ; script

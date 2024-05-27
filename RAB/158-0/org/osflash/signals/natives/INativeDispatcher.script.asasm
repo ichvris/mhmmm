@@ -1,0 +1,25 @@
+script ; 747
+ sinit
+  refid "org.osflash.signals.natives:INativeDispatcher.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "org.osflash.signals.natives:INativeDispatcher"
+    initproperty        QName(PackageNamespace("org.osflash.signals.natives"), "INativeDispatcher")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals.natives"), "INativeDispatcher")
+  #include "INativeDispatcher.class.asasm"
+ end ; trait
+end ; script

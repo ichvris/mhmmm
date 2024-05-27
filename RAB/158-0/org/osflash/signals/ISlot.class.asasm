@@ -1,0 +1,98 @@
+class
+ refid "org.osflash.signals:ISlot"
+ instance QName(PackageNamespace("org.osflash.signals"), "ISlot")
+  flag INTERFACE
+  iinit
+   refid "org.osflash.signals:ISlot/iinit"
+  end ; method
+  trait getter QName(Namespace("org.osflash.signals:ISlot"), "listener")
+   method
+    refid "org.osflash.signals:ISlot:listener/getter"
+    returns QName(PackageNamespace(""), "Function")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("org.osflash.signals:ISlot"), "listener")
+   method
+    refid "org.osflash.signals:ISlot:listener/setter"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals:ISlot"), "params")
+   method
+    refid "org.osflash.signals:ISlot:params/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("org.osflash.signals:ISlot"), "params")
+   method
+    refid "org.osflash.signals:ISlot:params/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals:ISlot"), "once")
+   method
+    refid "org.osflash.signals:ISlot:once/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals:ISlot"), "priority")
+   method
+    refid "org.osflash.signals:ISlot:priority/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals:ISlot"), "enabled")
+   method
+    refid "org.osflash.signals:ISlot:enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("org.osflash.signals:ISlot"), "enabled")
+   method
+    refid "org.osflash.signals:ISlot:enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:ISlot"), "execute0")
+   method
+    refid "org.osflash.signals:ISlot:execute0"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:ISlot"), "execute1")
+   method
+    refid "org.osflash.signals:ISlot:execute1"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:ISlot"), "execute")
+   method
+    refid "org.osflash.signals:ISlot:execute"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:ISlot"), "remove")
+   method
+    refid "org.osflash.signals:ISlot:remove"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:ISlot/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,53 @@
+class
+ refid "com.bit101.components:HSlider"
+ instance QName(PackageNamespace("com.bit101.components"), "HSlider")
+  extends QName(PackageNamespace("com.bit101.components"), "Slider")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:HSlider")
+  iinit
+   refid "com.bit101.components:HSlider/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "horizontal"
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.bit101.components:HSlider/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

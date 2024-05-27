@@ -1,0 +1,1123 @@
+class
+ refid "tribulle.type:LigneChat"
+ instance QName(PackageNamespace("tribulle.type"), "LigneChat")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.type:LigneChat/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Date")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(-1)
+   optional Null()
+   body
+    maxstack 11
+    localcount 12
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            7
+
+     pushnull
+     setlocal            8
+
+     pushnull
+     setlocal            9
+
+     pushnull
+     setlocal            6
+
+     pushnull
+     setlocal            10
+
+     pushfalse
+     setlocal            11
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+
+     getlocal2
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+
+     getlocal            5
+     pushnull
+     ifeq                L29
+
+     getlocal            5
+     jump                L32
+
+L29:
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     coerce              QName(PackageNamespace(""), "Date")
+L32:
+     findproperty        QName(PackageNamespace(""), "dateMessage")
+     swap
+     setproperty         QName(PackageNamespace(""), "dateMessage")
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_afficherHeureMessageChat")
+     iffalse             L84
+
+     pushstring          "["
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "hours")
+     pushbyte            10
+     ifnlt               L48
+
+     pushstring          "0"
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "hours")
+     add
+     jump                L51
+
+L48:
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "hours")
+     convert_s
+L51:
+     add
+     pushstring          ":"
+     add
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "minutes")
+     pushbyte            10
+     ifnlt               L63
+
+     pushstring          "0"
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "minutes")
+     add
+     jump                L66
+
+L63:
+     getlex              QName(PackageNamespace(""), "dateMessage")
+     getproperty         QName(PackageNamespace(""), "minutes")
+     convert_s
+L66:
+     add
+     pushstring          "]"
+     add
+     setlocal            7
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_inversionSensLecture")
+     iffalse             L79
+
+     pushstring          " "
+     getlocal            7
+     add
+     coerce_s
+     setlocal            7
+
+     jump                L83
+
+L79:
+     getlocal            7
+     pushstring          " "
+     add
+     setlocal            7
+
+L83:
+     jump                L86
+
+L84:
+     pushstring          ""
+     setlocal            7
+
+L86:
+     getlocal1
+     pushbyte            1
+     equals
+     dup
+     iftrue              L95
+
+     pop
+     getlocal1
+     pushbyte            3
+     equals
+L95:
+     dup
+     iftrue              L101
+
+     pop
+     getlocal1
+     pushbyte            2
+     equals
+L101:
+     iffalse             L132
+
+     getlocal3
+     dup
+     iffalse             L112
+
+     pop
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+     getproperty         QName(PackageNamespace(""), "LOGIN")
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            2
+     greaterthan
+     coerce_a
+L112:
+     dup
+     iffalse             L125
+
+     pop
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+     getproperty         QName(PackageNamespace(""), "LOGIN")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     equals
+     not
+     coerce_a
+L125:
+     iffalse             L132
+
+     pushstring          "<J>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+
+L132:
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_inversionSensLecture")
+     iffalse             L484
+
+     pushstring          ""
+     setlocal            9
+
+     pushstring          ""
+     setlocal            6
+
+     getlocal1
+     pushbyte            1
+     ifne                L169
+
+     getlocal3
+     iffalse             L163
+
+     pushstring          "   <V>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     coerce_s
+     setlocal            9
+
+     pushstring          "<N>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L168
+
+L163:
+     pushstring          "<BL>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+L168:
+     jump                L422
+
+L169:
+     getlocal1
+     pushbyte            2
+     ifne                L202
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     iffalse             L194
+
+     pushstring          "   <PT>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     pushstring          " •"
+     add
+     setlocal            9
+
+     pushstring          "<T>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L201
+
+L194:
+     pushstring          "<font color='#5BA783'>• "
+     getlocal            7
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+L201:
+     jump                L422
+
+L202:
+     getlex              QName(PackageNamespace(""), "MESSAGE_STAFF")
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     ifngt               L274
+
+     pushstring          "<font color='#"
+     getlex              QName(PackageNamespace(""), "COULEURS_STAFF")
+     getlex              QName(PackageNamespace(""), "MESSAGE_STAFF")
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            16
+     callproperty        Multiname("toString", [PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+     add
+     pushstring          "'>"
+     add
+     setlocal            10
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     iffalse             L264
+
+     pushfalse
+     setlocal            11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "¤"
+     ifne                L236
+
+     pushtrue
+     setlocal            11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+
+L236:
+     pushstring          "   "
+     getlocal            10
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     getlocal            11
+     iffalse             L251
+
+     pushstring          "][All]"
+     jump                L252
+
+L251:
+     pushstring          "]"
+L252:
+     add
+     getlocal            7
+     add
+     pushstring          " •"
+     add
+     setlocal            9
+
+     getlocal            10
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L273
+
+L264:
+     getlocal            10
+     pushstring          "• "
+     add
+     getlocal            7
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+L273:
+     jump                L422
+
+L274:
+     getlocal1
+     pushbyte            3
+     ifne                L333
+
+     getlocal            4
+     pushbyte            0
+     ifnge               L314
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            8
+
+     iftrue              L291
+
+     getlocal            4
+     convert_s
+     setlocal            8
+
+L291:
+     pushstring          "   <PS>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] ["
+     add
+     getlocal            8
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     coerce_s
+     setlocal            9
+
+     pushstring          "<S>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L332
+
+L314:
+     pushstring          "   <PS>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     coerce_s
+     setlocal            9
+
+     pushstring          "<S>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+L332:
+     jump                L422
+
+L333:
+     getlocal1
+     pushbyte            100
+     ifne                L371
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            8
+
+     iftrue              L347
+
+     getlocal            4
+     convert_s
+     setlocal            8
+
+L347:
+     pushstring          "   <CEP>[<CE>"
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "<CEP>] ["
+     add
+     getlocal            8
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     pushstring          " &lt;"
+     add
+     setlocal            9
+
+     pushstring          "<CEP>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L422
+
+L371:
+     getlocal1
+     pushbyte            101
+     ifne                L394
+
+     pushstring          "   <CS>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     pushstring          " &gt;"
+     add
+     setlocal            9
+
+     pushstring          "<CS>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L422
+
+L394:
+     getlocal1
+     pushbyte            102
+     ifne                L417
+
+     pushstring          "   <BL>["
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "]"
+     add
+     getlocal            7
+     add
+     pushstring          " &lt;"
+     add
+     setlocal            9
+
+     pushstring          "<BL>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+     jump                L422
+
+L417:
+     pushstring          "<BL>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     coerce_s
+     setlocal            6
+
+L422:
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     iftrue              L459
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_policeInterface")
+     pushbyte            12
+     pushint             7108545
+     pushnull
+     pushnull
+     pushnull
+     pushnull
+     pushnull
+     pushstring          "right"
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 9
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "multiline")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "wordWrap")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     pushshort           403
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     pushshort           175
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getproperty         QName(PackageNamespace(""), "GLOBAL_STYLESHEET")
+     setproperty         QName(PackageNamespace(""), "styleSheet")
+
+L459:
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     getlocal            6
+     getlocal            9
+     add
+     setproperty         QName(PackageNamespace(""), "htmlText")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome")
+     getproperty         QName(PackageNamespace(""), "numLines")
+     pushbyte            1
+     ifngt               L477
+
+     getlocal            9
+     pushstring          "\n"
+     add
+     getlocal            6
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L483
+
+L477:
+     getlocal            6
+     getlocal            9
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L483:
+     jump                L762
+
+L484:
+     getlocal1
+     pushbyte            1
+     ifne                L515
+
+     getlocal3
+     iffalse             L508
+
+     pushstring          "<V>"
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] <N>"
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L514
+
+L508:
+     pushstring          "<BL>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L514:
+     jump                L762
+
+L515:
+     getlocal1
+     pushbyte            2
+     ifne                L548
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     iffalse             L539
+
+     pushstring          "<PT>• "
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] <T>"
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L547
+
+L539:
+     pushstring          "<font color='#5BA783'>• "
+     getlocal            7
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L547:
+     jump                L762
+
+L548:
+     getlex              QName(PackageNamespace(""), "MESSAGE_STAFF")
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     ifngt               L618
+
+     pushstring          "<font color='#"
+     getlex              QName(PackageNamespace(""), "COULEURS_STAFF")
+     getlex              QName(PackageNamespace(""), "MESSAGE_STAFF")
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            16
+     callproperty        Multiname("toString", [PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+     add
+     pushstring          "'>"
+     add
+     setlocal            10
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     iffalse             L607
+
+     pushfalse
+     setlocal            11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "¤"
+     ifne                L582
+
+     pushtrue
+     setlocal            11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+
+L582:
+     getlocal            10
+     pushstring          "• "
+     add
+     getlocal            7
+     add
+     getlocal            11
+     iffalse             L591
+
+     pushstring          "[All]["
+     jump                L592
+
+L591:
+     pushstring          "["
+L592:
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] "
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L617
+
+L607:
+     getlocal            10
+     pushstring          "• "
+     add
+     getlocal            7
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L617:
+     jump                L762
+
+L618:
+     getlocal1
+     pushbyte            3
+     ifne                L676
+
+     getlocal            4
+     pushbyte            0
+     ifnge               L657
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            8
+
+     iftrue              L635
+
+     getlocal            4
+     convert_s
+     setlocal            8
+
+L635:
+     pushstring          "<PS>"
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlocal            8
+     add
+     pushstring          "] ["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 2
+     add
+     pushstring          "] <S>"
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L675
+
+L657:
+     pushstring          "<PS>"
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] <S>"
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L675:
+     jump                L762
+
+L676:
+     getlocal1
+     pushbyte            100
+     ifne                L712
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_indexCommunauteParIdentifiant")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), ProtectedNamespace("tribulle.type:LigneChat"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            8
+
+     iftrue              L690
+
+     getlocal            4
+     convert_s
+     setlocal            8
+
+L690:
+     pushstring          "<CEP>&gt; "
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlocal            8
+     add
+     pushstring          "] [<CE>"
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 2
+     add
+     pushstring          "<CEP>] "
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L762
+
+L712:
+     getlocal1
+     pushbyte            101
+     ifne                L734
+
+     pushstring          "<CS>&lt; "
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] "
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L762
+
+L734:
+     getlocal1
+     pushbyte            102
+     ifne                L756
+
+     pushstring          "<BL>&gt; "
+     getlocal            7
+     add
+     pushstring          "["
+     add
+     getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+     pushtrue
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+     add
+     pushstring          "] "
+     add
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+     jump                L762
+
+L756:
+     pushstring          "<BL>"
+     getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+     add
+     findproperty        QName(PackageNamespace(""), "chaine")
+     swap
+     setproperty         QName(PackageNamespace(""), "chaine")
+
+L762:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "dateMessage") type QName(PackageNamespace(""), "Date") end
+  trait slot QName(PackageNamespace(""), "chaine") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "auteur")
+   method
+    refid "tribulle.type:LigneChat/auteur/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_auteur")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "message")
+   method
+    refid "tribulle.type:LigneChat/message/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "_message")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.type:LigneChat/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace(""), "int")
+    applytype           1
+    pushbyte            4
+    construct           1
+    dup
+    pushbyte            0
+    pushbyte            4
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            1
+    pushbyte            5
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            2
+    pushbyte            6
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            3
+    pushbyte            7
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    findproperty        QName(PackageNamespace(""), "MESSAGE_STAFF")
+    swap
+    initproperty        QName(PackageNamespace(""), "MESSAGE_STAFF")
+
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace(""), "int")
+    applytype           1
+    pushbyte            4
+    construct           1
+    dup
+    pushbyte            0
+    pushint             9424320
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            1
+    pushint             9810120
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            2
+    pushint             12161994
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    dup
+    pushbyte            3
+    pushint             12936702
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.type:LigneChat#0"), StaticProtectedNs("tribulle.type:LigneChat"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageInternalNs("tribulle.type"), PrivateNamespace(null, "tribulle.type:LigneChat#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    findproperty        QName(PackageNamespace(""), "COULEURS_STAFF")
+    swap
+    initproperty        QName(PackageNamespace(""), "COULEURS_STAFF")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "MESSAGE_SALON") type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "MESSAGE_TRIBU") type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "MESSAGE_CANAL_PRIVE") type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "MESSAGE_STAFF") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>) end
+ trait const QName(PackageNamespace(""), "COULEURS_STAFF") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>) end
+ trait slot QName(PrivateNamespace(null, "tribulle.type:LigneChat#0"), "champsTexteFantome") type QName(PackageNamespace("flash.text"), "TextField") end
+end ; class

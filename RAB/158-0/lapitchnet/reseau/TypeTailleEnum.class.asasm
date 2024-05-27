@@ -1,0 +1,41 @@
+class
+ refid "lapitchnet.reseau:TypeTailleEnum"
+ instance QName(PackageNamespace("lapitchnet.reseau"), "TypeTailleEnum")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.reseau:TypeTailleEnum/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau:TypeTailleEnum/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "TAILLE_FIXE") type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "TAILLE_BYTE") type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "TAILLE_SHORT") type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "TAILLE_INT") type QName(PackageNamespace(""), "int") value Integer(4) end
+end ; class

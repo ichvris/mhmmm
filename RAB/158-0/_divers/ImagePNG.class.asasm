@@ -1,0 +1,413 @@
+class
+ refid "_divers:ImagePNG"
+ instance QName(PackageNamespace("_divers"), "ImagePNG")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "_divers:ImagePNG/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_divers:ImagePNG/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTable") type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTableComputed") type QName(PackageNamespace(""), "Boolean") value False() end
+ trait method QName(PackageNamespace(""), "encode")
+  method
+   refid "_divers:ImagePNG/encode"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     setlocal2
+
+     pushbyte            0
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     dup
+     setlocal            5
+
+     pushdouble          2303741511
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     getlocal            5
+     pushint             218765834
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     dup
+     setlocal            7
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            7
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            7
+     pushint             134610944
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     getlocal            7
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+     findpropstrict      QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk")
+     getlocal            5
+     pushint             1229472850
+     getlocal            7
+     callpropvoid        QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk"), 3
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal            6
+
+     pushbyte            0
+     setlocal3
+
+     jump                L107
+
+L48:
+     label
+     getlocal            6
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "transparent")
+     iftrue              L80
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L75
+
+L58:
+     label
+     getlocal1
+     getlocal            4
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "getPixel"), 2
+     convert_i
+     setlocal2
+
+     getlocal            6
+     getlocal2
+     pushint             16777215
+     bitand
+     pushbyte            8
+     lshift
+     pushshort           255
+     bitor
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     inclocal_i          4
+L75:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     iflt                L58
+
+     jump                L106
+
+L80:
+     pushbyte            0
+     setlocal            4
+
+     jump                L102
+
+L83:
+     label
+     getlocal1
+     getlocal            4
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "getPixel32"), 2
+     convert_i
+     setlocal2
+
+     getlocal            6
+     getlocal2
+     pushint             16777215
+     bitand
+     pushbyte            8
+     lshift
+     getlocal2
+     pushbyte            24
+     urshift
+     bitor
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     inclocal_i          4
+L102:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     iflt                L83
+
+L106:
+     inclocal_i          3
+L107:
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     iflt                L48
+
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "compress"), 0
+
+     findpropstrict      QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk")
+     getlocal            5
+     pushint             1229209940
+     getlocal            6
+     callpropvoid        QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk"), 3
+
+     findpropstrict      QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk")
+     getlocal            5
+     pushint             1229278788
+     pushnull
+     callpropvoid        QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk"), 3
+
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "_divers:ImagePNG"), "writeChunk")
+  method
+   refid "_divers:ImagePNG/writeChunk"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 11
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            10
+
+     pushbyte            0
+     setlocal            9
+
+     pushbyte            0
+     setlocal            8
+
+     getlex              QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTableComputed")
+     iftrue              L58
+
+     pushtrue
+     findproperty        QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTableComputed")
+     swap
+     setproperty         QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTableComputed")
+
+     newarray            0
+     findproperty        QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTable")
+     swap
+     setproperty         QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTable")
+
+     pushbyte            0
+     setlocal            10
+
+     jump                L55
+
+L23:
+     label
+     getlocal            10
+     setlocal            5
+
+     pushbyte            0
+     setlocal            9
+
+     jump                L47
+
+L29:
+     label
+     getlocal            5
+     pushbyte            1
+     bitand
+     iffalse             L41
+
+     pushdouble          3988292384
+     getlocal            5
+     pushbyte            1
+     urshift
+     bitxor
+     setlocal            5
+
+     jump                L46
+
+L41:
+     getlocal            5
+     pushbyte            1
+     urshift
+     convert_i
+     setlocal            5
+
+L46:
+     inclocal_i          9
+L47:
+     getlocal            9
+     pushbyte            8
+     iflt                L29
+
+     getlex              QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTable")
+     getlocal            10
+     getlocal            5
+     setproperty         MultinameL([PrivateNamespace(null, "_divers:ImagePNG"), StaticProtectedNs("_divers:ImagePNG"), StaticProtectedNs("Object"), PackageNamespace("_divers"), PackageInternalNs("_divers"), PrivateNamespace(null, "_divers:ImagePNG/writeChunk"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     inclocal_i          10
+L55:
+     getlocal            10
+     pushshort           256
+     iflt                L23
+
+L58:
+     pushbyte            0
+     setlocal            6
+
+     getlocal3
+     pushnull
+     ifeq                L67
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            6
+
+L67:
+     getlocal1
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "position")
+     convert_i
+     setlocal            4
+
+     getlocal1
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     getlocal3
+     pushnull
+     ifeq                L83
+
+     getlocal1
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+L83:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "position")
+     convert_i
+     setlocal            7
+
+     getlocal1
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "position")
+
+     pushdouble          4294967295
+     convert_i
+     setlocal            5
+
+     pushbyte            0
+     setlocal            8
+
+     jump                L111
+
+L96:
+     label
+     getlex              QName(PrivateNamespace(null, "_divers:ImagePNG"), "crcTable")
+     getlocal            5
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
+     bitxor
+     pushshort           255
+     bitand
+     getproperty         MultinameL([PrivateNamespace(null, "_divers:ImagePNG"), StaticProtectedNs("_divers:ImagePNG"), StaticProtectedNs("Object"), PackageNamespace("_divers"), PackageInternalNs("_divers"), PrivateNamespace(null, "_divers:ImagePNG/writeChunk"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlocal            5
+     pushbyte            8
+     urshift
+     bitxor
+     setlocal            5
+
+     inclocal_i          8
+L111:
+     getlocal            8
+     getlocal            7
+     getlocal            4
+     subtract
+     iflt                L96
+
+     getlocal            5
+     pushdouble          4294967295
+     bitxor
+     setlocal            5
+
+     getlocal1
+     getlocal            7
+     setproperty         QName(PackageNamespace(""), "position")
+
+     getlocal1
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,222 @@
+class
+ refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06"
+ instance QName(PackageNamespace(""), "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IConnexion", [PackageNamespace("lapitchnet.reseau.interfaces")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")
+  iinit
+   refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PackageNamespace(""), "\x08\x05\x04\x07\x08\x05\x03\x07\x01\x04\x03\x07")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     initproperty        QName(PackageNamespace(""), "\x04\x03\x08\x03\x08\x07\x06\x05\x02\x06\x02\x05")
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")
+     getlocal0
+     setproperty         QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06")
+     constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06"), 0
+     initproperty        QName(PackageNamespace(""), "\x08\x05\x02\x08\x03\x03\x05\x08\x05\x06\x03\x02")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x08\x05\x02\x08\x03\x03\x05\x08\x05\x06\x03\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x02\x06\x02\x01\x04\x07\x06\x08\x06\x06") end
+  trait slot QName(PackageNamespace(""), "\x08\x05\x04\x07\x08\x05\x03\x07\x01\x04\x03\x07") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait setter QName(PackageNamespace(""), "idSequence")
+   method
+    refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/idSequence/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "\x04\x03\x08\x03\x08\x07\x06\x05\x02\x06\x02\x05")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "idSequence")
+   method
+    refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/idSequence/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x08\x03\x08\x07\x06\x05\x02\x06\x02\x05")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "traitePaquetSortant")
+   method
+    refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/traitePaquetSortant"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+L6:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x02\x08\x03\x03\x05\x08\x05\x06\x03\x02")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getIdPaquet"), 1
+      convert_i
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+      istypelate
+      iffalse             L27
+
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+      astypelate
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IPaquetSequenciel"), "getIdSequence"), 0
+      convert_i
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x04\x07\x08\x05\x03\x07\x01\x04\x03\x07")
+      getlocal3
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06"), StaticProtectedNs("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")])
+
+L27:
+      getlex              QName(PackageNamespace(""), "\x03\x04\x08\x05\x01\x01\x07\x01\x02\x08\x02\x07\x03")
+      getproperty         QName(PackageNamespace(""), "\x03\x07\x08\x07\x05\x02\x03\x05\x08\x05\x03\x03\x07")
+      findpropstrict      QName(PackageNamespace(""), "\x07\x04\x02\x05\x03\x02\x06\x01\x04\x08\x02")
+      getlocal2
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "\x07\x04\x02\x05\x03\x02\x06\x01\x04\x08\x02"), 2
+      callpropvoid        QName(PackageNamespace(""), "\x04\x04\x01\x05\x06\x02\x08\x07\x02\x04\x07\x02\x08"), 1
+
+L34:
+      jump                L46
+
+L35:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                4
+L46:
+      returnvoid
+     end ; code
+     try from L6 to L34 target L35 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "E") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "recupereSequence")
+   method
+    refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/recupereSequence"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x04\x07\x08\x05\x03\x07\x01\x04\x03\x07")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06"), StaticProtectedNs("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")])
+      coerce              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x04\x07\x08\x05\x03\x07\x01\x04\x03\x07")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06"), StaticProtectedNs("\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06")])
+      pop
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "\x04\x03\x08\x03\x08\x07\x06\x05\x02\x06\x02\x05") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03") slotid 1 type QName(PackageNamespace(""), "\x07\x02\x05\x04\x05\x08\x08\x03\x08\x04\x07\x06") end
+end ; class

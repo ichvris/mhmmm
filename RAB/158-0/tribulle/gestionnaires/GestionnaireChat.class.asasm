@@ -1,0 +1,200 @@
+class
+ refid "tribulle.gestionnaires:GestionnaireChat"
+ instance QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.gestionnaires:GestionnaireChat/iinit"
+   param QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#0"), "PrivateClass")
+   body
+    maxstack 7
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 4
+     findproperty        QName(PackageNamespace(""), "recoisMessagePriveSignal")
+     swap
+     setproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 4
+     findproperty        QName(PackageNamespace(""), "recoisMessageCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "recoisMessageCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "Boolean")
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 5
+     findproperty        QName(PackageNamespace(""), "rejoinsCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "rejoinsCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+     findproperty        QName(PackageNamespace(""), "afficheMessageClient")
+     swap
+     setproperty         QName(PackageNamespace(""), "afficheMessageClient")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "quitteCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "quitteCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "statusModeSilence")
+     swap
+     setproperty         QName(PackageNamespace(""), "statusModeSilence")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+     findproperty        QName(PackageNamespace(""), "connexionMembreCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "connexionMembreCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+     findproperty        QName(PackageNamespace(""), "deconnexionMembreCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "deconnexionMembreCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+     findproperty        QName(PackageNamespace(""), "connexionMembresCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "connexionMembresCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+     findproperty        QName(PackageNamespace(""), "deconnexionMembresCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "deconnexionMembresCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 3
+     findproperty        QName(PackageNamespace(""), "resultatDemandeMembresCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "resultatDemandeMembresCanal")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "changeCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "changeCanal")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "recoisMessagePriveSignal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "recoisMessageCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "rejoinsCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "afficheMessageClient") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "quitteCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "connexionMembreCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "deconnexionMembreCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "connexionMembresCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "deconnexionMembresCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "resultatDemandeMembresCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "statusModeSilence") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "changeCanal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ end ; instance
+ cinit
+  refid "tribulle.gestionnaires:GestionnaireChat/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#1"), "_singleton") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle.gestionnaires:GestionnaireChat/getInstance"
+   returns QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#1"), "_singleton")
+     pushnull
+     ifne                L12
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#0"), "PrivateClass")
+     constructprop       QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#0"), "PrivateClass"), 0
+     construct           1
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#1"), "_singleton")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#1"), "_singleton")
+
+L12:
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#1"), "_singleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

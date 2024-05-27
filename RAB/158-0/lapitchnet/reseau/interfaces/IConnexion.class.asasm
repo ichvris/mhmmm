@@ -1,0 +1,48 @@
+class
+ refid "lapitchnet.reseau.interfaces:IConnexion"
+ instance QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+  flag INTERFACE
+  iinit
+   refid "lapitchnet.reseau.interfaces:IConnexion/iinit"
+  end ; method
+  trait getter QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "idSequence")
+   method
+    refid "lapitchnet.reseau.interfaces:IConnexion:idSequence/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "idSequence")
+   method
+    refid "lapitchnet.reseau.interfaces:IConnexion:idSequence/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "recupereSequence")
+   method
+    refid "lapitchnet.reseau.interfaces:IConnexion:recupereSequence"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant")
+   method
+    refid "lapitchnet.reseau.interfaces:IConnexion:traitePaquetSortant"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau.interfaces:IConnexion/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

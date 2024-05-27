@@ -1,0 +1,60 @@
+class
+ refid "\x02\x01\x02\x07\x08\x07\x02\x01\x01\x01\x01\x03"
+ instance QName(PackageNamespace(""), "\x02\x01\x02\x07\x08\x07\x02\x01\x01\x01\x01\x03")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x02\x01\x02\x07\x08\x07\x02\x01\x01\x01\x01\x03")
+  iinit
+   refid "\x02\x01\x02\x07\x08\x07\x02\x01\x01\x01\x01\x03/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "\x08\x02\x01\x07\x02\x07\x01\x02\x01\x06\x02\x01")
+     constructprop       QName(PackageNamespace(""), "\x08\x02\x01\x07\x02\x07\x01\x02\x01\x06\x02\x01"), 0
+     initproperty        QName(PackageNamespace(""), "R")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01")
+     constructprop       QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01"), 0
+     initproperty        QName(PackageNamespace(""), "\x02\x02\x05\x05\x05\x08\x03\x02\x04\x02\x08")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01")
+     constructprop       QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01"), 0
+     initproperty        QName(PackageNamespace(""), "\x01\x07\x08\x01\x01\x06\x05\x08\x08\x02\x08\x04\x07")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "R") type QName(PackageNamespace(""), "\x08\x02\x01\x07\x02\x07\x01\x02\x01\x06\x02\x01") end
+  trait slot QName(PackageNamespace(""), "\x02\x02\x05\x05\x05\x08\x03\x02\x04\x02\x08") type QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01") end
+  trait slot QName(PackageNamespace(""), "\x01\x07\x08\x01\x01\x06\x05\x08\x08\x02\x08\x04\x07") type QName(PackageNamespace(""), "\x03\x08\x07\x05\x08\x07\x04\x04\x07\x01") end
+ end ; instance
+ cinit
+  refid "\x02\x01\x02\x07\x08\x07\x02\x01\x01\x01\x01\x03/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,131 @@
+class
+ refid "\x03\x06\x04\x05\x05\x07\x03\x04\x03\x05\x04"
+ instance QName(PackageNamespace(""), "\x03\x06\x04\x05\x05\x07\x03\x04\x03\x05\x04")
+  extends QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x03\x06\x04\x05\x05\x07\x03\x04\x03\x05\x04")
+  iinit
+   refid "\x03\x06\x04\x05\x05\x07\x03\x04\x03\x05\x04/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 12
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+     getproperty         QName(PackageNamespace(""), "\x05\x05\x06\x04\x02\x04\x02\x05\x06\x05\x06\x06\x03")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     constructsuper      2
+
+     findproperty        QName(PackageNamespace(""), "\x05\x01\x05\x04\x03\x01\x06\x06\x05\x06\x08\x05")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+     initproperty        QName(PackageNamespace(""), "\x05\x01\x05\x04\x03\x01\x06\x06\x05\x06\x08\x05")
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlocal            5
+     pushnull
+     ifne                L32
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x05\x08\x08\x08\x01\x06\x05\x08\x07\x05\x05\x06\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     coerce_s
+     setlocal            5
+
+L32:
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            8
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            10
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            11
+     iftrue              L61
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x06\x05\x06\x03\x08\x05\x04\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x06\x01\x07\x07\x02\x06\x04\x07\x02\x07\x03\x01\x02")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     coerce_s
+     setlocal            11
+
+L61:
+     getlex              QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal            11
+     callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x03\x06\x04\x05\x05\x07\x03\x04\x03\x05\x04/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

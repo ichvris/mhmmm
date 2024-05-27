@@ -1,0 +1,25 @@
+script ; 237
+ sinit
+  refid "org.osflash.signals:ISignal.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "org.osflash.signals:ISignal"
+    initproperty        QName(PackageNamespace("org.osflash.signals"), "ISignal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals"), "ISignal")
+  #include "ISignal.class.asasm"
+ end ; trait
+end ; script

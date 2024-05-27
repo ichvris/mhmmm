@@ -1,0 +1,223 @@
+class
+ refid "lapitchnet.utils:IntUtil"
+ instance QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.utils:IntUtil/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.utils:IntUtil/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "rol")
+  method
+   refid "lapitchnet.utils:IntUtil/rol"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal2
+     lshift
+     getlocal1
+     pushbyte            32
+     getlocal2
+     subtract
+     urshift
+     bitor
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "ror")
+  method
+   refid "lapitchnet.utils:IntUtil/ror"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            32
+     getlocal2
+     subtract
+     convert_i
+     setlocal3
+
+     getlocal1
+     getlocal3
+     lshift
+     getlocal1
+     pushbyte            32
+     getlocal3
+     subtract
+     urshift
+     bitor
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace(null, "lapitchnet.utils:IntUtil"), "hexChars") type QName(PackageNamespace(""), "String") value Utf8("0123456789abcdef") end
+ trait method QName(PackageNamespace(""), "toHex")
+  method
+   refid "lapitchnet.utils:IntUtil/toHex"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            4
+
+     pushstring          ""
+     setlocal3
+
+     getlocal2
+     iffalse             L48
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L44
+
+L13:
+     label
+     getlocal3
+     getlex              QName(PrivateNamespace(null, "lapitchnet.utils:IntUtil"), "hexChars")
+     getlocal1
+     pushbyte            3
+     getlocal            5
+     subtract
+     pushbyte            8
+     multiply
+     pushbyte            4
+     add
+     rshift
+     pushbyte            15
+     bitand
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     getlex              QName(PrivateNamespace(null, "lapitchnet.utils:IntUtil"), "hexChars")
+     getlocal1
+     pushbyte            3
+     getlocal            5
+     subtract
+     pushbyte            8
+     multiply
+     rshift
+     pushbyte            15
+     bitand
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     add
+     add
+     coerce_s
+     setlocal3
+
+     inclocal_i          5
+L44:
+     getlocal            5
+     pushbyte            4
+     iflt                L13
+
+     jump                L81
+
+L48:
+     pushbyte            0
+     setlocal            4
+
+     jump                L78
+
+L51:
+     label
+     getlocal3
+     getlex              QName(PrivateNamespace(null, "lapitchnet.utils:IntUtil"), "hexChars")
+     getlocal1
+     getlocal            4
+     pushbyte            8
+     multiply
+     pushbyte            4
+     add
+     rshift
+     pushbyte            15
+     bitand
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     getlex              QName(PrivateNamespace(null, "lapitchnet.utils:IntUtil"), "hexChars")
+     getlocal1
+     getlocal            4
+     pushbyte            8
+     multiply
+     rshift
+     pushbyte            15
+     bitand
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     add
+     add
+     coerce_s
+     setlocal3
+
+     inclocal_i          4
+L78:
+     getlocal            4
+     pushbyte            4
+     iflt                L51
+
+L81:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

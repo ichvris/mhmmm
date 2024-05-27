@@ -1,0 +1,228 @@
+class
+ refid "tribulle.utils:LinkUtil"
+ instance QName(PackageNamespace("tribulle.utils"), "LinkUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.utils:LinkUtil/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.utils:LinkUtil/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "handleTextLink")
+  method
+   refid "tribulle.utils:LinkUtil/handleTextLink"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_fonctionCliqueChat")
+     pushnull
+     ifeq                L9
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "x_fonctionCliqueChat"), 1
+
+L9:
+     findpropstrict      QName(PackageNamespace(""), "getLinkParams")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getLinkParams"), 1
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal2
+
+     getlocal2
+     getproperty         Multiname("eventName", [PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     setlocal3
+
+     jump                L30
+
+L18:
+     label
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal2
+     getproperty         Multiname("joueur", [PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushnull
+     getlocal2
+     getproperty         Multiname("online", [PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushstring          "false"
+     equals
+     not
+     callpropvoid        QName(PackageNamespace(""), "x_menuContextuel"), 3
+
+     jump                L34
+
+L30:
+     getlex              QName(PackageNamespace("tribulle.enums"), "ChatEventEnum")
+     getproperty         QName(PackageNamespace(""), "TEXTE_NOM_JOUEUR")
+     getlocal3
+     ifstricteq          L18
+
+L34:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getLinkParams")
+  method
+   refid "tribulle.utils:LinkUtil/getLinkParams"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            7
+
+     pushnull
+     setlocal            6
+
+     pushnull
+     setlocal3
+
+     pushnull
+     setlocal            5
+
+     getlocal1
+     pushstring          ";"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     newobject           0
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            4
+
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     setproperty         Multiname("eventName", [PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            1
+     greaterthan
+     dup
+     iffalse             L36
+
+     pop
+     getlocal2
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushstring          ""
+     equals
+     not
+L36:
+     iffalse             L85
+
+     getlocal2
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce_s
+     dup
+     setlocal            7
+
+     pushstring          "&"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            6
+
+     pushbyte            0
+     setlocal            9
+
+     getlocal            6
+     setlocal            8
+
+     jump                L83
+
+L52:
+     label
+     getlocal            8
+     getlocal            9
+     nextvalue
+     coerce_s
+     setlocal3
+
+     getlocal3
+     pushstring          "="
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     setlocal            5
+
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L74
+
+     pop
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            1
+     greaterthan
+L74:
+     iffalse             L83
+
+     getlocal            4
+     getlocal            5
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlocal            5
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     setproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:LinkUtil#0"), StaticProtectedNs("tribulle.utils:LinkUtil"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:LinkUtil#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L83:
+     hasnext2            8, 9
+     iftrue              L52
+
+L85:
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

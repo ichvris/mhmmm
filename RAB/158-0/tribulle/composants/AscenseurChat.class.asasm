@@ -1,0 +1,640 @@
+class
+ refid "tribulle.composants:AscenseurChat"
+ instance QName(PackageNamespace("tribulle.composants"), "AscenseurChat")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  iinit
+   refid "tribulle.composants:AscenseurChat/iinit"
+   param QName(PackageNamespace("flash.text"), "TextField")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Integer(1)
+   optional Integer(2108213)
+   optional Integer(3952740)
+   optional Integer(0)
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     getproperty         QName(PackageNamespace(""), "width")
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Largeur")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Largeur")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            10
+     subtract
+     getlocal            5
+     add
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "mouseWheelEnabled")
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     pushfalse
+     findproperty        QName(PackageNamespace(""), "mouseChildren")
+     swap
+     setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "mouseEnabled")
+     swap
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlocal2
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "PuissanceMolette")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "PuissanceMolette")
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     findproperty        QName(PackageNamespace(""), "ClipAscenseur")
+     swap
+     setproperty         QName(PackageNamespace(""), "ClipAscenseur")
+
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Largeur")
+     add
+     pushbyte            5
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     getproperty         QName(PackageNamespace(""), "y")
+     pushbyte            5
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal3
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCF")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCF")
+
+     getlocal            4
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCB")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCB")
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     dup
+     setlocal            6
+
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushbyte            251
+     pushbyte            0
+     pushbyte            13
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+     callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "graphics")
+     callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     dup
+     setlocal            7
+
+     getproperty         QName(PackageNamespace(""), "graphics")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCF")
+     callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     pushbyte            2
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+     callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "graphics")
+     callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PackageNamespace(""), "ClipAscenseur")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "mouseWheel"
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Utilisation_Molette")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     pushstring          "mouseWheel"
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Utilisation_Molette")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "mouseDown"
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Clique_Ascenseur")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+     getproperty         QName(PackageNamespace(""), "parent")
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     pushfalse
+     findproperty        QName(PackageNamespace(""), "visible")
+     swap
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Largeur") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "ClipAscenseur") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "PuissanceMolette") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCF") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCB") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "DécalageBarreY") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "fonctionRetourMaj") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "Rendu_Ascenseur")
+   method
+    refid "tribulle.composants:AscenseurChat/Rendu_Ascenseur"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnan
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      pushbyte            1
+      ifne                L24
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "visible")
+      swap
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      pushfalse
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours")
+
+      jump                L123
+
+L24:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "numLines")
+      convert_i
+      setlocal3
+
+      getlocal3
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      subtract
+      getlocal3
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      equals
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "visible")
+      swap
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+      getlocal2
+      multiply
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            10
+      ifnlt               L58
+
+      pushbyte            10
+      setlocal            4
+
+L58:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "AscenseurCB")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      pushbyte            2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Hauteur")
+      getlocal            4
+      subtract
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+
+      getlocal1
+      pushbyte            0
+      ifne                L91
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      jump                L123
+
+L91:
+      getlocal1
+      pushbyte            1
+      ifne                L104
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "FinEnCours")
+      iffalse             L103
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      setproperty         QName(PackageNamespace(""), "y")
+
+L103:
+      jump                L123
+
+L104:
+      getlocal1
+      pushbyte            2
+      ifne                L115
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      jump                L123
+
+L115:
+      getlocal1
+      pushbyte            3
+      ifne                L123
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      pushdouble          0.9
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+L123:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Utilisation_Molette")
+   method
+    refid "tribulle.composants:AscenseurChat/Utilisation_Molette"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnan
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "visible")
+      iffalse             L49
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "delta")
+      pushbyte            0
+      ifnlt               L16
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "PuissanceMolette")
+      convert_i
+      setlocal3
+
+      jump                L20
+
+L16:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "PuissanceMolette")
+      negate
+      convert_i
+      setlocal3
+
+L20:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      getlocal3
+      add
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      swap
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      decrement
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      decrement
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      getlocal2
+      multiply
+      convert_i
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "fonctionRetourMaj")
+      pushnull
+      ifeq                L49
+
+      getlex              QName(PackageNamespace(""), "fonctionRetourMaj")
+      getglobalscope
+      call                0
+      pop
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Clique_Ascenseur")
+   method
+    refid "tribulle.composants:AscenseurChat/Clique_Ascenseur"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "fonctionRetourMaj")
+      pushnull
+      ifeq                L10
+
+      getlex              QName(PackageNamespace(""), "fonctionRetourMaj")
+      getglobalscope
+      pushtrue
+      call                1
+      pop
+L10:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "mouseY")
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "DécalageBarreY")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "DécalageBarreY")
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Boucle_Ascenseur")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Declique_Ascenseur")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Declique_Ascenseur")
+   method
+    refid "tribulle.composants:AscenseurChat/Declique_Ascenseur"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Boucle_Ascenseur")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Declique_Ascenseur")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Boucle_Ascenseur")
+   method
+    refid "tribulle.composants:AscenseurChat/Boucle_Ascenseur"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ClipAscenseur")
+      getproperty         QName(PackageNamespace(""), "mouseY")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "DécalageBarreY")
+      subtract
+      convert_i
+      setlocal3
+
+      getlocal3
+      pushbyte            0
+      ifnlt               L14
+
+      pushbyte            0
+      setlocal3
+
+      jump                L20
+
+L14:
+      getlocal3
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      ifngt               L20
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      convert_i
+      setlocal3
+
+L20:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "ClipBarre")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "LimiteBarreY")
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      getlocal2
+      multiply
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            0
+      ifne                L42
+
+      pushbyte            1
+      setlocal            4
+
+L42:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:AscenseurChat"), "Texte")
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:AscenseurChat/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

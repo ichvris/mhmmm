@@ -1,0 +1,29 @@
+class
+ refid "org.osflash.signals:ISignal"
+ instance QName(PackageNamespace("org.osflash.signals"), "ISignal")
+  implements QName(PackageNamespace("org.osflash.signals"), "IOnceSignal")
+  flag INTERFACE
+  iinit
+   refid "org.osflash.signals:ISignal/iinit"
+  end ; method
+  trait method QName(Namespace("org.osflash.signals:ISignal"), "add")
+   method
+    refid "org.osflash.signals:ISignal:add"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:ISignal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

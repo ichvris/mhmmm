@@ -1,0 +1,29 @@
+script ; 518
+ sinit
+  refid "org.osflash.signals:OnceSignal.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "org.osflash.signals:OnceSignal"
+    popscope
+    initproperty        QName(PackageNamespace("org.osflash.signals"), "OnceSignal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("org.osflash.signals"), "OnceSignal")
+  #include "OnceSignal.class.asasm"
+ end ; trait
+end ; script

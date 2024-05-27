@@ -1,0 +1,512 @@
+class
+ refid "tribulle.composants:ListeAmis"
+ instance QName(PackageNamespace("tribulle.composants"), "ListeAmis")
+  extends QName(PackageNamespace("com.bit101.components"), "List")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ListeAmis")
+  iinit
+   refid "tribulle.composants:ListeAmis/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlex              QName(PackageNamespace("tribulle.composants"), "ElementListeAmi")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "_gestionnaire")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "_gestionnaire")
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "autoHideScrollBar")
+     swap
+     setproperty         QName(PackageNamespace(""), "autoHideScrollBar")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "_gestionnaire") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis") end
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "tri")
+   method
+    refid "tribulle.composants:ListeAmis/tri"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "epoux")
+      iffalse             L7
+
+      pushbyte            255
+      returnvalue
+
+L7:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "epoux")
+      iffalse             L12
+
+      pushbyte            1
+      returnvalue
+
+L12:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "online")
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      not
+L20:
+      iffalse             L23
+
+      pushbyte            255
+      returnvalue
+
+L23:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "online")
+      not
+      dup
+      iffalse             L32
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      convert_b
+L32:
+      iffalse             L35
+
+      pushbyte            1
+      returnvalue
+
+L35:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      dup
+      iffalse             L43
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      not
+L43:
+      iffalse             L46
+
+      pushbyte            255
+      returnvalue
+
+L46:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      dup
+      iffalse             L54
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      not
+L54:
+      iffalse             L57
+
+      pushbyte            1
+      returnvalue
+
+L57:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      ifnlt               L64
+
+      pushbyte            255
+      returnvalue
+
+L64:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      ifngt               L71
+
+      pushbyte            1
+      returnvalue
+
+L71:
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "rafraichi")
+   method
+    refid "tribulle.composants:ListeAmis/rafraichi"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "sort")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "tri")
+      callpropvoid        QName(PackageNamespace(""), "sort"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSignaleRetraitAmi")
+   method
+    refid "tribulle.composants:ListeAmis/onSignaleRetraitAmi"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeItem")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeItem"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSignaleAjoutAmi")
+   method
+    refid "tribulle.composants:ListeAmis/onSignaleAjoutAmi"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "items")
+      setlocal            4
+
+      jump                L33
+
+L9:
+      label
+      getlocal            4
+      getlocal            5
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      istypelate
+      iffalse             L33
+
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      getglobalscope
+      getlocal2
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L33
+
+      findpropstrict      QName(PackageNamespace(""), "rafraichi")
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+      returnvoid
+
+L33:
+      hasnext2            4, 5
+      iftrue              L9
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "rafraichi")
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onResultatListeAmis")
+   method
+    refid "tribulle.composants:ListeAmis/onResultatListeAmis"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "afficherAmis")
+      callpropvoid        QName(PackageNamespace(""), "afficherAmis"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "afficherAmis")
+   method
+    refid "tribulle.composants:ListeAmis/afficherAmis"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "amis")
+      setlocal3
+
+      jump                L24
+
+L15:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L24:
+      hasnext2            3, 4
+      iftrue              L15
+
+      findpropstrict      QName(PackageNamespace(""), "setItems")
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "tri")
+      callpropvoid        QName(PackageNamespace(""), "setItems"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSignaleModificationLocalisationAmi")
+   method
+    refid "tribulle.composants:ListeAmis/onSignaleModificationLocalisationAmi"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "onAjouteAmi")
+   method
+    refid "tribulle.composants:ListeAmis/onAjouteAmi"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "_gestionnaire")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "rafraichi")
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "onRetireAmi")
+   method
+    refid "tribulle.composants:ListeAmis/onRetireAmi"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "items")
+      setlocal3
+
+      jump                L25
+
+L9:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      getproperty         Multiname("label", [PrivateNamespace(null, "tribulle.composants:ListeAmis"), ProtectedNamespace("tribulle.composants:ListeAmis"), StaticProtectedNs("tribulle.composants:ListeAmis"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ListeAmis/onRetireAmi"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "tribulle.composants:ListeAmis"), ProtectedNamespace("tribulle.composants:ListeAmis"), StaticProtectedNs("tribulle.composants:ListeAmis"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ListeAmis/onRetireAmi"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      ifne                L25
+
+      findpropstrict      QName(PackageNamespace(""), "removeItem")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "removeItem"), 1
+
+      returnvoid
+
+L25:
+      hasnext2            3, 4
+      iftrue              L9
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ListeAmis"), "onActualiseInfos")
+   method
+    refid "tribulle.composants:ListeAmis/onActualiseInfos"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "rafraichi")
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ListeAmis/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

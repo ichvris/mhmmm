@@ -1,0 +1,1103 @@
+class
+ refid "com.bit101.components:ScrollBar"
+ instance QName(PackageNamespace("com.bit101.components"), "ScrollBar")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:ScrollBar")
+  iinit
+   refid "com.bit101.components:ScrollBar/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional True()
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+
+     getlocal            6
+     findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_displayUpDownButtons")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_displayUpDownButtons")
+
+     getlocal0
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      3
+
+     getlocal            5
+     pushnull
+     ifeq                L22
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "change"
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "DELAY_TIME") type QName(PackageNamespace(""), "int") value Integer(500) end
+  trait const QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "REPEAT_TIME") type QName(PackageNamespace(""), "int") value Integer(100) end
+  trait const QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "UP") type QName(PackageNamespace(""), "String") value Utf8("up") end
+  trait const QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "DOWN") type QName(PackageNamespace(""), "String") value Utf8("down") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_autoHide") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider") type QName(PrivateNamespace(null, "com.bit101.components:ScrollBar"), "ScrollSlider") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize") type QName(PackageNamespace(""), "int") value Integer(1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_displayUpDownButtons") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollBar:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.components:ScrollBar"), "ScrollSlider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+      getlocal0
+      pushbyte            0
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onChange")
+      constructprop       QName(PrivateNamespace(null, "com.bit101.components:ScrollBar"), "ScrollSlider"), 5
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_displayUpDownButtons")
+      iftrue              L15
+
+      returnvoid
+
+L15:
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "PushButton")
+      getlocal0
+      pushbyte            0
+      dup
+      pushstring          ""
+      constructprop       QName(PackageNamespace("com.bit101.components"), "PushButton"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onUpClick")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton")
+      pushbyte            10
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Shape")
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_upButton")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "PushButton")
+      getlocal0
+      pushbyte            0
+      dup
+      pushstring          ""
+      constructprop       QName(PackageNamespace("com.bit101.components"), "PushButton"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onDownClick")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushbyte            10
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Shape")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+      pushstring          "vertical"
+      ifne                L115
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "DROPSHADOW")
+      pushdouble          0.5
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            5
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            7
+      pushbyte            6
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            3
+      pushbyte            6
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "DROPSHADOW")
+      pushdouble          0.5
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            5
+      pushbyte            7
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            7
+      pushbyte            4
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            3
+      pushbyte            4
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      jump                L163
+
+L115:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "DROPSHADOW")
+      pushdouble          0.5
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            3
+      pushbyte            5
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            6
+      pushbyte            7
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            6
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "DROPSHADOW")
+      pushdouble          0.5
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            7
+      pushbyte            5
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            4
+      pushbyte            7
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            4
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+L163:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollBar:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L13
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      jump                L18
+
+L13:
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      pushbyte            100
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+L18:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushshort           500
+      pushbyte            1
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+      pushstring          "timerComplete"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onDelayComplete")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushbyte            100
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer")
+      pushstring          "timer"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onRepeat")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSliderParams")
+   method
+    refid "com.bit101.components:ScrollBar/setSliderParams"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setSliderParams"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setThumbPercent")
+   method
+    refid "com.bit101.components:ScrollBar/setThumbPercent"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setThumbPercent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollBar/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_orientation")
+      pushstring          "vertical"
+      ifne                L47
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      ifne                L16
+
+      pushbyte            0
+      jump                L19
+
+L16:
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      coerce_a
+L19:
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      ifne                L31
+
+      pushbyte            0
+      jump                L32
+
+L31:
+      pushdouble          20
+L32:
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      ifeq                L46
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+L46:
+      jump                L88
+
+L47:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      equals
+      pushnull
+      ifne                L55
+
+      pushbyte            0
+      jump                L58
+
+L55:
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      coerce_a
+L58:
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      ifne                L69
+
+      pushbyte            0
+      jump                L70
+
+L69:
+      pushdouble          20
+L70:
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushnull
+      ifeq                L88
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "SCROLLBAR_SIZE")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_downButton")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+L88:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_autoHide")
+      iffalse             L100
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "thumbPercent")
+      pushbyte            1
+      lessthan
+      findproperty        QName(PackageNamespace(""), "visible")
+      swap
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L104
+
+L100:
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "visible")
+      swap
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L104:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoHide")
+   method
+    refid "com.bit101.components:ScrollBar/autoHide/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_autoHide")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_autoHide")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoHide")
+   method
+    refid "com.bit101.components:ScrollBar/autoHide/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_autoHide")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:ScrollBar/value/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "value")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:ScrollBar/value/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:ScrollBar/minimum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "minimum")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:ScrollBar/minimum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "minimum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:ScrollBar/maximum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "maximum")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:ScrollBar/maximum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "maximum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "lineSize")
+   method
+    refid "com.bit101.components:ScrollBar/lineSize/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "lineSize")
+   method
+    refid "com.bit101.components:ScrollBar/lineSize/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "pageSize")
+   method
+    refid "com.bit101.components:ScrollBar/pageSize/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "pageSize")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "pageSize")
+   method
+    refid "com.bit101.components:ScrollBar/pageSize/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "pageSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onUpClick")
+   method
+    refid "com.bit101.components:ScrollBar:onUpClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goUp")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goUp"), 0
+
+      pushtrue
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+
+      pushstring          "up"
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goUp")
+   method
+    refid "com.bit101.components:ScrollBar:goUp"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      swap
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onDownClick")
+   method
+    refid "com.bit101.components:ScrollBar:onDownClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goDown")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goDown"), 0
+
+      pushtrue
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+
+      pushstring          "down"
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goDown")
+   method
+    refid "com.bit101.components:ScrollBar:goDown"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_lineSize")
+      add
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_scrollSlider")
+      swap
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onMouseGoUp")
+   method
+    refid "com.bit101.components:ScrollBar:onMouseGoUp"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_delayTimer")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      pushfalse
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onChange")
+   method
+    refid "com.bit101.components:ScrollBar:onChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onDelayComplete")
+   method
+    refid "com.bit101.components:ScrollBar:onDelayComplete"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_shouldRepeat")
+      iffalse             L6
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_repeatTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L6:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "onRepeat")
+   method
+    refid "com.bit101.components:ScrollBar:onRepeat"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "_direction")
+      pushstring          "up"
+      ifne                L8
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goUp")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goUp"), 0
+
+      jump                L10
+
+L8:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goDown")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ScrollBar"), "goDown"), 0
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:ScrollBar/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,202 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatDissoudreTribu")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "idSequence") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "resultat") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "getIdSequence")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/getIdSequence"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "idSequence")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "precedentDissoudreTribu") type QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DissoudreTribu") end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "idSequence")
+      swap
+      setproperty         QName(PackageNamespace(""), "idSequence")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      findproperty        QName(PackageNamespace(""), "resultat")
+      swap
+      setproperty         QName(PackageNamespace(""), "resultat")
+
+      getlex              QName(PackageNamespace(""), "connexion")
+      getlex              QName(PackageNamespace(""), "idSequence")
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "recupereSequence"), 1
+      coerce              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L34
+
+      getlocal2
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DissoudreTribu")
+      istypelate
+      iffalse             L34
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DissoudreTribu")
+      getglobalscope
+      getlocal2
+      call                1
+      findproperty        QName(PackageNamespace(""), "precedentDissoudreTribu")
+      swap
+      setproperty         QName(PackageNamespace(""), "precedentDissoudreTribu")
+
+      getlex              QName(PackageNamespace(""), "precedentDissoudreTribu")
+      getlocal0
+      setproperty         QName(PackageNamespace(""), "suivantResultatDissoudreTribu")
+
+L34:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_ResultatDissoudreTribu/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

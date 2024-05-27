@@ -1,0 +1,21 @@
+method
+ refid "\x02\x03\x08\x03\x05\x03\x03\x02\x07\x01/\x06\x08\x05\x05\x08\x07\x01\x03\x05\x06/inline_method"
+ param QName(PackageNamespace("flash.events"), "Event")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 5
+  localcount 2
+  initscopedepth 11
+  maxscopedepth 11
+  code
+   getlex              QName(PackageNamespace(""), "\x07\x08\x05\x01\x08\x06\x07\x07\x03\x08\x01\x06\x06")
+   getlex              QName(PackageInternalNs(""), "\x04\x05\x04\x08\x07\x02\x08\x07\x07\x04\x03\x08\x03")
+   getlex              QName(PackageInternalNs(""), "\x03\x02\x06\x08\x08\x02\x06\x05\x07\x07\x06\x02")
+   getlex              QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01")
+   getlex              QName(PackageNamespace(""), "\x08\x08\x06\x07\x02\x08\x02\x08\x05\x05\x07")
+   callpropvoid        QName(PackageNamespace(""), "\x01\x05\x06\x05\x03\x05\x06\x08\x06\x05\x03"), 4
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

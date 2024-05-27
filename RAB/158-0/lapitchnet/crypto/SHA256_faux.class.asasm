@@ -1,0 +1,976 @@
+class
+ refid "lapitchnet.crypto:SHA256_faux"
+ instance QName(PackageNamespace("lapitchnet.crypto"), "SHA256_faux")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.crypto:SHA256_faux/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.crypto:SHA256_faux/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "x_hash")
+  method
+   refid "lapitchnet.crypto:SHA256_faux/x_hash"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromString")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromString"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     findpropstrict      QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "hashBlocks")
+     getlocal2
+     callproperty        QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "hashBlocks"), 1
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal3
+
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "hashBytes")
+  method
+   refid "lapitchnet.crypto:SHA256_faux/hashBytes"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromByteArray")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromByteArray"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     findpropstrict      QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "hashBlocks")
+     getlocal2
+     callproperty        QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "hashBlocks"), 1
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal3
+
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "toHex"), 2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "hashBlocks")
+  method
+   refid "lapitchnet.crypto:SHA256_faux/hashBlocks"
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 65
+    localcount 32
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            26
+
+     pushbyte            0
+     setlocal            16
+
+     pushbyte            0
+     setlocal            17
+
+     pushbyte            0
+     setlocal            18
+
+     pushbyte            0
+     setlocal            19
+
+     pushbyte            0
+     setlocal            20
+
+     pushbyte            0
+     setlocal            22
+
+     pushbyte            0
+     setlocal            23
+
+     pushbyte            0
+     setlocal            25
+
+     pushbyte            0
+     setlocal            28
+
+     pushbyte            0
+     setlocal            12
+
+     pushbyte            0
+     setlocal            11
+
+     pushbyte            0
+     setlocal            14
+
+     pushbyte            0
+     setlocal            13
+
+     pushbyte            0
+     setlocal            31
+
+     pushbyte            0
+     setlocal            15
+
+     pushbyte            0
+     setlocal            21
+
+     pushbyte            0
+     setlocal            30
+
+     pushint             1779033703
+     setlocal2
+
+     pushint             -1150833019
+     setlocal3
+
+     pushint             1013904242
+     setlocal            4
+
+     pushint             -1521486534
+     setlocal            5
+
+     pushint             1359893119
+     setlocal            6
+
+     pushint             -1694144372
+     setlocal            7
+
+     pushint             528734635
+     setlocal            8
+
+     pushint             1541459225
+     setlocal            9
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushint             1116352408
+     pushint             1899447441
+     pushdouble          3049323471
+     pushdouble          3921009573
+     pushint             961987163
+     pushint             1508970993
+     pushdouble          2453635748
+     pushdouble          2870763221
+     pushdouble          3624381080
+     pushint             310598401
+     pushint             607225278
+     pushint             1426881987
+     pushint             1925078388
+     pushdouble          2162078206
+     pushdouble          2614888103
+     pushdouble          3248222580
+     pushdouble          3835390401
+     pushdouble          4022224774
+     pushint             264347078
+     pushint             604807628
+     pushint             770255983
+     pushint             1249150122
+     pushint             1555081692
+     pushint             1996064986
+     pushdouble          2554220882
+     pushdouble          2821834349
+     pushdouble          2952996808
+     pushdouble          3210313671
+     pushdouble          3336571891
+     pushdouble          3584528711
+     pushint             113926993
+     pushint             338241895
+     pushint             666307205
+     pushint             773529912
+     pushint             1294757372
+     pushint             1396182291
+     pushint             1695183700
+     pushint             1986661051
+     pushdouble          2177026350
+     pushdouble          2456956037
+     pushdouble          2730485921
+     pushdouble          2820302411
+     pushdouble          3259730800
+     pushdouble          3345764771
+     pushdouble          3516065817
+     pushdouble          3600352804
+     pushdouble          4094571909
+     pushint             275423344
+     pushint             430227734
+     pushint             506948616
+     pushint             659060556
+     pushint             883997877
+     pushint             958139571
+     pushint             1322822218
+     pushint             1537002063
+     pushint             1747873779
+     pushint             1955562222
+     pushint             2024104815
+     pushdouble          2227730452
+     pushdouble          2361852424
+     pushdouble          2428436474
+     pushdouble          2756734187
+     pushdouble          3204031479
+     pushdouble          3329325298
+     constructprop       QName(PackageNamespace(""), "Array"), 64
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            27
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            10
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushbyte            64
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            29
+
+     pushbyte            0
+     setlocal            26
+
+     jump                L390
+
+L134:
+     label
+     getlocal2
+     setlocal            16
+
+     getlocal3
+     setlocal            17
+
+     getlocal            4
+     setlocal            18
+
+     getlocal            5
+     setlocal            19
+
+     getlocal            6
+     setlocal            20
+
+     getlocal            7
+     setlocal            22
+
+     getlocal            8
+     setlocal            23
+
+     getlocal            9
+     setlocal            25
+
+     pushbyte            0
+     setlocal            28
+
+     jump                L342
+
+L154:
+     label
+     getlocal            28
+     pushbyte            16
+     ifnlt               L178
+
+     getlocal            29
+     getlocal            28
+     getlocal1
+     getlocal            26
+     getlocal            28
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlex              QName(PackageNamespace(""), "isNaN")
+     getglobalscope
+     getlocal            29
+     getlocal            28
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     call                1
+     iffalse             L177
+
+     getlocal            29
+     getlocal            28
+     pushbyte            0
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L177:
+     jump                L248
+
+L178:
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            29
+     getlocal            28
+     pushbyte            15
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            7
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            29
+     getlocal            28
+     pushbyte            15
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            18
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     getlocal            29
+     getlocal            28
+     pushbyte            15
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            3
+     urshift
+     bitxor
+     setlocal            12
+
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            29
+     getlocal            28
+     pushbyte            2
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            17
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            29
+     getlocal            28
+     pushbyte            2
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            19
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     getlocal            29
+     getlocal            28
+     pushbyte            2
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushbyte            10
+     urshift
+     bitxor
+     setlocal            11
+
+     getlocal            29
+     getlocal            28
+     getlocal            29
+     getlocal            28
+     pushbyte            16
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlocal            12
+     add
+     getlocal            29
+     getlocal            28
+     pushbyte            7
+     subtract
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     add
+     getlocal            11
+     add
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L248:
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            16
+     pushbyte            2
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            16
+     pushbyte            13
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            16
+     pushbyte            22
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     setlocal            14
+
+     getlocal            16
+     getlocal            17
+     bitand
+     getlocal            16
+     getlocal            18
+     bitand
+     bitxor
+     getlocal            17
+     getlocal            18
+     bitand
+     bitxor
+     setlocal            13
+
+     getlocal            14
+     getlocal            13
+     add
+     convert_i
+     setlocal            31
+
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            20
+     pushbyte            6
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            20
+     pushbyte            11
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "IntUtil")
+     getlocal            20
+     pushbyte            25
+     callproperty        QName(PackageNamespace(""), "ror"), 2
+     bitxor
+     setlocal            15
+
+     getlocal            20
+     getlocal            22
+     bitand
+     getlocal            20
+     bitnot
+     getlocal            23
+     bitand
+     bitxor
+     setlocal            21
+
+     getlocal            25
+     getlocal            15
+     add
+     getlocal            21
+     add
+     getlocal            27
+     getlocal            28
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     add
+     getlocal            29
+     getlocal            28
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     add
+     convert_i
+     setlocal            30
+
+     getlocal            23
+     setlocal            25
+
+     getlocal            22
+     setlocal            23
+
+     getlocal            20
+     setlocal            22
+
+     getlocal            19
+     getlocal            30
+     add
+     convert_i
+     setlocal            20
+
+     getlocal            18
+     setlocal            19
+
+     getlocal            17
+     setlocal            18
+
+     getlocal            16
+     setlocal            17
+
+     getlocal            30
+     getlocal            31
+     add
+     convert_i
+     setlocal            16
+
+     inclocal_i          28
+L342:
+     getlocal            28
+     pushbyte            64
+     iflt                L154
+
+     getlocal2
+     getlocal            16
+     add
+     convert_i
+     setlocal2
+
+     getlocal3
+     getlocal            17
+     add
+     convert_i
+     setlocal3
+
+     getlocal            4
+     getlocal            18
+     add
+     convert_i
+     setlocal            4
+
+     getlocal            5
+     getlocal            19
+     add
+     convert_i
+     setlocal            5
+
+     getlocal            6
+     getlocal            20
+     add
+     convert_i
+     setlocal            6
+
+     getlocal            7
+     getlocal            22
+     add
+     convert_i
+     setlocal            7
+
+     getlocal            8
+     getlocal            23
+     add
+     convert_i
+     setlocal            8
+
+     getlocal            9
+     getlocal            25
+     add
+     convert_i
+     setlocal            9
+
+     getlocal            26
+     pushbyte            16
+     add
+     convert_i
+     setlocal            26
+
+L390:
+     getlocal            26
+     getlocal            10
+     iflt                L134
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     dup
+     setlocal            24
+
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            8
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+     getlocal            24
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "position")
+
+     getlocal            24
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromByteArray")
+  method
+   refid "lapitchnet.crypto:SHA256_faux/createBlocksFromByteArray"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace(""), "Array")
+   body
+    maxstack 5
+    localcount 9
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "position")
+     convert_i
+     setlocal            5
+
+     getlocal1
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "position")
+
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            8
+     multiply
+     convert_i
+     setlocal2
+
+     pushshort           255
+     setlocal            6
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L54
+
+L25:
+     label
+     getlocal            4
+     pushbyte            5
+     rshift
+     setlocal            7
+
+     getlocal3
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readByte"), 0
+     getlocal            6
+     bitand
+     pushbyte            24
+     getlocal            4
+     pushbyte            32
+     modulo
+     subtract
+     lshift
+     bitor
+     setlocal            8
+
+     getlocal3
+     getlocal            7
+     getlocal            8
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal            4
+     pushbyte            8
+     add
+     convert_i
+     setlocal            4
+
+L54:
+     getlocal            4
+     getlocal2
+     iflt                L25
+
+     getlocal2
+     pushbyte            5
+     rshift
+     setlocal            8
+
+     getlocal3
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushshort           128
+     pushbyte            24
+     getlocal2
+     pushbyte            32
+     modulo
+     subtract
+     lshift
+     bitor
+     setlocal            7
+
+     getlocal3
+     getlocal            8
+     getlocal            7
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal3
+     getlocal2
+     pushbyte            64
+     add
+     pushbyte            9
+     rshift
+     pushbyte            4
+     lshift
+     pushbyte            15
+     add
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal1
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "position")
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), "createBlocksFromString")
+  method
+   refid "lapitchnet.crypto:SHA256_faux/createBlocksFromString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Array")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            8
+     multiply
+     convert_i
+     setlocal2
+
+     pushshort           255
+     setlocal            5
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L50
+
+L18:
+     label
+     getlocal            4
+     pushbyte            5
+     rshift
+     setlocal            6
+
+     getlocal3
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     getlocal1
+     getlocal            4
+     pushbyte            8
+     divide
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     getlocal            5
+     bitand
+     pushbyte            24
+     getlocal            4
+     pushbyte            32
+     modulo
+     subtract
+     lshift
+     bitor
+     setlocal            7
+
+     getlocal3
+     getlocal            6
+     getlocal            7
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal            4
+     pushbyte            8
+     add
+     convert_i
+     setlocal            4
+
+L50:
+     getlocal            4
+     getlocal2
+     iflt                L18
+
+     getlocal2
+     pushbyte            5
+     rshift
+     setlocal            7
+
+     getlocal3
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     pushshort           128
+     pushbyte            24
+     getlocal2
+     pushbyte            32
+     modulo
+     subtract
+     lshift
+     bitor
+     setlocal            6
+
+     getlocal3
+     getlocal            7
+     getlocal            6
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal3
+     getlocal2
+     pushbyte            64
+     add
+     pushbyte            9
+     rshift
+     pushbyte            4
+     lshift
+     pushbyte            15
+     add
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#0"), StaticProtectedNs("lapitchnet.crypto:SHA256_faux"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.utils"), PackageNamespace("lapitchnet.crypto"), PackageInternalNs("lapitchnet.crypto"), PrivateNamespace(null, "lapitchnet.crypto:SHA256_faux#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

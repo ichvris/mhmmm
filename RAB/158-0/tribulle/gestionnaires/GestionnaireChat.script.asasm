@@ -1,0 +1,41 @@
+script ; 823
+ sinit
+  refid "tribulle.gestionnaires:GestionnaireChat.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireChat"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireChat/PrivateClass"
+    popscope
+    initproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#0"), "PrivateClass")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+  #include "GestionnaireChat.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireChat#0"), "PrivateClass")
+  #include "GestionnaireChat/PrivateClass.class.asasm"
+ end ; trait
+end ; script

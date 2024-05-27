@@ -1,0 +1,29 @@
+script ; 430
+ sinit
+  refid "tribulle.type:LigneChat.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.type:LigneChat"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.type"), "LigneChat")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.type"), "LigneChat")
+  #include "LigneChat.class.asasm"
+ end ; trait
+end ; script

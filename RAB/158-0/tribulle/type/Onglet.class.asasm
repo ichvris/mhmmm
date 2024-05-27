@@ -1,0 +1,295 @@
+class
+ refid "tribulle.type:Onglet"
+ instance QName(PackageNamespace("tribulle.type"), "Onglet")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.type:Onglet/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional False()
+   optional Integer(4508876)
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     findproperty        QName(PackageNamespace(""), "id")
+     swap
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal2
+     findproperty        QName(PackageNamespace(""), "label")
+     swap
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlocal3
+     findproperty        QName(PackageNamespace(""), "nomCanal")
+     swap
+     setproperty         QName(PackageNamespace(""), "nomCanal")
+
+     getlocal            4
+     findproperty        QName(PackageNamespace(""), "chatDiscussion")
+     swap
+     setproperty         QName(PackageNamespace(""), "chatDiscussion")
+
+     getlocal            5
+     findproperty        QName(PackageNamespace(""), "couleurOnglet")
+     swap
+     setproperty         QName(PackageNamespace(""), "couleurOnglet")
+
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace("tribulle.type"), "LigneChat")
+     applytype           1
+     construct           0
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+     applytype           1
+     construct           0
+     findproperty        QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "label") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "nomCanal") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "chatDiscussion") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "validationCallback") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "isPrivate") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "estDetache") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "nouveauMessage") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "nouveauMessagePrive") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "couleurOnglet") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "ongletUniquementClient") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "LigneChat")>) end
+  trait slot QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")>) end
+  trait method QName(PackageNamespace(""), "ajouteLigneHistorique")
+   method
+    refid "tribulle.type:Onglet/ajouteLigneHistorique"
+    param QName(PackageNamespace("tribulle.type"), "LigneChat")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "LIGNE_MAXIMUM_PAR_CANAL")
+      ifngt               L10
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+
+L10:
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "historique")
+   method
+    refid "tribulle.type:Onglet/historique/getter"
+    returns TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "LigneChat")>)
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_historique")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ajouteMembre")
+   method
+    refid "tribulle.type:Onglet/ajouteMembre"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "getMembreFromId")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "getMembreFromId"), 1
+      pushnull
+      ifne                L13
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+      getlocal1
+      getlocal2
+      constructprop       QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retireMembre")
+   method
+    refid "tribulle.type:Onglet/retireMembre"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "getMembreFromId")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "getMembreFromId"), 1
+      coerce              QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L16
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "getMembreFromId")
+   method
+    refid "tribulle.type:Onglet/getMembreFromId"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+      setlocal3
+
+      jump                L21
+
+L9:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal1
+      ifne                L21
+
+      getlocal2
+      returnvalue
+
+L21:
+      hasnext2            3, 4
+      iftrue              L9
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "membres")
+   method
+    refid "tribulle.type:Onglet/membres/getter"
+    returns TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")>)
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "_membres")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.type:Onglet/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.type:Onglet#0"), "LIGNE_MAXIMUM_PAR_CANAL") type QName(PackageNamespace(""), "int") value Integer(100) end
+end ; class

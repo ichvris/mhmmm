@@ -1,0 +1,230 @@
+class
+ refid "tribulle.composants:ListeIgnores"
+ instance QName(PackageNamespace("tribulle.composants"), "ListeIgnores")
+  extends QName(PackageNamespace("com.bit101.components"), "List")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ListeIgnores")
+  iinit
+   refid "tribulle.composants:ListeIgnores/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlex              QName(PackageNamespace("tribulle.composants"), "ElementListeIgnore")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ListeIgnores"), "tri")
+   method
+    refid "tribulle.composants:ListeIgnores/tri"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal2
+      ifnlt               L7
+
+      pushbyte            255
+      jump                L8
+
+L7:
+      pushdouble          1
+L8:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onResultatListeNoire")
+   method
+    refid "tribulle.composants:ListeIgnores/onResultatListeNoire"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "afficherIgnores")
+      callpropvoid        QName(PackageNamespace(""), "afficherIgnores"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "afficherIgnores")
+   method
+    refid "tribulle.composants:ListeIgnores/afficherIgnores"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_items")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireListeNoire")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "ignores")
+      setlocal3
+
+      jump                L33
+
+L15:
+      label
+      getlocal3
+      getlocal            4
+      nextname
+      coerce_s
+      setlocal2
+
+      getlocal2
+      iftrue              L30
+
+      getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+      pushstring          "WTF ignore null:"
+      getlocal2
+      add
+      pushstring          "ERREUR"
+      callpropvoid        QName(PackageNamespace(""), "flashTrace"), 2
+
+      jump                L33
+
+L30:
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L33:
+      hasnext2            3, 4
+      iftrue              L15
+
+      findpropstrict      QName(PackageNamespace(""), "setItems")
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeIgnores"), "tri")
+      callpropvoid        QName(PackageNamespace(""), "setItems"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSignaleRetraitListeNoire")
+   method
+    refid "tribulle.composants:ListeIgnores/onSignaleRetraitListeNoire"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeItem")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callpropvoid        QName(PackageNamespace(""), "removeItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "sort")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeIgnores"), "tri")
+      callpropvoid        QName(PackageNamespace(""), "sort"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSignaleAjoutListeNoire")
+   method
+    refid "tribulle.composants:ListeIgnores/onSignaleAjoutListeNoire"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "sort")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ListeIgnores"), "tri")
+      callpropvoid        QName(PackageNamespace(""), "sort"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ListeIgnores/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

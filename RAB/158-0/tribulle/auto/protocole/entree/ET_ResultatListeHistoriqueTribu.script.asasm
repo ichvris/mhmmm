@@ -1,0 +1,29 @@
+script ; 746
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_ResultatListeHistoriqueTribu.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_ResultatListeHistoriqueTribu"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatListeHistoriqueTribu")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatListeHistoriqueTribu")
+  #include "ET_ResultatListeHistoriqueTribu.class.asasm"
+ end ; trait
+end ; script

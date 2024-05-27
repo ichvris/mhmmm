@@ -1,0 +1,264 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatListeAmis")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "idSequence") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "amis") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>) end
+  trait method QName(PackageNamespace(""), "getIdSequence")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/getIdSequence"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "idSequence")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "precedentListeAmis") type QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ListeAmis") end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L19
+
+L9:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace(""), "amis")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_ResultatListeAmis#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_ResultatListeAmis"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_ResultatListeAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_ResultatListeAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getTaille"), 0
+      add
+      convert_i
+      setlocal1
+
+      inclocal_i          2
+L19:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "amis")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      pushbyte            6
+      getlocal1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "idSequence")
+      swap
+      setproperty         QName(PackageNamespace(""), "idSequence")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      applytype           1
+      getlocal2
+      construct           1
+      findproperty        QName(PackageNamespace(""), "amis")
+      swap
+      setproperty         QName(PackageNamespace(""), "amis")
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L32
+
+L24:
+      label
+      getlex              QName(PackageNamespace(""), "amis")
+      getlocal            4
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cree"), 1
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_ResultatListeAmis#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_ResultatListeAmis"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_ResultatListeAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_ResultatListeAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      inclocal_i          4
+L32:
+      getlocal            4
+      getlocal2
+      iflt                L24
+
+      getlex              QName(PackageNamespace(""), "connexion")
+      getlex              QName(PackageNamespace(""), "idSequence")
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "recupereSequence"), 1
+      coerce              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L57
+
+      getlocal3
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ListeAmis")
+      istypelate
+      iffalse             L57
+
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ListeAmis")
+      getglobalscope
+      getlocal3
+      call                1
+      findproperty        QName(PackageNamespace(""), "precedentListeAmis")
+      swap
+      setproperty         QName(PackageNamespace(""), "precedentListeAmis")
+
+      getlex              QName(PackageNamespace(""), "precedentListeAmis")
+      getlocal0
+      setproperty         QName(PackageNamespace(""), "suivantResultatListeAmis")
+
+L57:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_ResultatListeAmis/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

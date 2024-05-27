@@ -1,0 +1,193 @@
+class
+ refid "tribulle.composants:ElementListeIgnore"
+ instance QName(PackageNamespace("tribulle.composants"), "ElementListeIgnore")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ElementListeIgnore")
+  iinit
+   refid "tribulle.composants:ElementListeIgnore/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "_boutonSuppressionIgnore") type QName(PackageNamespace("com.bit101.components"), "PushButton") end
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeIgnore"), "addChildren") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeIgnore:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:ListItem"), "addChildren"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushshort           150
+      setproperty         QName(PackageNamespace(""), "width")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "HBox")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "HBox"), 1
+      coerce              QName(PackageNamespace("com.bit101.components"), "HBox")
+      setlocal1
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+      getlocal1
+      pushbyte            0
+      dup
+      getlocal2
+      pushstring          "btn_fermer_normal"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), ProtectedNamespace("tribulle.composants:ElementListeIgnore"), StaticProtectedNs("tribulle.composants:ElementListeIgnore"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeIgnore:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlocal2
+      pushstring          "btn_fermer_over"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), ProtectedNamespace("tribulle.composants:ElementListeIgnore"), StaticProtectedNs("tribulle.composants:ElementListeIgnore"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeIgnore:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      construct           0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "onSuppr")
+      constructprop       QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC"), 6
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "_boutonSuppressionIgnore")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "_boutonSuppressionIgnore")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "_boutonSuppressionIgnore")
+      pushbyte            15
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeIgnore/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "draw"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifeq                L19
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getlex              QName(PackageNamespace(""), "String")
+      astypelate
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 2
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L22
+
+L19:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_label")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeIgnore"), "onSuppr")
+   method
+    refid "tribulle.composants:ElementListeIgnore/onSuppr"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RetireListeNoire")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getlex              QName(PackageNamespace(""), "String")
+      astypelate
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RetireListeNoire"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ElementListeIgnore/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

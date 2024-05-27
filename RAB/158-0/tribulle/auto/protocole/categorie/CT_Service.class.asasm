@@ -1,0 +1,28 @@
+class
+ refid "tribulle.auto.protocole.categorie:CT_Service"
+ instance QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_Service")
+  flag INTERFACE
+  iinit
+   refid "tribulle.auto.protocole.categorie:CT_Service/iinit"
+  end ; method
+  trait method QName(Namespace("tribulle.auto.protocole.categorie:CT_Service"), "executeResultatIdentificationService")
+   method
+    refid "tribulle.auto.protocole.categorie:CT_Service:executeResultatIdentificationService"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatIdentificationService")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.categorie:CT_Service/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

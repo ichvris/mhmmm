@@ -1,0 +1,167 @@
+class
+ refid "tribulle.composants:ListeOnglets"
+ instance QName(PackageNamespace("tribulle.composants"), "ListeOnglets")
+  extends QName(PackageNamespace("com.bit101.components"), "List")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ListeOnglets")
+  iinit
+   refid "tribulle.composants:ListeOnglets/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace("tribulle.type"), "Onglet")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "clicOngletSignal")
+     swap
+     setproperty         QName(PackageNamespace(""), "clicOngletSignal")
+
+     pushbyte            2
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemMargin")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemMargin")
+
+     getlex              QName(PackageNamespace("tribulle.composants"), "ElementListeOnglet")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "autoHideScrollBar")
+     swap
+     setproperty         QName(PackageNamespace(""), "autoHideScrollBar")
+
+     pushbyte            84
+     findproperty        QName(PackageNamespace(""), "width")
+     swap
+     setproperty         QName(PackageNamespace(""), "width")
+
+     pushshort           172
+     getlocal3
+     subtract
+     findproperty        QName(PackageNamespace(""), "height")
+     swap
+     setproperty         QName(PackageNamespace(""), "height")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "clicOngletSignal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait method QName(PackageNamespace(""), "ajouteOnglet")
+   method
+    refid "tribulle.composants:ListeOnglets/ajouteOnglet"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlocal2
+      iffalse             L11
+
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "selectedItem")
+      swap
+      setproperty         QName(PackageNamespace(""), "selectedItem")
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("tribulle.composants:ListeOnglets"), "onSelect") flag OVERRIDE
+   method
+    refid "tribulle.composants:ListeOnglets:onSelect"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:List"), "onSelect"), 1
+      getlex              QName(PackageNamespace(""), "clicOngletSignal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getproperty         Multiname("data", [PrivateNamespace(null, "tribulle.composants:ListeOnglets:onSelect#0"), ProtectedNamespace("tribulle.composants:ListeOnglets"), StaticProtectedNs("tribulle.composants:ListeOnglets"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ListeOnglets:onSelect#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "refresh")
+   method
+    refid "tribulle.composants:ListeOnglets/refresh"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ListeOnglets/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

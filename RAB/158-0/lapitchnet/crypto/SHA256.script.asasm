@@ -1,0 +1,33 @@
+script ; 540
+ sinit
+  refid "lapitchnet.crypto:SHA256.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.hash"), "SHABase")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.crypto:SHA256"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.crypto"), "SHA256")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.crypto"), "SHA256")
+  #include "SHA256.class.asasm"
+ end ; trait
+end ; script

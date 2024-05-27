@@ -1,0 +1,127 @@
+class
+ refid "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08"
+ instance QName(PackageNamespace(""), "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08")
+  iinit
+   refid "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08/iinit#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08/iinit#1"), PackageInternalNs(""), ProtectedNamespace("\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08"), StaticProtectedNs("\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "\x08\x04\x03\x01\x06\x01\x02\x08\x05\x06\x04\x04\x02")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "\x07\x04\x07\x03\x02\x04\x07\x01\x05\x04")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "\x01\x08\x07\x03\x05\x01\x06\x02\x01\x08\x08\x06\x04")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "categorie")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "\x01\x07\x06\x05\x02\x04\x05\x02\x06\x03\x07")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "\x03\x01\x01\x07\x08\x06\x07\x01\x01\x08\x05")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "\x07\x04\x05\x02\x04\x06\x04\x02\x01\x03\x03\x05\x05")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "\x05\x02\x05\x05\x03\x03\x04\x01\x03\x03\x07\x04\x04")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x01\x08\x07\x03\x05\x01\x06\x02\x01\x08\x08\x06\x04") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "categorie") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x01\x07\x06\x05\x02\x04\x05\x02\x06\x03\x07") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x03\x01\x01\x07\x08\x06\x07\x01\x01\x08\x05") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x07\x04\x05\x02\x04\x06\x04\x02\x01\x03\x03\x05\x05") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x07\x04\x07\x03\x02\x04\x07\x01\x05\x04") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x08\x04\x03\x01\x06\x01\x02\x08\x05\x06\x04\x04\x02")>) end
+  trait slot QName(PackageNamespace(""), "\x01\x01\x04\x07\x07\x02\x06\x02\x07\x07\x04") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x05\x02\x05\x05\x03\x03\x04\x01\x03\x03\x07\x04\x04") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x06\x01\x01\x01\x08\x03\x04\x02\x08\x05\x06\x05\x05") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x03\x08\x07\x05\x06\x08\x02\x05\x04\x05\x02\x05") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x05\x01\x04\x06\x08\x07\x08\x02\x05\x02\x05") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x07\x08\x03\x04\x02\x07\x05\x07\x06\x04\x04\x08") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x05\x06\x08\x03\x03\x07\x07\x08\x07\x05\x02\x03\x04") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x01\x02\x06\x07\x05\x07\x08\x08\x08\x01\x08\x03") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "\x05\x07\x03\x08\x05\x08\x05\x06\x05\x08\x03")
+   method
+    refid "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08/\x05\x07\x03\x08\x05\x08\x05\x06\x05\x08\x03"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x04\x07\x03\x02\x04\x07\x01\x05\x04")
+      findpropstrict      QName(PackageNamespace(""), "\x08\x04\x03\x01\x06\x01\x02\x08\x05\x06\x04\x04\x02")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      constructprop       QName(PackageNamespace(""), "\x08\x04\x03\x01\x06\x01\x02\x08\x05\x06\x04\x04\x02"), 5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x06\x04\x07\x04\x08\x07\x04\x04\x08\x06\x04\x08/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

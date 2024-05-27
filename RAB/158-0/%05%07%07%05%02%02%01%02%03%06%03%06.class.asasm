@@ -1,0 +1,305 @@
+class
+ refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06"
+ instance QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+  iinit
+   refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "\x06\x06\x07\x03\x05\x08\x02\x05\x02\x05\x02\x07")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "\x05\x07\x02\x01\x05\x02\x03\x07\x02\x08\x07\x08\x05")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     initproperty        QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PackageNamespace(""), "\x06\x06\x07\x03\x05\x08\x02\x05\x02\x05\x02\x07") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x05\x07\x02\x01\x05\x02\x03\x07\x02\x08\x07\x08\x05") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x05\x01\x05\x04\x03\x01\x06\x06\x05\x06\x08\x05") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PackageNamespace(""), "\x02\x04\x02\x07\x01\x02\x01\x02\x01\x05\x06\x07") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "\x07\x07\x04\x07\x07\x01\x06\x04\x01\x02\x02\x03")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x07\x07\x04\x07\x07\x01\x06\x04\x01\x02\x02\x03"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x02\x08\x05\x02\x07\x03\x04\x04\x05\x02\x03\x05\x01")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x02\x08\x05\x02\x07\x03\x04\x04\x05\x02\x03\x05\x01"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x01\x04\x05\x05\x01\x03\x05\x07\x06\x03\x07\x03\x08")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x01\x04\x05\x05\x01\x03\x05\x07\x06\x03\x07\x03\x08"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x02\x06\x05\x07\x07\x02\x04\x05\x07\x05\x05")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x02\x06\x05\x07\x07\x02\x04\x05\x07\x05\x05"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x06\x06\x07\x07\x08\x05\x04\x05\x04\x07\x04\x02\x04")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x06\x06\x07\x07\x08\x05\x04\x05\x04\x07\x04\x02\x04"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      setproperty         QName(PackageNamespace(""), "position")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      initproperty        QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+      getproperty         QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03")
+      getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x08\x01\x05\x05\x06\x07\x07\x03\x03")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x06\x06\x07\x06\x08\x08\x08\x01\x07\x07\x08\x07\x07")
+      getproperty         QName(PackageNamespace(""), "\x06\x03\x01\x05\x06\x08\x02\x06\x02\x06\x06\x08\x08")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08#0"), PackageNamespace(""), PrivateNamespace(null, "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06"), StaticProtectedNs("\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")])
+      convert_i
+      setlocal3
+
+      jump                L52
+
+L30:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      add
+      getlocal3
+      modulo
+      convert_i
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+      getproperty         QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03")
+      getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x08\x01\x05\x05\x06\x07\x07\x03\x03")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08#0"), PackageNamespace(""), PrivateNamespace(null, "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x03\x08\x04\x04\x05\x08\x06\x04\x02\x06\x01\x08#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06"), StaticProtectedNs("\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")])
+      bitxor
+      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+L52:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      iftrue              L30
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x04\x04\x02\x01\x01\x05\x08\x08\x02\x02\x05\x07\x04")
+   method
+    refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/\x04\x04\x02\x01\x01\x05\x08\x08\x02\x02\x05\x07\x04"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeBoolean"), 1
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x05\x07\x07\x05\x02\x02\x01\x02\x03\x06\x03\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,637 @@
+class
+ refid "com.bit101.components:UISlider"
+ instance QName(PackageNamespace("com.bit101.components"), "UISlider")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:UISlider")
+  iinit
+   refid "com.bit101.components:UISlider/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal            5
+     pushnull
+     ifeq                L18
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "change"
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L18:
+     findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel")
+     callpropvoid        QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider") type QName(PackageNamespace("com.bit101.components"), "Slider") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision") type QName(PackageNamespace(""), "int") value Integer(1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_sliderClass") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:UISlider"), "_tick") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait method QName(ProtectedNamespace("com.bit101.components:UISlider"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:UISlider:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 3
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "_sliderClass")
+      getlocal0
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "onSliderChange")
+      constructprop       QName(ProtectedNamespace("com.bit101.components:UISlider"), "_sliderClass"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel")
+   method
+    refid "com.bit101.components:UISlider:formatValueLabel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "isNaN")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "value")
+      call                1
+      iffalse             L14
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      pushstring          "NaN"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+
+L14:
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      callproperty        QName(PackageNamespace(""), "pow"), 2
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal2
+      multiply
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      getlocal2
+      divide
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#0"), ProtectedNamespace("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      ifne                L66
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      pushbyte            0
+      ifngt               L48
+
+      getlocal1
+      pushstring          "."
+      add
+      setlocal1
+
+L48:
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L62
+
+L52:
+      label
+      getlocal1
+      pushstring          "0"
+      add
+      setlocal1
+
+      getlocal            4
+      convert_d
+      increment
+      convert_u
+      setlocal            4
+
+L62:
+      getlocal            4
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      iflt                L52
+
+      jump                L94
+
+L66:
+      getlocal3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#0"), ProtectedNamespace("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#0"), ProtectedNamespace("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      ifnlt               L94
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L86
+
+L76:
+      label
+      getlocal1
+      pushstring          "0"
+      add
+      setlocal1
+
+      getlocal            4
+      convert_d
+      increment
+      convert_u
+      setlocal            4
+
+L86:
+      getlocal            4
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      getlocal3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#0"), ProtectedNamespace("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#0"), ProtectedNamespace("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:UISlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:UISlider:formatValueLabel#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      subtract
+      iflt                L76
+
+L94:
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "positionLabel")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:UISlider"), "positionLabel"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:UISlider"), "positionLabel")
+   method
+    refid "com.bit101.components:UISlider:positionLabel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:UISlider/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSliderParams")
+   method
+    refid "com.bit101.components:UISlider/setSliderParams"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setSliderParams"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:UISlider"), "onSliderChange")
+   method
+    refid "com.bit101.components:UISlider:onSliderChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:UISlider/value/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:UISlider"), "formatValueLabel"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:UISlider/value/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:UISlider/maximum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "maximum")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:UISlider/maximum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "maximum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:UISlider/minimum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "minimum")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:UISlider/minimum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "minimum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "labelPrecision")
+   method
+    refid "com.bit101.components:UISlider/labelPrecision/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "labelPrecision")
+   method
+    refid "com.bit101.components:UISlider/labelPrecision/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_precision")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:UISlider/label/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:UISlider/label/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_labelText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "tick")
+   method
+    refid "com.bit101.components:UISlider/tick/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_tick")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_tick")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_tick")
+      setproperty         QName(PackageNamespace(""), "tick")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "tick")
+   method
+    refid "com.bit101.components:UISlider/tick/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_tick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:UISlider/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

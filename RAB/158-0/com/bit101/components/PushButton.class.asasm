@@ -1,0 +1,648 @@
+class
+ refid "com.bit101.components:PushButton"
+ instance QName(PackageNamespace("com.bit101.components"), "PushButton")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:PushButton")
+  iinit
+   refid "com.bit101.components:PushButton/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal            5
+     pushnull
+     ifeq                L14
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "click"
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L14:
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+     getlocal0
+     pushtrue
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "effetLumiere"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:PushButton:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "buttonMode")
+      swap
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      pushtrue
+      findproperty        QName(PackageNamespace(""), "useHandCursor")
+      swap
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      pushbyte            20
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:PushButton:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      iffalse             L35
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_back")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "y")
+
+L35:
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseGoDown")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "rollOver"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace")
+   method
+    refid "com.bit101.components:PushButton:drawFace"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+      iffalse             L17
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FILTRE_BOUTON_ENFONCE")
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      jump                L26
+
+L17:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FILTRE_BOUTON")
+      setproperty         QName(PackageNamespace(""), "filters")
+
+L26:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      pushbyte            6
+      callpropvoid        QName(PackageNamespace(""), "drawRoundRect"), 5
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_face")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:PushButton/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText")
+      pushstring          ""
+      ifeq                L55
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            4
+      subtract
+      ifngt               L32
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            4
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      jump                L35
+
+L32:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+L35:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_label")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+L55:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseOver")
+   method
+    refid "com.bit101.components:PushButton:onMouseOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "rollOut"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseOut")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseOut")
+   method
+    refid "com.bit101.components:PushButton:onMouseOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      pushstring          "rollOut"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseOut")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseGoDown")
+   method
+    refid "com.bit101.components:PushButton:onMouseGoDown"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseGoUp")
+   method
+    refid "com.bit101.components:PushButton:onMouseGoUp"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle")
+      dup
+      iffalse             L8
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_over")
+      convert_b
+L8:
+      iffalse             L14
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      not
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+
+L14:
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:PushButton/label/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText")
+
+      findpropstrict      QName(PackageNamespace(""), "draw")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:PushButton/label/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_labelText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:PushButton/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle")
+      iftrue              L6
+
+      pushfalse
+      setlocal1
+
+L6:
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_down")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:PushButton"), "drawFace"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "com.bit101.components:PushButton/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "toggle")
+   method
+    refid "com.bit101.components:PushButton/toggle/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "toggle")
+   method
+    refid "com.bit101.components:PushButton/toggle/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:PushButton"), "_toggle")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:PushButton/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

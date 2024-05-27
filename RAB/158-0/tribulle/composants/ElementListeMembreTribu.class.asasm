@@ -1,0 +1,1145 @@
+class
+ refid "tribulle.composants:ElementListeMembreTribu"
+ instance QName(PackageNamespace("tribulle.composants"), "ElementListeMembreTribu")
+  extends QName(PackageNamespace("com.bit101.components"), "ListItem")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:ElementListeMembreTribu")
+  iinit
+   refid "tribulle.composants:ElementListeMembreTribu/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), "addChildren") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeMembreTribu:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator"), 1
+      coerce              QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator")
+      setlocal1
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle.composants"), "ComposantTribu")
+      getproperty         QName(PackageNamespace(""), "COMPOSANT_MEMBRE_TRIBU_XML")
+      callproperty        QName(PackageNamespace(""), "getComposantXml"), 1
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      callpropvoid        QName(PackageNamespace(""), "parseXML"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      iftrue              L52
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "x_ressourcesTransformicePourTribulle")
+      pushstring          "$TexteSoopa"
+      callproperty        Multiname("x_pouf", [PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      getproperty         Multiname("_T", [PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageNomJoueur")
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushbyte            30
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "multiline")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushstring          "left"
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushbyte            53
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L52:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      iftrue              L83
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageRang")
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "multiline")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushstring          "left"
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushbyte            6
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L83:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      iftrue              L134
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      pushbyte            48
+      dup
+      pushbyte            14
+      callpropvoid        QName(PackageNamespace(""), "drawRoundRect"), 5
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            2
+      pushint             1910830
+      pushbyte            1
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      pushbyte            48
+      dup
+      pushbyte            14
+      callpropvoid        QName(PackageNamespace(""), "drawRoundRect"), 5
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L134:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      iftrue              L262
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      pushbyte            55
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      pushbyte            26
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "x_ressourcesTransformicePourTribulle")
+      pushstring          "$BoutonPoint"
+      callproperty        Multiname("x_pouf", [PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "x_ressourcesTransformicePourTribulle")
+      pushstring          "$BoutonC"
+      callproperty        Multiname("x_pouf", [PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "x_ressourcesTransformicePourTribulle")
+      pushstring          "$BoutonFleche"
+      callproperty        Multiname("x_pouf", [PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), ProtectedNamespace("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("tribulle.composants:ElementListeMembreTribu"), StaticProtectedNs("com.bit101.components:ListItem"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.type"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu:addChildren"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      pushbyte            40
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushstring          "mouseDown"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicChuchoter")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      pushstring          "mouseDown"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicRejoindre")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      pushstring          "mouseDown"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicBoutonMenu")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageJeu")
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushbyte            40
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "multiline")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushbyte            10
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageLocalisation")
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushshort           220
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "multiline")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushbyte            100
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L262:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:ElementListeMembreTribu/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushfalse
+      setlocal3
+
+      pushnull
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "draw"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L23
+
+      pop
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      getlex              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      istypelate
+L23:
+      iffalse             L135
+
+      getlex              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      getglobalscope
+      getlex              QName(PackageNamespace(""), "data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      dup
+      iffalse             L37
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L37:
+      iffalse             L42
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L42:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "avatar")
+      callproperty        QName(PackageNamespace(""), "getUrlAvatar"), 1
+      pushstring          ""
+      callproperty        QName(PackageNamespace(""), "x_recupImageDistante"), 2
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "masqueAvatar")
+      setproperty         QName(PackageNamespace(""), "mask")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "cadreAvatar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      callproperty        QName(PackageNamespace(""), "estJoueur"), 1
+      convert_b
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal3
+      iffalse             L79
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushint             40349
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      jump                L82
+
+L79:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushint             12763866
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+L82:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "idRang")
+      callproperty        QName(PackageNamespace(""), "getRangDepuisId"), 1
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      getlocal1
+      pushnull
+      ifeq                L107
+
+      pushstring          "- "
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      add
+      jump                L108
+
+L107:
+      pushstring          ""
+L108:
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "afficheLocalisationMembre")
+      getlocal0
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "afficheLocalisationMembre"), 3
+
+      getlocal3
+      not
+      dup
+      iffalse             L126
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribu")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "estEnLigne"), 1
+      convert_b
+L126:
+      iffalse             L131
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L134
+
+L131:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L134:
+      jump                L192
+
+L135:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      dup
+      iffalse             L142
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L142:
+      iffalse             L147
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "imageAvatar")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L147:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      dup
+      iffalse             L154
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L154:
+      iffalse             L159
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L159:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      dup
+      iffalse             L166
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L166:
+      iffalse             L171
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L171:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsRang")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMP")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnMenu")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L192:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "afficheLocalisationMembre")
+   method
+    refid "tribulle.composants:ElementListeMembreTribu/afficheLocalisationMembre"
+    param QName(PackageNamespace("com.bit101.components"), "Component")
+    param QName(PackageNamespace("tribulle.type"), "MembreTribu")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      dup
+      iffalse             L13
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L13:
+      iffalse             L18
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L18:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      dup
+      iffalse             L25
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+L25:
+      iffalse             L30
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L30:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribu")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "estEnLigne"), 1
+      iffalse             L117
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "AUCUN")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifeq                L47
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      callproperty        QName(PackageNamespace(""), "recupImageJeu"), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+
+L47:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      pushbyte            59
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "iconeJeu")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callproperty        QName(PackageNamespace(""), "recupImageDrapeauSalon"), 1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      pushbyte            80
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "clipConteneurBtn")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "drapeau")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      coerce_s
+      dup
+      setlocal            4
+
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            3
+      ifne                L90
+
+      getlocal            4
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      getlocal            4
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      add
+      coerce_s
+      setlocal            4
+
+L90:
+      getlocal            4
+      pushstring          "-"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      dup
+      setlocal            5
+
+      pushbyte            2
+      ifne                L106
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      getlocal            4
+      getlocal            5
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L109
+
+L106:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "text")
+
+L109:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      getlocal3
+      not
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L146
+
+L117:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsNomJoueur")
+      pushint             6316175
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "champsLocalisation")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.derniere.connexion"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushstring          " : "
+      add
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilDate")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      callproperty        QName(PackageNamespace(""), "toTimestampEnMillis"), 1
+      callproperty        QName(PackageNamespace(""), "getDateAffichage"), 1
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushbyte            24
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "texteDerniereConnexion")
+      pushshort           300
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "btnRejoindre")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L146:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicRejoindre")
+   method
+    refid "tribulle.composants:ElementListeMembreTribu/onClicRejoindre"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      pushnull
+      ifeq                L89
+
+      getlex              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      getglobalscope
+      getlex              QName(ProtectedNamespace("com.bit101.components:ListItem"), "_data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      setlocal2
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      ifeq                L77
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_TRANSFORMICE")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L34
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.transformice.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L34:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_BOUBOUM")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L48
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.bouboum.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L48:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_FORTORESSE")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L62
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.fortoresse.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L62:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_NEKODANCER")
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L76
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      pushstring          "http://www.nekodancer.com/"
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+
+L76:
+      returnvoid
+
+L77:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      iffalse             L89
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "RejoindreSalon")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      callpropvoid        QName(PackageNamespace(""), "masquerTribu"), 0
+
+L89:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicChuchoter")
+   method
+    refid "tribulle.composants:ElementListeMembreTribu/onClicChuchoter"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      getglobalscope
+      getlex              QName(PackageNamespace(""), "data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      setlocal2
+
+      getlocal2
+      iffalse             L15
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "x_activerChuchotement"), 2
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "onClicBoutonMenu")
+   method
+    refid "tribulle.composants:ElementListeMembreTribu/onClicBoutonMenu"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      getglobalscope
+      getlex              QName(PackageNamespace(""), "data")
+      call                1
+      coerce              QName(PackageNamespace("tribulle.type"), "MembreTribu")
+      setlocal2
+
+      getlocal2
+      iffalse             L15
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "x_menuContextuel"), 2
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:ElementListeMembreTribu/cinit"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+    pushstring          "Soopafresh"
+    pushbyte            18
+    pushint             12763866
+    constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageNomJoueur")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageNomJoueur")
+
+    findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+    pushstring          "Verdana"
+    pushbyte            11
+    pushint             7108545
+    constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageRang")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageRang")
+
+    findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+    pushstring          "Verdana"
+    pushbyte            11
+    pushint             6316175
+    constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageJeu")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageJeu")
+
+    findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+    pushstring          "Verdana"
+    pushbyte            11
+    pushint             40349
+    constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+    findproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageLocalisation")
+    swap
+    initproperty        QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageLocalisation")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageNomJoueur") type QName(PackageNamespace("flash.text"), "TextFormat") end
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageRang") type QName(PackageNamespace("flash.text"), "TextFormat") end
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageJeu") type QName(PackageNamespace("flash.text"), "TextFormat") end
+ trait const QName(PrivateNamespace(null, "tribulle.composants:ElementListeMembreTribu"), "formatageLocalisation") type QName(PackageNamespace("flash.text"), "TextFormat") end
+end ; class

@@ -1,0 +1,605 @@
+class
+ refid "lapitchnet.reseau:Connexion"
+ instance QName(PackageNamespace("lapitchnet.reseau"), "Connexion")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+  flag SEALED
+  iinit
+   refid "lapitchnet.reseau:Connexion/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("flash.net"), "Socket")
+     constructprop       QName(PackageNamespace("flash.net"), "Socket"), 0
+     findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+     swap
+     setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+     applytype           1
+     construct           0
+     findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences")
+     swap
+     setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences")
+
+     findpropstrict      QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "initialiseSignals")
+     callpropvoid        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "initialiseSignals"), 0
+
+     getlocal1
+     dup
+     iffalse             L24
+
+     pop
+     getlocal2
+     coerce_a
+L24:
+     iffalse             L29
+
+     getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+     getlocal1
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "connect"), 2
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexionSocketSignal") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait slot QName(PackageNamespace(""), "fermetureSocketSignal") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait slot QName(PackageNamespace(""), "ioErrorSocketSignal") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait slot QName(PackageNamespace(""), "dataSocketSignal") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait slot QName(PackageNamespace(""), "connexionEtablieSignal") type QName(PackageNamespace("org.osflash.signals"), "OnceSignal") end
+  trait slot QName(PackageNamespace(""), "categorieInformationsSignal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket") type QName(PackageNamespace("flash.net"), "Socket") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole") end
+  trait slot QName(PackageNamespace(""), "clef") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idSequence") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait setter QName(PackageNamespace(""), "idSequence")
+   method
+    refid "lapitchnet.reseau:Connexion/idSequence/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idSequence")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idSequence")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "idSequence")
+   method
+    refid "lapitchnet.reseau:Connexion/idSequence/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idSequence")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")>) end
+  trait method QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "initialiseSignals")
+   method
+    refid "lapitchnet.reseau:Connexion/initialiseSignals"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      pushstring          "connect"
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+      findproperty        QName(PackageNamespace(""), "connexionSocketSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "connexionSocketSignal")
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      pushstring          "close"
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+      findproperty        QName(PackageNamespace(""), "fermetureSocketSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "fermetureSocketSignal")
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      pushstring          "ioError"
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+      findproperty        QName(PackageNamespace(""), "ioErrorSocketSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "ioErrorSocketSignal")
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      pushstring          "socketData"
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+      findproperty        QName(PackageNamespace(""), "dataSocketSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "dataSocketSignal")
+
+      getlex              QName(PackageNamespace(""), "dataSocketSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "onSocketDataEvent")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "OnceSignal")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "OnceSignal"), 0
+      findproperty        QName(PackageNamespace(""), "connexionEtablieSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "connexionEtablieSignal")
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+      getlex              QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 2
+      findproperty        QName(PackageNamespace(""), "categorieInformationsSignal")
+      swap
+      setproperty         QName(PackageNamespace(""), "categorieInformationsSignal")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fermeConnexion")
+   method
+    refid "lapitchnet.reseau:Connexion/fermeConnexion"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "dataSocketSignal")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "onSocketDataEvent")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sauvegardeSequence")
+   method
+    refid "lapitchnet.reseau:Connexion/sauvegardeSequence"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences")
+      getlocal1
+      pushbyte            0
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "recupereSequence")
+   method
+    refid "lapitchnet.reseau:Connexion/recupereSequence"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "lapitchnet.reseau:Connexion"), ProtectedNamespace("lapitchnet.reseau:Connexion"), StaticProtectedNs("lapitchnet.reseau:Connexion"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.reseau"), PackageInternalNs("lapitchnet.reseau"), PrivateNamespace(null, "lapitchnet.reseau:Connexion/recupereSequence"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      coerce              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_sauvegardeSequences")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "lapitchnet.reseau:Connexion"), ProtectedNamespace("lapitchnet.reseau:Connexion"), StaticProtectedNs("lapitchnet.reseau:Connexion"), StaticProtectedNs("Object"), PackageNamespace("lapitchnet.reseau"), PackageInternalNs("lapitchnet.reseau"), PrivateNamespace(null, "lapitchnet.reseau:Connexion/recupereSequence"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pop
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "onSocketDataEvent")
+   method
+    refid "lapitchnet.reseau:Connexion/onSocketDataEvent"
+    param QName(PackageNamespace("flash.events"), "ProgressEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      jump                L104
+
+L3:
+      label
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+      iffalse             L57
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant")
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      getlocal0
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant")
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "creePaquetEntrant"), 2
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      getproperty         QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "typeTaille")
+      pushbyte            2
+      ifne                L28
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+
+      jump                L53
+
+L28:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      getproperty         QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "typeTaille")
+      pushbyte            1
+      ifne                L38
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+
+      jump                L53
+
+L38:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      getproperty         QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "typeTaille")
+      pushbyte            4
+      ifne                L48
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+
+      jump                L53
+
+L48:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "getTailleDonnes"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+
+L53:
+      pushfalse
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+
+L57:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+      not
+      dup
+      iffalse             L66
+
+      pop
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      greaterequals
+L66:
+      iffalse             L103
+
+      getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+      pushstring          "<-- Reception d'un paquet (id: "
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant")
+      add
+      pushstring          ")"
+      add
+      pushstring          "RESEAU"
+      callpropvoid        QName(PackageNamespace(""), "flashTrace"), 2
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+      pushnull
+      ifne                L84
+
+      getlex              QName(PackageNamespace("lapitchnet.pools"), "ByteArrayPool")
+      callproperty        QName(PackageNamespace(""), "cree"), 0
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+
+      jump                L86
+
+L84:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+L86:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+      pushbyte            0
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_taillePaquetCourant")
+      callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_ba")
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IPaquetEntrant"), "lecture"), 1
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_idPaquetCourant")
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_paquetCourant")
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "traiterPaquetEntrant"), 2
+
+      pushtrue
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_isNewPaquet")
+
+      jump                L104
+
+L103:
+      jump                L108
+
+L104:
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      pushbyte            0
+      ifgt                L3
+
+L108:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "traitePaquetSortant")
+   method
+    refid "lapitchnet.reseau:Connexion/traitePaquetSortant"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      setproperty         QName(Namespace("lapitchnet.reseau.interfaces:IPaquetSortant"), "connexion")
+
+      getlex              QName(PackageNamespace("lapitchnet.pools"), "ByteArrayPool")
+      callproperty        QName(PackageNamespace(""), "cree"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      getlocal1
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IProtocole"), "getIdPaquet"), 1
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "COMPTEUR_VERIFICATION")
+      convert_d
+      dup
+      increment
+      findpropstrict      QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "COMPTEUR_VERIFICATION")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "COMPTEUR_VERIFICATION")
+
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("lapitchnet.reseau.interfaces:IPaquetSortant"), "getTailleDonnes"), 0
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IPaquetSortant"), "ecriture"), 1
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_socket")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+      pushstring          "--> Envoi de données (sequence: "
+      getlex              QName(PackageNamespace(""), "idSequence")
+      add
+      pushstring          ") -> "
+      add
+      getlex              QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getglobalscope
+      getlocal1
+      call                1
+      add
+      pushstring          "RESEAU"
+      callpropvoid        QName(PackageNamespace(""), "flashTrace"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+      istypelate
+      iffalse             L56
+
+      findpropstrict      QName(PackageNamespace(""), "sauvegardeSequence")
+      getlex              QName(PackageNamespace(""), "idSequence")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "sauvegardeSequence"), 2
+
+L56:
+      getlex              QName(PackageNamespace("lapitchnet.pools"), "ByteArrayPool")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "recycle"), 1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "protocole")
+   method
+    refid "lapitchnet.reseau:Connexion/protocole/setter"
+    param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      pushnull
+      ifne                L10
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+
+      jump                L14
+
+L10:
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "On ne peut avoir qu'un seul protocole !!"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "protocole")
+   method
+    refid "lapitchnet.reseau:Connexion/protocole/getter"
+    returns QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IProtocole")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "_protocole")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau:Connexion/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:Connexion"), "COMPTEUR_VERIFICATION") type QName(PackageNamespace(""), "int") value Integer(0) end
+end ; class

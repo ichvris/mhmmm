@@ -1,0 +1,51 @@
+class
+ refid "tribulle.type:Onglet/MembreCanal"
+ instance QName(PrivateNamespace(null, "tribulle.type:Onglet#1"), "MembreCanal")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.type:Onglet/MembreCanal/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     findproperty        QName(PackageNamespace(""), "id")
+     swap
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal2
+     findproperty        QName(PackageNamespace(""), "nom")
+     swap
+     setproperty         QName(PackageNamespace(""), "nom")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nom") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "tribulle.type:Onglet/MembreCanal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

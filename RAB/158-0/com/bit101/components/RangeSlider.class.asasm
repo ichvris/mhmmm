@@ -1,0 +1,1646 @@
+class
+ refid "com.bit101.components:RangeSlider"
+ instance QName(PackageNamespace("com.bit101.components"), "RangeSlider")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:RangeSlider")
+  iinit
+   refid "com.bit101.components:RangeSlider/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+
+     getlocal0
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      3
+
+     getlocal            5
+     pushnull
+     ifeq                L18
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     pushstring          "change"
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue") type QName(PackageNamespace(""), "Number") value Integer(100) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode") type QName(PackageNamespace(""), "String") value Utf8("always") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum") type QName(PackageNamespace(""), "Number") value Integer(100) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation") type QName(PackageNamespace(""), "String") value Utf8("vertical") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:RangeSlider:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L16
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            110
+      pushbyte            10
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      pushstring          "top"
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+
+      jump                L24
+
+L16:
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            10
+      pushbyte            110
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      pushstring          "right"
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:RangeSlider:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "addChildren"), 0
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            2
+      pushtrue
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 2
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            1
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 1
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDragMin")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            1
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 1
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDragMax")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "always"
+      equals
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawBack")
+   method
+    refid "com.bit101.components:RangeSlider:drawBack"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BACKGROUND")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawHandles")
+   method
+    refid "com.bit101.components:RangeSlider:drawHandles"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L44
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      jump                L66
+
+L44:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+L66:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+   method
+    refid "com.bit101.components:RangeSlider:positionHandles"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L39
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      multiply
+      subtract
+      convert_d
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      divide
+      getlocal1
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      divide
+      getlocal1
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L78
+
+L39:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      convert_d
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      divide
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      divide
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+L78:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+   method
+    refid "com.bit101.components:RangeSlider:updateLabels"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "getLabelForValue")
+      getlex              QName(PackageNamespace(""), "lowValue")
+      callproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "getLabelForValue"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "getLabelForValue")
+      getlex              QName(PackageNamespace(""), "highValue")
+      callproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "getLabelForValue"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "vertical"
+      ifne                L70
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushdouble          0.5
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushdouble          0.5
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      pushstring          "left"
+      ifne                L59
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      negate
+      pushbyte            5
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      negate
+      pushbyte            5
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L69
+
+L59:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+L69:
+      jump                L107
+
+L70:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      pushstring          "bottom"
+      ifne                L97
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      jump                L107
+
+L97:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+L107:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "getLabelForValue")
+   method
+    refid "com.bit101.components:RangeSlider:getLabelForValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal            4
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      callproperty        QName(PackageNamespace(""), "pow"), 2
+      multiply
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      callproperty        QName(PackageNamespace(""), "pow"), 2
+      divide
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      pushbyte            0
+      ifngt               L59
+
+      getlocal2
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.components:RangeSlider:getLabelForValue#0"), ProtectedNamespace("com.bit101.components:RangeSlider"), StaticProtectedNs("com.bit101.components:RangeSlider"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageInternalNs("com.bit101.components"), PrivateNamespace(null, "com.bit101.components:RangeSlider:getLabelForValue#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      dup
+      iftrue              L35
+
+      pop
+      pushstring          ""
+      coerce_a
+L35:
+      coerce_s
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L45
+
+      getlocal2
+      pushstring          "."
+      add
+      setlocal2
+
+L45:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      jump                L56
+
+L50:
+      label
+      getlocal2
+      pushstring          "0"
+      add
+      setlocal2
+
+      inclocal_i          3
+L56:
+      getlocal3
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      iflt                L50
+
+L59:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:RangeSlider/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawBack")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawBack"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "drawHandles"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDragMin")
+   method
+    refid "com.bit101.components:RangeSlider:onDragMin"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDrop")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMinSlide")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L26
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      pushfalse
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 2
+
+      jump                L45
+
+L26:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      pushfalse
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      add
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 2
+
+L45:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "move"
+      ifne                L54
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDragMax")
+   method
+    refid "com.bit101.components:RangeSlider:onDragMax"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDrop")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMaxSlide")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L33
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      pushfalse
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      add
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 2
+
+      jump                L45
+
+L33:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      pushfalse
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      dup
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      subtract
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 2
+
+L45:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "move"
+      ifne                L54
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDrop")
+   method
+    refid "com.bit101.components:RangeSlider:onDrop"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onDrop")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMinSlide")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMaxSlide")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "stopDrag")
+      callpropvoid        QName(PackageNamespace(""), "stopDrag"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "move"
+      ifne                L25
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMinSlide")
+   method
+    refid "com.bit101.components:RangeSlider:onMinSlide"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L26
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      multiply
+      subtract
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      multiply
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      jump                L47
+
+L26:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlex              QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      multiply
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+L47:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlocal2
+      ifeq                L55
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L55:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "onMaxSlide")
+   method
+    refid "com.bit101.components:RangeSlider:onMaxSlide"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_orientation")
+      pushstring          "horizontal"
+      ifne                L28
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      multiply
+      subtract
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      multiply
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      jump                L51
+
+L28:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maxHandle")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      multiply
+      subtract
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      subtract
+      multiply
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+L51:
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlocal2
+      ifeq                L59
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L59:
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:RangeSlider/minimum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:RangeSlider/minimum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:RangeSlider/maximum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:RangeSlider/maximum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "lowValue")
+   method
+    refid "com.bit101.components:RangeSlider/lowValue/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_minimum")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "lowValue")
+   method
+    refid "com.bit101.components:RangeSlider/lowValue/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      multiply
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "highValue")
+   method
+    refid "com.bit101.components:RangeSlider/highValue/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowValue")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_maximum")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "positionHandles"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "change"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "highValue")
+   method
+    refid "com.bit101.components:RangeSlider/highValue/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highValue")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      multiply
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "labelMode")
+   method
+    refid "com.bit101.components:RangeSlider/labelMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_highLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "always"
+      equals
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_lowLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      pushstring          "always"
+      equals
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "labelMode")
+   method
+    refid "com.bit101.components:RangeSlider/labelMode/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelMode")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "labelPosition")
+   method
+    refid "com.bit101.components:RangeSlider/labelPosition/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "labelPosition")
+   method
+    refid "com.bit101.components:RangeSlider/labelPosition/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPosition")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "labelPrecision")
+   method
+    refid "com.bit101.components:RangeSlider/labelPrecision/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "labelPrecision")
+   method
+    refid "com.bit101.components:RangeSlider/labelPrecision/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_labelPrecision")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "tick")
+   method
+    refid "com.bit101.components:RangeSlider/tick/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "updateLabels"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "tick")
+   method
+    refid "com.bit101.components:RangeSlider/tick/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:RangeSlider"), "_tick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:RangeSlider/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ALWAYS") type QName(PackageNamespace(""), "String") value Utf8("always") end
+ trait const QName(PackageNamespace(""), "BOTTOM") type QName(PackageNamespace(""), "String") value Utf8("bottom") end
+ trait const QName(PackageNamespace(""), "HORIZONTAL") type QName(PackageNamespace(""), "String") value Utf8("horizontal") end
+ trait const QName(PackageNamespace(""), "LEFT") type QName(PackageNamespace(""), "String") value Utf8("left") end
+ trait const QName(PackageNamespace(""), "MOVE") type QName(PackageNamespace(""), "String") value Utf8("move") end
+ trait const QName(PackageNamespace(""), "NEVER") type QName(PackageNamespace(""), "String") value Utf8("never") end
+ trait const QName(PackageNamespace(""), "RIGHT") type QName(PackageNamespace(""), "String") value Utf8("right") end
+ trait const QName(PackageNamespace(""), "TOP") type QName(PackageNamespace(""), "String") value Utf8("top") end
+ trait const QName(PackageNamespace(""), "VERTICAL") type QName(PackageNamespace(""), "String") value Utf8("vertical") end
+end ; class

@@ -1,0 +1,37 @@
+script ; 151
+ sinit
+  refid "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04_x_squeletteChat.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ByteArrayAsset")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ByteArrayAsset")
+    newclass            "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04_x_squeletteChat"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04_x_squeletteChat")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04_x_squeletteChat") slotid 1
+  #include "%05%05%06%02%04%04%08%08%08%01%08%04_x_squeletteChat.class.asasm"
+ end ; trait
+end ; script

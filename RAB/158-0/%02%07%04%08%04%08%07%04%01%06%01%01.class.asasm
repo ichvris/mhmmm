@@ -1,0 +1,526 @@
+class
+ refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01"
+ instance QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+  extends QName(PackageNamespace("flash.text"), "TextField")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+  iinit
+   refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace("flash.text"), "TextFormat")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(0)
+   optional Integer(20)
+   optional Null()
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "mouseEnabled")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+     initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+     findproperty        QName(PackageNamespace(""), "mouseWheelEnabled")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+     initproperty        QName(PackageNamespace(""), "mouseWheelEnabled")
+
+     findproperty        QName(PackageNamespace(""), "multiline")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+     initproperty        QName(PackageNamespace(""), "multiline")
+
+     findproperty        QName(PackageNamespace(""), "wordWrap")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+     initproperty        QName(PackageNamespace(""), "wordWrap")
+
+     getlocal            4
+     iffalse             L26
+
+     findproperty        QName(PackageNamespace(""), "defaultTextFormat")
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "defaultTextFormat")
+
+     jump                L32
+
+L26:
+     findproperty        QName(PackageNamespace(""), "defaultTextFormat")
+     getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+     getproperty         QName(PackageNamespace(""), "\x04\x06\x03\x04\x08\x06\x01\x06\x06\x04\x03\x06\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x02\x05\x04\x03\x08\x03\x02\x05\x02\x04\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x03\x06\x07\x03\x01\x03\x01\x06\x06")
+     initproperty        QName(PackageNamespace(""), "defaultTextFormat")
+
+L32:
+     getlocal1
+     iffalse             L37
+
+     findproperty        QName(PackageNamespace(""), "text")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "text")
+
+L37:
+     getlocal2
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     ifne                L49
+
+     findproperty        QName(PackageNamespace(""), "height")
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "height")
+
+     findproperty        QName(PackageNamespace(""), "autoSize")
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "LEFT")
+     initproperty        QName(PackageNamespace(""), "autoSize")
+
+     jump                L77
+
+L49:
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlocal3
+     ifne                L71
+
+     findproperty        QName(PackageNamespace(""), "width")
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "width")
+
+     findproperty        QName(PackageNamespace(""), "multiline")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+     initproperty        QName(PackageNamespace(""), "multiline")
+
+     findproperty        QName(PackageNamespace(""), "wordWrap")
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+     initproperty        QName(PackageNamespace(""), "wordWrap")
+
+     findproperty        QName(PackageNamespace(""), "autoSize")
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "LEFT")
+     initproperty        QName(PackageNamespace(""), "autoSize")
+
+     jump                L77
+
+L71:
+     findproperty        QName(PackageNamespace(""), "width")
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "width")
+
+     findproperty        QName(PackageNamespace(""), "height")
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "height")
+
+L77:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "\x01\x07\x08\x07\x08\x05\x03\x04\x01\x06\x01\x08")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x01\x07\x08\x07\x08\x05\x03\x04\x01\x06\x01\x08"
+    param QName(PackageNamespace("flash.text"), "StyleSheet")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "styleSheet")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "styleSheet")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x01\x06\x01\x01\x01\x01\x05\x07\x05\x07\x02\x01\x06")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x01\x06\x01\x01\x01\x01\x05\x07\x05\x07\x02\x01\x06"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    flag HAS_OPTIONAL
+    optional True()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "defaultTextFormat")
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "bold")
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x02\x05\x08\x01\x04\x03\x05\x04\x04\x07\x01\x08\x01")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x02\x05\x08\x01\x04\x03\x05\x04\x04\x07\x01\x08\x01"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "defaultTextFormat")
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x01\x08\x04\x01\x08\x06\x08\x02\x04\x02\x07\x05\x06")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x01\x08\x04\x01\x08\x06\x08\x02\x04\x02\x07\x05\x06"
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "styleSheet")
+      getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+      getproperty         QName(PackageNamespace(""), "\x03\x06\x02\x04\x04\x07\x07\x05\x01\x05\x03\x03")
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x08\x03\x02\x05\x06\x06\x08\x01")
+      initproperty        QName(PackageNamespace(""), "styleSheet")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x05\x02\x05\x07\x02\x02\x06\x06\x08\x03\x01\x04")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x05\x02\x05\x07\x02\x02\x06\x06\x08\x03\x01\x04"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "textColor")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "textColor")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"
+    param QName(PackageNamespace("flash.text"), "TextFormat")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "StyleSheet")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "styleSheet")
+      iffalse             L13
+
+      getlex              QName(PackageNamespace(""), "styleSheet")
+      coerce              QName(PackageNamespace("flash.text"), "StyleSheet")
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "styleSheet")
+      pushnull
+      initproperty        QName(PackageNamespace(""), "styleSheet")
+
+L13:
+      findproperty        QName(PackageNamespace(""), "defaultTextFormat")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace(""), "setTextFormat")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      getlocal2
+      iffalse             L24
+
+      findproperty        QName(PackageNamespace(""), "styleSheet")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "styleSheet")
+
+L24:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x08\x05\x04\x01\x01\x01\x01\x08\x01\x02\x04\x05\x04")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x08\x05\x04\x01\x01\x01\x01\x08\x01\x02\x04\x05\x04"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    flag HAS_OPTIONAL
+    optional True()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "defaultTextFormat")
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "italic")
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x04\x04\x05\x05\x02\x08\x04\x01\x02\x01\x07\x05")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x04\x04\x05\x05\x02\x08\x04\x01\x02\x01\x07\x05"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "defaultTextFormat")
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "size")
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x07\x04\x07\x07\x04\x06\x08\x07\x05\x05\x01\x03\x02")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x07\x04\x07\x07\x04\x06\x08\x07\x05\x05\x01\x03\x02"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "defaultTextFormat")
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "\x08\x02\x05\x01\x05\x05\x04\x04\x06\x07\x02\x05\x03"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x01\x03\x02\x05\x03\x07\x05\x02\x07\x02\x01\x03")
+   method
+    refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/\x01\x03\x02\x05\x03\x07\x05\x02\x07\x02\x01\x03"
+    returns QName(PackageNamespace(""), "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 8
+     maxscopedepth 9
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "multiline")
+      iftrue              L23
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x05\x04\x01\x08\x01\x02\x05\x01\x04\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getlex              QName(PackageNamespace(""), "textHeight")
+      add
+      negate
+      getlex              QName(PackageNamespace(""), "height")
+      add
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      add
+      initproperty        QName(PackageNamespace(""), "y")
+
+      jump                L65
+
+L23:
+      getlex              QName(PackageNamespace(""), "parent")
+      iffalse             L65
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+      dup
+      iffalse             L36
+
+      pop
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "\x02\x03\x08\x03\x05\x03\x03\x02\x07\x01")
+      astypelate
+      convert_b
+L36:
+      iffalse             L54
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "\x02\x03\x08\x03\x05\x03\x03\x02\x07\x01")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "\x08\x08\x06\x07\x02\x08\x02\x08\x05\x05\x07")
+      getlex              QName(PackageNamespace(""), "textHeight")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x05\x04\x01\x08\x01\x02\x05\x01\x04\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      add
+      subtract
+      pushbyte            2
+      divide
+      initproperty        QName(PackageNamespace(""), "y")
+
+      jump                L65
+
+L54:
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x05\x04\x01\x08\x01\x02\x05\x01\x04\x05")
+      getlex              QName(PackageNamespace(""), "textHeight")
+      add
+      subtract
+      pushbyte            2
+      divide
+      initproperty        QName(PackageNamespace(""), "y")
+
+L65:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x02\x07\x04\x08\x04\x08\x07\x04\x01\x06\x01\x01/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 7
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

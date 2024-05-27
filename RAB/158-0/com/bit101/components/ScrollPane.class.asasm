@@ -1,0 +1,679 @@
+class
+ refid "com.bit101.components:ScrollPane"
+ instance QName(PackageNamespace("com.bit101.components"), "ScrollPane")
+  extends QName(PackageNamespace("com.bit101.components"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:ScrollPane")
+  iinit
+   refid "com.bit101.components:ScrollPane/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar") type QName(PackageNamespace("com.bit101.components"), "VScrollBar") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar") type QName(PackageNamespace("com.bit101.components"), "HScrollBar") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_dragContent") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollPane:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Panel"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "resize"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onResize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoDown")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollPane:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Panel"), "addChildren"), 0
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "VScrollBar")
+      pushnull
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            10
+      subtract
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onScroll")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "VScrollBar"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "HScrollBar")
+      pushnull
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onScroll")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "HScrollBar"), 4
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+
+      findpropstrict      QName(PackageNamespace(""), "addRawChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      callpropvoid        QName(PackageNamespace(""), "addRawChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addRawChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      callpropvoid        QName(PackageNamespace(""), "addRawChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      pushbyte            10
+      dup
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addRawChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      callpropvoid        QName(PackageNamespace(""), "addRawChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:ScrollPane/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            10
+      subtract
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "height")
+      divide
+      convert_d
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            10
+      subtract
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "width")
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      pushbyte            1
+      ifnge               L40
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      jump                L50
+
+L40:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+L50:
+      getlocal1
+      pushbyte            1
+      ifnge               L60
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      jump                L70
+
+L60:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_mask")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+L70:
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setThumbPercent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      pushbyte            10
+      add
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      setproperty         QName(PackageNamespace(""), "maximum")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "pageSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setThumbPercent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      subtract
+      pushbyte            10
+      add
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      setproperty         QName(PackageNamespace(""), "maximum")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "pageSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_corner")
+      getlocal2
+      pushbyte            1
+      lessthan
+      dup
+      iffalse             L128
+
+      pop
+      getlocal1
+      pushbyte            1
+      lessthan
+L128:
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    refid "com.bit101.components:ScrollPane/update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onScroll")
+   method
+    refid "com.bit101.components:ScrollPane:onScroll"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "content")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onResize")
+   method
+    refid "com.bit101.components:ScrollPane:onResize"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoDown")
+   method
+    refid "com.bit101.components:ScrollPane:onMouseGoDown"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "content")
+      pushfalse
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            10
+      subtract
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            10
+      subtract
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      callpropvoid        QName(PackageNamespace(""), "startDrag"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseMove")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseMove")
+   method
+    refid "com.bit101.components:ScrollPane:onMouseMove"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "x")
+      negate
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlex              QName(PackageNamespace(""), "content")
+      getproperty         QName(PackageNamespace(""), "y")
+      negate
+      setproperty         QName(PackageNamespace(""), "value")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoUp")
+   method
+    refid "com.bit101.components:ScrollPane:onMouseGoUp"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "content")
+      callpropvoid        QName(PackageNamespace(""), "stopDrag"), 0
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseMove"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseMove")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushstring          "mouseUp"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoUp")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "dragContent")
+   method
+    refid "com.bit101.components:ScrollPane/dragContent/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_dragContent")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_dragContent")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_dragContent")
+      iffalse             L19
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoDown")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      jump                L29
+
+L19:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushstring          "mouseDown"
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "onMouseGoDown")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Panel"), "_background")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "dragContent")
+   method
+    refid "com.bit101.components:ScrollPane/dragContent/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_dragContent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:ScrollPane/autoHideScrollBar/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "autoHide")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_hScrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "autoHide")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:ScrollPane/autoHideScrollBar/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ScrollPane"), "_vScrollbar")
+      getproperty         QName(PackageNamespace(""), "autoHide")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:ScrollPane/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

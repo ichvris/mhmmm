@@ -1,0 +1,261 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleTribuCreee")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nom") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "messageJour") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "codeMaisonTFM") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "idRangUtilisateur") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "rangs") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")>) end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L19
+
+L9:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace(""), "rangs")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleTribuCreee#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleTribuCreee"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleTribuCreee"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleTribuCreee#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PackageNamespace(""), "getTaille"), 0
+      add
+      convert_i
+      setlocal1
+
+      inclocal_i          2
+L19:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "rangs")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      pushbyte            18
+      getlex              QName(PackageNamespace(""), "nom")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      getlex              QName(PackageNamespace(""), "messageJour")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      getlocal1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "id")
+      swap
+      setproperty         QName(PackageNamespace(""), "id")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal3
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "nom")
+      swap
+      setproperty         QName(PackageNamespace(""), "nom")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal            5
+
+      getlocal1
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "messageJour")
+      swap
+      setproperty         QName(PackageNamespace(""), "messageJour")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "codeMaisonTFM")
+      swap
+      setproperty         QName(PackageNamespace(""), "codeMaisonTFM")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "idRangUtilisateur")
+      swap
+      setproperty         QName(PackageNamespace(""), "idRangUtilisateur")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal            4
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      applytype           1
+      getlocal            4
+      construct           1
+      findproperty        QName(PackageNamespace(""), "rangs")
+      swap
+      setproperty         QName(PackageNamespace(""), "rangs")
+
+      pushbyte            0
+      setlocal2
+
+      jump                L62
+
+L54:
+      label
+      getlex              QName(PackageNamespace(""), "rangs")
+      getlocal2
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cree"), 1
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleTribuCreee#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleTribuCreee"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleTribuCreee"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleTribuCreee#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      inclocal_i          2
+L62:
+      getlocal2
+      getlocal            4
+      iflt                L54
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleTribuCreee/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

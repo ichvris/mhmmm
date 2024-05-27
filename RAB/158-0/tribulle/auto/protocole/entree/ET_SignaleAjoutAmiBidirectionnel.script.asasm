@@ -1,0 +1,29 @@
+script ; 543
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleAjoutAmiBidirectionnel.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_SignaleAjoutAmiBidirectionnel"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleAjoutAmiBidirectionnel")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleAjoutAmiBidirectionnel")
+  #include "ET_SignaleAjoutAmiBidirectionnel.class.asasm"
+ end ; trait
+end ; script

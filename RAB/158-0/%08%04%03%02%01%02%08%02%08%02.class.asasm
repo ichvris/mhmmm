@@ -1,0 +1,154 @@
+class
+ refid "\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02"
+ instance QName(PackageNamespace(""), "\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02")
+  iinit
+   refid "\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+     getproperty         QName(PackageNamespace(""), "\x05\x04\x05\x04\x01\x08\x01\x02\x05\x01\x04\x05")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     add
+     convert_i
+     setlocal2
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+     getproperty         QName(PackageNamespace(""), "\x05\x04\x05\x04\x01\x08\x01\x02\x05\x01\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     add
+     convert_i
+     setlocal3
+
+     getlocal1
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getRect"), 1
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal            4
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal2
+     getlocal3
+     pushtrue
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     initproperty        QName(PackageNamespace(""), "\x08\x06\x02\x01\x07\x07\x05\x04\x07\x05\x02\x01")
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+     setlocal            5
+
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x08\x06\x02\x01\x07\x07\x05\x04\x07\x05\x02\x01")
+     getlocal1
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "x")
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     initproperty        QName(PackageNamespace(""), "\x04\x01\x06\x07\x04\x06\x04\x05\x02\x02\x05\x03")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "y")
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     initproperty        QName(PackageNamespace(""), "\x04\x03\x02\x08\x05\x07\x03\x01\x05\x01\x04\x01")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x04\x01\x06\x07\x04\x06\x04\x05\x02\x02\x05\x03") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x04\x03\x02\x08\x05\x07\x03\x01\x05\x01\x04\x01") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x08\x06\x02\x01\x07\x07\x05\x04\x07\x05\x02\x01") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait method QName(PackageNamespace(""), "\x07\x06\x07\x02\x07\x07\x07\x03\x02\x06\x05")
+   method
+    refid "\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02/\x07\x06\x07\x02\x07\x07\x07\x03\x02\x06\x05"
+    returns QName(PackageNamespace("flash.display"), "Bitmap")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x06\x02\x01\x07\x07\x05\x04\x07\x05\x02\x01")
+      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x01\x06\x07\x04\x06\x04\x05\x02\x02\x05\x03")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x02\x08\x05\x07\x03\x01\x05\x01\x04\x01")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x08\x04\x03\x02\x01\x02\x08\x02\x08\x02/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

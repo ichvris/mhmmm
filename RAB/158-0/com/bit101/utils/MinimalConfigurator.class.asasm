@@ -1,0 +1,699 @@
+class
+ refid "com.bit101.utils:MinimalConfigurator"
+ instance QName(PackageNamespace("com.bit101.utils"), "MinimalConfigurator")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.utils:MinimalConfigurator")
+  iinit
+   refid "com.bit101.utils:MinimalConfigurator/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+
+     newobject           0
+     findproperty        QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "idMap")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "idMap")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader") type QName(PackageNamespace("flash.net"), "URLLoader") end
+  trait slot QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "idMap") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "loadXML")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/loadXML"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLLoader")
+      constructprop       QName(PackageNamespace("flash.net"), "URLLoader"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader")
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader")
+      pushstring          "complete"
+      getlex              QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "onLoadComplete")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal1
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "onLoadComplete")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/onLoadComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "parseXMLString")
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "loader")
+      getproperty         QName(PackageNamespace(""), "data")
+      getlex              QName(PackageNamespace(""), "String")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "parseXMLString"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "parseXMLString")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/parseXMLString"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 2
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+L4:
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "parseXML")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "parseXML"), 1
+
+L12:
+      jump                L23
+
+L13:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+L23:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "complete"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+     try from L4 to L12 target L13 type QName(PackageNamespace(""), "Error") name QName(PackageInternalNs("com.bit101.utils"), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "parseXML")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/parseXML"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      pushnull
+      setlocal3
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L30
+
+L11:
+      label
+      getlocal1
+      callproperty        Multiname("children", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal3
+
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "parseComp")
+      getlocal3
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "parseComp"), 1
+      coerce              QName(PackageNamespace("com.bit101.components"), "Component")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L29
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L29:
+      inclocal_i          4
+L30:
+      getlocal            4
+      getlocal1
+      callproperty        Multiname("children", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      callproperty        Multiname("length", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      iflt                L11
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "getPackage")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/getPackage"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        Multiname("name", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      pushstring          "Image"
+      ifne                L8
+
+      pushstring          "cuicui.bit101.components"
+      returnvalue
+
+L8:
+      pushstring          "com.bit101.components"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "parseComp")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/parseComp"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace("com.bit101.components"), "Component")
+    body
+     maxstack 4
+     localcount 18
+     initscopedepth 0
+     maxscopedepth 2
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushnull
+      setlocal            11
+
+      pushnull
+      setlocal            10
+
+      pushnull
+      setlocal            6
+
+      pushnull
+      setlocal            7
+
+      pushnull
+      setlocal3
+
+      pushnull
+      setlocal            5
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      setlocal            12
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            9
+
+L23:
+      getlex              QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+      getglobalscope
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "getPackage")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "getPackage"), 1
+      pushstring          "."
+      add
+      getlocal1
+      callproperty        Multiname("name", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      add
+      call                1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      dup
+      setlocal            11
+
+      construct           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim")
+      getlocal1
+      getproperty         MultinameA("id", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        Multiname("toString", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim"), 1
+      coerce_s
+      dup
+      setlocal            10
+
+      pushstring          ""
+      ifeq                L67
+
+      getlocal2
+      getlocal            10
+      setproperty         Multiname("name", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "idMap")
+      getlocal            10
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+      getlocal            10
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L67
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+      getlocal            10
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L67:
+      getlocal1
+      getproperty         MultinameA("event", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        Multiname("toString", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      pushstring          ""
+      ifeq                L102
+
+      getlocal1
+      getproperty         MultinameA("event", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushstring          ":"
+      callproperty        Multiname("split", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            6
+
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim")
+      getlocal            6
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim"), 1
+      coerce_s
+      setlocal            7
+
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim")
+      getlocal            6
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim"), 1
+      coerce_s
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L102
+
+      getlocal2
+      getlocal            7
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "parent")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 2
+
+L102:
+      pushbyte            0
+      setlocal            15
+
+      getlocal1
+      callproperty        Multiname("attributes", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      setlocal            14
+
+      jump                L167
+
+L108:
+      label
+      getlocal            14
+      getlocal            15
+      nextvalue
+      coerce              QName(PackageNamespace(""), "XML")
+      dup
+      setlocal            4
+
+      callproperty        Multiname("name", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      callproperty        Multiname("toString", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      coerce_s
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L167
+
+      getlocal2
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PackageNamespace(""), "Boolean")
+      istypelate
+      iffalse             L136
+
+      getlocal2
+      getlocal            5
+      getlocal            4
+      pushstring          "true"
+      equals
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      jump                L167
+
+L136:
+      getlocal            5
+      pushstring          "value"
+      equals
+      dup
+      iftrue              L145
+
+      pop
+      getlocal            5
+      pushstring          "lowValue"
+      equals
+L145:
+      dup
+      iftrue              L151
+
+      pop
+      getlocal            5
+      pushstring          "highValue"
+      equals
+L151:
+      dup
+      iftrue              L157
+
+      pop
+      getlocal            5
+      pushstring          "choice"
+      equals
+L157:
+      iffalse             L163
+
+      getlocal            9
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      jump                L167
+
+L163:
+      getlocal2
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L167:
+      hasnext2            14, 15
+      iftrue              L108
+
+      pushbyte            0
+      setlocal            17
+
+      getlocal            9
+      setlocal            16
+
+      jump                L186
+
+L174:
+      label
+      getlocal            16
+      getlocal            17
+      nextname
+      coerce_s
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      getlocal            9
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L186:
+      hasnext2            16, 17
+      iftrue              L174
+
+      pushbyte            0
+      setlocal            8
+
+      jump                L207
+
+L191:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "parseComp")
+      getlocal1
+      callproperty        Multiname("children", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callproperty        QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "parseComp"), 1
+      coerce              QName(PackageNamespace("com.bit101.components"), "Component")
+      dup
+      setlocal            12
+
+      pushnull
+      ifeq                L206
+
+      getlocal2
+      getlocal            12
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+
+L206:
+      inclocal_i          8
+L207:
+      getlocal            8
+      getlocal1
+      callproperty        Multiname("children", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      callproperty        Multiname("length", [PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      iflt                L191
+
+L212:
+      jump                L223
+
+L213:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            15
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+L223:
+      getlocal2
+      getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+      astypelate
+      returnvalue
+     end ; code
+     try from L23 to L212 target L213 type QName(PackageNamespace(""), "Error") name QName(PackageInternalNs("com.bit101.utils"), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCompById")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/getCompById"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("com.bit101.components"), "Component")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), "idMap")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), ProtectedNamespace("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("com.bit101.utils:MinimalConfigurator"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("com.bit101.components"), PackageNamespace("com.bit101.utils"), PackageInternalNs("com.bit101.utils"), PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.bit101.utils:MinimalConfigurator#0"), "trim")
+   method
+    refid "com.bit101.utils:MinimalConfigurator/trim"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "^\\s+|\\s+$"
+      pushstring          "sg"
+      construct           2
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.utils:MinimalConfigurator/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlex              QName(PackageNamespace("com.bit101.components"), "CheckBox")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "ComboBox")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "HBox")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "HRangeSlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "HScrollBar")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "HSlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "HUISlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "IndicatorLight")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Label")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "List")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "ListItem")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Meter")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Panel")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "ProgressBar")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "PushButton")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "RadioButton")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "RangeSlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "ScrollBar")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "ScrollPane")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Slider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "TextArea")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "UISlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "VBox")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "VRangeSlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "VScrollBar")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "VSlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "VUISlider")
+    pop
+    getlex              QName(PackageNamespace("com.bit101.components"), "Window")
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

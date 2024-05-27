@@ -1,0 +1,1180 @@
+class
+ refid "com.bit101.components:Meter"
+ instance QName(PackageNamespace("com.bit101.components"), "Meter")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:Meter")
+  iinit
+   refid "com.bit101.components:Meter/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_damp") type QName(PackageNamespace(""), "Number") value Double(0.8) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_label") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum") type QName(PackageNamespace(""), "Number") value Double(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel") type QName(PackageNamespace("com.bit101.components"), "Label") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_targetRotation") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_value") type QName(PackageNamespace(""), "Number") value Double(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:Meter:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      pushshort           200
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+
+      pushbyte            100
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:Meter:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      pushbyte            206
+      setproperty         QName(PackageNamespace(""), "rotation")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      setproperty         QName(PackageNamespace(""), "mask")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+      getlocal0
+      constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:Meter/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushdouble          -2.443460952792061
+      setlocal1
+
+      pushdouble          -0.6981317007977318
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "drawBackground")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "drawBackground"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "drawDial")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "drawDial"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "drawTicks")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "drawTicks"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "drawNeedle")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "drawNeedle"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      pushbyte            10
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            4
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            10
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            4
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          0.5
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSize") flag OVERRIDE
+   method
+    refid "com.bit101.components:Meter/setSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            2
+      divide
+      convert_d
+      setlocal2
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "setSize"), 2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "drawBackground")
+   method
+    refid "com.bit101.components:Meter:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BACKGROUND")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "PANEL")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "drawDial")
+   method
+    refid "com.bit101.components:Meter:drawDial"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          1.25
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BACKGROUND")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BUTTON_FACE")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          1.05
+      multiply
+      convert_d
+      setlocal            5
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          0.96
+      multiply
+      convert_d
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            5
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            5
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal1
+      setlocal            4
+
+      jump                L73
+
+L54:
+      label
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            5
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            5
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal            4
+      pushdouble          0.1
+      add
+      convert_d
+      setlocal            4
+
+L73:
+      getlocal            4
+      getlocal2
+      iflt                L54
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            5
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            5
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal3
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal3
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal2
+      setlocal            4
+
+      jump                L124
+
+L105:
+      label
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal3
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal3
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal            4
+      pushdouble          0.1
+      subtract
+      convert_d
+      setlocal            4
+
+L124:
+      getlocal            4
+      getlocal1
+      ifgt                L105
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal3
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal3
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            5
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            5
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "drawTicks")
+   method
+    refid "com.bit101.components:Meter:drawTicks"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          1.05
+      multiply
+      convert_d
+      setlocal            8
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          0.96
+      multiply
+      convert_d
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          1.13
+      multiply
+      convert_d
+      setlocal            4
+
+      pushdouble          0
+      setlocal            7
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L85
+
+L26:
+      label
+      getlocal1
+      getlocal            5
+      getlocal2
+      getlocal1
+      subtract
+      multiply
+      pushbyte            8
+      divide
+      add
+      convert_d
+      setlocal            6
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal3
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal3
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal            7
+      inclocal            7
+      pushbyte            2
+      modulo
+      pushbyte            0
+      ifne                L71
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            4
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            4
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      jump                L84
+
+L71:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_dial")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      getlocal            8
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      getlocal            8
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+L84:
+      inclocal_i          5
+L85:
+      getlocal            5
+      pushbyte            9
+      iflt                L26
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "drawNeedle")
+   method
+    refid "com.bit101.components:Meter:drawNeedle"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             16711680
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushdouble          -0.5
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      negate
+      pushdouble          1.1
+      multiply
+      pushbyte            1
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushdouble          1.1
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            4
+      pushbyte            0
+      dup
+      pushbyte            1
+      pushbyte            3
+      dup
+      pushdouble          0.2
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 7
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needleMask")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "update")
+   method
+    refid "com.bit101.components:Meter:update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+
+      pushbyte            206
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      subtract
+      divide
+      pushbyte            100
+      multiply
+      add
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_targetRotation")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_targetRotation")
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "enterFrame"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:Meter"), "onEnterFrame")
+   method
+    refid "com.bit101.components:Meter:onEnterFrame"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_targetRotation")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getproperty         QName(PackageNamespace(""), "rotation")
+      subtract
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      dup
+      getproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      getlocal2
+      pushdouble          0.05
+      multiply
+      add
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      dup
+      getproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_damp")
+      multiply
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.1
+      lessthan
+      dup
+      iffalse             L35
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.1
+      lessthan
+L35:
+      iffalse             L44
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_targetRotation")
+      setproperty         QName(PackageNamespace(""), "rotation")
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      pushstring          "enterFrame"
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      jump                L51
+
+L44:
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      getproperty         QName(PackageNamespace(""), "rotation")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_velocity")
+      add
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_needle")
+      swap
+      setproperty         QName(PackageNamespace(""), "rotation")
+
+L51:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:Meter/maximum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:Meter/maximum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maximum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:Meter/minimum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minimum")
+   method
+    refid "com.bit101.components:Meter/minimum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minimum")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:Meter/value/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Meter"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Meter"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:Meter/value/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:Meter/label/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_label")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "label")
+   method
+    refid "com.bit101.components:Meter/label/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_labelText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showValues")
+   method
+    refid "com.bit101.components:Meter/showValues/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_minLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_maxLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showValues")
+   method
+    refid "com.bit101.components:Meter/showValues/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_showValues")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "damp")
+   method
+    refid "com.bit101.components:Meter/damp/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:Meter"), "_damp")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:Meter"), "_damp")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "damp")
+   method
+    refid "com.bit101.components:Meter/damp/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Meter"), "_damp")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:Meter/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

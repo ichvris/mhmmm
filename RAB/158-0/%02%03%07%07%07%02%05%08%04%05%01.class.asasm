@@ -1,0 +1,203 @@
+class
+ refid "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01"
+ instance QName(PackageNamespace(""), "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+  iinit
+   refid "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01/iinit"
+   param QName(PackageNamespace("flash.display"), "Sprite")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal            6
+
+     pushnan
+     setlocal            7
+
+     pushnan
+     setlocal            8
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     divide
+     convert_i
+     setlocal            5
+
+     getlocal2
+     iffalse             L44
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x08\x03\x02\x04\x08\x08\x01\x08\x05\x02\x02\x02")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x08\x03\x02\x04\x08\x08\x01\x08\x05\x02\x02\x02")
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal            6
+
+     getlocal2
+     convert_d
+     setlocal            7
+
+     getlocal3
+     convert_d
+     setlocal            8
+
+     jump                L61
+
+L44:
+     getlocal1
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getRect"), 1
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal            6
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal            4
+     add
+     convert_d
+     setlocal            7
+
+     getlocal            4
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "height")
+     add
+     convert_d
+     setlocal            8
+
+L61:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     getlocal            7
+     getlocal            8
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     initproperty        QName(PackageNamespace(""), "\x06\x01\x03\x04\x07\x04\x03\x02\x05\x05\x01\x06\x08")
+
+     getlocal0
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "x")
+     initproperty        QName(PackageNamespace(""), "\x04\x01\x06\x07\x04\x06\x04\x05\x02\x02\x05\x03")
+
+     getlocal0
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "y")
+     initproperty        QName(PackageNamespace(""), "\x04\x03\x02\x08\x05\x07\x03\x01\x05\x01\x04\x01")
+
+     getlex              QName(PackageNamespace(""), "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+     getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     iffalse             L90
+
+     getlex              QName(PackageNamespace(""), "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+     getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L90:
+     getlex              QName(PackageNamespace(""), "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+     getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal1
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "x")
+     negate
+     getlocal            5
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal1
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "y")
+     negate
+     getlocal            5
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal            7
+     getlocal            8
+     pushtrue
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     initproperty        QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07")
+     getlex              QName(PackageNamespace(""), "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01")
+     getproperty         QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+     callpropvoid        QName(PackageNamespace(""), "draw"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x04\x01\x06\x07\x04\x06\x04\x05\x02\x02\x05\x03") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "\x04\x03\x02\x08\x05\x07\x03\x01\x05\x01\x04\x01") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "\x05\x08\x03\x08\x01\x03\x03\x06\x05\x07") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PackageNamespace(""), "\x06\x01\x03\x04\x07\x04\x03\x02\x05\x05\x01\x06\x08") type QName(PackageNamespace("flash.geom"), "Rectangle") end
+ end ; instance
+ cinit
+  refid "\x02\x03\x07\x07\x07\x02\x05\x08\x04\x05\x01/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+    findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+    constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+    initproperty        QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "\x06\x02\x07\x07\x01\x07\x01\x02\x06\x02\x06\x05\x04") slotid 1 type QName(PackageNamespace("flash.display"), "Sprite") end
+end ; class

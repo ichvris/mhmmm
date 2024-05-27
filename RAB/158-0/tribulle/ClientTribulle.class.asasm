@@ -1,0 +1,387 @@
+class
+ refid "tribulle:ClientTribulle"
+ instance QName(PackageNamespace("tribulle"), "ClientTribulle")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle:ClientTribulle/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "RejoindreSalon")
+     swap
+     setproperty         QName(PackageNamespace(""), "RejoindreSalon")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "DemandeProfil")
+     swap
+     setproperty         QName(PackageNamespace(""), "DemandeProfil")
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+     findproperty        QName(PackageNamespace(""), "OuvertureInterfaceSignalement")
+     swap
+     setproperty         QName(PackageNamespace(""), "OuvertureInterfaceSignalement")
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance")
+     pushnull
+     ifeq                L29
+
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     pushstring          "Tribulle est deja instancié"
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+  trait slot QName(PackageNamespace(""), "RejoindreSalon") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "DemandeProfil") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PackageNamespace(""), "OuvertureInterfaceSignalement") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait method QName(PackageNamespace(""), "init")
+   method
+    refid "tribulle:ClientTribulle/init"
+    param QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService")
+
+      getlex              QName(PackageNamespace("tribulle.composants._types"), "ProxyChatTribulle")
+      callpropvoid        QName(PackageNamespace(""), "initialisation"), 0
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      callpropvoid        QName(PackageNamespace(""), "initialisationStyle"), 0
+
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      pushstring          "transformice"
+      callpropvoid        QName(PackageNamespace(""), "setStyle"), 1
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+      setproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeService")
+   method
+    refid "tribulle:ClientTribulle/typeService/getter"
+    returns QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addRessources")
+   method
+    refid "tribulle:ClientTribulle/addRessources"
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      getlex              QName(PackageNamespace("cuicui.utils"), "GestionnaireAssets")
+      getproperty         QName(PackageNamespace(""), "ressourcesGraphique")
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      setlocal2
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal1
+      setlocal            4
+
+      jump                L25
+
+L13:
+      label
+      getlocal            4
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal3
+
+      getlocal2
+      getlocal3
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle:ClientTribulle"), ProtectedNamespace("tribulle:ClientTribulle"), StaticProtectedNs("tribulle:ClientTribulle"), StaticProtectedNs("Object"), PackageNamespace("tribulle"), PackageInternalNs("tribulle"), PrivateNamespace(null, "tribulle:ClientTribulle/addRessources"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle:ClientTribulle"), ProtectedNamespace("tribulle:ClientTribulle"), StaticProtectedNs("tribulle:ClientTribulle"), StaticProtectedNs("Object"), PackageNamespace("tribulle"), PackageInternalNs("tribulle"), PrivateNamespace(null, "tribulle:ClientTribulle/addRessources"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L25:
+      hasnext2            4, 5
+      iftrue              L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ajouterComposantTribu")
+   method
+    refid "tribulle:ClientTribulle/ajouterComposantTribu"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace("tribulle.composants"), "ComposantTribu")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("tribulle.composants"), "ComposantTribu")
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService")
+      constructprop       QName(PackageNamespace("tribulle.composants"), "ComposantTribu"), 2
+      coerce              QName(PackageNamespace("tribulle.composants"), "ComposantTribu")
+      setlocal2
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "tribu"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "register"), 2
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "x_ajouteComposantListeAmis")
+   method
+    refid "tribulle:ClientTribulle/x_ajouteComposantListeAmis"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+      getlocal1
+      constructprop       QName(PackageNamespace("tribulle.composants"), "ComposantAmis"), 1
+      coerce              QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+      setlocal2
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "register"), 2
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "composant")
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getComposant")
+   method
+    refid "tribulle:ClientTribulle/getComposant"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("com.bit101.components"), "Component")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retirerComposant")
+   method
+    refid "tribulle:ClientTribulle/retirerComposant"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      setlocal2
+
+      jump                L17
+
+L5:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callpropvoid        QName(PackageNamespace(""), "unregister"), 1
+
+      jump                L23
+
+L11:
+      label
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireComposants")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "chat"
+      callpropvoid        QName(PackageNamespace(""), "unregister"), 1
+
+      jump                L23
+
+L17:
+      pushstring          "listedamis"
+      getlocal2
+      ifstricteq          L5
+
+      pushstring          "chat"
+      getlocal2
+      ifstricteq          L11
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCleTradMonnaie")
+   method
+    refid "tribulle:ClientTribulle/getCleTradMonnaie"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_typeService")
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+      getproperty         QName(PackageNamespace(""), "JEU_BOUBOUM")
+      ifne                L8
+
+      pushstring          "monnaie.noisettes"
+      returnvalue
+
+L8:
+      pushstring          "monnaie.fromages"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle:ClientTribulle/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance") type QName(PackageNamespace("tribulle"), "ClientTribulle") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle:ClientTribulle/getInstance"
+   returns QName(PackageNamespace("tribulle"), "ClientTribulle")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance")
+     pushnull
+     ifne                L10
+
+     getlocal0
+     construct           0
+     findproperty        QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance")
+
+L10:
+     getlex              QName(PrivateNamespace(null, "tribulle:ClientTribulle"), "_instance")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

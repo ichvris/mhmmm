@@ -1,0 +1,67 @@
+class
+ refid "org.osflash.signals:IOnceSignal"
+ instance QName(PackageNamespace("org.osflash.signals"), "IOnceSignal")
+  flag INTERFACE
+  iinit
+   refid "org.osflash.signals:IOnceSignal/iinit"
+  end ; method
+  trait getter QName(Namespace("org.osflash.signals:IOnceSignal"), "valueClasses")
+   method
+    refid "org.osflash.signals:IOnceSignal:valueClasses/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("org.osflash.signals:IOnceSignal"), "valueClasses")
+   method
+    refid "org.osflash.signals:IOnceSignal:valueClasses/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals:IOnceSignal"), "numListeners")
+   method
+    refid "org.osflash.signals:IOnceSignal:numListeners/getter"
+    returns QName(PackageNamespace(""), "uint")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:IOnceSignal"), "addOnce")
+   method
+    refid "org.osflash.signals:IOnceSignal:addOnce"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:IOnceSignal"), "dispatch")
+   method
+    refid "org.osflash.signals:IOnceSignal:dispatch"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:IOnceSignal"), "remove")
+   method
+    refid "org.osflash.signals:IOnceSignal:remove"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:IOnceSignal"), "removeAll")
+   method
+    refid "org.osflash.signals:IOnceSignal:removeAll"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:IOnceSignal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

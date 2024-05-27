@@ -1,0 +1,29 @@
+script ; 561
+ sinit
+  refid "lapitchnet.reseau:TypeTailleEnum.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.reseau:TypeTailleEnum"
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.reseau"), "TypeTailleEnum")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau"), "TypeTailleEnum")
+  #include "TypeTailleEnum.class.asasm"
+ end ; trait
+end ; script

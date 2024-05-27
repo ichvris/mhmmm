@@ -1,0 +1,646 @@
+class
+ refid "cuicui.bit101.components:Popup"
+ instance QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+  extends QName(PackageNamespace("com.bit101.components"), "Window")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("cuicui.bit101.components:Popup")
+  iinit
+   refid "cuicui.bit101.components:Popup/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("Window")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+     constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 0
+     findproperty        QName(PackageNamespace(""), "SignaleFermeture")
+     swap
+     setproperty         QName(PackageNamespace(""), "SignaleFermeture")
+
+     pushtrue
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Window"), "_hasCloseButton")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+     pushstring          "popup"
+     findproperty        QName(PackageNamespace(""), "name")
+     swap
+     setproperty         QName(PackageNamespace(""), "name")
+
+     pushshort           300
+     findproperty        QName(PackageNamespace(""), "width")
+     swap
+     setproperty         QName(PackageNamespace(""), "width")
+
+     pushbyte            120
+     findproperty        QName(PackageNamespace(""), "height")
+     swap
+     setproperty         QName(PackageNamespace(""), "height")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur") type QName(PackageNamespace("com.bit101.components"), "HBox") end
+  trait slot QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_contentInit") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "SignaleFermeture") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait method QName(ProtectedNamespace("cuicui.bit101.components:Popup"), "init") flag OVERRIDE
+   method
+    refid "cuicui.bit101.components:Popup:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Window"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "close"
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClosePopup")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "cuicui.bit101.components:Popup/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 11
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal2
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      setlocal            6
+
+      pushnull
+      setlocal1
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal3
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_contentInit")
+      iftrue              L262
+
+      pushtrue
+      findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_contentInit")
+      swap
+      setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_contentInit")
+
+      pushfalse
+      setlocal2
+
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      pushnull
+      equals
+      dup
+      iffalse             L36
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      pushnull
+      equals
+      not
+L36:
+      dup
+      iffalse             L43
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+L43:
+      iffalse             L70
+
+      pushbyte            0
+      setlocal            8
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      setlocal            7
+
+      jump                L61
+
+L49:
+      label
+      getlocal            7
+      getlocal            8
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      getproperty         Multiname("width", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      add
+      convert_i
+      setlocal            5
+
+L61:
+      hasnext2            7, 8
+      iftrue              L49
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "width")
+      ifngt               L70
+
+      getlocal            5
+      findproperty        QName(PackageNamespace(""), "width")
+      swap
+      setproperty         QName(PackageNamespace(""), "width")
+
+L70:
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      pushnull
+      ifeq                L141
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "width")
+      ifnlt               L92
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      pushbyte            5
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L97
+
+L92:
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "width")
+      findproperty        QName(PackageNamespace(""), "width")
+      swap
+      setproperty         QName(PackageNamespace(""), "width")
+
+L97:
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      pushbyte            30
+      add
+      getlex              QName(PackageNamespace(""), "height")
+      ifnlt               L115
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      pushbyte            80
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      jump                L141
+
+L115:
+      pushtrue
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Window"), "_titleBar")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L133
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+L133:
+      iffalse             L136
+
+      pushbyte            40
+      jump                L137
+
+L136:
+      pushdouble          0
+L137:
+      add
+      findproperty        QName(PackageNamespace(""), "height")
+      swap
+      setproperty         QName(PackageNamespace(""), "height")
+
+L141:
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      pushnull
+      equals
+      dup
+      iffalse             L151
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      pushnull
+      equals
+      not
+L151:
+      dup
+      iffalse             L158
+
+      pop
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+L158:
+      iffalse             L217
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "HBox")
+      getlocal0
+      pushbyte            0
+      getlocal2
+      iffalse             L169
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            20
+      add
+      jump                L170
+
+L169:
+      pushdouble          78
+L170:
+      constructprop       QName(PackageNamespace("com.bit101.components"), "HBox"), 3
+      findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      swap
+      setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      pushstring          "resize"
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onBtnConteneurResize")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      pushbyte            0
+      setlocal            10
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      setlocal            9
+
+      jump                L203
+
+L183:
+      label
+      getlocal            9
+      getlocal            10
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "PushButton")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      pushbyte            0
+      dup
+      getlocal            6
+      getproperty         Multiname("label", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClick")
+      constructprop       QName(PackageNamespace("com.bit101.components"), "PushButton"), 5
+      coerce              QName(PackageNamespace("com.bit101.components"), "PushButton")
+      setlocal1
+
+      getlocal1
+      getlocal            6
+      getproperty         Multiname("width", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         QName(PackageNamespace(""), "width")
+
+L203:
+      hasnext2            9, 10
+      iftrue              L183
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "width")
+      ifnlt               L217
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+L217:
+      getlex              QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      iffalse             L228
+
+      pushshort           800
+      convert_d
+      setlocal3
+
+      pushshort           400
+      convert_d
+      setlocal            4
+
+      jump                L246
+
+L228:
+      getlex              QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L240
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "height")
+      convert_d
+      setlocal            4
+
+      jump                L246
+
+L240:
+      pushshort           800
+      convert_d
+      setlocal3
+
+      pushshort           400
+      convert_d
+      setlocal            4
+
+L246:
+      getlocal3
+      getlex              QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      findproperty        QName(PackageNamespace(""), "x")
+      swap
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      findproperty        QName(PackageNamespace(""), "y")
+      swap
+      setproperty         QName(PackageNamespace(""), "y")
+
+L262:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClick")
+   method
+    refid "cuicui.bit101.components:Popup/onClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getlex              QName(PackageNamespace("com.bit101.components"), "PushButton")
+      astypelate
+      coerce              QName(PackageNamespace("com.bit101.components"), "PushButton")
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      setlocal            4
+
+      jump                L37
+
+L15:
+      label
+      getlocal            4
+      getlocal            5
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      getproperty         Multiname("label", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "label")
+      ifne                L37
+
+      getlocal2
+      getproperty         Multiname("callback", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      ifeq                L33
+
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      callpropvoid        Multiname("callback", [PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), ProtectedNamespace("cuicui.bit101.components:Popup"), StaticProtectedNs("cuicui.bit101.components:Popup"), StaticProtectedNs("com.bit101.components:Window"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("cuicui.bit101.components"), PackageInternalNs("cuicui.bit101.components"), PrivateNamespace(null, "cuicui.bit101.components:Popup#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+
+L33:
+      findpropstrict      QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClosePopup")
+      pushnull
+      callpropvoid        QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClosePopup"), 1
+
+      returnvoid
+
+L37:
+      hasnext2            4, 5
+      iftrue              L15
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addContent")
+   method
+    refid "cuicui.bit101.components:Popup/addContent"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+      swap
+      setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_content")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addButtons")
+   method
+    refid "cuicui.bit101.components:Popup/addButtons"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+      swap
+      setproperty         QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_buttons")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onClosePopup")
+   method
+    refid "cuicui.bit101.components:Popup/onClosePopup"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlex              QName(PackageNamespace(""), "SignaleFermeture")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "onBtnConteneurResize")
+   method
+    refid "cuicui.bit101.components:Popup/onBtnConteneurResize"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PrivateNamespace(null, "cuicui.bit101.components:Popup#0"), "_btnConteneur")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "cuicui.bit101.components:Popup/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

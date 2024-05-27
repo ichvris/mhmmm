@@ -1,0 +1,42 @@
+class
+ refid "org.osflash.signals:IPrioritySignal"
+ instance QName(PackageNamespace("org.osflash.signals"), "IPrioritySignal")
+  implements QName(PackageNamespace("org.osflash.signals"), "ISignal")
+  flag INTERFACE
+  iinit
+   refid "org.osflash.signals:IPrioritySignal/iinit"
+  end ; method
+  trait method QName(Namespace("org.osflash.signals:IPrioritySignal"), "addWithPriority")
+   method
+    refid "org.osflash.signals:IPrioritySignal:addWithPriority"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals:IPrioritySignal"), "addOnceWithPriority")
+   method
+    refid "org.osflash.signals:IPrioritySignal:addOnceWithPriority"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:IPrioritySignal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

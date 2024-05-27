@@ -1,0 +1,235 @@
+class
+ refid "tribulle.categories:CategorieListeNoire"
+ instance QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_ListeNoire")
+  flag SEALED
+  iinit
+   refid "tribulle.categories:CategorieListeNoire/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "executeResultatAjoutListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeResultatAjoutListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatAjoutListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatAjoutListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeErreurListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeErreurListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ErreurListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleRetraitListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeSignaleRetraitListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRetraitListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleRetraitListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "login")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeResultatListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ignores")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeResultatRetireListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeResultatRetireListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ResultatRetireListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "ResultatRetireListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "resultat")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "executeSignaleAjoutListeNoire")
+   method
+    refid "tribulle.categories:CategorieListeNoire/executeSignaleAjoutListeNoire"
+    param QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleAjoutListeNoire")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "SignaleAjoutListeNoire")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "login")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.categories:CategorieListeNoire/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ErreurListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "ErreurListeNoire")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatAjoutListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatAjoutListeNoire")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "int")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatRetireListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatRetireListeNoire")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+    getlex              QName(PackageNamespace(""), "String")
+    applytype           1
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "ResultatListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "ResultatListeNoire")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleAjoutListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleAjoutListeNoire")
+
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "String")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    findproperty        QName(PackageNamespace(""), "SignaleRetraitListeNoire")
+    swap
+    setproperty         QName(PackageNamespace(""), "SignaleRetraitListeNoire")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "ErreurListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatAjoutListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatRetireListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "ResultatListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleAjoutListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+ trait slot QName(PackageNamespace(""), "SignaleRetraitListeNoire") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+end ; class

@@ -1,0 +1,287 @@
+class
+ refid "tribulle.composants._types:ProxyChatTribulle"
+ instance QName(PackageNamespace("tribulle.composants._types"), "ProxyChatTribulle")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.composants._types:ProxyChatTribulle/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.composants._types:ProxyChatTribulle/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "initialisation")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/initialisation"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     coerce              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+     setlocal1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "recoisMessagePriveSignal")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "onAjouteMessagePrive")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "recoisMessageCanal")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "nouveauMessageCanal")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "rejoinsCanal")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "onRejoindreCanal")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "quitteCanal")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "fermerCanal")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "resultatDemandeMembresCanal")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "affichageListeJoueursCanal")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "statusModeSilence")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "resultatActivationSilence")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+     getlex              QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "affichageMessageChat")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "onAjouteMessagePrive")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/onAjouteMessagePrive"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Integer(-1)
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "x_receptionMessagePrive"), 4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "onRejoindreCanal")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/onRejoindreCanal"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     getlocal2
+     getlocal            4
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "x_rejoindreCanalDiscussion"), 4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "nouveauMessageCanal")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/nouveauMessageCanal"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Integer(-1)
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "x_receptionMessageCanal"), 4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "fermerCanal")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/fermerCanal"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "x_fermerCanal"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "resultatActivationSilence")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/resultatActivationSilence"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "x_resultatActivationSilence"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "affichageMessageChat")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/affichageMessageChat"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "x_affichageMessageChat"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.composants._types:ProxyChatTribulle"), "affichageListeJoueursCanal")
+  method
+   refid "tribulle.composants._types:ProxyChatTribulle/affichageListeJoueursCanal"
+   param QName(PackageNamespace(""), "int")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "x_affichageListeJoueursCanal"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

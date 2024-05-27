@@ -1,0 +1,84 @@
+class
+ refid "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04"
+ instance QName(PackageNamespace(""), "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04")
+  extends QName(PackageNamespace(""), "\x05\x08\x07\x06\x04\x08\x04\x03\x06\x01\x07\x08")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04")
+  iinit
+   refid "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PackageNamespace(""), "\x08\x05\x06\x04\x01\x02\x02\x07\x01\x02\x07")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readByte"), 0
+     convert_i
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     convert_i
+     setlocal3
+
+     jump                L27
+
+L18:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x06\x04\x01\x02\x02\x07\x01\x02\x07")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readByte"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readByte"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04/iinit#0"), PackageNamespace(""), PrivateNamespace(null, "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04/iinit#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04"), StaticProtectedNs("\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04"), StaticProtectedNs("\x05\x08\x07\x06\x04\x08\x04\x03\x06\x01\x07\x08")])
+
+     inclocal_i          3
+L27:
+     getlocal3
+     getlocal2
+     iflt                L18
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readBoolean"), 0
+     initproperty        QName(PackageNamespace(""), "\x04\x01\x02\x05\x04\x04\x07\x03\x07\x06\x04\x05\x04")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x08\x05\x06\x04\x01\x02\x02\x07\x01\x02\x07") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PackageNamespace(""), "\x04\x01\x02\x05\x04\x04\x07\x03\x07\x06\x04\x05\x04") type QName(PackageNamespace(""), "Boolean") end
+ end ; instance
+ cinit
+  refid "\x04\x04\x02\x02\x01\x08\x05\x06\x02\x02\x07\x04\x04/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

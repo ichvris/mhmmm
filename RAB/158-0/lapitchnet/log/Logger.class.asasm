@@ -1,0 +1,73 @@
+class
+ refid "lapitchnet.log:Logger"
+ instance QName(PackageNamespace("lapitchnet.log"), "Logger")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "lapitchnet.log:Logger/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "lapitchnet.log:Logger/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "INFO") type QName(PackageNamespace(""), "String") value Utf8("INFO") end
+ trait const QName(PackageNamespace(""), "DEBUG") type QName(PackageNamespace(""), "String") value Utf8("DEBUG") end
+ trait const QName(PackageNamespace(""), "ERREUR") type QName(PackageNamespace(""), "String") value Utf8("ERREUR") end
+ trait const QName(PackageNamespace(""), "RESEAU") type QName(PackageNamespace(""), "String") value Utf8("RESEAU") end
+ trait method QName(PackageNamespace(""), "flashTrace")
+  method
+   refid "lapitchnet.log:Logger/flashTrace"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Utf8("DEBUG")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "trace")
+     getglobalscope
+     pushstring          "["
+     getlocal2
+     add
+     pushstring          "] "
+     add
+     getlocal1
+     add
+     call                1
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

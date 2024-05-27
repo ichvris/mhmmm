@@ -1,0 +1,514 @@
+class
+ refid "tribulle.gestionnaires:GestionnaireListeNoire"
+ instance QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireListeNoire")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.gestionnaires:GestionnaireListeNoire/iinit"
+   param QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), "PrivateClass")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "SignaleAjoutListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onSignaleAjoutListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "SignaleRetraitListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onSignaleRetraitListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "ResultatListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "ErreurListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onErreurListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "ResultatAjoutListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatAjoutListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieListeNoire")
+     getproperty         QName(PackageNamespace(""), "ResultatRetireListeNoire")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatRetireListeNoire")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_initialise") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_composant") type QName(PackageNamespace("tribulle.composants"), "ComposantAmis") end
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/getComposant"
+    returns QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_composant")
+      pushnull
+      ifne                L15
+
+      getlex              QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+      getglobalscope
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      call                1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_composant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_composant")
+
+L15:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_composant")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/getListeIgnores"
+    returns QName(PackageNamespace("tribulle.composants"), "ListeIgnores")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant"), 0
+      getproperty         QName(PackageNamespace(""), "listeIgnores")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estIgnore")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/estIgnore"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onResultatListeNoire"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      setproperty         QName(PackageNamespace(""), "x_indexListeIgnores")
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      setlocal3
+
+      jump                L26
+
+L15:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce_s
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L26:
+      hasnext2            3, 4
+      iftrue              L15
+
+      pushtrue
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_initialise")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_initialise")
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L41
+
+      pop
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant"), 0
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L41:
+      iffalse             L46
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onResultatListeNoire"), 1
+
+L46:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onSignaleRetraitListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onSignaleRetraitListeNoire"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      deleteproperty      MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pop
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant"), 0
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L15
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onSignaleRetraitListeNoire"), 1
+
+L15:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleRetraitListeNoire"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      pushtrue
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onSignaleAjoutListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onSignaleAjoutListeNoire"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeIgnores")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireListeNoire"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getComposant"), 0
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L21
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "getListeIgnores"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutListeNoire"), 1
+
+L21:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleAjoutListeNoire"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      pushtrue
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onErreurListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onErreurListeNoire"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.erreurListeNoire.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatAjoutListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onResultatAjoutListeNoire"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L16
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.ignores.resultatAjoutListeNoire.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "onResultatRetireListeNoire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/onResultatRetireListeNoire"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L16
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushstring          "listedamis"
+      callproperty        QName(PackageNamespace(""), "getComposant"), 1
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.ignores.resultatRetireListeNoire.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "initialise")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/initialise/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_initialise")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "ignores")
+   method
+    refid "tribulle.gestionnaires:GestionnaireListeNoire/ignores/getter"
+    returns QName(PackageNamespace("flash.utils"), "Dictionary")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_indexJoueursIgnores")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.gestionnaires:GestionnaireListeNoire/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_singleton") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireListeNoire") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle.gestionnaires:GestionnaireListeNoire/getInstance"
+   returns QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireListeNoire")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_singleton")
+     pushnull
+     ifne                L12
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), "PrivateClass")
+     constructprop       QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#1"), "PrivateClass"), 0
+     construct           1
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_singleton")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_singleton")
+
+L12:
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireListeNoire#0"), "_singleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

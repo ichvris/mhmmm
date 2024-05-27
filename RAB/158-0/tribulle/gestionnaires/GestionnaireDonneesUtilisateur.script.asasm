@@ -1,0 +1,41 @@
+script ; 824
+ sinit
+  refid "tribulle.gestionnaires:GestionnaireDonneesUtilisateur.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireDonneesUtilisateur"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireDonneesUtilisateur/PrivateClass"
+    popscope
+    initproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#1"), "PrivateClass")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireDonneesUtilisateur")
+  #include "GestionnaireDonneesUtilisateur.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireDonneesUtilisateur#1"), "PrivateClass")
+  #include "GestionnaireDonneesUtilisateur/PrivateClass.class.asasm"
+ end ; trait
+end ; script

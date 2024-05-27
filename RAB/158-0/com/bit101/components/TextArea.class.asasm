@@ -1,0 +1,624 @@
+class
+ refid "com.bit101.components:TextArea"
+ instance QName(PackageNamespace("com.bit101.components"), "TextArea")
+  extends QName(PackageNamespace("com.bit101.components"), "Text")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:TextArea")
+  iinit
+   refid "com.bit101.components:TextArea/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "multiline")
+     swap
+     setproperty         QName(PackageNamespace(""), "multiline")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructsuper      5
+
+     getlocal            6
+     findproperty        QName(ProtectedNamespace("com.bit101.components:Text"), "_marginY")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:Text"), "_marginY")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar") type QName(PackageNamespace("com.bit101.components"), "VScrollBar") end
+  trait slot QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_autoScroll") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:TextArea:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Text"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "mouseWheel"
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onMouseWheel")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:TextArea:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Text"), "addChildren"), 0
+      findpropstrict      QName(PackageNamespace("com.bit101.components"), "VScrollBar")
+      getlocal0
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onScrollbarScroll")
+      pushfalse
+      constructprop       QName(PackageNamespace("com.bit101.components"), "VScrollBar"), 5
+      findproperty        QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushstring          "scroll"
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextScroll")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushstring          "link"
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextLink")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar")
+   method
+    refid "com.bit101.components:TextArea:updateScrollbar"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+      dup
+      iftrue              L8
+
+      pop
+      getlex              QName(PackageNamespace(""), "forceNextScrollToBottom")
+      convert_b
+L8:
+      iffalse             L23
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      pushbyte            1
+      add
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      pushfalse
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "forceNextScrollToBottom")
+      swap
+      setproperty         QName(PackageNamespace(""), "forceNextScrollToBottom")
+
+L23:
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "numLines")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      subtract
+      pushbyte            1
+      add
+      convert_i
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "numLines")
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      callpropvoid        QName(PackageNamespace(""), "setSliderParams"), 3
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setThumbPercent"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "pageSize")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "forceNextScrollToBottom") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:TextArea/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      equals
+      dup
+      iffalse             L12
+
+      pop
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_autoScroll")
+      convert_b
+L12:
+      iffalse             L17
+
+      pushtrue
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+
+L17:
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            4
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      pushstring          "enterFrame"
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextScrollDelay")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextScrollDelay")
+   method
+    refid "com.bit101.components:TextArea:onTextScrollDelay"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      pushstring          "enterFrame"
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextScrollDelay")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onChange") flag OVERRIDE
+   method
+    refid "com.bit101.components:TextArea:onChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Text"), "onChange"), 1
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onScrollbarScroll")
+   method
+    refid "com.bit101.components:TextArea:onScrollbarScroll"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextScroll")
+   method
+    refid "com.bit101.components:TextArea:onTextScroll"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onTextLink")
+   method
+    refid "com.bit101.components:TextArea:onTextLink"
+    param QName(PackageNamespace("flash.events"), "TextEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:TextArea"), "onMouseWheel")
+   method
+    refid "com.bit101.components:TextArea:onMouseWheel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "delta")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      swap
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "value")
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "com.bit101.components:TextArea/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PackageNamespace(""), "enabled")
+      swap
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "tabEnabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:TextArea/autoHideScrollBar/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "autoHide")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoHideScrollBar")
+   method
+    refid "com.bit101.components:TextArea/autoHideScrollBar/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getproperty         QName(PackageNamespace(""), "autoHide")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setStylesheet")
+   method
+    refid "com.bit101.components:TextArea/setStylesheet"
+    param QName(PackageNamespace("flash.text"), "StyleSheet")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "styleSheet")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "scrollToTop")
+   method
+    refid "com.bit101.components:TextArea/scrollToTop"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tf")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      pushfalse
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_scrollToBottom")
+
+      pushfalse
+      findproperty        QName(PackageNamespace(""), "forceNextScrollToBottom")
+      swap
+      setproperty         QName(PackageNamespace(""), "forceNextScrollToBottom")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:TextArea"), "_scrollbar")
+      getlex              QName(PackageNamespace(""), "_tf")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:TextArea"), "updateScrollbar"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoScroll")
+   method
+    refid "com.bit101.components:TextArea/autoScroll/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_autoScroll")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoScroll")
+   method
+    refid "com.bit101.components:TextArea/autoScroll/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_autoScroll")
+      swap
+      setproperty         QName(PrivateNamespace(null, "com.bit101.components:TextArea"), "_autoScroll")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:TextArea/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

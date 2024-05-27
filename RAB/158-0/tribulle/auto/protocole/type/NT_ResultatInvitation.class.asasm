@@ -1,0 +1,40 @@
+class
+ refid "tribulle.auto.protocole.type:NT_ResultatInvitation"
+ instance QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.type:NT_ResultatInvitation/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.type:NT_ResultatInvitation/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "ACCEPTER") type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait slot QName(PackageNamespace(""), "REFUSER") type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "IGNORER") type QName(PackageNamespace(""), "int") value Integer(2) end
+end ; class

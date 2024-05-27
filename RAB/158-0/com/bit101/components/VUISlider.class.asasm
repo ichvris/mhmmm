@@ -1,0 +1,227 @@
+class
+ refid "com.bit101.components:VUISlider"
+ instance QName(PackageNamespace("com.bit101.components"), "VUISlider")
+  extends QName(PackageNamespace("com.bit101.components"), "UISlider")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:VUISlider")
+  iinit
+   refid "com.bit101.components:VUISlider/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   optional Utf8("")
+   optional Null()
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.bit101.components"), "VSlider")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:UISlider"), "_sliderClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:UISlider"), "_sliderClass")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructsuper      5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("com.bit101.components:VUISlider"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:VUISlider:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            20
+      pushshort           146
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:VUISlider/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getlex              QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_slider")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:VUISlider"), "positionLabel") flag OVERRIDE
+   method
+    refid "com.bit101.components:VUISlider:positionLabel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_valueLabel")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "width") flag OVERRIDE
+   method
+    refid "com.bit101.components:VUISlider/width/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      pushnull
+      ifne                L7
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      returnvalue
+
+L7:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:UISlider"), "_label")
+      getproperty         QName(PackageNamespace(""), "width")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:VUISlider/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

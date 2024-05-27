@@ -1,0 +1,168 @@
+class
+ refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"
+ instance QName(PackageNamespace(""), "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")
+  iinit
+   refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
+     initproperty        QName(PackageNamespace(""), "\x03\x04\x05\x02\x06\x05\x05\x03\x07\x02\x02\x03\x04")
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
+     convert_i
+     setlocal2
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), StaticProtectedNs("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     getlocal2
+     construct           1
+     initproperty        QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05")
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     negate
+     convert_i
+     setlocal3
+
+     jump                L34
+
+L27:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05")
+     getlocal3
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUTF"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), StaticProtectedNs("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")])
+
+L34:
+     getlocal3
+     increment_i
+     dup
+     convert_i
+     setlocal3
+
+     getlocal2
+     iflt                L27
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x03\x04\x05\x02\x06\x05\x05\x03\x07\x02\x02\x03\x04") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>) end
+  trait method QName(PackageNamespace(""), "\x02\x04\x02\x06\x08\x08\x01\x07\x06\x01")
+   method
+    refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06/\x02\x04\x02\x06\x08\x08\x01\x07\x06\x01"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), StaticProtectedNs("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x06\x05\x08\x08\x05\x06\x06\x05\x04\x08\x08\x05\x04")
+   method
+    refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06/\x06\x05\x08\x08\x05\x06\x06\x05\x04\x08\x08\x05\x04"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), StaticProtectedNs("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x08\x06\x04\x01\x01\x05\x06\x06\x07\x07\x07\x07\x07")
+   method
+    refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06/\x08\x06\x04\x01\x01\x05\x06\x06\x07\x07\x07\x07\x07"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x08\x05\x04\x02\x06\x07\x04\x06\x06\x05\x02\x05")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#0"), PackageNamespace(""), PrivateNamespace(null, "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06"), StaticProtectedNs("\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06")])
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x04\x04\x01\x08\x08\x01\x02\x06\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x06\x01\x04\x08\x05\x07\x01\x01\x03\x08")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x01\x02\x05\x03\x05\x04\x01\x05\x03\x05\x06/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

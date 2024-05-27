@@ -1,0 +1,135 @@
+class
+ refid "\x01\x03\x07\x01\x05\x04\x04\x04\x07\x07\x02\x03"
+ instance QName(PackageNamespace(""), "\x01\x03\x07\x01\x05\x04\x04\x04\x07\x07\x02\x03")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x01\x03\x07\x01\x05\x04\x04\x04\x07\x07\x02\x03")
+  iinit
+   refid "\x01\x03\x07\x01\x05\x04\x04\x04\x07\x07\x02\x03/iinit"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "\x05\x05\x07\x05\x01\x05\x04\x07\x04\x03\x06\x05")
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     ifnlt               L18
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     convert_d
+     setlocal1
+
+     jump                L26
+
+L18:
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x08\x06\x03\x01\x08\x07\x01\x06\x08\x04\x08\x07\x01")
+     getproperty         QName(PackageNamespace(""), "\x01\x02\x07\x07\x06\x05\x02\x08\x01\x06\x07\x06\x06")
+     ifngt               L26
+
+     getlex              QName(PackageNamespace(""), "\x08\x06\x03\x01\x08\x07\x01\x06\x08\x04\x08\x07\x01")
+     getproperty         QName(PackageNamespace(""), "\x01\x02\x07\x07\x06\x05\x02\x08\x01\x06\x07\x06\x06")
+     convert_d
+     setlocal1
+
+L26:
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     getlocal2
+     ifngt               L37
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     convert_d
+     setlocal2
+
+     jump                L45
+
+L37:
+     getlex              QName(PackageNamespace(""), "\x08\x06\x03\x01\x08\x07\x01\x06\x08\x04\x08\x07\x01")
+     getproperty         QName(PackageNamespace(""), "\x03\x04\x06\x02\x08\x08\x08\x01\x08\x07")
+     getlocal2
+     ifnlt               L45
+
+     getlex              QName(PackageNamespace(""), "\x08\x06\x03\x01\x08\x07\x01\x06\x08\x04\x08\x07\x01")
+     getproperty         QName(PackageNamespace(""), "\x03\x04\x06\x02\x08\x08\x08\x01\x08\x07")
+     convert_d
+     setlocal2
+
+L45:
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     multiply
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     initproperty        QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     multiply
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     initproperty        QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x05\x05\x07\x05\x01\x05\x04\x07\x04\x03\x06\x05") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "\x01\x06\x06\x04\x08\x07\x03\x06\x04\x01\x06") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "\x01\x03\x07\x01\x05\x04\x04\x04\x07\x07\x02\x03/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

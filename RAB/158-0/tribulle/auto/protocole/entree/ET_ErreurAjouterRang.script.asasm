@@ -1,0 +1,29 @@
+script ; 48
+ sinit
+  refid "tribulle.auto.protocole.entree:ET_ErreurAjouterRang.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.entree:ET_ErreurAjouterRang"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurAjouterRang")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_ErreurAjouterRang")
+  #include "ET_ErreurAjouterRang.class.asasm"
+ end ; trait
+end ; script

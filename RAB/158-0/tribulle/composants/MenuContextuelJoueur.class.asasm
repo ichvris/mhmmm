@@ -1,0 +1,1875 @@
+class
+ refid "tribulle.composants:MenuContextuelJoueur"
+ instance QName(PackageNamespace("tribulle.composants"), "MenuContextuelJoueur")
+  extends QName(PackageNamespace("com.bit101.components"), "List")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("tribulle.composants:MenuContextuelJoueur")
+  iinit
+   refid "tribulle.composants:MenuContextuelJoueur/iinit"
+   param QName(PackageNamespace("flash.display"), "Stage")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushnull
+     pushbyte            0
+     dup
+     pushnull
+     pushfalse
+     constructsuper      5
+
+     getlocal1
+     findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+
+     findpropstrict      QName(PackageNamespace(""), "setSize")
+     pushshort           150
+     pushbyte            18
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     pushbyte            18
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+
+     getlex              QName(PackageNamespace("tribulle.composants"), "ElementListeMenuContextuel")
+     findproperty        QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+     swap
+     setproperty         QName(ProtectedNamespace("com.bit101.components:List"), "_listItemClass")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent") type QName(PackageNamespace("flash.display"), "Stage") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu") type QName(PackageNamespace("tribulle.type"), "MembreTribu") end
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onStageClicked")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onStageClicked"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "hide")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "show")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/show"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("tribulle.type"), "MembreTribu")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional True()
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L11
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      getlocal1
+      ifne                L9
+
+      returnvoid
+
+L9:
+      findpropstrict      QName(PackageNamespace(""), "hide")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+L11:
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+
+      getlocal2
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+
+      getlocal3
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online")
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      convert_b
+      dup
+      setlocal            4
+
+      dup
+      iffalse             L35
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      pushnull
+      equals
+L35:
+      iffalse             L37
+
+      returnvoid
+
+L37:
+      pushbyte            255
+      findproperty        QName(PackageNamespace(""), "selectedIndex")
+      swap
+      setproperty         QName(PackageNamespace(""), "selectedIndex")
+
+      findpropstrict      QName(PackageNamespace(""), "removeAll")
+      callpropvoid        QName(PackageNamespace(""), "removeAll"), 0
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "addItemsJoueur")
+      callpropvoid        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "addItemsJoueur"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "items")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L51
+
+      returnvoid
+
+L51:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "items")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(ProtectedNamespace("com.bit101.components:List"), "_listItemHeight")
+      multiply
+      findproperty        QName(PackageNamespace(""), "height")
+      swap
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "mouseX"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      add
+      pushshort           800
+      ifngt               L76
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "mouseX"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      subtract
+      convert_d
+      findproperty        QName(PackageNamespace(""), "x")
+      swap
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L83
+
+L76:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "mouseX"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      convert_d
+      findproperty        QName(PackageNamespace(""), "x")
+      swap
+      setproperty         QName(PackageNamespace(""), "x")
+
+L83:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "mouseY"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      add
+      pushshort           600
+      ifngt               L98
+
+      pushshort           600
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      subtract
+      convert_d
+      findproperty        QName(PackageNamespace(""), "y")
+      swap
+      setproperty         QName(PackageNamespace(""), "y")
+
+      jump                L104
+
+L98:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "mouseY"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      findproperty        QName(PackageNamespace(""), "y")
+      swap
+      setproperty         QName(PackageNamespace(""), "y")
+
+L104:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "resize"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:Component"), "invalidate"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "makeListItems"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:List"), "fillItems")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:List"), "fillItems"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+      pushnull
+      ifne                L132
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushshort           500
+      pushbyte            1
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+      pushstring          "timer"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onTimerComplete")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L132:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "addItemsJoueur")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/addItemsJoueur"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 15
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal            4
+
+      pushfalse
+      setlocal            11
+
+      pushfalse
+      setlocal            9
+
+      pushfalse
+      setlocal3
+
+      pushfalse
+      setlocal            6
+
+      pushfalse
+      setlocal            12
+
+      pushfalse
+      setlocal            7
+
+      pushfalse
+      setlocal            8
+
+      pushfalse
+      setlocal            10
+
+      pushfalse
+      setlocal            5
+
+      pushnull
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushnull
+      ifne                L223
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+      findproperty        QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "pseudo"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      pushtrue
+      pushnull
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoter"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.chuchoter"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onChuchote")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoterOnglet"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.chuchoterOnglet"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onChuchoteOnglet")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profil"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.profil"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onProfil")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "ami"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.ajouterAmi"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onAmi")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "echanger"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "Inventaire_Echanger"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "cliqueEchanger")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "tribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.tribu"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushtrue
+      pushnull
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "recruterTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.inviterTribu"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onRecruteTribu")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "changerRangTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.bouton.changerRang"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicAffecterRang")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "exclureTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.bouton.exclure"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicExclure")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "designerChefTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.bouton.designerChef"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicDesignerChefSpirituel")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "quitterTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.bouton.quitterTribu"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicQuitterTribu")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "dissoudreTribu"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "interface.tribu.bouton.dissoudreTribu"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicDissoudreTribu")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_invite")
+      iftrue              L193
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "forum"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "Forum"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushtrue
+      pushnull
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profilForum"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "texte.profil"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onProfilForum")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "envoyerMessage"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "bouton.envoyerMessage"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onEnvoyerMessage")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L193:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "moderation"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.moderation"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushtrue
+      pushnull
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "ignorer"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.ignorer"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onIgnorer")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "signaler"
+      findpropstrict      QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "menu.contextuel.joueur.signaler"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onReporter")
+      constructprop       QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel"), 3
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L223:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "pseudo"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      setproperty         Multiname("label", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      pushnull
+      ifne                L347
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "pseudo"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online")
+      iffalse             L261
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoter"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoterOnglet"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profil"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_modeTransformice")
+      iffalse             L261
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "echanger"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L261:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      pushnull
+      ifne                L272
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "ami"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L272:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_invite")
+      iftrue              L290
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "forum"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profilForum"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "envoyerMessage"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L290:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online")
+      dup
+      iffalse             L300
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+      getproperty         QName(PackageNamespace(""), "INVITER")
+      callproperty        QName(PackageNamespace(""), "possedeDroit"), 1
+      convert_b
+L300:
+      iffalse             L311
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "tribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "recruterTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L311:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_online")
+      dup
+      iffalse             L321
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "ignorer"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      equals
+      not
+L321:
+      dup
+      iffalse             L330
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "signaler"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      equals
+      not
+L330:
+      iffalse             L346
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "moderation"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "ignorer"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "signaler"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L346:
+      jump                L595
+
+L347:
+      pushfalse
+      setlocal            4
+
+      pushfalse
+      setlocal            11
+
+      pushfalse
+      setlocal            9
+
+      pushfalse
+      setlocal3
+
+      pushfalse
+      setlocal            6
+
+      pushfalse
+      setlocal            12
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+      getproperty         QName(PackageNamespace(""), "PROPRIETAIRE")
+      callproperty        QName(PackageNamespace(""), "possedeDroit"), 1
+      convert_b
+      setlocal            7
+
+      pushfalse
+      setlocal            8
+
+      pushfalse
+      setlocal            10
+
+      getlocal            7
+      iffalse             L410
+
+      pushbyte            0
+      setlocal            14
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "membres")
+      setlocal            13
+
+      jump                L408
+
+L379:
+      label
+      getlocal            13
+      getlocal            14
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_MembreTribu")
+      setlocal2
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      callproperty        QName(PackageNamespace(""), "estJoueur"), 1
+      iffalse             L393
+
+      pushtrue
+      setlocal            10
+
+      jump                L408
+
+L393:
+      pushfalse
+      setlocal            10
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribu")
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "idRang")
+      callproperty        QName(PackageNamespace(""), "getRangDepuisId"), 1
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+      getproperty         QName(PackageNamespace(""), "PROPRIETAIRE")
+      callproperty        QName(PackageNamespace(""), "possedeDroit"), 2
+      iffalse             L408
+
+      pushtrue
+      setlocal            8
+
+      jump                L410
+
+L408:
+      hasnext2            13, 14
+      iftrue              L379
+
+L410:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      convert_b
+      dup
+      setlocal            5
+
+      iftrue              L515
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "pseudo"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribu")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      callproperty        QName(PackageNamespace(""), "estEnLigne"), 1
+      iffalse             L436
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoter"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "chuchoterOnglet"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L436:
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profil"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_modeTransformice")
+      iffalse             L449
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "echanger"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L449:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "idRang")
+      callproperty        QName(PackageNamespace(""), "getRangDepuisId"), 1
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifne                L463
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribu")
+      callproperty        QName(PackageNamespace(""), "getRangInconnu"), 0
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal1
+
+L463:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+      getproperty         QName(PackageNamespace(""), "AFFECTER_RANGS")
+      callproperty        QName(PackageNamespace(""), "possedeDroit"), 1
+      dup
+      iffalse             L478
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "rangUtilisateur")
+      getproperty         QName(PackageNamespace(""), "ordre")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ordre")
+      lessthan
+L478:
+      iffalse             L483
+
+      pushtrue
+      setlocal            11
+
+      pushtrue
+      setlocal            4
+
+L483:
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+      getproperty         QName(PackageNamespace(""), "EXCLURE")
+      callproperty        QName(PackageNamespace(""), "possedeDroit"), 1
+      dup
+      iffalse             L498
+
+      pop
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "rangUtilisateur")
+      getproperty         QName(PackageNamespace(""), "ordre")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ordre")
+      lessthan
+L498:
+      iffalse             L503
+
+      pushtrue
+      setlocal            9
+
+      pushtrue
+      setlocal            4
+
+L503:
+      getlocal            7
+      dup
+      iffalse             L509
+
+      pop
+      getlocal            8
+      not
+L509:
+      iffalse             L514
+
+      pushtrue
+      setlocal3
+
+      pushtrue
+      setlocal            4
+
+L514:
+      jump                L532
+
+L515:
+      pushtrue
+      setlocal            6
+
+      pushtrue
+      setlocal            4
+
+      getlocal            8
+      iffalse             L523
+
+      pushtrue
+      setlocal            11
+
+L523:
+      getlocal            7
+      dup
+      iffalse             L529
+
+      pop
+      getlocal            10
+      convert_b
+L529:
+      iffalse             L532
+
+      pushtrue
+      setlocal            12
+
+L532:
+      getlocal            4
+      iffalse             L575
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "tribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlocal            11
+      iffalse             L546
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "changerRangTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L546:
+      getlocal            9
+      iffalse             L553
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "exclureTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L553:
+      getlocal3
+      iffalse             L560
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "designerChefTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L560:
+      getlocal            12
+      iffalse             L568
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "dissoudreTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      jump                L575
+
+L568:
+      getlocal            6
+      iffalse             L575
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "quitterTribu"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L575:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_invite")
+      iftrue              L595
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "forum"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "profilForum"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlocal            5
+      iftrue              L595
+
+      findpropstrict      QName(PackageNamespace(""), "addItem")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onglets")
+      pushstring          "envoyerMessage"
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L595:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hide")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/hide"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L12
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "click"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onStageClicked")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onTimerComplete")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onTimerComplete"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "timer")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_defaultParent")
+      pushstring          "click"
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onStageClicked")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), "onSelect") flag OVERRIDE
+   method
+    refid "tribulle.composants:MenuContextuelJoueur:onSelect"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getproperty         Multiname("data", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         Multiname("isTitle", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      iffalse             L8
+
+      returnvoid
+
+L8:
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:List"), "onSelect"), 1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getproperty         Multiname("data", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         Multiname("callback", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushnull
+      ifeq                L23
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getproperty         Multiname("data", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        Multiname("callback", [PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), ProtectedNamespace("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("tribulle.composants:MenuContextuelJoueur"), StaticProtectedNs("com.bit101.components:List"), StaticProtectedNs("com.bit101.components:Component"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), PackageNamespace("tribulle.composants"), PackageInternalNs("tribulle.composants"), PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+
+      findpropstrict      QName(PackageNamespace(""), "hide")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onChuchote")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onChuchote"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "x_activerChuchotement"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onChuchoteOnglet")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onChuchoteOnglet"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "x_activerChuchotement"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onProfilForum")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onProfilForum"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("flash.net"), "navigateToURL")
+      getglobalscope
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getproperty         QName(PackageNamespace(""), "PREFIX_URL_ATELIER801")
+      pushstring          "/profile?lo="
+      add
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurWeb"), 0
+      add
+      pushstring          "&to="
+      add
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_token")
+      add
+      pushstring          "&pr="
+      add
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurWeb"), 1
+      add
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      call                2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onEnvoyerMessage")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onEnvoyerMessage"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callpropvoid        QName(PackageNamespace(""), "envoiMessagePrive"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onProfil")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onProfil"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "DemandeProfil")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onAmi")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onAmi"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutAmi")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AjoutAmi"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "cliqueEchanger")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/cliqueEchanger"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callpropvoid        QName(PackageNamespace(""), "x_fonctionLancementEchange"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onRecruteTribu")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onRecruteTribu"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callpropvoid        QName(PackageNamespace(""), "inviterDansTribu"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onIgnorer")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onIgnorer"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 2
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.ignorerJoueur.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.ignorerJoueur.contenu"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      newfunction         "tribulle.composants:MenuContextuelJoueur/onIgnorer/inline_method"
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onReporter")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onReporter"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle"), "ClientTribulle")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "OuvertureInterfaceSignalement")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicAffecterRang")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicAffecterRang"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("tribulle.composants"), "ListeRangsTribu")
+      pushnull
+      constructprop       QName(PackageNamespace("tribulle.composants"), "ListeRangsTribu"), 1
+      coerce              QName(PackageNamespace("tribulle.composants"), "ListeRangsTribu")
+      setlocal1
+
+      getlocal1
+      pushshort           200
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal1
+      pushshort           200
+      setproperty         QName(PackageNamespace(""), "height")
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "rangs")
+      setlocal3
+
+      jump                L44
+
+L20:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "ordre")
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "rangUtilisateur")
+      getproperty         QName(PackageNamespace(""), "ordre")
+      ifngt               L44
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "idRang")
+      ifne                L44
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "selectedItem")
+
+L44:
+      hasnext2            3, 4
+      iftrue              L20
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.affecterRang.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationAffecterRang")
+      callpropvoid        QName(PackageNamespace(""), "popupAnnulerValider"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicExclure")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicExclure"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.exclureMembre.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.exclureMembre.etiquette"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationExclure")
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicDesignerChefSpirituel")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicDesignerChefSpirituel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.designerChefSpirituel.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.designerChefSpirituel.etiquette"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_joueurCourant")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationDesignerChefSpirituel")
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicQuitterTribu")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicQuitterTribu"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.quitter.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.quitter.etiquette"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationQuitterTribu")
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicDissoudreTribu")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicDissoudreTribu"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.dissoudre.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.tribu.dissoudre.etiquette"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationDissoudreTribu")
+      callpropvoid        QName(PackageNamespace(""), "popupConfirmation"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationAffecterRang")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicValidationAffecterRang"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.bit101.components"), "List")
+      astypelate
+      coerce              QName(PackageNamespace("com.bit101.components"), "List")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "selectedItem")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      astypelate
+      coerce              QName(PackageNamespace("tribulle.auto.protocole.type"), "TT_Rang")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L17
+
+      returnvoid
+
+L17:
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "idRang")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L23
+
+      returnvoid
+
+L23:
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AffecterRang")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_AffecterRang"), 3
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationExclure")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicValidationExclure"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ExclureMembre")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "id")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_ExclureMembre"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationDesignerChefSpirituel")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicValidationDesignerChefSpirituel"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DesignerChefSpirituel")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "_membreTribu")
+      getproperty         QName(PackageNamespace(""), "id")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DesignerChefSpirituel"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationQuitterTribu")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicValidationQuitterTribu"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_QuitterTribu")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_QuitterTribu"), 1
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.composants:MenuContextuelJoueur#0"), "onClicValidationDissoudreTribu")
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/onClicValidationDissoudreTribu"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DissoudreTribu")
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "idSequenceConnexion")
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      getproperty         QName(PackageNamespace(""), "nomTribu")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DissoudreTribu"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "tribulle.composants:MenuContextuelJoueur/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            3
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "FOND_TITRE_FENETRE")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.composants:MenuContextuelJoueur/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

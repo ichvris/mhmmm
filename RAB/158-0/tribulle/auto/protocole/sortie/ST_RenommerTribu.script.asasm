@@ -1,0 +1,33 @@
+script ; 147
+ sinit
+  refid "tribulle.auto.protocole.sortie:ST_RenommerTribu.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.sortie:ST_RenommerTribu"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RenommerTribu")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RenommerTribu")
+  #include "ST_RenommerTribu.class.asasm"
+ end ; trait
+end ; script

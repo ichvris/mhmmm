@@ -1,0 +1,413 @@
+class
+ refid "tribulle.serveur.auto.metadonnees:MetadonneesTypeService"
+ instance QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesTypeService/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "nomConstante")
+
+     getlocal0
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "idForum")
+
+     getlocal0
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "cleTradNom")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nomConstante") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "idForum") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "cleTradNom") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "tribulle.serveur.auto.metadonnees:MetadonneesTypeService/cinit"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlocal0
+    pushbyte            1
+    pushstring          "AUCUN"
+    pushbyte            0
+    pushstring          "type_service.1.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "AUCUN")
+    swap
+    initproperty        QName(PackageNamespace(""), "AUCUN")
+
+    getlocal0
+    pushbyte            2
+    pushstring          "TRIBULLE"
+    pushbyte            0
+    pushstring          "type_service.2.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "TRIBULLE")
+    swap
+    initproperty        QName(PackageNamespace(""), "TRIBULLE")
+
+    getlocal0
+    pushbyte            3
+    pushstring          "APP_STANDALONE"
+    pushbyte            0
+    pushstring          "type_service.3.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "APP_STANDALONE")
+    swap
+    initproperty        QName(PackageNamespace(""), "APP_STANDALONE")
+
+    getlocal0
+    pushbyte            4
+    pushstring          "JEU_TRANSFORMICE"
+    pushbyte            6
+    pushstring          "type_service.4.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_TRANSFORMICE")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_TRANSFORMICE")
+
+    getlocal0
+    pushbyte            5
+    pushstring          "JEU_CELOUSCO"
+    pushbyte            0
+    pushstring          "type_service.5.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_CELOUSCO")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_CELOUSCO")
+
+    getlocal0
+    pushbyte            6
+    pushstring          "JEU_FORTORESSE"
+    pushbyte            8
+    pushstring          "type_service.6.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_FORTORESSE")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_FORTORESSE")
+
+    getlocal0
+    pushbyte            7
+    pushstring          "JEU_BOUBOUM"
+    pushbyte            7
+    pushstring          "type_service.7.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_BOUBOUM")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_BOUBOUM")
+
+    getlocal0
+    pushbyte            8
+    pushstring          "JEU_AAAAH"
+    pushbyte            0
+    pushstring          "type_service.8.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_AAAAH")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_AAAAH")
+
+    getlocal0
+    pushbyte            9
+    pushstring          "FORUM_TRIBULLE"
+    pushbyte            0
+    pushstring          "type_service.9.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "FORUM_TRIBULLE")
+    swap
+    initproperty        QName(PackageNamespace(""), "FORUM_TRIBULLE")
+
+    getlocal0
+    pushbyte            10
+    pushstring          "OUTIL"
+    pushbyte            0
+    pushstring          "type_service.10.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "OUTIL")
+    swap
+    initproperty        QName(PackageNamespace(""), "OUTIL")
+
+    getlocal0
+    pushbyte            11
+    pushstring          "FORUM_TFM"
+    pushbyte            0
+    pushstring          "type_service.11.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "FORUM_TFM")
+    swap
+    initproperty        QName(PackageNamespace(""), "FORUM_TFM")
+
+    getlocal0
+    pushbyte            12
+    pushstring          "EXTINCTION"
+    pushbyte            0
+    pushstring          "type_service.12.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "EXTINCTION")
+    swap
+    initproperty        QName(PackageNamespace(""), "EXTINCTION")
+
+    getlocal0
+    pushbyte            13
+    pushstring          "GENERAL"
+    pushbyte            0
+    pushstring          "type_service.13.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "GENERAL")
+    swap
+    initproperty        QName(PackageNamespace(""), "GENERAL")
+
+    getlocal0
+    pushbyte            14
+    pushstring          "ORWELL"
+    pushbyte            0
+    pushstring          "type_service.14.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "ORWELL")
+    swap
+    initproperty        QName(PackageNamespace(""), "ORWELL")
+
+    getlocal0
+    pushbyte            15
+    pushstring          "JEU_NEKODANCER"
+    pushint             508574
+    pushstring          "type_service.15.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_NEKODANCER")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_NEKODANCER")
+
+    getlocal0
+    pushbyte            16
+    pushstring          "JEU_RUN_FOR_CHEESE"
+    pushbyte            5
+    pushstring          "type_service.16.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_RUN_FOR_CHEESE")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_RUN_FOR_CHEESE")
+
+    getlocal0
+    pushbyte            17
+    pushstring          "JEU_DEADMEAT"
+    pushbyte            0
+    pushstring          "type_service.17.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_DEADMEAT")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_DEADMEAT")
+
+    getlocal0
+    pushbyte            18
+    pushstring          "MODULES_801"
+    pushbyte            5
+    pushstring          "type_service.18.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "MODULES_801")
+    swap
+    initproperty        QName(PackageNamespace(""), "MODULES_801")
+
+    getlocal0
+    pushbyte            19
+    pushstring          "JEUX"
+    pushbyte            0
+    pushstring          "type_service.19.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEUX")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEUX")
+
+    getlocal0
+    pushbyte            20
+    pushstring          "JEU_SURBLE"
+    pushbyte            0
+    pushstring          "type_service.20.nom"
+    construct           4
+    findproperty        QName(PackageNamespace(""), "JEU_SURBLE")
+    swap
+    initproperty        QName(PackageNamespace(""), "JEU_SURBLE")
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PackageNamespace(""), "_ids")
+    swap
+    setproperty         QName(PackageNamespace(""), "_ids")
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            1
+    getlex              QName(PackageNamespace(""), "AUCUN")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            2
+    getlex              QName(PackageNamespace(""), "TRIBULLE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            3
+    getlex              QName(PackageNamespace(""), "APP_STANDALONE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            4
+    getlex              QName(PackageNamespace(""), "JEU_TRANSFORMICE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            5
+    getlex              QName(PackageNamespace(""), "JEU_CELOUSCO")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            6
+    getlex              QName(PackageNamespace(""), "JEU_FORTORESSE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            7
+    getlex              QName(PackageNamespace(""), "JEU_BOUBOUM")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            8
+    getlex              QName(PackageNamespace(""), "JEU_AAAAH")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            9
+    getlex              QName(PackageNamespace(""), "FORUM_TRIBULLE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            10
+    getlex              QName(PackageNamespace(""), "OUTIL")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            11
+    getlex              QName(PackageNamespace(""), "FORUM_TFM")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            12
+    getlex              QName(PackageNamespace(""), "EXTINCTION")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            13
+    getlex              QName(PackageNamespace(""), "GENERAL")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            14
+    getlex              QName(PackageNamespace(""), "ORWELL")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            15
+    getlex              QName(PackageNamespace(""), "JEU_NEKODANCER")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            16
+    getlex              QName(PackageNamespace(""), "JEU_RUN_FOR_CHEESE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            17
+    getlex              QName(PackageNamespace(""), "JEU_DEADMEAT")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            18
+    getlex              QName(PackageNamespace(""), "MODULES_801")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            19
+    getlex              QName(PackageNamespace(""), "JEUX")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    getlex              QName(PackageNamespace(""), "_ids")
+    pushbyte            20
+    getlex              QName(PackageNamespace(""), "JEU_SURBLE")
+    setproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "AUCUN") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "TRIBULLE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "APP_STANDALONE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_TRANSFORMICE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_CELOUSCO") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_FORTORESSE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_BOUBOUM") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_AAAAH") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "FORUM_TRIBULLE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "OUTIL") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "FORUM_TFM") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "EXTINCTION") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "GENERAL") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "ORWELL") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_NEKODANCER") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_RUN_FOR_CHEESE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_DEADMEAT") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "MODULES_801") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEUX") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait const QName(PackageNamespace(""), "JEU_SURBLE") type QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService") end
+ trait slot QName(PackageNamespace(""), "_ids") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace(""), "getById")
+  method
+   refid "tribulle.serveur.auto.metadonnees:MetadonneesTypeService/getById"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesTypeService")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "_ids")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#0"), StaticProtectedNs("tribulle.serveur.auto.metadonnees:MetadonneesTypeService"), StaticProtectedNs("Object"), PackageNamespace("tribulle.serveur.auto.metadonnees"), PackageInternalNs("tribulle.serveur.auto.metadonnees"), PrivateNamespace(null, "tribulle.serveur.auto.metadonnees:MetadonneesTypeService#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

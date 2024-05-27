@@ -1,0 +1,29 @@
+script ; 641
+ sinit
+  refid "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.serveur.auto.metadonnees:MetadonneesDroitTribu"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.serveur.auto.metadonnees"), "MetadonneesDroitTribu")
+  #include "MetadonneesDroitTribu.class.asasm"
+ end ; trait
+end ; script

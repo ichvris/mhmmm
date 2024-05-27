@@ -1,0 +1,41 @@
+script ; 135
+ sinit
+  refid "tribulle.gestionnaires:GestionnaireTribu.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireTribu"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.gestionnaires:GestionnaireTribu/PrivateClass"
+    popscope
+    initproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireTribu#1"), "PrivateClass")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireTribu")
+  #include "GestionnaireTribu.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireTribu#1"), "PrivateClass")
+  #include "GestionnaireTribu/PrivateClass.class.asasm"
+ end ; trait
+end ; script

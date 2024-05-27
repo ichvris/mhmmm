@@ -1,0 +1,50 @@
+class
+ refid "\x04\x05\x05\x03\x08\x05\x05\x07\x07\x05\x07\x01\x01"
+ instance QName(PackageNamespace(""), "\x04\x05\x05\x03\x08\x05\x05\x07\x07\x05\x07\x01\x01")
+  extends QName(PackageNamespace(""), "\x05\x08\x07\x06\x04\x08\x04\x03\x06\x01\x07\x08")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x04\x05\x05\x03\x08\x05\x05\x07\x07\x05\x07\x01\x01")
+  iinit
+   refid "\x04\x05\x05\x03\x08\x05\x05\x07\x07\x05\x07\x01\x01/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUTF"), 0
+     initproperty        QName(PackageNamespace(""), "\x02\x05\x05\x05\x04\x06\x03\x02\x01\x07\x01\x07")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x02\x05\x05\x05\x04\x06\x03\x02\x01\x07\x01\x07") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "\x04\x05\x05\x03\x08\x05\x05\x07\x07\x05\x07\x01\x01/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,2265 @@
+class
+ refid "tribulle.gestionnaires:GestionnaireAmis"
+ instance QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.gestionnaires:GestionnaireAmis/iinit"
+   param QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), "PrivateClass")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+     getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+     applytype           1
+     construct           0
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+
+     getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleRetraitAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleRetraitAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleDeconnexionAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDeconnexionAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleConnexionAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleConnexionAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleAjoutAmiBidirectionnel")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleAjoutAmiBidirectionnel")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleRetraitAmiBidirectionnel")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleRetraitAmiBidirectionnel")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatRetireAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatRetireAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleAjoutAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleAjoutAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatAjoutAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatAjoutAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatListeAmis")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatListeAmis")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ErreurListeAmis")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onErreurListeAmis")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleModificationLocalisationAmi")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleModificationLocalisationAmi")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleConnexionAmis")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleConnexionAmis")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleDeconnexionAmis")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDeconnexionAmis")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleDemandeEnMariage")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDemandeEnMariage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatDemandeEnMariage")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatDemandeEnMariage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ErreurDemandeEnMariage")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onErreurDemandeEnMariage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatRepondDemandeEnMariage")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatRepondDemandeEnMariage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleMariage")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleMariage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "ResultatDemandeDivorce")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatDemandeDivorce")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieAmis")
+     getproperty         QName(PackageNamespace(""), "SignaleDivorce")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDivorce")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlex              QName(PackageNamespace("tribulle.categories"), "CategorieDonneesUtilisateur")
+     getproperty         QName(PackageNamespace(""), "SignaleChangementDeGenre")
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleChangementDeGenre")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>) end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireChat") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_initialise") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant") type QName(PackageNamespace("tribulle.composants"), "ComposantAmis") end
+  trait getter QName(PackageNamespace(""), "composant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/composant/getter"
+    returns QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "composant")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/composant/setter"
+    param QName(PackageNamespace("tribulle.composants"), "ComposantAmis")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/getListeAmis"
+    returns QName(PackageNamespace("tribulle.composants"), "ListeAmis")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "composant")
+      getproperty         QName(PackageNamespace(""), "listeAmis")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleRetraitAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleRetraitAmi"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "retireParNom")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "retireParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L14
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "onSignaleRetraitAmi"), 1
+
+L14:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleRetireAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      pushtrue
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      deleteproperty      MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDeconnexionAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleDeconnexionAmi"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "deconnecte"), 0
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L17
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L17:
+      iffalse             L21
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L21:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      iffalse             L37
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleDeconnexionAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L37:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDeconnexionAmis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleDeconnexionAmis"
+    param QName(PackageNamespace(""), "int")
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 9
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal            5
+
+      pushnull
+      setlocal            4
+
+      pushbyte            0
+      setlocal            6
+
+      pushbyte            0
+      setlocal            8
+
+      getlocal2
+      setlocal            7
+
+      jump                L32
+
+L13:
+      label
+      getlocal            7
+      getlocal            8
+      nextvalue
+      convert_i
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      dup
+      setlocal            4
+
+      callpropvoid        QName(PackageNamespace(""), "deconnecte"), 0
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      iffalse             L32
+
+      inclocal_i          6
+      getlocal            4
+      setlocal            5
+
+L32:
+      hasnext2            7, 8
+      iftrue              L13
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L42
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L42:
+      iffalse             L46
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L46:
+      getlocal            6
+      pushbyte            1
+      ifne                L63
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleDeconnexionAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L75
+
+L63:
+      getlocal            6
+      pushbyte            1
+      ifngt               L75
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleDeconnexionAmis"
+      getlocal            6
+      convert_s
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L75:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleConnexionAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleConnexionAmi"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L38
+
+      getlocal1
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "ajoute")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "ajoute"), 1
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L24
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L24:
+      iffalse             L29
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutAmi"), 1
+
+L29:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      jump                L64
+
+L38:
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L60
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L60:
+      iffalse             L64
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L64:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      iffalse             L80
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleConnexionAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L80:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleConnexionAmis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleConnexionAmis"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 8
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            7
+
+      getlocal1
+      setlocal            6
+
+      jump                L80
+
+L14:
+      label
+      getlocal            6
+      getlocal            7
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      dup
+      setlocal            4
+
+      pushnull
+      ifne                L56
+
+      getlocal2
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "ajoute")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "ajoute"), 1
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L42
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L42:
+      iffalse             L47
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutAmi"), 1
+
+L47:
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      jump                L74
+
+L56:
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      setproperty         QName(PackageNamespace(""), "online")
+
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+L74:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "bidirectionnel")
+      iffalse             L80
+
+      inclocal_i          5
+      getlocal            4
+      setlocal3
+
+L80:
+      hasnext2            6, 7
+      iftrue              L14
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L90
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L90:
+      iffalse             L94
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L94:
+      getlocal            5
+      pushbyte            1
+      ifne                L111
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleConnexionAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L123
+
+L111:
+      getlocal            5
+      pushbyte            0
+      ifngt               L123
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleConnexionAmis"
+      getlocal            5
+      convert_s
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L123:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleAjoutAmiBidirectionnel")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleAjoutAmiBidirectionnel"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "AMITIE_BIDIRECTIONNELLE")
+      bitor
+      getlocal2
+      swap
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "online")
+      setproperty         QName(PackageNamespace(""), "online")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L36
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L36:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleRetraitAmiBidirectionnel")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleRetraitAmiBidirectionnel"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "retireBidirectionnalite"), 0
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L15
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatRetireAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatRetireAmi"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L14
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatRetirerAmi"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleAjoutAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleAjoutAmi"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "estDejaAmi")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "estDejaAmi"), 1
+      iftrue              L9
+
+      findpropstrict      QName(PackageNamespace(""), "ajoute")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "ajoute"), 1
+
+L9:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L16
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutAmi"), 1
+
+L16:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleAjoutAmi"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatAjoutAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatAjoutAmi"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L14
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatAjoutAmi"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatListeAmis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatListeAmis"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal            4
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace("tribulle.type"), "Ami")
+      applytype           1
+      construct           0
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+
+      pushbyte            255
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      jump                L35
+
+L18:
+      label
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L35:
+      inclocal_i          3
+      getlocal3
+      getlocal2
+      iflt                L18
+
+      getlex              QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "initialise")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      iffalse             L50
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onResultatListeAmis"), 1
+
+L50:
+      getlex              QName(PackageNamespace("lapitchnet.log"), "Logger")
+      pushstring          "Reception de la liste d'amis"
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "LOGIN")
+      callpropvoid        QName(PackageNamespace(""), "flashTrace"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onErreurListeAmis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onErreurListeAmis"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.erreurListeAmis"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleModificationLocalisationAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleModificationLocalisationAmi"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParId")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParId"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      dup
+      setlocal            4
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L19
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L19:
+      iffalse             L26
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "onSignaleModificationLocalisationAmi"), 3
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ajoute")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/ajoute"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retire")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/retire"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifeq                L13
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retireParNom")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/retireParNom"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("tribulle.type"), "Ami")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L13
+
+      findpropstrict      QName(PackageNamespace(""), "retire")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "retire"), 1
+
+L13:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getParId")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/getParId"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("tribulle.type"), "Ami")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      setlocal3
+
+      jump                L21
+
+L9:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal1
+      ifne                L21
+
+      getlocal2
+      returnvalue
+
+L21:
+      hasnext2            3, 4
+      iftrue              L9
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getParNom")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/getParNom"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("tribulle.type"), "Ami")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      setlocal3
+
+      jump                L23
+
+L9:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      ifne                L23
+
+      getlocal2
+      returnvalue
+
+L23:
+      hasnext2            3, 4
+      iftrue              L9
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "estDejaAmi")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/estDejaAmi"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      setlocal3
+
+      jump                L22
+
+L9:
+      label
+      getlocal3
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      ifne                L22
+
+      pushtrue
+      returnvalue
+
+L22:
+      hasnext2            3, 4
+      iftrue              L9
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "initialise")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/initialise/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_initialise")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "initialise")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/initialise/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_initialise")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_initialise")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "amis")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/amis/getter"
+    returns TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("tribulle.type"), "Ami")>)
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_amis")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_nomAuteurDemandeEnMariage") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "ignorerDemandesEnMariage") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleDemandeEnMariage"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+
+      getlocal3
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_nomAuteurDemandeEnMariage")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_nomAuteurDemandeEnMariage")
+
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "ignorerDemandesEnMariage")
+      iffalse             L21
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+      getproperty         QName(PackageNamespace(""), "IGNORER")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+
+L21:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.signaleDemandeEnMariage.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.signaleDemandeEnMariage.contenu"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onAccepteDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onIgnoreDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onRefuseDemandeEnMariage")
+      callproperty        QName(PackageNamespace(""), "popupConfirmationIgnorer"), 6
+      coerce              QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+      dup
+      setlocal            4
+
+      pushdouble          0.95
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onAccepteDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onAccepteDemandeEnMariage"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+      getproperty         QName(PackageNamespace(""), "ACCEPTER")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onIgnoreDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onIgnoreDemandeEnMariage"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+      getproperty         QName(PackageNamespace(""), "IGNORER")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      pushtrue
+      findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "ignorerDemandesEnMariage")
+      swap
+      setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "ignorerDemandesEnMariage")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onRefuseDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onRefuseDemandeEnMariage"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+      getproperty         QName(PackageNamespace(""), "connexionTribulle")
+      findpropstrict      QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage")
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_idSequenceDemandeEnMariage")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+      getproperty         QName(PackageNamespace(""), "REFUSER")
+      constructprop       QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_RepondDemandeEnMariage"), 2
+      callpropvoid        QName(Namespace("lapitchnet.reseau.interfaces:IConnexion"), "traitePaquetSortant"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatRepondDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatRepondDemandeEnMariage"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifne                L7
+
+      returnvoid
+
+L7:
+      getlocal2
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ResultatInvitation")
+      getproperty         QName(PackageNamespace(""), "ACCEPTER")
+      ifeq                L12
+
+      returnvoid
+
+L12:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatRepondDemandeEnMariage.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatDemandeEnMariage"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatDemandeEnMariage.titre"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatDemandeEnMariage"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onErreurDemandeEnMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onErreurDemandeEnMariage"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "EN_LISTE_NOIRE")
+      ifeq                L15
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatRepondDemandeEnMariage.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleMariage")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleMariage"
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    param QName(PackageNamespace("tribulle.type"), "Ami")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L90
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L49
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      setproperty         QName(PackageNamespace(""), "online")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L44
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L44:
+      iffalse             L48
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L48:
+      jump                L73
+
+L49:
+      findpropstrict      QName(PackageNamespace(""), "ajoute")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "ajoute"), 1
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L68
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L68:
+      iffalse             L73
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutAmi"), 1
+
+L73:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<R>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleMarieAvec"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L175
+
+L90:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L175
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L135
+
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+      setproperty         QName(PackageNamespace(""), "dateDerniereConnexion")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "online")
+      setproperty         QName(PackageNamespace(""), "online")
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "typeService")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "localisation")
+      callpropvoid        QName(PackageNamespace(""), "majLocalisation"), 2
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L130
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L130:
+      iffalse             L134
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L134:
+      jump                L159
+
+L135:
+      findpropstrict      QName(PackageNamespace(""), "ajoute")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "ajoute"), 1
+
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "x_indexListeAmis")
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), ProtectedNamespace("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("tribulle.gestionnaires:GestionnaireAmis"), StaticProtectedNs("Object"), PackageNamespace("tribulle.gestionnaires"), PackageInternalNs("tribulle.gestionnaires"), PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L154
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L154:
+      iffalse             L159
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onSignaleAjoutAmi"), 1
+
+L159:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<R>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleMarieAvec"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nom")
+      pushtrue
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L175:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onResultatDemandeDivorce")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onResultatDemandeDivorce"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_ErreurTribulle")
+      getproperty         QName(PackageNamespace(""), "SUCCES")
+      ifeq                L15
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+      getproperty         QName(PackageNamespace(""), "instanceTransformice")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "popup.amis.resultatDemandeDivorce.titre"
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+      callpropvoid        QName(PackageNamespace(""), "afficherResultatTribulle"), 3
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleDivorce")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleDivorce"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      pushnull
+      setlocal            4
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L55
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L27
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "EPOUX")
+      bitnot
+      bitand
+      getlocal3
+      swap
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+L27:
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L35
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L35:
+      iffalse             L39
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L39:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<R>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleAuteurDivorce"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal2
+      pushtrue
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      jump                L103
+
+L55:
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iffalse             L103
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      dup
+      setlocal            4
+
+      pushnull
+      ifeq                L76
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "masqueInfos")
+      getlex              QName(PackageNamespace("tribulle.auto.protocole.type"), "NT_MasqueInfosAmi")
+      getproperty         QName(PackageNamespace(""), "EPOUX")
+      bitnot
+      bitand
+      getlocal            4
+      swap
+      setproperty         QName(PackageNamespace(""), "masqueInfos")
+
+L76:
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L84
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L84:
+      iffalse             L88
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L88:
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_chat")
+      getproperty         QName(PackageNamespace(""), "afficheMessageClient")
+      pushstring          "<R>"
+      getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+      pushstring          "chat.amis.signaleDivorce"
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilUI")
+      getlocal1
+      pushtrue
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "online")
+      callproperty        QName(PackageNamespace(""), "getNomJoueurFormate"), 3
+      callproperty        QName(PackageNamespace(""), "recupTexte"), 2
+      add
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+L103:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "onSignaleChangementDeGenre")
+   method
+    refid "tribulle.gestionnaires:GestionnaireAmis/onSignaleChangementDeGenre"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      setlocal3
+
+      getlex              QName(PackageNamespace("tribulle.utils"), "UtilTribulle")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "estJoueurCourant"), 1
+      iftrue              L31
+
+      findpropstrict      QName(PackageNamespace(""), "getParNom")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getParNom"), 1
+      coerce              QName(PackageNamespace("tribulle.type"), "Ami")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L31
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setGenre"), 1
+
+      getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+      getproperty         QName(PackageNamespace(""), "RAFRAICHISSEMENT_DYNAMIQUE")
+      dup
+      iffalse             L27
+
+      pop
+      getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_composant")
+      getproperty         QName(PackageNamespace(""), "x_affichee")
+      convert_b
+L27:
+      iffalse             L31
+
+      findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis")
+      callproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "getListeAmis"), 0
+      callpropvoid        QName(PackageNamespace(""), "rafraichi"), 0
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.gestionnaires:GestionnaireAmis/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_singleton") type QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis") end
+ trait method QName(PackageNamespace(""), "getInstance")
+  method
+   refid "tribulle.gestionnaires:GestionnaireAmis/getInstance"
+   returns QName(PackageNamespace("tribulle.gestionnaires"), "GestionnaireAmis")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_singleton")
+     pushnull
+     ifne                L12
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), "PrivateClass")
+     constructprop       QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#1"), "PrivateClass"), 0
+     construct           1
+     findproperty        QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_singleton")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_singleton")
+
+L12:
+     getlex              QName(PrivateNamespace(null, "tribulle.gestionnaires:GestionnaireAmis#0"), "_singleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

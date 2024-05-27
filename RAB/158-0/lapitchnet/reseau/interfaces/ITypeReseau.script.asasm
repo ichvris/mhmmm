@@ -1,0 +1,25 @@
+script ; 802
+ sinit
+  refid "lapitchnet.reseau.interfaces:ITypeReseau.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "lapitchnet.reseau.interfaces:ITypeReseau"
+    initproperty        QName(PackageNamespace("lapitchnet.reseau.interfaces"), "ITypeReseau")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau.interfaces"), "ITypeReseau")
+  #include "ITypeReseau.class.asasm"
+ end ; trait
+end ; script

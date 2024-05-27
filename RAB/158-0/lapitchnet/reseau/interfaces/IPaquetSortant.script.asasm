@@ -1,0 +1,25 @@
+script ; 955
+ sinit
+  refid "lapitchnet.reseau.interfaces:IPaquetSortant.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "lapitchnet.reseau.interfaces:IPaquetSortant"
+    initproperty        QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+  #include "IPaquetSortant.class.asasm"
+ end ; trait
+end ; script

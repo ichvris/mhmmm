@@ -1,0 +1,2946 @@
+class
+ refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"
+ instance QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+  iinit
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional False()
+   optional Integer(1)
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     initproperty        QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     initproperty        QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+
+     getlocal3
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+     ifne                L52
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     add
+     initproperty        QName(PackageNamespace(""), "\x01\x04\x04\x05\x07\x06\x07\x05\x01\x07\x04")
+
+     jump                L84
+
+L52:
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal3
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            4
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            5
+     iffalse             L77
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     coerce_a
+     jump                L82
+
+L77:
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     coerce_a
+L82:
+     add
+     initproperty        QName(PackageNamespace(""), "\x01\x04\x04\x05\x07\x06\x07\x05\x01\x07\x04")
+
+L84:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>) end
+  trait slot QName(PackageNamespace(""), "\x07\x07\x04\x07\x03\x04\x03\x06\x02\x07\x03") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x01\x04\x04\x05\x07\x06\x07\x05\x01\x07\x04") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x03\x02\x04\x02\x06\x03\x06\x07\x01\x03\x03\x03") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x05\x04\x07\x01\x02\x05\x05\x04\x04\x03\x05\x05\x01") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x04\x08\x06\x05\x02\x07\x03\x08\x04\x01\x05\x07\x06") type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+  trait slot QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "\x05\x04\x08\x03\x03\x08\x01\x03\x05\x08\x04\x02")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x05\x04\x08\x03\x03\x08\x01\x03\x05\x08\x04\x02"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      setlocal            5
+
+      getlocal1
+      iffalse             L211
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+      iftrue              L210
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      initproperty        QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      negate
+      initproperty        QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      initproperty        QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x05\x04\x07\x01\x02\x05\x05\x04\x04\x03\x05\x05\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+      initproperty        QName(PackageNamespace(""), "\x04\x08\x06\x05\x02\x07\x03\x08\x04\x01\x05\x07\x06")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x01\x08\x08\x08\x04\x06\x08\x08\x08\x06")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x05\x01\x06\x03\x08\x01\x03\x07")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x03\x02\x02\x01\x05\x06\x03\x01\x05\x07\x03")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      initproperty        QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x03\x08\x04\x01\x07\x08\x06\x03\x02\x06")
+      pushnull
+      ifne                L210
+
+      getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x02\x02\x02\x01\x01\x02\x03\x04\x05")
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      applytype           1
+      getlocal2
+      pushtrue
+      construct           2
+      setproperty         QName(PackageNamespace(""), "\x01\x07\x03\x08\x04\x01\x07\x08\x06\x03\x02\x06")
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      negate
+      convert_i
+      setlocal3
+
+      jump                L203
+
+L103:
+      label
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x02\x01\x06\x08\x03\x01\x05\x05\x08\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x06\x07\x02\x08\x08\x04\x08\x08\x05\x04\x06\x04\x01")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getlocal3
+      add
+      add
+      coerce_s
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+      getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      pushfalse
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      coerce              QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      setlocal            5
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x05\x08\x06\x02\x08\x03\x06\x08\x06\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x05\x08\x06\x02\x08\x03\x06\x08\x06\x02\x01")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x03\x08\x04\x01\x07\x08\x06\x03\x02\x06")
+      getlocal3
+      getlocal            5
+      setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getlocal3
+      add
+      getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+      getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+      equals
+      dup
+      iftrue              L176
+
+      pop
+      getlocal3
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      add
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+      getproperty         QName(PackageNamespace(""), "\x03\x08\x01\x08\x04\x08\x06\x02\x05\x06\x06\x03")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      equals
+L176:
+      dup
+      iftrue              L186
+
+      pop
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getlocal3
+      add
+      getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+      getproperty         QName(PackageNamespace(""), "\x02\x05\x03\x06\x08\x08\x08\x01\x02\x08\x04")
+      equals
+L186:
+      dup
+      iftrue              L198
+
+      pop
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getlocal3
+      add
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x04\x01\x01\x01\x07\x08\x06\x04\x03\x03\x04")
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x02\x02\x02\x01\x01\x02\x03\x04\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      equals
+L198:
+      iffalse             L203
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+      setproperty         QName(PackageNamespace(""), "\x04\x06\x08\x04\x02\x06\x06\x02\x01\x03\x08\x03")
+
+L203:
+      getlocal3
+      increment_i
+      dup
+      convert_i
+      setlocal3
+
+      getlocal2
+      iflt                L103
+
+L210:
+      jump                L242
+
+L211:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+      iffalse             L242
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+      initproperty        QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x07\x01\x02\x05\x05\x04\x04\x03\x05\x05\x01")
+      initproperty        QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x08\x06\x05\x02\x07\x03\x08\x04\x01\x05\x07\x06")
+      initproperty        QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+
+L242:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x03\x07\x07\x08\x04\x08\x01\x07\x07\x07\x08\x08\x04")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x03\x07\x07\x08\x04\x08\x01\x07\x07\x07\x08\x08\x04"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L42
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+      iftrue              L41
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      initproperty        QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+
+      getlocal0
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x06\x06\x07\x06\x08\x08\x08\x01\x07\x07\x08\x07\x07")
+      getproperty         QName(PackageNamespace(""), "\x07\x06\x04\x06\x01\x03\x06\x02\x05\x02\x08\x05")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      callproperty        QName(PackageNamespace(""), "\x07\x02\x04\x05\x05\x03\x08\x02\x01\x03\x02"), 2
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+L41:
+      jump                L65
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+      iffalse             L65
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+L65:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x07\x05\x01\x04\x05\x03\x03\x03\x05\x02\x08\x01\x06")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x07\x05\x01\x04\x05\x03\x03\x03\x05\x02\x08\x01\x06"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "MovieClip")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+      iffalse             L9
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+      getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+      convert_i
+      jump                L14
+
+L9:
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      convert_i
+L14:
+      convert_i
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "\x02\x08\x08\x04\x05\x07\x03\x01\x02\x07\x06"), 7
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal            5
+
+      getlocal            5
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            5
+      iftrue              L46
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "MovieClip")
+      constructprop       QName(PackageNamespace("flash.display"), "MovieClip"), 0
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal            5
+
+L46:
+      getlocal2
+      iffalse             L56
+
+      getlocal            5
+      getproperty         Multiname("ClipGrosse", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      iffalse             L56
+
+      getlocal            5
+      getproperty         Multiname("ClipGrosse", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      callproperty        QName(PackageNamespace(""), "\x05\x08\x06\x07\x07\x03\x07\x02\x08\x01\x01\x06"), 0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")]), 1
+
+L56:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+      ifeq                L72
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+      getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+      getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+      getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+      getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      jump                L80
+
+L72:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+L80:
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      callpropvoid        QName(PackageNamespace(""), "gotoAndStop"), 1
+
+      getlocal            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"
+    returns QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      constructprop       QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), 4
+      coerce              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+      iffalse             L20
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "\x01\x08\x08\x02\x05\x04\x06\x01\x07\x07\x06\x05\x06"), 1
+
+L20:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+      iffalse             L26
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "\x07\x04\x03\x01\x08\x07\x08\x06\x01\x05\x05"), 1
+
+L26:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+      iffalse             L32
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "\x05\x04\x08\x03\x03\x08\x01\x03\x05\x08\x04\x02"), 1
+
+L32:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+      iffalse             L38
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "\x03\x07\x07\x08\x04\x08\x01\x07\x07\x07\x08\x08\x04"), 1
+
+L38:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x04\x07\x03\x04\x03\x06\x02\x07\x03")
+      setproperty         QName(PackageNamespace(""), "\x07\x07\x04\x07\x03\x04\x03\x06\x02\x07\x03")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      iffalse             L98
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+      iffalse             L98
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      setproperty         QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01")
+
+L98:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x01\x08\x08\x02\x05\x04\x06\x01\x07\x07\x06\x05\x06")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x01\x08\x08\x02\x05\x04\x06\x01\x07\x07\x06\x05\x06"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L46
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+      iftrue              L45
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      initproperty        QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      initproperty        QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x08\x08\x01\x02\x03\x08\x01\x07\x08\x06\x08\x06\x04")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x08\x08\x01\x02\x03\x08\x01\x07\x08\x06\x08\x06\x04")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x07\x03\x04\x08\x05\x07\x03\x06\x08\x06\x05\x04")
+      callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x07\x03\x04\x08\x05\x07\x03\x06\x08\x06\x05\x04")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+L45:
+      jump                L69
+
+L46:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+      iffalse             L69
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+      initproperty        QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+L69:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x02\x04\x03\x05\x07\x04\x01\x04\x02\x08\x06\x07")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x02\x04\x03\x05\x07\x04\x01\x04\x02\x08\x06\x07"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 9
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x04\x07\x03\x04\x03\x06\x02\x07\x03")
+      iftrue              L368
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x04\x07\x03\x04\x03\x06\x02\x07\x03")
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      convert_i
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+      iffalse             L33
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      convert_i
+      setlocal3
+
+      jump                L42
+
+L33:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+      iffalse             L42
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+      getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      convert_i
+      setlocal3
+
+L42:
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x03\x04\x07\x05\x08\x03\x04\x08\x02\x08\x06\x05")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+      iffalse             L57
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x06\x06\x07\x06\x08\x08\x08\x01\x07\x07\x08\x07\x07")
+      getproperty         QName(PackageNamespace(""), "\x07\x06\x04\x06\x01\x03\x06\x02\x05\x02\x08\x05")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      coerce_s
+      setlocal2
+
+L57:
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal3
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+      getproperty         QName(PackageNamespace(""), "\x03\x04\x04\x04\x08\x06\x05\x02\x06\x05\x08\x04")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+      iffalse             L127
+
+      getlex              QName(PackageNamespace(""), "\x06\x06\x07\x06\x08\x08\x08\x01\x07\x07\x08\x07\x07")
+      getproperty         QName(PackageNamespace(""), "\x07\x06\x04\x06\x01\x03\x06\x02\x05\x02\x08\x05")
+      coerce_s
+      setlocal2
+
+L127:
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal3
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+      ifeq                L311
+
+      getlex              QName(PackageNamespace(""), "\x04\x04\x02\x07\x06\x07\x04\x03\x05\x07\x06\x02")
+      getproperty         QName(PackageNamespace(""), "\x06\x07\x08\x05\x08\x03\x04\x05\x03\x05\x02\x07\x03")
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal3
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x01\x05\x02\x04\x06\x03\x05\x02\x06\x05\x03")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x03\x02\x03\x06\x04\x03\x02\x07\x05\x05\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x06\x03\x06\x05\x02\x07\x08\x02\x01\x02\x07\x01")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal3
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x06\x02\x03\x02\x03\x01\x04\x04\x08\x03\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x03\x03\x01\x07\x05\x08\x01\x08\x02\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+L311:
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x06\x06\x01\x07\x01\x05\x04\x08\x05\x04\x04\x03")
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal3
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x05\x05\x07\x01\x06\x05\x04\x02\x08\x03")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 8
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+      setlocal            4
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x06\x08\x04\x06\x05\x02\x08\x02")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      initproperty        QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x01\x04\x02\x05\x04\x06\x02\x01\x01\x03\x04\x03")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+L368:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x07\x02\x04\x05\x05\x03\x08\x02\x01\x03\x02")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x07\x02\x04\x05\x05\x03\x08\x02\x01\x03\x02"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getlocal1
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x02\x07\x08\x08\x07\x06\x04\x06\x06\x06\x06")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x08\x07\x04\x02\x01\x08\x02\x03\x06\x05\x03\x03\x08")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x01\x01\x03\x01\x02\x04\x01\x02\x06\x04")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x03\x05\x04\x04\x05\x02\x01\x08\x08\x08")
+      callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 6
+      getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+      getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+      getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+      constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+      coerce              QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+      setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+      setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "\x07\x04\x03\x01\x08\x07\x08\x06\x01\x05\x05")
+   method
+    refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x07\x04\x03\x01\x08\x07\x08\x06\x01\x05\x05"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L80
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+      iftrue              L79
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      initproperty        QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+      initproperty        QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+
+      getlocal0
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x03\x04\x07\x05\x08\x03\x04\x08\x02\x08\x06\x05")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      callproperty        QName(PackageNamespace(""), "\x07\x02\x04\x05\x05\x03\x08\x02\x01\x03\x02"), 2
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      setproperty         QName(PackageNamespace(""), "\x01\x04\x02\x02\x04\x04\x08\x08\x01\x07\x06\x08")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      setproperty         QName(PackageNamespace(""), "\x05\x01\x05\x03\x02\x05\x05\x05\x04\x04\x04\x04\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+      getproperty         QName(PackageNamespace(""), "\x03\x04\x04\x04\x08\x06\x05\x02\x06\x05\x08\x04")
+      callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+      callproperty        QName(PackageNamespace(""), "\x07\x02\x04\x05\x05\x03\x08\x02\x01\x03\x02"), 2
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+      setproperty         QName(PackageNamespace(""), "\x01\x04\x02\x02\x04\x04\x08\x08\x01\x07\x06\x08")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+      getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+      getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+      callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+      setproperty         QName(PackageNamespace(""), "\x05\x01\x05\x03\x02\x05\x05\x05\x04\x04\x04\x04\x03")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+L79:
+      jump                L103
+
+L80:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+      iffalse             L103
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+      getproperty         QName(PackageNamespace(""), "\x01\x03\x03\x05\x06\x03\x04\x05\x05\x03\x06\x08\x04")
+      initproperty        QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x07\x02\x01\x07\x01\x02\x08\x08\x08\x08\x08\x07\x03")
+      initproperty        QName(PackageNamespace(""), "\x07\x07\x07\x06\x04\x03\x05\x02\x04\x01\x07\x02")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x05\x02\x03\x05\x02\x08\x08\x07\x02\x02\x06\x08\x02")
+      initproperty        QName(PackageNamespace(""), "\x02\x07\x04\x04\x07\x04\x03\x07\x04\x08\x07\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x06\x01\x04\x08\x01\x08\x08\x01\x08\x01\x01")
+      initproperty        QName(PackageNamespace(""), "\x04\x05\x08\x08\x06\x06\x08\x06\x02\x03\x08\x01\x01")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "\x04\x08\x02\x04\x08\x03\x05\x08\x03\x05\x03\x05")
+      initproperty        QName(PackageNamespace(""), "\x04\x07\x02\x08\x07\x04\x08\x05\x06\x04\x03\x05\x02")
+
+L103:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "\x01\x08\x06\x01\x06\x06\x07\x01\x06\x03\x04")
+    pushshort           1144
+    pushshort           -1143
+    add
+    initproperty        QName(PackageNamespace(""), "\x01\x08\x06\x01\x06\x06\x07\x01\x06\x03\x04")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x06\x04\x01\x02\x03\x03\x05\x05\x06\x08")
+    pushshort           2220
+    pushshort           -2218
+    add
+    initproperty        QName(PackageNamespace(""), "\x03\x06\x04\x01\x02\x03\x03\x05\x05\x06\x08")
+
+    findproperty        QName(PackageNamespace(""), "\x06\x04\x07\x05\x07\x01\x02\x04\x07\x02\x07\x08\x08")
+    pushshort           3352
+    pushshort           -3349
+    add
+    initproperty        QName(PackageNamespace(""), "\x06\x04\x07\x05\x07\x01\x02\x04\x07\x02\x07\x08\x08")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x05\x04\x07\x06\x05\x07\x08\x07\x03\x05\x03")
+    pushstring          "AnimZelda"
+    initproperty        QName(PackageNamespace(""), "\x03\x05\x04\x07\x06\x05\x07\x08\x07\x03\x05\x03")
+
+    findproperty        QName(PackageNamespace(""), "\x08\x08\x05\x08\x06\x07\x02\x08\x03\x04\x07\x05")
+    pushstring          "AnimCadeau"
+    initproperty        QName(PackageNamespace(""), "\x08\x08\x05\x08\x06\x07\x02\x08\x03\x04\x07\x05")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x03\x02\x05\x03\x04\x01\x07\x02\x01\x04\x02")
+    pushstring          "AnimNeige"
+    initproperty        QName(PackageNamespace(""), "\x03\x03\x02\x05\x03\x04\x01\x07\x02\x01\x04\x02")
+
+    findproperty        QName(PackageNamespace(""), "\x01\x08\x08\x06\x02\x02\x05\x06\x07\x07\x06\x07\x02")
+    getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+    pushstring          "AnimPeche"
+    callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+    initproperty        QName(PackageNamespace(""), "\x01\x08\x08\x06\x02\x02\x05\x06\x07\x07\x06\x07\x02")
+
+    findproperty        QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    setproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    setproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+
+    findproperty        QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    setproperty         QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+
+    findproperty        QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07")
+    getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+    getlex              QName(PackageNamespace("flash.display"), "MovieClip")
+    applytype           1
+    construct           0
+    initproperty        QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07")
+
+    findproperty        QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+    pushshort           3491
+    pushshort           -3490
+    add
+    initproperty        QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+
+    findproperty        QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+    pushshort           5063
+    pushshort           -5016
+    add
+    initproperty        QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+
+    findproperty        QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+    pushshort           2708
+    pushshort           -2660
+    add
+    initproperty        QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "\x01\x08\x06\x01\x06\x06\x07\x01\x06\x03\x04") slotid 1 type QName(PackageNamespace(""), "int") value Double(1) end
+ trait const QName(PackageNamespace(""), "\x03\x06\x04\x01\x02\x03\x03\x05\x05\x06\x08") slotid 2 type QName(PackageNamespace(""), "int") value Double(2) end
+ trait const QName(PackageNamespace(""), "\x06\x04\x07\x05\x07\x01\x02\x04\x07\x02\x07\x08\x08") slotid 3 type QName(PackageNamespace(""), "int") value Double(3) end
+ trait const QName(PackageNamespace(""), "\x03\x05\x04\x07\x06\x05\x07\x08\x07\x03\x05\x03") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("AnimZelda") end
+ trait const QName(PackageNamespace(""), "\x08\x08\x05\x08\x06\x07\x02\x08\x03\x04\x07\x05") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("AnimCadeau") end
+ trait const QName(PackageNamespace(""), "\x03\x03\x02\x05\x03\x04\x01\x07\x02\x01\x04\x02") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("AnimNeige") end
+ trait const QName(PackageNamespace(""), "\x01\x08\x08\x06\x02\x02\x05\x06\x07\x07\x06\x07\x02") slotid 7 type QName(PackageNamespace(""), "String") end
+ trait slot QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08") slotid 8 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08") slotid 9 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01") slotid 10 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait const QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07") slotid 11 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "MovieClip")>) end
+ trait const QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04") slotid 12 type QName(PackageNamespace(""), "int") value Double(1) end
+ trait const QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01") slotid 13 type QName(PackageNamespace(""), "int") value Double(47) end
+ trait const QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02") slotid 14 type QName(PackageNamespace(""), "int") value Double(48) end
+ trait slot QName(PackageNamespace(""), "\x01\x07\x03\x08\x04\x01\x07\x08\x06\x03\x02\x06") slotid 15 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")>) end
+ trait slot QName(PackageNamespace(""), "\x08\x08\x01\x02\x03\x08\x01\x07\x08\x06\x08\x06\x04") slotid 16 type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+ trait slot QName(PackageNamespace(""), "\x07\x03\x04\x08\x05\x07\x03\x06\x08\x06\x05\x04") slotid 17 type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+ trait slot QName(PackageNamespace(""), "\x04\x03\x01\x08\x08\x08\x04\x06\x08\x08\x08\x06") slotid 18 type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+ trait slot QName(PackageNamespace(""), "\x04\x07\x02\x05\x01\x06\x03\x08\x01\x03\x07") slotid 19 type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+ trait slot QName(PackageNamespace(""), "\x03\x01\x03\x02\x02\x01\x05\x06\x03\x01\x05\x07\x03") slotid 20 type QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01") end
+ trait slot QName(PackageNamespace(""), "\x05\x08\x01\x04\x05\x01\x06\x02\x01\x05\x01\x01") slotid 21 type QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05") end
+ trait method QName(PackageNamespace(""), "\x04\x01\x01\x04\x05\x08\x02\x07\x08\x06\x03") flag FINAL dispid 3
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x04\x01\x01\x04\x05\x08\x02\x07\x08\x06\x03"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 10
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x05\x08\x01\x04\x05\x01\x06\x02\x01\x05\x01\x01")
+     iffalse             L6
+
+     returnvoid
+
+L6:
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+     setlocal1
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x08\x07\x08\x02\x01\x04\x08\x05\x06\x01\x06\x08\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x02\x07\x06\x01\x04\x07\x04\x06\x02\x05")
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x08\x07\x08\x02\x01\x04\x08\x05\x06\x01\x06\x08\x03")
+     getproperty         QName(PackageNamespace(""), "\x05\x03\x06\x04\x08\x06\x02\x07\x05\x04\x05\x05")
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x03\x04\x07\x05\x08\x03\x04\x08\x02\x08\x06\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     negate
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 6
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+     setproperty         QName(PackageNamespace(""), "\x04\x03\x01\x08\x08\x08\x04\x06\x08\x08\x08\x06")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x04\x03\x01\x08\x08\x08\x04\x06\x08\x08\x08\x06")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+     setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x04\x03\x01\x08\x08\x08\x04\x06\x08\x08\x08\x06")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+     setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+     getproperty         QName(PackageNamespace(""), "\x03\x04\x04\x04\x08\x06\x05\x02\x06\x05\x08\x04")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     negate
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 6
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+     setproperty         QName(PackageNamespace(""), "\x04\x07\x02\x05\x01\x06\x03\x08\x01\x03\x07")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x05\x01\x06\x03\x08\x01\x03\x07")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+     setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x05\x01\x06\x03\x08\x01\x03\x07")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+     setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     findpropstrict      QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x06\x06\x01\x07\x01\x05\x04\x08\x05\x04\x04\x03")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     negate
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"), 6
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     constructprop       QName(PackageNamespace(""), "\x04\x06\x08\x01\x07\x02\x07\x06\x01\x05\x03\x01\x01"), 1
+     setproperty         QName(PackageNamespace(""), "\x03\x01\x03\x02\x02\x01\x05\x06\x03\x01\x05\x07\x03")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x01\x03\x02\x02\x01\x05\x06\x03\x01\x05\x07\x03")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x03\x05\x04\x06\x07\x03\x08\x07\x02\x01")
+     setproperty         QName(PackageNamespace(""), "\x02\x07\x02\x03\x05\x02\x05\x06\x07\x08\x05\x02\x05")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x01\x03\x02\x02\x01\x05\x06\x03\x01\x05\x07\x03")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x02\x07\x01\x06\x05\x04\x03\x05\x01\x07\x04\x02")
+     setproperty         QName(PackageNamespace(""), "\x07\x05\x01\x01\x01\x07\x07\x08\x01\x02\x02\x07")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x02\x04\x07\x01\x06\x03\x02\x06\x07\x08")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x06\x02\x01\x06\x06\x01\x06\x04\x05")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     negate
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getlocal1
+     pushfalse
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x08\x03\x06\x05\x06\x04\x06\x02\x03\x03\x06\x02\x06")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x08\x01\x05\x01\x03\x05\x06\x02"), 7
+     setproperty         QName(PackageNamespace(""), "\x05\x08\x01\x04\x05\x01\x06\x02\x01\x05\x01\x01")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x06\x02\x06\x08\x01\x05\x01\x03\x05\x06\x02") flag FINAL dispid 4
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x06\x02\x06\x08\x01\x05\x01\x03\x05\x06\x02"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+   flag HAS_OPTIONAL
+   optional False()
+   optional Integer(1)
+   optional Integer(1)
+   body
+    maxstack 7
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            8
+
+     pushfalse
+     setlocal            10
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+     getlocal3
+     ifne                L35
+
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal1
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     add
+     coerce_s
+     setlocal            8
+
+     jump                L90
+
+L35:
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal1
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal3
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+     getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            4
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            5
+     iffalse             L82
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     coerce_a
+     jump                L87
+
+L82:
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     coerce_a
+L87:
+     add
+     coerce_s
+     setlocal            8
+
+L90:
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     setlocal            9
+
+     getlocal            9
+     iffalse             L166
+
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+     callproperty        QName(PackageNamespace(""), "\x02\x02\x01\x08\x01\x06\x05\x08\x05\x07\x03\x02"), 0
+     setproperty         QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+
+     getlocal            9
+     getlocal            6
+     setproperty         QName(PackageNamespace(""), "\x02\x08\x06\x08\x02\x03\x02\x05\x04\x05\x03\x06")
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     iffalse             L113
+
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "\x04\x07\x07\x03\x06\x05\x03\x07\x05\x02\x01\x03\x04"), 0
+     returnvalue
+
+L113:
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+     getlocal            8
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     pushfalse
+     setlocal            10
+
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x04\x06\x06\x02\x01\x06\x05\x05\x02\x01")
+     iffalse             L132
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x01\x08\x08\x02\x05\x04\x06\x01\x07\x07\x06\x05\x06")
+     callproperty        QName(PackageNamespace(""), "\x08\x07\x05\x03\x04\x07\x02\x06\x07\x04\x08\x01\x01"), 1
+     getglobalscope
+     getlocal            10
+     call                1
+     pop
+L132:
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x05\x04\x04\x01\x02\x02\x01\x08\x03\x02")
+     iffalse             L143
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x07\x04\x03\x01\x08\x07\x08\x06\x01\x05\x05")
+     callproperty        QName(PackageNamespace(""), "\x08\x07\x05\x03\x04\x07\x02\x06\x07\x04\x08\x01\x01"), 1
+     getglobalscope
+     getlocal            10
+     call                1
+     pop
+L143:
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x02\x03\x06\x07\x06\x07\x01\x06\x05\x03\x07\x06")
+     iffalse             L154
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x05\x04\x08\x03\x03\x08\x01\x03\x05\x08\x04\x02")
+     callproperty        QName(PackageNamespace(""), "\x08\x07\x05\x03\x04\x07\x02\x06\x07\x04\x08\x01\x01"), 1
+     getglobalscope
+     getlocal            10
+     call                1
+     pop
+L154:
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x07\x02\x08\x03\x08\x05\x07\x03\x08\x04\x04")
+     iffalse             L163
+
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "\x03\x07\x07\x08\x04\x08\x01\x07\x07\x07\x08\x08\x04")
+     getglobalscope
+     getlocal            10
+     call                1
+     pop
+L163:
+     getlocal            9
+     returnvalue
+
+     jump                L189
+
+L166:
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     construct           6
+     coerce              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     setlocal            9
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     getlocal            8
+     getlocal            9
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+     getlocal            8
+     getlex              QName(PackageNamespace(""), "\x03\x04\x03\x04\x02\x03\x06\x01\x06\x02\x06")
+     getproperty         QName(PackageNamespace(""), "\x06\x08\x02\x01\x08\x05\x07\x01\x06\x06\x04\x02\x06")
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     getlocal            9
+     returnvalue
+L189:
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x05\x08\x06\x07\x07\x03\x07\x02\x08\x01\x01\x06") flag FINAL dispid 5
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x05\x08\x06\x07\x07\x03\x07\x02\x08\x01\x01\x06"
+   returns QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07")
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal1
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     negate
+     convert_i
+     setlocal2
+
+     jump                L30
+
+L18:
+     label
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal3
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "stage")
+     iftrue              L30
+
+     getlocal3
+     returnvalue
+
+L30:
+     getlocal2
+     increment_i
+     dup
+     convert_i
+     setlocal2
+
+     getlocal1
+     iflt                L18
+
+     getlex              QName(PackageNamespace(""), "\x08\x02\x08\x04\x06\x07\x05\x08\x01\x01\x06\x02")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+     getproperty         QName(PackageNamespace(""), "\x02\x03\x03\x04\x07\x02\x01\x06\x07\x05\x02")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     callproperty        QName(PackageNamespace(""), "\x07\x01\x03\x05\x01\x01\x03\x03\x04\x04\x08\x03"), 1
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x07\x07\x06\x07\x01\x07\x07\x02\x08\x03\x06\x06\x07")
+     getlocal3
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x08\x05\x03\x06\x05\x04\x01\x07\x06\x08\x05\x08") flag FINAL dispid 6
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x08\x05\x03\x06\x05\x04\x01\x07\x06\x08\x05\x08"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x06\x05\x03\x01\x02\x03\x04\x05\x02\x08\x01\x08") flag FINAL dispid 7
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x06\x05\x03\x01\x02\x03\x04\x05\x02\x08\x01\x08"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     setproperty         QName(PackageNamespace(""), "\x07\x07\x05\x06\x02\x06\x08\x05\x06\x01")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x04\x07\x01\x02\x05\x04\x02\x01\x01\x04\x05\x03") flag FINAL dispid 8
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x04\x07\x01\x02\x05\x04\x02\x01\x01\x04\x05\x03"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 10
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     setlocal            7
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     convert_i
+     setlocal1
+
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+     setlocal2
+
+     pushbyte            0
+     setlocal            8
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     coerce_a
+     setlocal            9
+
+     jump                L59
+
+L33:
+     label
+     getlocal            9
+     getlocal            8
+     nextname
+     coerce_s
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     setlocal            6
+
+     getlocal            6
+     iffalse             L59
+
+     getlocal1
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+     subtract
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x05\x03\x06\x01\x04\x06\x07\x03\x02\x08\x06\x05\x08")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     ifngt               L59
+
+     getlocal2
+     getlocal3
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L59:
+     hasnext2            9, 8
+     iftrue              L33
+
+     kill                9
+     kill                8
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     convert_i
+     setlocal            4
+
+     jump                L77
+
+L68:
+     label
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     getlocal2
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     deleteproperty      MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     pop
+     inclocal_i          4
+L77:
+     getlocal            4
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L68
+
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "String")
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+     setlocal2
+
+     pushbyte            0
+     setlocal            8
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     coerce_a
+     setlocal            9
+
+     jump                L120
+
+L94:
+     label
+     getlocal            9
+     getlocal            8
+     nextname
+     coerce_s
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     setlocal            7
+
+     getlocal            7
+     iffalse             L120
+
+     getlocal1
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+     subtract
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x05\x03\x06\x01\x04\x06\x07\x03\x02\x08\x06\x05\x08")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     ifngt               L120
+
+     getlocal2
+     getlocal            5
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L120:
+     hasnext2            9, 8
+     iftrue              L94
+
+     kill                9
+     kill                8
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     convert_i
+     setlocal            4
+
+     jump                L138
+
+L129:
+     label
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal2
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     deleteproperty      MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     pop
+     inclocal_i          4
+L138:
+     getlocal            4
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L129
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06") flag FINAL dispid 9
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x05\x01\x04\x08\x01\x06\x03\x03\x08\x08\x06\x06\x06"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   returns TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   body
+    maxstack 8
+    localcount 17
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     setlocal            14
+
+     getlex              QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04")
+     getproperty         QName(PackageNamespace(""), "\x04\x07\x05\x01\x05\x08\x02\x04\x08\x04\x07\x03\x07")
+     iftrue              L27
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     convert_i
+     setlocal1
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     convert_i
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+     getproperty         QName(PackageNamespace(""), "\x04\x07\x02\x03\x01\x06\x04\x06\x04\x03\x04\x02\x07")
+     coerce_s
+     setlocal            5
+
+L27:
+     getlex              QName(PackageNamespace(""), "\x01\x08\x07\x06\x08\x08\x06\x01\x02\x07\x02")
+     callproperty        QName(PackageNamespace(""), "\x02\x02\x01\x08\x01\x06\x05\x08\x05\x07\x03\x02"), 0
+     convert_i
+     setlocal            10
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+     getlocal            4
+     ifne                L72
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            5
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal3
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            4
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            6
+     add
+     coerce_s
+     setlocal            9
+
+     jump                L130
+
+L72:
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            5
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal3
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            4
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+     getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            6
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            8
+     iffalse             L122
+
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     coerce_a
+     jump                L127
+
+L122:
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     coerce_a
+L127:
+     add
+     coerce_s
+     setlocal            9
+
+L130:
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x04\x03\x08\x01\x03\x08\x08\x03\x01\x07\x03")
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     setlocal            11
+
+     getlocal            11
+     iffalse             L181
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+     getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x01\x02\x04\x03\x07\x07\x02\x07\x08")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     setlocal            14
+
+     getlocal            11
+     getlocal            10
+     setproperty         QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+
+     getlocal            14
+     iffalse             L160
+
+     getlocal            14
+     getlocal            10
+     setproperty         QName(PackageNamespace(""), "\x01\x04\x03\x08\x05\x08\x06\x03\x08\x07\x08\x05\x02")
+
+L160:
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     applytype           1
+     pushbyte            2
+     construct           1
+     dup
+     pushbyte            0
+     getlocal            11
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal            14
+     iffalse             L177
+
+     getlocal            14
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     jump                L179
+
+L177:
+     getlocal            11
+     coerce              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+L179:
+     setproperty         MultinameL([PackageNamespace("")])
+
+     returnvalue
+
+L181:
+     getlex              QName(PackageNamespace(""), "\x08\x07\x08\x02\x01\x04\x08\x05\x06\x01\x06\x08\x03")
+     dup
+     setlocal            15
+
+     getproperty         QName(PackageNamespace(""), "\x03\x05\x01\x04\x02\x08\x03\x03\x05\x04\x02\x05\x03")
+     increment_i
+     setlocal            16
+
+     getlocal            15
+     getlocal            16
+     setproperty         QName(PackageNamespace(""), "\x03\x05\x01\x04\x02\x08\x03\x03\x05\x04\x02\x05\x03")
+
+     kill                16
+     kill                15
+     getlex              Multiname("Vector", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")>)
+     setlocal            12
+
+     getlex              QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04")
+     getlocal1
+     getlocal3
+     getlocal            4
+     getlocal2
+     getlocal            5
+     getlocal            6
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "\x02\x08\x08\x04\x05\x07\x03\x01\x02\x07\x06"), 7
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal            13
+
+     getlocal            13
+     iftrue              L215
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "MovieClip")
+     constructprop       QName(PackageNamespace("flash.display"), "MovieClip"), 0
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal            13
+
+L215:
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+     ifeq                L229
+
+     getlocal            13
+     getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+     getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+     setproperty         QName(PackageNamespace(""), "scaleX")
+
+     getlocal            13
+     getlex              QName(PackageNamespace(""), "\x06\x03\x03\x02\x07\x04\x08\x01\x03\x04\x08\x01\x07")
+     getproperty         QName(PackageNamespace(""), "\x07\x08\x07\x02\x07\x03\x07\x03\x01\x04\x08")
+     getproperty         QName(PackageNamespace(""), "\x02\x01\x01\x01\x08\x03\x04\x02\x03\x05\x07\x08\x08")
+     setproperty         QName(PackageNamespace(""), "scaleY")
+
+L229:
+     getlocal            12
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     findpropstrict      QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     getlocal            13
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     constructprop       QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06"), 3
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x04\x03\x08\x01\x03\x08\x08\x03\x01\x07\x03")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            12
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     getlocal            13
+     getproperty         Multiname("ClipGrosse", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     iffalse             L306
+
+     getlocal            7
+     iffalse             L270
+
+     getlex              QName(PackageNamespace(""), "\x05\x05\x06\x02\x04\x04\x08\x08\x08\x01\x08\x04")
+     getlocal1
+     getlocal3
+     getlocal            4
+     getlocal2
+     getlocal            5
+     getlocal            6
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "\x02\x08\x08\x04\x05\x07\x03\x01\x02\x07\x06"), 7
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal            13
+
+L270:
+     getlocal            13
+     getproperty         Multiname("ClipGrosse", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     getlex              QName(PackageNamespace(""), "\x08\x02\x08\x04\x06\x07\x05\x08\x01\x01\x06\x02")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x03\x06\x01\x01\x02\x08\x08\x04")
+     getproperty         QName(PackageNamespace(""), "\x02\x03\x03\x04\x07\x02\x01\x06\x07\x05\x02")
+     callproperty        QName(PackageNamespace(""), "\x07\x01\x03\x05\x01\x01\x03\x03\x04\x04\x08\x03"), 1
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")]), 1
+
+     getlocal            12
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     findpropstrict      QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06")
+     getlocal            13
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x01\x04\x06\x05\x04\x08\x01\x06\x01\x03")
+     getproperty         QName(PackageNamespace(""), "\x02\x06\x01\x02\x05\x01\x01\x04\x07\x05\x05")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     constructprop       QName(PackageNamespace(""), "\x05\x08\x05\x01\x08\x08\x04\x08\x07\x08\x05\x06"), 3
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x03\x06\x08\x08\x08\x02\x01\x02\x04\x03\x03\x05\x08")
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x08\x06\x08\x01\x03\x04\x08\x08\x04\x05\x08")
+     getproperty         QName(PackageNamespace(""), "\x03\x02\x07\x01\x02\x04\x03\x07\x07\x02\x07\x08")
+     callproperty        QName(PackageNamespace(""), "\x06\x02\x06\x03\x02\x08\x05\x07\x01\x06\x05\x04\x08"), 1
+     add
+     getlocal            12
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     setproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+
+L306:
+     getlocal            12
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "\x02\x07\x05\x04\x07\x07\x04\x05\x08\x04\x04") flag FINAL dispid 10
+  method
+   refid "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05/\x02\x07\x05\x04\x07\x07\x04\x05\x08\x04\x04"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x08\x05\x03\x02\x04\x08\x08\x04\x08\x08\x04")
+     getlocal3
+     ifne                L28
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x02\x04\x04\x05\x06\x01\x08\x07\x07\x05\x03")
+     getproperty         QName(PackageNamespace(""), "\x01\x07\x08\x06\x06\x03\x07\x08\x01\x05\x08\x02")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     add
+     coerce_s
+     setlocal            5
+
+     jump                L46
+
+L28:
+     getlocal1
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal2
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal3
+     add
+     getlex              QName(PackageNamespace(""), "\x03\x06\x07\x05\x04\x02\x02\x02\x06\x08\x05\x04\x02")
+     getproperty         QName(PackageNamespace(""), "\x06\x04\x03\x03\x06\x08\x01\x07\x04\x07\x02\x07")
+     add
+     getlocal            4
+     add
+     coerce_s
+     setlocal            5
+
+L46:
+     getlex              QName(PackageNamespace(""), "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")
+     getproperty         QName(PackageNamespace(""), "\x01\x03\x01\x04\x07\x04\x04\x01\x04\x06\x06\x08")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#0"), PackageNamespace(""), PrivateNamespace(null, "\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05"), StaticProtectedNs("\x06\x07\x04\x01\x03\x04\x03\x06\x04\x07\x03\x05")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

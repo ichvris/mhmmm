@@ -1,0 +1,664 @@
+class
+ refid "org.osflash.signals:SlotList"
+ instance QName(PackageNamespace("org.osflash.signals"), "SlotList")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  iinit
+   refid "org.osflash.signals:SlotList/iinit"
+   param QName(PackageNamespace("org.osflash.signals"), "ISlot")
+   param QName(PackageNamespace("org.osflash.signals"), "SlotList")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     not
+     dup
+     iffalse             L11
+
+     pop
+     getlocal2
+     not
+L11:
+     iffalse             L23
+
+     getlex              QName(PackageNamespace(""), "NIL")
+     iffalse             L18
+
+     findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+     pushstring          "Parameters head and tail are null. Use the NIL element instead."
+     constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+     throw
+L18:
+     pushfalse
+     findproperty        QName(PackageNamespace(""), "nonEmpty")
+     swap
+     setproperty         QName(PackageNamespace(""), "nonEmpty")
+
+     jump                L44
+
+L23:
+     getlocal1
+     iftrue              L29
+
+     findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+     pushstring          "Parameter head cannot be null."
+     constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+     throw
+L29:
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "head")
+
+     getlocal0
+     getlocal2
+     dup
+     iftrue              L39
+
+     pop
+     getlex              QName(PackageNamespace(""), "NIL")
+     coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+L39:
+     setproperty         QName(PackageNamespace(""), "tail")
+
+     pushtrue
+     findproperty        QName(PackageNamespace(""), "nonEmpty")
+     swap
+     setproperty         QName(PackageNamespace(""), "nonEmpty")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "head") type QName(PackageNamespace("org.osflash.signals"), "ISlot") end
+  trait slot QName(PackageNamespace(""), "tail") type QName(PackageNamespace("org.osflash.signals"), "SlotList") end
+  trait slot QName(PackageNamespace(""), "nonEmpty") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    refid "org.osflash.signals:SlotList/length/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L6
+
+      pushbyte            0
+      returnvalue
+
+L6:
+      getlex              QName(PackageNamespace(""), "tail")
+      getlex              QName(PackageNamespace(""), "NIL")
+      ifne                L11
+
+      pushbyte            1
+      returnvalue
+
+L11:
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      setlocal2
+
+      jump                L26
+
+L17:
+      label
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L26:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L17
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "prepend")
+   method
+    refid "org.osflash.signals:SlotList/prepend"
+    param QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    returns QName(PackageNamespace("org.osflash.signals"), "SlotList")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "append")
+   method
+    refid "org.osflash.signals:SlotList/append"
+    param QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    returns QName(PackageNamespace("org.osflash.signals"), "SlotList")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L6
+
+      getlocal0
+      returnvalue
+
+L6:
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L12
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      returnvalue
+
+L12:
+      getlex              QName(PackageNamespace(""), "tail")
+      getlex              QName(PackageNamespace(""), "NIL")
+      ifne                L21
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      getlex              QName(PackageNamespace(""), "head")
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      returnvalue
+
+L21:
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlex              QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      dup
+      setlocal            4
+
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+      jump                L47
+
+L32:
+      label
+      getlocal3
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      dup
+      setlocal            5
+
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            5
+      setlocal3
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L47:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L32
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "insertWithPriority")
+   method
+    refid "org.osflash.signals:SlotList/insertWithPriority"
+    param QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    returns QName(PackageNamespace("org.osflash.signals"), "SlotList")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L8
+
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      returnvalue
+
+L8:
+      getlocal1
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "priority")
+      convert_i
+      dup
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "priority")
+      ifngt               L21
+
+      findpropstrict      QName(PackageNamespace(""), "prepend")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      returnvalue
+
+L21:
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlex              QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      dup
+      setlocal            4
+
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+      jump                L59
+
+L32:
+      label
+      getlocal            5
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "priority")
+      ifngt               L45
+
+      getlocal3
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            4
+      returnvalue
+
+L45:
+      getlocal3
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      dup
+      setlocal            6
+
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            6
+      setlocal3
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L59:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L32
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal1
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "filterNot")
+   method
+    refid "org.osflash.signals:SlotList/filterNot"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "SlotList")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      not
+      dup
+      iftrue              L10
+
+      pop
+      getlocal1
+      pushnull
+      equals
+L10:
+      iffalse             L13
+
+      getlocal0
+      returnvalue
+
+L13:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "listener")
+      ifne                L19
+
+      getlex              QName(PackageNamespace(""), "tail")
+      returnvalue
+
+L19:
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlex              QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      dup
+      setlocal            4
+
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+      jump                L56
+
+L30:
+      label
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "listener")
+      getlocal1
+      ifne                L42
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            4
+      returnvalue
+
+L42:
+      getlocal3
+      findpropstrict      QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      constructprop       QName(PackageNamespace("org.osflash.signals"), "SlotList"), 1
+      dup
+      setlocal            5
+
+      setproperty         QName(PackageNamespace(""), "tail")
+
+      getlocal            5
+      setlocal3
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L56:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L30
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "contains")
+   method
+    refid "org.osflash.signals:SlotList/contains"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L6
+
+      pushfalse
+      returnvalue
+
+L6:
+      getlocal0
+      setlocal2
+
+      jump                L21
+
+L9:
+      label
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "listener")
+      getlocal1
+      ifne                L17
+
+      pushtrue
+      returnvalue
+
+L17:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L21:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L9
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "find")
+   method
+    refid "org.osflash.signals:SlotList/find"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("org.osflash.signals"), "ISlot")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L6
+
+      pushnull
+      returnvalue
+
+L6:
+      getlocal0
+      setlocal2
+
+      jump                L22
+
+L9:
+      label
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      getproperty         QName(Namespace("org.osflash.signals:ISlot"), "listener")
+      getlocal1
+      ifne                L18
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "head")
+      returnvalue
+
+L18:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal2
+
+L22:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L9
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "org.osflash.signals:SlotList/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal2
+
+      getlocal0
+      setlocal1
+
+      jump                L20
+
+L7:
+      label
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "head")
+      pushstring          " -> "
+      add
+      add
+      coerce_s
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tail")
+      coerce              QName(PackageNamespace("org.osflash.signals"), "SlotList")
+      setlocal1
+
+L20:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L7
+
+      getlocal2
+      pushstring          "NIL"
+      add
+      setlocal2
+
+      pushstring          "[List "
+      getlocal2
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals:SlotList/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getlocal0
+    pushnull
+    pushnull
+    construct           2
+    findproperty        QName(PackageNamespace(""), "NIL")
+    swap
+    initproperty        QName(PackageNamespace(""), "NIL")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "NIL") type QName(PackageNamespace("org.osflash.signals"), "SlotList") end
+end ; class

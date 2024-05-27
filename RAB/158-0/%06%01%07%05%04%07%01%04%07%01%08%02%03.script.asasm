@@ -1,0 +1,57 @@
+script ; 264
+ sinit
+  refid "\x06\x01\x07\x05\x04\x07\x01\x04\x07\x01\x08\x02\x03.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("\x06\x01\x07\x05\x04\x07\x01\x04\x07\x01\x08\x02\x03", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "\x07\x02\x05\x02\x08\x04\x01\x05\x06\x01\x01\x05\x04")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "\x02\x03\x08\x03\x05\x03\x03\x02\x07\x01")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "\x02\x03\x08\x03\x05\x03\x03\x02\x07\x01")
+    newclass            "\x06\x01\x07\x05\x04\x07\x01\x04\x07\x01\x08\x02\x03"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "\x06\x01\x07\x05\x04\x07\x01\x04\x07\x01\x08\x02\x03")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "\x06\x01\x07\x05\x04\x07\x01\x04\x07\x01\x08\x02\x03")
+  #include "%06%01%07%05%04%07%01%04%07%01%08%02%03.class.asasm"
+ end ; trait
+end ; script

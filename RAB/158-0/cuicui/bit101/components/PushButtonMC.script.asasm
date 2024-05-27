@@ -1,0 +1,57 @@
+script ; 95
+ sinit
+  refid "cuicui.bit101.components:PushButtonMC.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.bit101.components"), "PushButton")
+    dup
+    pushscope
+
+    newclass            "cuicui.bit101.components:PushButtonMC"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("cuicui.bit101.components"), "PushButtonMC")
+  #include "PushButtonMC.class.asasm"
+ end ; trait
+end ; script

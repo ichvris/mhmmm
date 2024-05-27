@@ -1,0 +1,337 @@
+class
+ refid "com.bit101.components:ProgressBar"
+ instance QName(PackageNamespace("com.bit101.components"), "ProgressBar")
+  extends QName(PackageNamespace("com.bit101.components"), "Component")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.bit101.components:ProgressBar")
+  iinit
+   refid "com.bit101.components:ProgressBar/iinit"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait method QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "init") flag OVERRIDE
+   method
+    refid "com.bit101.components:ProgressBar:init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.bit101.components:Component"), "init"), 0
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      pushbyte            100
+      pushbyte            10
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "addChildren") flag OVERRIDE
+   method
+    refid "com.bit101.components:ProgressBar:addChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            2
+      pushtrue
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 2
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow")
+      pushbyte            1
+      callproperty        QName(ProtectedNamespace("com.bit101.components:Component"), "getShadow"), 1
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update")
+   method
+    refid "com.bit101.components:ProgressBar:update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+      divide
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.bit101.components:ProgressBar/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "draw"), 0
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "BACKGROUND")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_back")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("com.bit101.components"), "Style")
+      getproperty         QName(PackageNamespace(""), "PROGRESS_BAR")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_width")
+      pushbyte            2
+      subtract
+      getlex              QName(ProtectedNamespace("com.bit101.components:Component"), "_height")
+      pushbyte            2
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_bar")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:ProgressBar/maximum/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maximum")
+   method
+    refid "com.bit101.components:ProgressBar/maximum/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:ProgressBar/value/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_max")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      findproperty        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+      swap
+      setproperty         QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+
+      findpropstrict      QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "value")
+   method
+    refid "com.bit101.components:ProgressBar/value/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.bit101.components:ProgressBar"), "_value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.bit101.components:ProgressBar/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

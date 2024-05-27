@@ -1,0 +1,29 @@
+script ; 580
+ sinit
+  refid "tribulle.type:ItemMenuContextuel.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.type:ItemMenuContextuel"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.type"), "ItemMenuContextuel")
+  #include "ItemMenuContextuel.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,1815 @@
+class
+ refid "tribulle.utils:UtilUI"
+ instance QName(PackageNamespace("tribulle.utils"), "UtilUI")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  iinit
+   refid "tribulle.utils:UtilUI/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "tribulle.utils:UtilUI/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    findproperty        QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "cacheDrapeau")
+    swap
+    setproperty         QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "cacheDrapeau")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "cacheDrapeau") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace(""), "initaliseTexteDepuisCle")
+  method
+   refid "tribulle.utils:UtilUI/initaliseTexteDepuisCle"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal2
+
+     pushnull
+     setlocal            4
+
+     pushnull
+     setlocal3
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "PushButton")
+     istypelate
+     iffalse             L24
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "PushButton")
+     astypelate
+     coerce              QName(PackageNamespace("com.bit101.components"), "PushButton")
+     setlocal2
+
+     getlocal2
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "label")
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     setproperty         QName(PackageNamespace(""), "label")
+
+     jump                L55
+
+L24:
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "Label")
+     istypelate
+     iffalse             L40
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "Label")
+     astypelate
+     coerce              QName(PackageNamespace("com.bit101.components"), "Label")
+     dup
+     setlocal            4
+
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "text")
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     setproperty         QName(PackageNamespace(""), "text")
+
+     jump                L55
+
+L40:
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     istypelate
+     iffalse             L55
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     astypelate
+     coerce              QName(PackageNamespace("com.bit101.components"), "CheckBox")
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "label")
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     setproperty         QName(PackageNamespace(""), "label")
+
+L55:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "initaliseTooltipDepuisCle")
+  method
+   refid "tribulle.utils:UtilUI/initaliseTooltipDepuisCle"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getChild")
+  method
+   refid "tribulle.utils:UtilUI/getChild"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("flash.display"), "DisplayObject")
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            5
+
+     pushnull
+     setlocal            6
+
+     pushnull
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "name")
+     getlocal2
+     ifne                L14
+
+     getlocal1
+     returnvalue
+
+L14:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     convert_i
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L61
+
+L21:
+     label
+     getlocal1
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     dup
+     setlocal            6
+
+     pushnull
+     ifeq                L60
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "name")
+     getlocal2
+     ifne                L36
+
+     getlocal            6
+     returnvalue
+
+L36:
+     getlocal            6
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     istypelate
+     iffalse             L60
+
+     getlocal            6
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     setlocal3
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     pushbyte            0
+     ifngt               L60
+
+     findpropstrict      QName(PackageNamespace(""), "getChild")
+     getlocal3
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getChild"), 2
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     dup
+     setlocal            6
+
+     pushnull
+     ifeq                L60
+
+     getlocal            6
+     returnvalue
+
+L60:
+     inclocal_i          5
+L61:
+     getlocal            5
+     getlocal            4
+     iflt                L21
+
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getChildInputString")
+  method
+   refid "tribulle.utils:UtilUI/getChildInputString"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushnull
+     setlocal            6
+
+     pushnull
+     setlocal2
+
+     pushnull
+     setlocal            5
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     istypelate
+     iffalse             L19
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L19:
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     istypelate
+     dup
+     iffalse             L30
+
+     pop
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "editable")
+     convert_b
+L30:
+     iffalse             L36
+
+     getlocal1
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L36:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     convert_i
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L102
+
+L43:
+     label
+     getlocal1
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     dup
+     setlocal            6
+
+     pushnull
+     ifeq                L101
+
+     getlocal            6
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     istypelate
+     iffalse             L61
+
+     getlocal            6
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L61:
+     getlocal            6
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     istypelate
+     dup
+     iffalse             L72
+
+     pop
+     getlocal            6
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "editable")
+     convert_b
+L72:
+     iffalse             L78
+
+     getlocal            6
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L78:
+     getlocal            6
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     istypelate
+     iffalse             L101
+
+     getlocal            6
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     setlocal2
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     pushbyte            0
+     ifngt               L101
+
+     findpropstrict      QName(PackageNamespace(""), "getChildInputString")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getChildInputString"), 1
+     coerce_s
+     dup
+     setlocal            5
+
+     pushnull
+     ifeq                L101
+
+     getlocal            5
+     returnvalue
+
+L101:
+     inclocal_i          4
+L102:
+     getlocal            4
+     getlocal3
+     iflt                L43
+
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getChildUserData")
+  method
+   refid "tribulle.utils:UtilUI/getChildUserData"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "getChild")
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getChild"), 2
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+     istypelate
+     iffalse             L17
+
+     getlocal3
+     getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "userData")
+     returnvalue
+
+L17:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getParent")
+  method
+   refid "tribulle.utils:UtilUI/getParent"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "parent")
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     setlocal3
+
+     jump                L18
+
+L7:
+     label
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "name")
+     getlocal2
+     ifne                L14
+
+     getlocal3
+     returnvalue
+
+L14:
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "parent")
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     setlocal3
+
+L18:
+     getlocal3
+     pushnull
+     ifne                L7
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getParentUserData")
+  method
+   refid "tribulle.utils:UtilUI/getParentUserData"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "getParent")
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getParent"), 2
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+     istypelate
+     iffalse             L17
+
+     getlocal3
+     getlex              QName(PackageNamespace("com.bit101.components"), "Component")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "userData")
+     returnvalue
+
+L17:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getComposantXml")
+  method
+   refid "tribulle.utils:UtilUI/getComposantXml"
+   param QName(PackageNamespace(""), "Class")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     construct           0
+     getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
+     astypelate
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     pushnull
+     ifeq                L16
+
+     getlocal2
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+     returnvalue
+
+L16:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "vider")
+  method
+   refid "tribulle.utils:UtilUI/vider"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushnull
+     ifne                L6
+
+     returnvoid
+
+L6:
+     jump                L11
+
+L7:
+     label
+     getlocal1
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L11:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "numChildren")
+     pushbyte            0
+     ifgt                L7
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getNomJoueurFormate")
+  method
+   refid "tribulle.utils:UtilUI/getNomJoueurFormate"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   optional True()
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "+"
+     ifne                L19
+
+     getlocal1
+     pushbyte            0
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+     getlocal1
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+     jump                L29
+
+L19:
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+     getlocal1
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+L29:
+     getlocal2
+     iffalse             L36
+
+     findpropstrict      QName(PackageNamespace(""), "getNomJoueurCliquable")
+     getlocal1
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "getNomJoueurCliquable"), 2
+     returnvalue
+
+L36:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getNomJoueurWeb")
+  method
+   refid "tribulle.utils:UtilUI/getNomJoueurWeb"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushnull
+     ifne                L9
+
+     getlex              QName(PackageNamespace("lapitchnet.moteurjeu"), "Constantes")
+     getproperty         QName(PackageNamespace(""), "LOGIN")
+     coerce_s
+     setlocal1
+
+L9:
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "+"
+     ifne                L28
+
+     pushstring          "%2B"
+     getlocal1
+     pushbyte            1
+     dup
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+     add
+     getlocal1
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+     jump                L38
+
+L28:
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+     getlocal1
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+L38:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getNomJoueurCliquable")
+  method
+   refid "tribulle.utils:UtilUI/getNomJoueurCliquable"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional True()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushstring          "<a href=\"event:"
+     getlex              QName(PackageNamespace("tribulle.enums"), "ChatEventEnum")
+     getproperty         QName(PackageNamespace(""), "TEXTE_NOM_JOUEUR")
+     add
+     pushstring          ";joueur="
+     add
+     getlocal1
+     add
+     pushstring          "&online="
+     add
+     getlocal2
+     add
+     pushstring          "\" class=\"auteur\">"
+     add
+     getlocal1
+     add
+     pushstring          "</a>"
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getDateAffichage")
+  method
+   refid "tribulle.utils:UtilUI/getDateAffichage"
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     coerce              QName(PackageNamespace(""), "Date")
+     setlocal2
+
+     getlocal2
+     getlocal1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "setTime"), 1
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "month")
+     pushbyte            1
+     add
+     convert_i
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "date")
+     pushbyte            10
+     ifnlt               L24
+
+     pushstring          "0"
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "date")
+     add
+     jump                L27
+
+L24:
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "date")
+     convert_s
+L27:
+     pushstring          "/"
+     add
+     getlocal3
+     pushbyte            10
+     ifnlt               L36
+
+     pushstring          "0"
+     getlocal3
+     add
+     jump                L38
+
+L36:
+     getlocal3
+     convert_s
+L38:
+     add
+     pushstring          "/"
+     add
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "fullYear")
+     add
+     pushstring          ", "
+     add
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "hours")
+     pushbyte            9
+     ifngt               L54
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "hours")
+     convert_s
+     jump                L59
+
+L54:
+     pushstring          "0"
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "hours")
+     add
+     coerce_s
+L59:
+     add
+     pushstring          ":"
+     add
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "minutes")
+     pushbyte            9
+     ifngt               L70
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "minutes")
+     convert_s
+     jump                L75
+
+L70:
+     pushstring          "0"
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "minutes")
+     add
+     coerce_s
+L75:
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getValeurJSON")
+  method
+   refid "tribulle.utils:UtilUI/getValeurJSON"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_i
+     dup
+     setlocal            6
+
+     pushbyte            255
+     ifne                L12
+
+     pushnull
+     returnvalue
+
+L12:
+     getlocal            6
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     add
+     convert_i
+     setlocal            4
+
+     getlocal1
+     pushstring          ":"
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+     pushbyte            1
+     add
+     convert_i
+     setlocal            5
+
+     getlocal1
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "\""
+     equals
+     setlocal            7
+
+     getlocal1
+     pushstring          ","
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+     convert_i
+     setlocal3
+
+     getlocal3
+     pushbyte            255
+     ifne                L47
+
+     getlocal1
+     pushstring          "}"
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+     convert_i
+     setlocal3
+
+L47:
+     getlocal            7
+     iffalse             L57
+
+     getlocal1
+     getlocal            5
+     pushbyte            1
+     add
+     getlocal3
+     decrement
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     returnvalue
+
+L57:
+     getlocal1
+     getlocal            5
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours") type QName(PackageNamespace("cuicui.bit101.components"), "Popup") end
+ trait method QName(PackageNamespace(""), "popupSaisie")
+  method
+   refid "tribulle.utils:UtilUI/popupSaisie"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Integer(0)
+   body
+    maxstack 6
+    localcount 13
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            10
+
+     pushnull
+     setlocal            12
+
+     getlocal            6
+     iffalse             L38
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "TextArea")
+     pushnull
+     pushbyte            0
+     dup
+     getlocal            5
+     constructprop       QName(PackageNamespace("com.bit101.components"), "TextArea"), 4
+     coerce              QName(PackageNamespace("com.bit101.components"), "Component")
+     dup
+     setlocal            10
+
+     pushshort           300
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal            10
+     getlex              QName(PackageNamespace("com.bit101.components"), "TextArea")
+     astypelate
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "autoHideScrollBar")
+
+     getlocal            10
+     getlex              QName(PackageNamespace("com.bit101.components"), "TextArea")
+     astypelate
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "editable")
+
+     getlocal            9
+     pushbyte            0
+     ifngt               L37
+
+     getlocal            10
+     getlex              QName(PackageNamespace("com.bit101.components"), "TextArea")
+     astypelate
+     getlocal            9
+     setproperty         QName(PackageNamespace(""), "maxChars")
+
+L37:
+     jump                L57
+
+L38:
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "InputText")
+     pushnull
+     pushbyte            0
+     dup
+     getlocal            5
+     constructprop       QName(PackageNamespace("com.bit101.components"), "InputText"), 4
+     coerce              QName(PackageNamespace("com.bit101.components"), "Component")
+     dup
+     setlocal            10
+
+     pushshort           150
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal            9
+     pushbyte            0
+     ifngt               L57
+
+     getlocal            10
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     astypelate
+     getlocal            9
+     setproperty         QName(PackageNamespace(""), "maxChars")
+
+L57:
+     getlocal            10
+     pushstring          "input"
+     setproperty         QName(PackageNamespace(""), "name")
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "VBox")
+     constructprop       QName(PackageNamespace("com.bit101.components"), "VBox"), 0
+     coerce              QName(PackageNamespace("com.bit101.components"), "VBox")
+     dup
+     setlocal            11
+
+     pushshort           300
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "StringUtil")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "estVideOuNull"), 1
+     iftrue              L79
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Text")
+     getlocal            11
+     pushbyte            0
+     dup
+     getlocal            4
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Text"), 4
+     pushbyte            50
+     setproperty         QName(PackageNamespace(""), "height")
+
+L79:
+     getlex              QName(PackageNamespace("lapitchnet.utils"), "StringUtil")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "estVideOuNull"), 1
+     iftrue              L118
+
+     getlocal            6
+     iffalse             L97
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+     getlocal            11
+     pushbyte            0
+     dup
+     getlocal3
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 4
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "autoSize")
+
+     getlocal            11
+     getlocal            10
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     jump                L117
+
+L97:
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "HBox")
+     getlocal            11
+     pushbyte            0
+     dup
+     constructprop       QName(PackageNamespace("com.bit101.components"), "HBox"), 3
+     coerce              QName(PackageNamespace("com.bit101.components"), "HBox")
+     dup
+     setlocal            12
+
+     pushshort           300
+     setproperty         QName(PackageNamespace(""), "width")
+
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Label")
+     getlocal            12
+     pushbyte            0
+     dup
+     getlocal3
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Label"), 4
+     pop
+     getlocal            12
+     getlocal            10
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L117:
+     jump                L121
+
+L118:
+     getlocal            11
+     getlocal            10
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L121:
+     findpropstrict      QName(PackageNamespace(""), "popupAnnulerValider")
+     getlocal1
+     getlocal2
+     getlocal            11
+     getlocal            7
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "popupAnnulerValider"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupInformation")
+  method
+   refid "tribulle.utils:UtilUI/popupInformation"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 8
+    localcount 5
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "popupOk")
+     getlocal1
+     getlocal2
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Text")
+     pushnull
+     pushbyte            0
+     dup
+     getlocal3
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Text"), 4
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "popupOk"), 4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupConfirmation")
+  method
+   refid "tribulle.utils:UtilUI/popupConfirmation"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 8
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "popupAnnulerValider")
+     getlocal1
+     getlocal2
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Text")
+     pushnull
+     pushbyte            0
+     dup
+     getlocal3
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Text"), 4
+     getlocal            4
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "popupAnnulerValider"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupConfirmationIgnorer")
+  method
+   refid "tribulle.utils:UtilUI/popupConfirmationIgnorer"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 8
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "popupAnnulerIgnorerValider")
+     getlocal1
+     getlocal2
+     findpropstrict      QName(PackageNamespace("com.bit101.components"), "Text")
+     pushnull
+     pushbyte            0
+     dup
+     getlocal3
+     constructprop       QName(PackageNamespace("com.bit101.components"), "Text"), 4
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "popupAnnulerIgnorerValider"), 6
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupAnnulerIgnorerValider")
+  method
+   refid "tribulle.utils:UtilUI/popupAnnulerIgnorerValider"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 9
+    localcount 8
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     pushnull
+     ifeq                L11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     getproperty         QName(PackageNamespace(""), "parent")
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     pushnull
+     returnvalue
+
+L11:
+     findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     getlocal1
+     pushbyte            0
+     dup
+     getlocal2
+     constructprop       QName(PackageNamespace("cuicui.bit101.components"), "Popup"), 4
+     coerce              QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     dup
+     setlocal            7
+
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addContent"), 1
+
+     getlocal            7
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "bouton.valider"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            4
+     pushstring          "width"
+     pushbyte            100
+     newobject           3
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "bouton.annuler"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            6
+     pushstring          "width"
+     pushbyte            100
+     newobject           3
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "Ignorer_Temporairement"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            5
+     pushstring          "width"
+     pushshort           200
+     newobject           3
+     newarray            3
+     callpropvoid        QName(PackageNamespace(""), "addButtons"), 1
+
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "SignaleFermeture")
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "onFermeturePopup")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal            7
+     findproperty        QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+
+     getlocal            7
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupAnnulerValider")
+  method
+   refid "tribulle.utils:UtilUI/popupAnnulerValider"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 8
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     pushnull
+     ifeq                L11
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     getproperty         QName(PackageNamespace(""), "parent")
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     pushnull
+     returnvalue
+
+L11:
+     findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     getlocal1
+     pushbyte            0
+     dup
+     getlocal2
+     constructprop       QName(PackageNamespace("cuicui.bit101.components"), "Popup"), 4
+     coerce              QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     dup
+     setlocal            6
+
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addContent"), 1
+
+     getlocal            6
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "bouton.valider"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            4
+     pushstring          "width"
+     pushbyte            100
+     newobject           3
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "bouton.annuler"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            5
+     pushstring          "width"
+     pushbyte            100
+     newobject           3
+     newarray            2
+     callpropvoid        QName(PackageNamespace(""), "addButtons"), 1
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "SignaleFermeture")
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "onFermeturePopup")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     getlocal            6
+     findproperty        QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+
+     getlocal            6
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "popupOk")
+  method
+   refid "tribulle.utils:UtilUI/popupOk"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 7
+    localcount 6
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     getlocal1
+     pushbyte            0
+     dup
+     getlocal2
+     constructprop       QName(PackageNamespace("cuicui.bit101.components"), "Popup"), 4
+     coerce              QName(PackageNamespace("cuicui.bit101.components"), "Popup")
+     dup
+     setlocal            5
+
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addContent"), 1
+
+     getlocal            5
+     pushstring          "label"
+     getlex              QName(PackageNamespace("lapitchnet.langues"), "MoteurLangueTribulle")
+     pushstring          "bouton.ok"
+     callproperty        QName(PackageNamespace(""), "recupTexte"), 1
+     pushstring          "callback"
+     getlocal            4
+     pushstring          "width"
+     pushbyte            100
+     newobject           3
+     newarray            1
+     callpropvoid        QName(PackageNamespace(""), "addButtons"), 1
+
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getPopupInputString")
+  method
+   refid "tribulle.utils:UtilUI/getPopupInputString"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "getChild")
+     getlocal1
+     pushstring          "input"
+     callproperty        QName(PackageNamespace(""), "getChild"), 2
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal2
+
+     getlocal2
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     istypelate
+     iffalse             L17
+
+     getlocal2
+     getlex              QName(PackageNamespace("com.bit101.components"), "InputText")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L17:
+     getlocal2
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     istypelate
+     iffalse             L26
+
+     getlocal2
+     getlex              QName(PackageNamespace("com.bit101.components"), "Text")
+     astypelate
+     getproperty         QName(PackageNamespace(""), "text")
+     returnvalue
+
+L26:
+     pushstring          ""
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "onFermeturePopup")
+  method
+   refid "tribulle.utils:UtilUI/onFermeturePopup"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     getproperty         QName(PackageNamespace(""), "SignaleFermeture")
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "onFermeturePopup")
+     callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+     pushnull
+     findproperty        QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+     swap
+     setproperty         QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "_popupSaisieEnCours")
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "instanceTransformice")
+     getproperty         QName(PackageNamespace(""), "stage")
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "instanceTransformice")
+     setproperty         QName(PackageNamespace(""), "focus")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "recupImageDrapeauSalon")
+  method
+   refid "tribulle.utils:UtilUI/recupImageDrapeauSalon"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("flash.display"), "Bitmap")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     setlocal            4
+
+     pushnull
+     setlocal            6
+
+     pushnull
+     setlocal            5
+
+     pushnull
+     setlocal3
+
+     getlocal1
+     pushnull
+     equals
+     dup
+     iftrue              L21
+
+     pop
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "*"
+     equals
+L21:
+     dup
+     iftrue              L28
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            2
+     lessthan
+L28:
+     iffalse             L32
+
+     pushstring          "tm"
+     setlocal            4
+
+     jump                L39
+
+L32:
+     getlocal1
+     pushbyte            0
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     coerce_s
+     setlocal            4
+
+L39:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            5
+     greaterthan
+     dup
+     iffalse             L51
+
+     pop
+     getlocal1
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "-"
+     equals
+L51:
+     dup
+     iffalse             L59
+
+     pop
+     getlocal1
+     pushbyte            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "-"
+     equals
+L59:
+     iffalse             L73
+
+     getlocal1
+     pushbyte            3
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_s
+     setlocal            6
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getproperty         QName(PackageNamespace(""), "x_indexCommunauteParCodeChaine")
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:UtilUI"), StaticProtectedNs("tribulle.utils:UtilUI"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:UtilUI/recupImageDrapeauSalon"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     iffalse             L73
+
+     getlocal            6
+     setlocal            4
+
+L73:
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "cacheDrapeau")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:UtilUI"), StaticProtectedNs("tribulle.utils:UtilUI"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:UtilUI/recupImageDrapeauSalon"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal2
+
+     getlocal2
+     iftrue              L113
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal            5
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "x_recupDrapeau"), 1
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal3
+
+     getlocal            5
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal3
+     pushbyte            18
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal3
+     pushbyte            14
+     setproperty         QName(PackageNamespace(""), "height")
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     pushbyte            18
+     pushbyte            14
+     pushtrue
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal2
+
+     getlocal2
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "draw"), 1
+
+     getlex              QName(PrivateNamespace(null, "tribulle.utils:UtilUI"), "cacheDrapeau")
+     getlocal            4
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace(null, "tribulle.utils:UtilUI"), StaticProtectedNs("tribulle.utils:UtilUI"), StaticProtectedNs("Object"), PackageNamespace("tribulle.utils"), PackageInternalNs("tribulle.utils"), PrivateNamespace(null, "tribulle.utils:UtilUI/recupImageDrapeauSalon"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+L113:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     getlocal2
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "recupImageJeu")
+  method
+   refid "tribulle.utils:UtilUI/recupImageJeu"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("flash.display"), "Bitmap")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("tribulle"), "ProxyTribulle")
+     pushstring          "x_tribulle/x_loc_"
+     getlocal1
+     add
+     pushstring          ".png"
+     add
+     callproperty        QName(PackageNamespace(""), "x_recupImageDistante"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

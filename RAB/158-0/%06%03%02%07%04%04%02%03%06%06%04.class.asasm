@@ -1,0 +1,56 @@
+class
+ refid "\x06\x03\x02\x07\x04\x04\x02\x03\x06\x06\x04"
+ instance QName(PackageNamespace(""), "\x06\x03\x02\x07\x04\x04\x02\x03\x06\x06\x04")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x06\x03\x02\x07\x04\x04\x02\x03\x06\x06\x04")
+  iinit
+   refid "\x06\x03\x02\x07\x04\x04\x02\x03\x06\x06\x04/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "\x06\x03\x02\x07\x04\x04\x02\x03\x06\x06\x04/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "\x02\x08\x06\x01\x03\x02\x03\x04\x07\x02\x01")
+    pushshort           786
+    pushshort           -786
+    add
+    initproperty        QName(PackageNamespace(""), "\x02\x08\x06\x01\x03\x02\x03\x04\x07\x02\x01")
+
+    findproperty        QName(PackageNamespace(""), "\x08\x05\x03\x05\x08\x03\x02\x06\x01\x01\x04\x04")
+    pushshort           6867
+    pushshort           -6866
+    add
+    initproperty        QName(PackageNamespace(""), "\x08\x05\x03\x05\x08\x03\x02\x06\x01\x01\x04\x04")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "\x02\x08\x06\x01\x03\x02\x03\x04\x07\x02\x01") slotid 1 type QName(PackageNamespace(""), "int") value Double(0) end
+ trait const QName(PackageNamespace(""), "\x08\x05\x03\x05\x08\x03\x02\x06\x01\x01\x04\x04") slotid 2 type QName(PackageNamespace(""), "int") value Double(1) end
+end ; class

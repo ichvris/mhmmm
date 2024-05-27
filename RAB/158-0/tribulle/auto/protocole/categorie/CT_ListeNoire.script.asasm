@@ -1,0 +1,25 @@
+script ; 738
+ sinit
+  refid "tribulle.auto.protocole.categorie:CT_ListeNoire.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "tribulle.auto.protocole.categorie:CT_ListeNoire"
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_ListeNoire")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.categorie"), "CT_ListeNoire")
+  #include "CT_ListeNoire.class.asasm"
+ end ; trait
+end ; script

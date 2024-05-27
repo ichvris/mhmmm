@@ -1,0 +1,33 @@
+script ; 362
+ sinit
+  refid "tribulle.auto.protocole.sortie:ST_DemandeMembresCanal.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+    dup
+    pushscope
+
+    newclass            "tribulle.auto.protocole.sortie:ST_DemandeMembresCanal"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeMembresCanal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.auto.protocole.sortie"), "ST_DemandeMembresCanal")
+  #include "ST_DemandeMembresCanal.class.asasm"
+ end ; trait
+end ; script

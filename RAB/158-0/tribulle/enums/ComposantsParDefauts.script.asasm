@@ -1,0 +1,29 @@
+script ; 453
+ sinit
+  refid "tribulle.enums:ComposantsParDefauts.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle.enums:ComposantsParDefauts"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle.enums"), "ComposantsParDefauts")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle.enums"), "ComposantsParDefauts")
+  #include "ComposantsParDefauts.class.asasm"
+ end ; trait
+end ; script

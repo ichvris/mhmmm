@@ -1,0 +1,29 @@
+script ; 719
+ sinit
+  refid "tribulle:ProxyTribulle.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "tribulle:ProxyTribulle"
+    popscope
+    initproperty        QName(PackageNamespace("tribulle"), "ProxyTribulle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("tribulle"), "ProxyTribulle")
+  #include "ProxyTribulle.class.asasm"
+ end ; trait
+end ; script

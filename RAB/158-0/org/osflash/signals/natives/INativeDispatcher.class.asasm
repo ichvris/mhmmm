@@ -1,0 +1,54 @@
+class
+ refid "org.osflash.signals.natives:INativeDispatcher"
+ instance QName(PackageNamespace("org.osflash.signals.natives"), "INativeDispatcher")
+  implements QName(PackageNamespace("org.osflash.signals"), "IPrioritySignal")
+  flag INTERFACE
+  iinit
+   refid "org.osflash.signals.natives:INativeDispatcher/iinit"
+  end ; method
+  trait getter QName(Namespace("org.osflash.signals.natives:INativeDispatcher"), "eventType")
+   method
+    refid "org.osflash.signals.natives:INativeDispatcher:eventType/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals.natives:INativeDispatcher"), "eventClass")
+   method
+    refid "org.osflash.signals.natives:INativeDispatcher:eventClass/getter"
+    returns QName(PackageNamespace(""), "Class")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("org.osflash.signals.natives:INativeDispatcher"), "target")
+   method
+    refid "org.osflash.signals.natives:INativeDispatcher:target/getter"
+    returns QName(PackageNamespace("flash.events"), "IEventDispatcher")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("org.osflash.signals.natives:INativeDispatcher"), "target")
+   method
+    refid "org.osflash.signals.natives:INativeDispatcher:target/setter"
+    param QName(PackageNamespace("flash.events"), "IEventDispatcher")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("org.osflash.signals.natives:INativeDispatcher"), "dispatchEvent")
+   method
+    refid "org.osflash.signals.natives:INativeDispatcher:dispatchEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "org.osflash.signals.natives:INativeDispatcher/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

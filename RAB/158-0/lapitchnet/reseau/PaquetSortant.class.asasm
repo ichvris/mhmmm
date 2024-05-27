@@ -1,0 +1,117 @@
+class
+ refid "lapitchnet.reseau:PaquetSortant"
+ instance QName(PackageNamespace("lapitchnet.reseau"), "PaquetSortant")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSortant")
+  flag SEALED
+  iinit
+   refid "lapitchnet.reseau:PaquetSortant/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "lapitchnet.reseau:PaquetSortant"), "_connexion") type QName(PackageNamespace("lapitchnet.reseau"), "Connexion") end
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "lapitchnet.reseau:PaquetSortant/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            255
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ecriture")
+   method
+    refid "lapitchnet.reseau:PaquetSortant/ecriture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "connexion")
+   method
+    refid "lapitchnet.reseau:PaquetSortant/connexion/getter"
+    returns QName(PackageNamespace("lapitchnet.reseau"), "Connexion")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "lapitchnet.reseau:PaquetSortant"), "_connexion")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "connexion")
+   method
+    refid "lapitchnet.reseau:PaquetSortant/connexion/setter"
+    param QName(PackageNamespace("lapitchnet.reseau"), "Connexion")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      findproperty        QName(PrivateNamespace(null, "lapitchnet.reseau:PaquetSortant"), "_connexion")
+      swap
+      setproperty         QName(PrivateNamespace(null, "lapitchnet.reseau:PaquetSortant"), "_connexion")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "lapitchnet.reseau:PaquetSortant/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

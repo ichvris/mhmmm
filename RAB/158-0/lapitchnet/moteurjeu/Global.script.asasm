@@ -1,0 +1,29 @@
+script ; 940
+ sinit
+  refid "lapitchnet.moteurjeu:Global.sinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    dup
+    pushscope
+
+    newclass            "lapitchnet.moteurjeu:Global"
+    popscope
+    initproperty        QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.moteurjeu"), "Global")
+  #include "Global.class.asasm"
+ end ; trait
+end ; script

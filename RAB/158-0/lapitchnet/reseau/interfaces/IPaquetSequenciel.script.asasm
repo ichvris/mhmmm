@@ -1,0 +1,25 @@
+script ; 320
+ sinit
+  refid "lapitchnet.reseau.interfaces:IPaquetSequenciel.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 1
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "lapitchnet.reseau.interfaces:IPaquetSequenciel"
+    initproperty        QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetSequenciel")
+  #include "IPaquetSequenciel.class.asasm"
+ end ; trait
+end ; script

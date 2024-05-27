@@ -1,0 +1,111 @@
+class
+ refid "\x01\x06\x01\x04\x08\x02\x08\x04\x02\x07"
+ instance QName(PackageNamespace(""), "\x01\x06\x01\x04\x08\x02\x08\x04\x02\x07")
+  extends QName(PackageNamespace(""), "\x05\x08\x07\x06\x04\x08\x04\x03\x06\x01\x07\x08")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("\x01\x06\x01\x04\x08\x02\x08\x04\x02\x07")
+  iinit
+   refid "\x01\x06\x01\x04\x08\x02\x08\x04\x02\x07/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedShort"), 0
+     initproperty        QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedShort"), 0
+     initproperty        QName(PackageNamespace(""), "\x08\x08\x06\x07\x02\x08\x02\x08\x05\x05\x07")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x08\x08\x06\x07\x02\x08\x02\x08\x05\x05\x07")
+     pushtrue
+     pushdouble          4294967295
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     initproperty        QName(PackageNamespace(""), "\x08\x04\x05\x04\x07\x05\x08\x06\x06\x08\x05")
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedShort"), 0
+     convert_i
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "\x03\x06\x01\x06\x01\x01\x01\x04\x08\x04\x03\x08")
+     getlex              QName(PackageNamespace(""), "\x07\x02\x08\x08\x06\x05\x02\x08\x03\x07\x03\x04\x03")
+     getproperty         QName(PackageNamespace(""), "\x04\x05\x04\x03\x04\x04\x04\x03\x06\x01\x04")
+     callproperty        QName(PackageNamespace(""), "\x01\x06\x06\x06\x04\x05\x02\x01\x02\x04\x05\x04\x06"), 1
+     negate
+     convert_i
+     setlocal3
+
+     jump                L51
+
+L35:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x08\x04\x05\x04\x07\x05\x08\x06\x06\x08\x05")
+     getlocal3
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01")
+     modulo
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal3
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01")
+     divide
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readInt"), 0
+     callpropvoid        QName(PackageNamespace(""), "setPixel32"), 3
+
+L51:
+     getlocal3
+     increment_i
+     dup
+     convert_i
+     setlocal3
+
+     getlocal2
+     iflt                L35
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "\x05\x02\x01\x01\x03\x08\x08\x07\x03\x08\x06\x08\x01") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x08\x08\x06\x07\x02\x08\x02\x08\x05\x05\x07") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "\x08\x04\x05\x04\x07\x05\x08\x06\x06\x08\x05") type QName(PackageNamespace("flash.display"), "BitmapData") end
+ end ; instance
+ cinit
+  refid "\x01\x06\x01\x04\x08\x02\x08\x04\x02\x07/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,293 @@
+class
+ refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal"
+ instance QName(PackageNamespace("tribulle.auto.protocole.entree"), "ET_SignaleRejointCanal")
+  extends QName(PackageNamespace(""), "Object")
+  implements QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IPaquetEntrant")
+  flag SEALED
+  iinit
+   refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/iinit"
+   param QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 0
+    maxscopedepth 1
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "connexion")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "connexion") type QName(PackageNamespace("lapitchnet.reseau.interfaces"), "IConnexion") end
+  trait slot QName(PackageNamespace(""), "idCanal") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "nomCanal") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "custom") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "idsMembres") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>) end
+  trait slot QName(PackageNamespace(""), "nomsMembres") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>) end
+  trait getter QName(PackageNamespace(""), "droit")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/droit/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "log"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "typeTaille")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/typeTaille/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "estCrypte")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/estCrypte"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTailleDonnes")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/getTailleDonnes"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L21
+
+L9:
+      label
+      getlocal1
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "nomsMembres")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      add
+      convert_i
+      setlocal1
+
+      inclocal_i          2
+L21:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "nomsMembres")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      pushbyte            11
+      getlex              QName(PackageNamespace(""), "nomCanal")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      getlex              QName(PackageNamespace(""), "idsMembres")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      multiply
+      add
+      getlocal1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lecture")
+   method
+    refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/lecture"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 0
+     maxscopedepth 1
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      findproperty        QName(PackageNamespace(""), "idCanal")
+      swap
+      setproperty         QName(PackageNamespace(""), "idCanal")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      findproperty        QName(PackageNamespace(""), "nomCanal")
+      swap
+      setproperty         QName(PackageNamespace(""), "nomCanal")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      pushbyte            0
+      equals
+      not
+      findproperty        QName(PackageNamespace(""), "custom")
+      swap
+      setproperty         QName(PackageNamespace(""), "custom")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal            7
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace(""), "int")
+      applytype           1
+      getlocal            7
+      construct           1
+      findproperty        QName(PackageNamespace(""), "idsMembres")
+      swap
+      setproperty         QName(PackageNamespace(""), "idsMembres")
+
+      pushbyte            0
+      setlocal3
+
+      jump                L53
+
+L46:
+      label
+      getlex              QName(PackageNamespace(""), "idsMembres")
+      getlocal3
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      inclocal_i          3
+L53:
+      getlocal3
+      getlocal            7
+      iflt                L46
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal            4
+
+      getlex              QName(PackageNamespace("__AS3__.vec"), "Vector")
+      getlex              QName(PackageNamespace(""), "String")
+      applytype           1
+      getlocal            4
+      construct           1
+      findproperty        QName(PackageNamespace(""), "nomsMembres")
+      swap
+      setproperty         QName(PackageNamespace(""), "nomsMembres")
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L83
+
+L71:
+      label
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      convert_i
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "nomsMembres")
+      getlocal            5
+      getlocal1
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      setproperty         MultinameL([PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#0"), ProtectedNamespace("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("tribulle.auto.protocole.entree:ET_SignaleRejointCanal"), StaticProtectedNs("Object"), PackageNamespace("tribulle.auto.protocole.entree"), PackageInternalNs("tribulle.auto.protocole.entree"), PrivateNamespace(null, "tribulle.auto.protocole.entree:ET_SignaleRejointCanal#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      inclocal_i          5
+L83:
+      getlocal            5
+      getlocal            4
+      iflt                L71
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "tribulle.auto.protocole.entree:ET_SignaleRejointCanal/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 0
+   maxscopedepth 0
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
