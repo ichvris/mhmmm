@@ -205,7 +205,7 @@ class Client(ClientHandler):
             this.sendPacket([29, 22], struct.pack("!l", id), True)
 
     def chatEnable(this):
-        this.chatdisabled = False       
+    this.chatdisabled = False       
     def defineNotLibCn(this):
 	this.libCn = False
     def sendBlueTeam(this):
